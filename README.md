@@ -1,4 +1,9 @@
-# Fe engage Team Builder
+<div>
+  <h1>
+    <img src="src/assets/icon.ico" style="width: 30px; height: 30px; border-radius: 10px"/>
+    Fe engage Team Builder
+  </h1>
+</div>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
 
