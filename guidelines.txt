@@ -1,0 +1,13 @@
+This file aims to give guidelines and information about how the project should be developed.
+
+Technology:
+    The project is using angular 18 with tailwindcss.
+
+Structure:
+    The components composing the app are standalone with inline style and inline templates.
+
+Style:
+    The project should follow the graphic chart provided in the tailwind.config.js file.
+    Simple html elements such as buttons, input should be customized with animation to look modern.
+    The use of gradients is strongly recommended.
+

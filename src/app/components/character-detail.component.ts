@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Character } from "../models/Character.model";
 import { CommonModule } from "@angular/common";
 import { StatSheet } from "../models/StatSheet.model";
+import { CHARACTER_RESOURCE_PATH } from "../config/config";
 
 @Component({
     selector: 'character-detail',
@@ -13,7 +14,7 @@ import { StatSheet } from "../models/StatSheet.model";
         <div *ngIf="character"
              class="relative bg-gunmetal-500 text-baby_powder-500 p-6 rounded-lg shadow-lg max-w-2xl overflow-hidden">
             <div class="absolute inset-0 bg-cover bg-center opacity-20"
-                 [style.background-image]="'url(' + character.image + ')'"></div>
+                 [style.background-image]="'url(' + CHARACTER_RESOURCE_PATH + character.resourceIdentifier + '/' + character.resourceIdentifier + '_portrait.png' + ')'"></div>
             <div class="relative z-10">
                 <div class="mb-6">
                     <h2 class="text-3xl font-bold text-forest_green-500">{{ character.name }}</h2>
@@ -44,6 +45,7 @@ import { StatSheet } from "../models/StatSheet.model";
 })
 export class CharacterDetailComponent {
     @Input() character?: Character;
+    protected readonly CHARACTER_RESOURCE_PATH = CHARACTER_RESOURCE_PATH;
 
     constructor() {
     }

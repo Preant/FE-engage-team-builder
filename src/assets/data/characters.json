@@ -2,7 +2,6 @@
   {
     "id": 1,
     "name": "Alear",
-    "image": "assets/images/characters/alear-f/alear-f_portrait.png",
     "growth": {
       "hp": 60,
       "str": 35,
@@ -26,12 +25,12 @@
       "lck": 5,
       "mov": 4,
       "bld": 4
-    }
+    },
+    "resourceIdentifier": "alear-f"
   },
   {
     "id": 2,
     "name": "Vander",
-    "image": "assets/images/characters/vander/vander_portrait.png",
     "growth": {
       "hp": 60,
       "str": 25,
@@ -55,12 +54,12 @@
       "lck": 6,
       "mov": 6,
       "bld": 8
-    }
+    },
+    "resourceIdentifier": "vander"
   },
   {
     "id": 3,
     "name": "Clanne",
-    "image": "assets/images/characters/clanne/clanne_portrait.png",
     "growth": {
       "hp": 40,
       "str": 35,
@@ -84,12 +83,12 @@
       "lck": 4,
       "mov": 4,
       "bld": 4
-    }
+    },
+    "resourceIdentifier": "clanne"
   },
   {
     "id": 4,
     "name": "Framme",
-    "image": "assets/images/characters/framme/framme_portrait.png",
     "growth": {
       "hp": 55,
       "str": 30,
@@ -113,12 +112,12 @@
       "lck": 5,
       "mov": 4,
       "bld": 3
-    }
+    },
+    "resourceIdentifier": "framme"
   },
   {
     "id": 5,
     "name": "Alfred",
-    "image": "assets/images/characters/alfred/alfred_portrait.png",
     "growth": {
       "hp": 65,
       "str": 40,
@@ -142,12 +141,12 @@
       "lck": 8,
       "mov": 5,
       "bld": 6
-    }
+    },
+    "resourceIdentifier": "alfred"
   },
   {
     "id": 6,
     "name": "Etie",
-    "image": "assets/images/characters/etie/etie_portrait.png",
     "growth": {
       "hp": 45,
       "str": 40,
@@ -171,12 +170,12 @@
       "lck": 8,
       "mov": 4,
       "bld": 4
-    }
+    },
+    "resourceIdentifier": "etie"
   },
   {
     "id": 7,
     "name": "Boucheron",
-    "image": "assets/images/characters/boucheron/boucheron_portrait.png",
     "growth": {
       "hp": 85,
       "str": 20,
@@ -200,12 +199,12 @@
       "lck": 5,
       "mov": 4,
       "bld": 9
-    }
+    },
+    "resourceIdentifier": "boucheron"
   },
   {
     "id": 8,
     "name": "Céline",
-    "image": "assets/images/characters/celine/celine_portrait.png",
     "growth": {
       "hp": 50,
       "str": 35,
@@ -229,12 +228,12 @@
       "lck": 11,
       "mov": 4,
       "bld": 4
-    }
+    },
+    "resourceIdentifier": "celine"
   },
   {
     "id": 9,
     "name": "Chloé",
-    "image": "assets/images/characters/chloe/chloe_portrait.png",
     "growth": {
       "hp": 75,
       "str": 25,
@@ -258,12 +257,12 @@
       "lck": 10,
       "mov": 5,
       "bld": 5
-    }
+    },
+    "resourceIdentifier": "chloe"
   },
   {
     "id": 10,
     "name": "Louis",
-    "image": "assets/images/characters/louis/louis_portrait.png",
     "growth": {
       "hp": 75,
       "str": 40,
@@ -287,12 +286,12 @@
       "lck": 4,
       "mov": 4,
       "bld": 8
-    }
+    },
+    "resourceIdentifier": "louis"
   },
   {
     "id": 11,
     "name": "Yunaka",
-    "image": "assets/images/characters/yunaka/yunaka_portrait.png",
     "growth": {
       "hp": 50,
       "str": 35,
@@ -316,12 +315,12 @@
       "lck": 8,
       "mov": 5,
       "bld": 5
-    }
+    },
+    "resourceIdentifier": "yunaka"
   },
   {
     "id": 12,
     "name": "Alcryst",
-    "image": "assets/images/characters/alcryst/alcryst_portrait.png",
     "growth": {
       "hp": 65,
       "str": 30,
@@ -345,12 +344,12 @@
       "lck": 8,
       "mov": 4,
       "bld": 6
-    }
+    },
+    "resourceIdentifier": "alcryst"
   },
   {
     "id": 13,
     "name": "Citrinne",
-    "image": "assets/images/characters/citrinne/citrinne_portrait.png",
     "growth": {
       "hp": 45,
       "str": 10,
@@ -374,12 +373,12 @@
       "lck": 10,
       "mov": 4,
       "bld": 4
-    }
+    },
+    "resourceIdentifier": "citrinne"
   },
   {
     "id": 14,
     "name": "Lapis",
-    "image": "assets/images/characters/lapis/lapis_portrait.png",
     "growth": {
       "hp": 55,
       "str": 25,
@@ -403,12 +402,12 @@
       "lck": 7,
       "mov": 4,
       "bld": 5
-    }
+    },
+    "resourceIdentifier": "lapis"
   },
   {
     "id": 15,
     "name": "Diamant",
-    "image": "assets/images/characters/diamant/diamant_portrait.png",
     "growth": {
       "hp": 75,
       "str": 30,
@@ -432,12 +431,12 @@
       "lck": 10,
       "mov": 4,
       "bld": 9
-    }
+    },
+    "resourceIdentifier": "diamant"
   },
   {
     "id": 16,
     "name": "Amber",
-    "image": "assets/images/characters/amber/amber_portrait.png",
     "growth": {
       "hp": 65,
       "str": 45,
@@ -461,12 +460,12 @@
       "lck": 9,
       "mov": 5,
       "bld": 8
-    }
+    },
+    "resourceIdentifier": "amber"
   },
   {
     "id": 17,
     "name": "Jade",
-    "image": "assets/images/characters/jade/jade_portrait.png",
     "growth": {
       "hp": 55,
       "str": 35,
@@ -490,12 +489,12 @@
       "lck": 5,
       "mov": 4,
       "bld": 8
-    }
+    },
+    "resourceIdentifier": "jade"
   },
   {
     "id": 18,
     "name": "Ivy",
-    "image": "assets/images/characters/ivy/ivy_portrait.png",
     "growth": {
       "hp": 55,
       "str": 25,
@@ -519,12 +518,12 @@
       "lck": 4,
       "mov": 5,
       "bld": 7
-    }
+    },
+    "resourceIdentifier": "ivy"
   },
   {
     "id": 19,
     "name": "Kagetsu",
-    "image": "assets/images/characters/kagetsu/kagetsu_portrait.png",
     "growth": {
       "hp": 60,
       "str": 30,
@@ -548,12 +547,12 @@
       "lck": 17,
       "mov": 5,
       "bld": 9
-    }
+    },
+    "resourceIdentifier": "kagetsu"
   },
   {
     "id": 20,
     "name": "Zelkov",
-    "image": "assets/images/characters/zelkov/zelkov_portrait.png",
     "growth": {
       "hp": 65,
       "str": 35,
@@ -577,12 +576,12 @@
       "lck": 7,
       "mov": 5,
       "bld": 9
-    }
+    },
+    "resourceIdentifier": "zelkov"
   },
   {
     "id": 21,
     "name": "Fogado",
-    "image": "assets/images/characters/fogado/fogado_portrait.png",
     "growth": {
       "hp": 60,
       "str": 30,
@@ -606,12 +605,12 @@
       "lck": 8,
       "mov": 5,
       "bld": 8
-    }
+    },
+    "resourceIdentifier": "fogado"
   },
   {
     "id": 22,
     "name": "Pandreo",
-    "image": "assets/images/characters/pandreo/pandreo_portrait.png",
     "growth": {
       "hp": 60,
       "str": 5,
@@ -635,12 +634,12 @@
       "lck": 14,
       "mov": 5,
       "bld": 8
-    }
+    },
+    "resourceIdentifier": "pandreo"
   },
   {
     "id": 23,
     "name": "Bunet",
-    "image": "assets/images/characters/bunet/bunet_portrait.png",
     "growth": {
       "hp": 65,
       "str": 30,
@@ -664,12 +663,12 @@
       "lck": 13,
       "mov": 6,
       "bld": 11
-    }
+    },
+    "resourceIdentifier": "bunet"
   },
   {
     "id": 24,
     "name": "Timerra",
-    "image": "assets/images/characters/timerra/timerra_portrait.png",
     "growth": {
       "hp": 55,
       "str": 25,
@@ -693,12 +692,12 @@
       "lck": 10,
       "mov": 4,
       "bld": 5
-    }
+    },
+    "resourceIdentifier": "timerra"
   },
   {
     "id": 25,
     "name": "Panette",
-    "image": "assets/images/characters/panette/panette_portrait.png",
     "growth": {
       "hp": 75,
       "str": 45,
@@ -722,12 +721,12 @@
       "lck": 11,
       "mov": 5,
       "bld": 11
-    }
+    },
+    "resourceIdentifier": "panette"
   },
   {
     "id": 26,
     "name": "Merrin",
-    "image": "assets/images/characters/merrin/merrin_portrait.png",
     "growth": {
       "hp": 55,
       "str": 25,
@@ -751,12 +750,12 @@
       "lck": 14,
       "mov": 6,
       "bld": 9
-    }
+    },
+    "resourceIdentifier": "merrin"
   },
   {
     "id": 27,
     "name": "Hortensia",
-    "image": "assets/images/characters/hortensia/hortensia_portrait.png",
     "growth": {
       "hp": 40,
       "str": 20,
@@ -780,12 +779,12 @@
       "lck": 17,
       "mov": 5,
       "bld": 5
-    }
+    },
+    "resourceIdentifier": "hortensia"
   },
   {
     "id": 28,
     "name": "Seadall",
-    "image": "assets/images/characters/seadall/seadall_portrait.png",
     "growth": {
       "hp": 55,
       "str": 25,
@@ -809,12 +808,12 @@
       "lck": 11,
       "mov": 5,
       "bld": 8
-    }
+    },
+    "resourceIdentifier": "seadall"
   },
   {
     "id": 29,
     "name": "Rosado",
-    "image": "assets/images/characters/rosado/rosado_portrait.png",
     "growth": {
       "hp": 75,
       "str": 45,
@@ -838,12 +837,12 @@
       "lck": 8,
       "mov": 6,
       "bld": 8
-    }
+    },
+    "resourceIdentifier": "rosado"
   },
   {
     "id": 30,
     "name": "Goldmary",
-    "image": "assets/images/characters/goldmary/goldmary_portrait.png",
     "growth": {
       "hp": 65,
       "str": 30,
@@ -867,12 +866,12 @@
       "lck": 13,
       "mov": 5,
       "bld": 9
-    }
+    },
+    "resourceIdentifier": "goldmary"
   },
   {
     "id": 31,
     "name": "Lindon",
-    "image": "assets/images/characters/lindon/lindon_portrait.png",
     "growth": {
       "hp": 65,
       "str": 25,
@@ -896,12 +895,12 @@
       "lck": 8,
       "mov": 5,
       "bld": 10
-    }
+    },
+    "resourceIdentifier": "lindon"
   },
   {
     "id": 32,
     "name": "Saphir",
-    "image": "assets/images/characters/saphir/saphir_portrait.png",
     "growth": {
       "hp": 80,
       "str": 35,
@@ -925,12 +924,12 @@
       "lck": 15,
       "mov": 5,
       "bld": 15
-    }
+    },
+    "resourceIdentifier": "saphir"
   },
   {
     "id": 33,
     "name": "Veyle",
-    "image": "assets/images/characters/veyle/veyle_portrait.png",
     "growth": {
       "hp": 40,
       "str": 25,
@@ -954,12 +953,12 @@
       "lck": 18,
       "mov": 5,
       "bld": 7
-    }
+    },
+    "resourceIdentifier": "veyle"
   },
   {
     "id": 34,
     "name": "Mauvier",
-    "image": "assets/images/characters/mauvier/mauvier_portrait.png",
     "growth": {
       "hp": 70,
       "str": 35,
@@ -983,12 +982,12 @@
       "lck": 16,
       "mov": 6,
       "bld": 12
-    }
+    },
+    "resourceIdentifier": "mauvier"
   },
   {
     "id": 35,
     "name": "Anna",
-    "image": "assets/images/characters/anna/anna_portrait.png",
     "growth": {
       "hp": 55,
       "str": 15,
@@ -1012,12 +1011,12 @@
       "lck": 3,
       "mov": 4,
       "bld": 7
-    }
+    },
+    "resourceIdentifier": "anna"
   },
   {
     "id": 36,
     "name": "Jean",
-    "image": "assets/images/characters/jean/jean_portrait.png",
     "growth": {
       "hp": 50,
       "str": 20,
@@ -1041,12 +1040,12 @@
       "lck": 3,
       "mov": 4,
       "bld": 3
-    }
+    },
+    "resourceIdentifier": "jean"
   },
   {
     "id": 37,
     "name": "Nel",
-    "image": "assets/images/characters/nel/nel_portrait.png",
     "growth": {
       "hp": 55,
       "str": 30,
@@ -1070,12 +1069,12 @@
       "lck": 16,
       "mov": 5,
       "bld": 8
-    }
+    },
+    "resourceIdentifier": "nel"
   },
   {
     "id": 38,
     "name": "Rafal",
-    "image": "assets/images/characters/rafal/rafal_portrait.png",
     "growth": {
       "hp": 70,
       "str": 40,
@@ -1099,12 +1098,12 @@
       "lck": 12,
       "mov": 5,
       "bld": 9
-    }
+    },
+    "resourceIdentifier": "rafal"
   },
   {
     "id": 39,
     "name": "Zelestia",
-    "image": "assets/images/characters/zelestia/zelestia_portrait.png",
     "growth": {
       "hp": 60,
       "str": 35,
@@ -1128,12 +1127,12 @@
       "lck": 7,
       "mov": 6,
       "bld": 9
-    }
+    },
+    "resourceIdentifier": "zelestia"
   },
   {
     "id": 40,
     "name": "Gregory",
-    "image": "assets/images/characters/gregory/gregory_portrait.png",
     "growth": {
       "hp": 55,
       "str": 30,
@@ -1157,12 +1156,12 @@
       "lck": 9,
       "mov": 5,
       "bld": 8
-    }
+    },
+    "resourceIdentifier": "gregory"
   },
   {
     "id": 41,
     "name": "Madeline",
-    "image": "assets/images/characters/madeline/madeline_portrait.png",
     "growth": {
       "hp": 75,
       "str": 50,
@@ -1186,6 +1185,7 @@
       "lck": 9,
       "mov": 4,
       "bld": 13
-    }
+    },
+    "resourceIdentifier": "madeline"
   }
 ]
