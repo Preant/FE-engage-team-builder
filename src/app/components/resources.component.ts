@@ -1,25 +1,16 @@
 import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from "@angular/router";
+import { PanelButton } from "../models/front/PanelButton.models";
 
-interface Button {
-    name: string;
-    link: string;
-    size: 'large' | 'small';
-    color: string;
-    gridArea: string;
-    textGradient: string;
-    content: string[];
-    isVideo: boolean;
-}
 
 @Component({
     selector: 'app-databank-homepage',
     standalone: true,
     imports: [CommonModule, RouterLink],
     template: `
-        <div class="w-full h-screen bg-gradient-to-br from-rich_black-500 to-gunmetal-500 p-4 flex items-center justify-center">
-            <div class="w-full h-full max-w-7xl max-h-[90vh] bg-black rounded-xl shadow-2xl overflow-hidden grid grid-cols-5 grid-rows-8 gap-4 p-4 relative">
+        <div class="w-full h-screen bg-gradient-to-br from-rich_black-500 to-prussian_blue-500 p-4 flex items-center justify-center">
+            <div class="w-full h-full max-w-7xl max-h-[90vh] bg-prussian_blue-100 rounded-xl shadow-2xl overflow-hidden grid grid-cols-5 grid-rows-8 gap-4 p-4 relative">
                 <ng-container *ngFor="let button of buttons; let i = index">
                     <div
                             [ngClass]="buttonClasses(button)"
@@ -77,7 +68,7 @@ interface Button {
         }
     `]
 })
-export class DataBankHomepageComponent implements AfterViewInit {
+export class ResourcesComponent implements AfterViewInit {
     @ViewChildren('videoElement') videoElements!: QueryList<ElementRef>;
 
     hoveredButton: string | null = null;
@@ -87,7 +78,7 @@ export class DataBankHomepageComponent implements AfterViewInit {
     waitDuration: number = 3500; // 3.5 seconds wait between cycles
     isWaiting: boolean[] = [];
 
-    buttons: Button[] = [
+    buttons: PanelButton[] = [
         {
             name: 'Characters',
             link: '/characters',
@@ -112,7 +103,7 @@ export class DataBankHomepageComponent implements AfterViewInit {
             name: 'Emblems',
             link: '/emblems',
             size: 'large',
-            color: 'pakistan_green',
+            color: 'paynes_gray',
             gridArea: 'col-span-2 row-span-6',
             textGradient: 'from-green-400 via-blue-500 to-purple-600',
             content: ['/assets/videos/celica_intro.mp4', '/assets/videos/leif_intro.mp4', '/assets/videos/micaiah_intro.mp4', '/assets/videos/roy_intro.mp4'],
@@ -122,7 +113,7 @@ export class DataBankHomepageComponent implements AfterViewInit {
             name: 'Skills',
             link: '/skills',
             size: 'small',
-            color: 'forest_green',
+            color: 'air_superiority_blue',
             gridArea: 'col-span-2 row-span-2',
             textGradient: 'from-yellow-400 via-red-500 to-pink-500',
             content: ['/assets/images/skills.png'],
@@ -132,7 +123,7 @@ export class DataBankHomepageComponent implements AfterViewInit {
             name: 'Forging',
             link: '/forging',
             size: 'small',
-            color: 'baby_powder',
+            color: 'mauve',
             gridArea: 'col-span-1 row-span-4',
             textGradient: 'from-indigo-400 via-purple-500 to-pink-500',
             content: ['/assets/images/forging.png'],
@@ -142,7 +133,7 @@ export class DataBankHomepageComponent implements AfterViewInit {
             name: 'Weapons',
             link: '/weapons',
             size: 'small',
-            color: 'gunmetal',
+            color: 'prussian_blue',
             gridArea: 'col-span-2 row-span-2',
             textGradient: 'from-purple-400 via-pink-500 to-red-500',
             content: ['/assets/images/weapons.png'],
@@ -160,7 +151,7 @@ export class DataBankHomepageComponent implements AfterViewInit {
         this.cdr.detectChanges();
     }
 
-    buttonClasses(button: Button): string {
+    buttonClasses(button: PanelButton): string {
         return `
       ${button.gridArea}
       ${this.hoveredButton === button.name ? 'scale-[1.02]' : 'scale-100'}
@@ -175,7 +166,7 @@ export class DataBankHomepageComponent implements AfterViewInit {
     `;
     }
 
-    textClasses(button: Button): string {
+    textClasses(button: PanelButton): string {
         return `
       gradient-text ${button.size === 'large' ? 'text-4xl sm:text-5xl md:text-6xl' : 'text-xl sm:text-2xl md:text-3xl'}
       bg-gradient-to-r ${button.textGradient}

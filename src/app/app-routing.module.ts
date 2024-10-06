@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from "./components/home.component";
-import { DataBankHomepageComponent } from "./components/data-bank-homepage.component";
+import { ResourcesComponent } from "./components/resources.component";
+import { CharacterListComponent } from "./components/character-list.component";
+import { CharacterDetailComponent } from "./components/character-detail.component";
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
-    {path: 'team-builder', component: HomeComponent},
-    {path: 'data-bank', component: DataBankHomepageComponent},
-    {path: 'characters', component: DataBankHomepageComponent}
+    {path: 'teambuilder', component: HomeComponent},
+    {path: 'resources', component: ResourcesComponent},
+    {path: 'characters', component: CharacterListComponent},
+    {path: 'characters/:name', component: CharacterDetailComponent},
+    {path: '**', redirectTo: ''}
 ];
 
 @NgModule({
