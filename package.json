@@ -1,12 +1,15 @@
 {
-  "name": "FE-engage-team-builder",
+  "name": "fe-engage-team-builder",
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "lint": "eslint src -c eslint.config.js",
+    "lint-fix": "eslint src -c eslint.config.js --fix"
   },
   "private": true,
   "dependencies": {
@@ -20,6 +23,7 @@
     "@angular/platform-browser": "^18.2.7",
     "@angular/platform-browser-dynamic": "^18.2.7",
     "@angular/router": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^8.16.0",
     "recharts": "^2.12.7",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
@@ -31,6 +35,10 @@
     "@angular/compiler-cli": "^18.2.7",
     "@types/jasmine": "~4.3.0",
     "autoprefixer": "^10.4.20",
+    "eslint": "^9.16.0",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "eslint-plugin-import": "latest",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

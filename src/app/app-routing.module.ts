@@ -1,22 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from "./components/home.component";
-import { ResourcesComponent } from "./components/resources.component";
-import { CharacterListComponent } from "./components/character-list.component";
-import { CharacterDetailComponent } from "./components/character-detail.component";
+
+import { CharacterDetailComponent } from '@/app/components/character-detail.component';
+import { CharactersPageComponent } from '@/app/components/pages/characters.page.component';
+import { HomePageComponent } from '@/app/components/pages/home.page.component';
+import { ResourcesPageComponent } from '@/app/components/pages/resources.page.component';
 
 const routes: Routes = [
-    {path: '', component: HomeComponent},
-    {path: 'teambuilder', component: HomeComponent},
-    {path: 'resources', component: ResourcesComponent},
-    {path: 'characters', component: CharacterListComponent},
-    {path: 'characters/:name', component: CharacterDetailComponent},
-    {path: '**', redirectTo: ''}
+  // add titles to the routes
+  //remove selector on page component
+  { path: '', component: HomePageComponent },
+  { path: 'team-builder', component: HomePageComponent },
+  { path: 'resources', component: ResourcesPageComponent },
+  { path: 'characters', component: CharactersPageComponent },
+  { path: 'characters/:name', component: CharacterDetailComponent },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
 export class AppRoutingModule {
 }

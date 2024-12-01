@@ -1,22 +1,24 @@
-import { ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
-import { Character } from "../models/Character.model";
 import { CommonModule } from '@angular/common';
-import { CHARACTER_RESOURCE_PATH } from "../config/config";
-import { Router } from "@angular/router";
+import { ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { CHARACTER_RESOURCE_PATH } from '../config/config';
+import { Character } from '../models/Character.model';
+
 
 @Component({
-    selector: 'character-small-card',
-    standalone: true,
-    imports: [CommonModule],
-    template: `
+  selector: 'character-small-card',
+  standalone: true,
+  imports: [CommonModule],
+  template: `
         <ng-container *ngIf="character">
             <div class="character-card w-[300px] h-[80px] rounded-lg shadow-lg overflow-hidden
-                        cursor-pointer transition-all duration-300 ease-in-out transform 
+                        cursor-pointer transition-all duration-300 ease-in-out transform
                         hover:scale-105 hover:shadow-xl relative
                         bg-gradient-to-br from-prussian_blue-400 to-prussian_blue-600
                         hover:from-prussian_blue-300 hover:to-prussian_blue-500"
                  (click)="navigateToCharacter()">
-                <div class="absolute inset-0 bg-gradient-to-br from-prussian_blue-500 to-prussian_blue-700 
+                <div class="absolute inset-0 bg-gradient-to-br from-prussian_blue-500 to-prussian_blue-700
                             opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"></div>
                 <div class="relative w-full h-full flex rounded-lg overflow-hidden">
                     <div class="w-1/3 h-full overflow-hidden">
@@ -25,8 +27,8 @@ import { Router } from "@angular/router";
                              class="w-full h-full object-cover object-center transform scale-110 hover:scale-125 transition-transform duration-300 ease-in-out">
                     </div>
                     <div class="w-2/3 flex items-center pl-2 pr-1">
-                        <h3 class="character-name text-mauve font-bold leading-tight z-20 
-                                   px-2 py-1 bg-rich_black-500 bg-opacity-80 rounded w-full 
+                        <h3 class="character-name text-mauve font-bold leading-tight z-20
+                                   px-2 py-1 bg-rich_black-500 bg-opacity-80 rounded w-full
                                    whitespace-nowrap overflow-hidden text-ellipsis"
                             [class.text-long]="isLongName">
                             {{ character.name }}
@@ -36,7 +38,7 @@ import { Router } from "@angular/router";
             </div>
         </ng-container>
     `,
-    styles: [`
+  styles: [`
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
 
         .character-name {
@@ -66,19 +68,19 @@ export class CharacterSmallCardComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.checkNameLength();
+      this.checkNameLength();
     }
 
     checkNameLength() {
-        if (this.character && this.character.name) {
-            this.isLongName = this.character.name.length > 6;
-            this.cdr.detectChanges();
-        }
+      if (this.character && this.character.name) {
+        this.isLongName = this.character.name.length > 6;
+        this.cdr.detectChanges();
+      }
     }
 
     navigateToCharacter() {
-        if (this.character) {
-            this.router.navigate(['/characters', this.character.resourceIdentifier]);
-        }
+      if (this.character) {
+        this.router.navigate(['/characters', this.character.resourceIdentifier]);
+      }
     }
 }

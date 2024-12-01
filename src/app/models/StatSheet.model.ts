@@ -1,3 +1,3 @@
-import { CharacterStats } from "./Stat.enum";
+import { CharacterStats } from './Stat.enum';
 
 export type StatSheet = Record<CharacterStats, number>

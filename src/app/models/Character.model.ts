@@ -1,5 +1,5 @@
-import { StatSheet } from "./StatSheet.model";
-import { Country } from "./Country.enum";
+import { Country } from './Country.enum';
+import { StatSheet } from './StatSheet.model';
 
 export type Character = {
     id: number;

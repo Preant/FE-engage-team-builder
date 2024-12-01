@@ -1,23 +1,25 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CharacterDetailComponent } from "./components/character-detail.component";
-import { NavbarComponent } from "./components/header/navbar.component";
-import { RouterOutlet } from "@angular/router";
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+
+import { CharacterDetailComponent } from './components/character-detail.component';
+import { NavbarComponent } from './components/header/navbar.component';
+
 
 @Component({
-    selector: 'app-root',
-    standalone: true,
-    imports: [
-        RouterOutlet,
-        CommonModule,
-        CharacterDetailComponent,
-        NavbarComponent
-    ],
-    template: `
+  selector: 'app-root',
+  standalone: true,
+  imports: [
+    RouterOutlet,
+    CommonModule,
+    CharacterDetailComponent,
+    NavbarComponent
+  ],
+  template: `
         <app-navbar></app-navbar>
         <router-outlet></router-outlet>
     `,
-    styles: [`
+  styles: [`
     `]
 })
 export class AppComponent {
