@@ -2,12 +2,14 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
+import { NavItem } from '@/app/models/NavItem';
+
 @Component({
   selector: 'app-navbar',
   standalone: true,
   imports: [CommonModule, RouterLink, RouterLinkActive, NgOptimizedImage],
   template: `
-        <nav class="bg-gradient-to-r from-rich_black-500 to-prussian_blue-500 p-4 shadow-lg">
+        <nav class="bg-gradient-to-r from-rich_black-500 to-prussian_blue-500 p-4 shadow-lg h-[var(--header-height)]">
             <div class="container mx-auto flex justify-between items-center">
                 <a routerLink="/"
                    class="text-mauve-500 text-2xl font-bold inline-flex items-center group transition-all duration-300 ease-in-out transform hover:scale-105">
@@ -50,7 +52,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
     `]
 })
 export class NavbarComponent {
-  navItems = [
+  navItems: NavItem[] = [
     { label: 'TeamBuilder', link: '/teambuilder' },
     { label: 'Resources', link: '/resources' }
   ];

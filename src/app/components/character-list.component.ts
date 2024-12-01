@@ -1,53 +1,74 @@
-import { NgForOf, NgIf, NgStyle } from '@angular/common';
+import { NgStyle } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
-import { CharacterSmallCardComponent } from './character-small-card.component';
-import { Character } from '../models/Character.model';
-import { Country } from '../models/Country.enum';
-import { CharacterService } from '../services/character.service';
+import { CharacterSmallCardComponent } from '@/app/components/character-small-card.component';
+import { PanelGridComponent } from '@/app/components/panel/panel-grid.component';
+import { Character } from '@/app/models/Character.model';
+import { Country } from '@/app/models/Country.enum';
+import { createPanelGridConfig } from '@/app/models/PanelGridConfig.model';
+import { CharacterService } from '@/app/services/character.service';
 
 @Component({
   selector: 'character-list',
   standalone: true,
   imports: [
-    NgForOf,
-    NgIf,
+    NgStyle,
     CharacterSmallCardComponent,
-    NgStyle
+    PanelGridComponent
   ],
   template: `
-        <div class="p-4 bg-gradient-to-br from-rich_black-500 to-gunmetal-500">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div *ngFor="let country of countries"
-                     class="country-box rounded-lg shadow-lg overflow-hidden relative"
-                     [ngStyle]="{'background-image': 'url(/api/placeholder/800/600)'}">
-                    <div class="absolute inset-0 bg-forest_green-700 opacity-70"></div>
-                    <div class="relative z-10">
-                        <h2 class="text-2xl font-bold p-4 bg-pakistan_green-600 bg-opacity-80 text-baby_powder-500 font-cinzel">{{ country }}</h2>
-                        <div class="p-4 flex flex-wrap gap-4">
-                            <div *ngFor="let character of groupedCharacters[country]">
-                                <character-small-card
-                                        [character]="character"
-                                        class="transition-all duration-300 hover:scale-105"
-                                ></character-small-card>
+        <div class="min-h-screen p-6 bg-gradient-to-br from-prussian_blue-400 to-rich_black-600">
+            <div class="grid grid-cols-1 gap-8">
+                @for (country of countries; track country) {
+                    <div
+                            class="country-box rounded-xl shadow-2xl overflow-hidden relative"
+                            [ngStyle]="{'background-image': 'url(/api/placeholder/800/600)'}"
+                    >
+                        <div class="absolute inset-0 bg-gradient-to-br from-prussian_blue-500/90 to-rich_black-400/80"></div>
+
+                        <div class="relative z-10">
+                            <h2 class="text-2xl font-bold p-4 bg-gradient-to-r from-mauve-400/20 to-air_superiority_blue-500/20 backdrop-blur-sm text-mauve-100 font-cinzel border-b border-mauve-400/30 shadow-lg">
+                                {{ country }}
+                            </h2>
+
+                            <div class="p-6">
+                                <app-panel-grid
+                                        [items]="groupedCharacters[country]"
+                                        [config]="getPanelConfig(country)"
+                                        [defaultItemTemplate]="characterTemplate"
+                                        [trackByFn]="trackByCharacter"
+                                ></app-panel-grid>
+
+                                <ng-template #characterTemplate let-character>
+                                    <character-small-card
+                                            [character]="character"
+                                            class="transform hover:scale-105 transition-all duration-300"
+                                    ></character-small-card>
+                                </ng-template>
                             </div>
                         </div>
                     </div>
-                </div>
+                }
             </div>
         </div>
     `,
   styles: [`
         .country-box {
-            transition: all 0.3s ease-in-out;
             background-size: cover;
             background-position: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            isolation: isolate;
         }
 
         .country-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }`]
+            box-shadow: 0 12px 40px rgba(31, 41, 55, 0.25);
+        }
+
+        :host {
+            display: block;
+            min-height: 100vh;
+        }
+    `]
 })
 export class CharacterListComponent implements OnInit {
   public characters: Character[] = [];
@@ -62,6 +83,22 @@ export class CharacterListComponent implements OnInit {
       this.characters = characters;
       this.groupCharactersByCountry();
     });
+  }
+
+  getPanelConfig(country: string) {
+    const charactersCount = this.groupedCharacters[country]?.length || 0;
+    const cols = Math.min(4, Math.ceil(Math.sqrt(charactersCount)));
+    const rows = Math.ceil(charactersCount / cols);
+
+    return createPanelGridConfig({
+      cols,
+      rows,
+      waitDurationBetweenVideoCycles: 0
+    });
+  }
+
+  trackByCharacter(index: number, character: Character): string {
+    return character.resourceIdentifier;
   }
 
   private groupCharactersByCountry() {

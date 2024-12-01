@@ -2,9 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
-import { CharacterDetailComponent } from './components/character-detail.component';
-import { NavbarComponent } from './components/header/navbar.component';
-
+import { CharacterDetailComponent } from '@/app/components/character-detail.component';
+import { NavbarComponent } from '@/app/header/navbar.component';
 
 @Component({
   selector: 'app-root',

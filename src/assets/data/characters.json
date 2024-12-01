@@ -1082,7 +1082,7 @@
   {
     "id": 37,
     "name": "Nel",
-    "country": "Lythos",
+    "country": "Gradlon",
     "growth": {
       "hp": 55,
       "str": 30,
@@ -1112,7 +1112,7 @@
   {
     "id": 38,
     "name": "Rafal",
-    "country": "Lythos",
+    "country": "Gradlon",
     "growth": {
       "hp": 70,
       "str": 40,

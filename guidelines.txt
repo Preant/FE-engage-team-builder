@@ -6,6 +6,27 @@ Technology:
 Structure:
     The components composing the app are standalone with inline style and inline templates.
 
+Code guidelines:
+Use Signals for:
+
+Component state management
+Computed values
+Template bindings
+Simple reactivity
+
+
+Keep using RxJS for:
+
+HTTP requests
+Complex async operations
+Event handling
+Data streaming
+Time-based operations
+Error handling with retries
+Combining multiple data sources
+
+all the code you write will follow concepts of dumb and smart components.
+
 Style:
     The project should follow the graphic chart provided in the tailwind.config.js file.
     Simple html elements such as buttons, input should be customized with animation to look modern.

@@ -9,3 +9,7 @@
         font-family: Cinzel, serif;
     }
 }
+
+:root {
+    --header-height: 64px; /* or whatever your header height is */
+}

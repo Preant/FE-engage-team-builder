@@ -17,7 +17,7 @@ import { CharacterService } from '@/app/services/character.service';
   ],
   template: `
         <div class="min-h-screen w-full bg-rich_black-500 text-mauve-500 relative overflow-hidden">
-            <div class="absolute top-0 right-0 bottom-0 w-1/2 bg-cover bg-right opacity-10"
+            <div class="absolute top-0 right-0 bottom-0 w-1/2 bg-cover bg-right opacity-30"
                  [style.background-image]="'url(' + CHARACTER_RESOURCE_PATH + (character$ | async)?.resourceIdentifier + '/' + (character$ | async)?.resourceIdentifier + '_portrait.png' + ')'"></div>
 
             <div class="relative z-10 max-w-7xl mx-auto p-8">

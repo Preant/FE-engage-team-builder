@@ -18,10 +18,10 @@ export class CharacterService {
 
   public loadCharactersInformation(): void {
     this.http.get<Character[]>(this.charactersDataPath).subscribe({
-      next: (characters: Character[]) => {
+      next: (characters: Character[]): void => {
         this.charactersSubject.next(characters);
       },
-      error: (error) => {
+      error: (error: any): void => {
         console.error('Error fetching characters:', error);
         this.charactersSubject.error(error);
       }
@@ -35,7 +35,7 @@ export class CharacterService {
 
   public getCharacterByName(name: string): Observable<Character | undefined> {
     return this.getCharacters().pipe(
-      map((characters: Character[]) => characters.find((character: Character) => character.resourceIdentifier === name))
+      map((characters: Character[]): Character | undefined => characters.find((character: Character): boolean => character.resourceIdentifier === name))
     );
   }
 }

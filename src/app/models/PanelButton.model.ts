@@ -1,4 +1,4 @@
-export type PanelButton = {
+export interface PanelButton {
     name: string;
     link: string;
     size: 'large' | 'small';

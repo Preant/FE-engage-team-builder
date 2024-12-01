@@ -4,10 +4,15 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
+        <div class="home">
+            Home
+        </div>
     `,
-  styles: `
-        Home
-    `
+  styles: [`
+    .home {
+      padding: 1rem;
+    }
+  `]
 })
 export class HomePageComponent {
 
