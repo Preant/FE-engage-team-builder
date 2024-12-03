@@ -1,0 +1,906 @@
+[
+  {
+    "id": 1,
+    "identifier": "slim-sword",
+    "name": "Slim Sword",
+    "might": 3,
+    "hit": 100,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 2,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 500,
+    "description": "A light, unusually accurate sword.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false
+  },
+  {
+    "id": 2,
+    "name": "Iron Sword",
+    "identifier": "iron-sword",
+    "might": 5,
+    "hit": 90,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 5,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 1000,
+    "description": "A standard sword made of iron─simple, but effective.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false
+  },
+  {
+    "id": 3,
+    "name": "Steel Sword",
+    "identifier": "steel-sword",
+    "might": 9,
+    "hit": 85,
+    "crit": 5,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 8,
+    "weaponType": "SWORD",
+    "weaponRank": "C",
+    "price": 2000,
+    "description": "A sword made of steel.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false
+  },
+  {
+    "id": 4,
+    "name": "Silver Sword",
+    "identifier": "silver-sword",
+    "might": 12,
+    "hit": 90,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 11,
+    "weaponType": "SWORD",
+    "weaponRank": "B",
+    "price": 4000,
+    "description": "An exceptional sword of rare metals.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false
+  },
+  {
+    "id": 5,
+    "name": "Armorslayer",
+    "identifier": "armorslayer",
+    "might": 9,
+    "hit": 75,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 13,
+    "weaponType": "SWORD",
+    "weaponRank": "C",
+    "price": 2500,
+    "description": "A sword made to penetrate heavy armor.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "ARMOR"
+    ],
+    "isEngageWeapon": false
+  },
+  {
+    "id": 6,
+    "name": "Killing Edge",
+    "identifier": "killing-edge",
+    "might": 9,
+    "hit": 75,
+    "crit": 30,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 10,
+    "weaponType": "SWORD",
+    "weaponRank": "C",
+    "price": 2500,
+    "description": "A sword especially well-suited to inflicting deadly wounds.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false
+  },
+  {
+    "id": 7,
+    "name": "Levin Sword",
+    "identifier": "levin-sword",
+    "might": 13,
+    "hit": 85,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 11,
+    "weaponType": "SWORD",
+    "weaponRank": "C",
+    "price": 3000,
+    "description": "A magical sword that can strike close or at range.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false
+  },
+  {
+    "id": 8,
+    "name": "Wo Dao",
+    "identifier": "wo-dao",
+    "might": 6,
+    "hit": 90,
+    "crit": 20,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 7,
+    "weaponType": "SWORD",
+    "weaponRank": "B",
+    "price": 2500,
+    "description": "A sword honed to a razor edge.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false
+  },
+  {
+    "id": 9,
+    "name": "Wyrmslayer",
+    "identifier": "wyrmslayer",
+    "might": 8,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 12,
+    "weaponType": "SWORD",
+    "weaponRank": "B",
+    "price": 2500,
+    "description": "A sword crafted specifically to fight dragons.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "DRAGON"
+    ],
+    "isEngageWeapon": false
+  },
+  {
+    "id": 10,
+    "name": "Brave Sword",
+    "identifier": "brave-sword",
+    "might": 4,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 13,
+    "weaponType": "SWORD",
+    "weaponRank": "A",
+    "price": 8000,
+    "description": "A sword built for expert wielders. If user initiates combat, attacks twice.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false
+  },
+  {
+    "id": 11,
+    "name": "Libération",
+    "identifier": "liberation",
+    "might": 6,
+    "hit": 90,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 4,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 1000,
+    "description": "Divine Dragon only. Fills engage meter by 1 when user attacks and defeats a foe in a single turn.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false
+  },
+  {
+    "id": 12,
+    "name": "Wille Glanz",
+    "identifier": "wille-glanz",
+    "might": 12,
+    "hit": 70,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 10,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 8000,
+    "description": "Divine Dragon only. A powerful sword that can strike close or at range.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false
+  },
+  {
+    "id": 13,
+    "name": "Caladbolg",
+    "identifier": "caladbolg",
+    "might": 15,
+    "hit": 95,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 12,
+    "weaponType": "SWORD",
+    "weaponRank": "S",
+    "price": 10000,
+    "description": "A legendary sword, famous for its great power.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false
+  },
+  {
+    "id": 14,
+    "name": "Iron Blade",
+    "identifier": "iron-blade",
+    "might": 10,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 7,
+    "weaponType": "SWORD",
+    "weaponRank": "C",
+    "price": 1500,
+    "description": "A massive sword that smashes foes. Cannot follow up, or strike first if initiating combat.",
+    "KnocksBack": true,
+    "effectiveness": [],
+    "isEngageWeapon": false
+  },
+  {
+    "id": 15,
+    "name": "Steel Blade",
+    "identifier": "steel-blade",
+    "might": 18,
+    "hit": 75,
+    "crit": 5,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 10,
+    "weaponType": "SWORD",
+    "weaponRank": "B",
+    "price": 3000,
+    "description": "A massive sword of steel that smashes foes. Cannot follow up, or strike first if initiating combat.",
+    "KnocksBack": true,
+    "effectiveness": [],
+    "isEngageWeapon": false
+  },
+  {
+    "id": 16,
+    "name": "Silver Blade",
+    "identifier": "silver-blade",
+    "might": 24,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 13,
+    "weaponType": "SWORD",
+    "weaponRank": "A",
+    "price": 6000,
+    "description": "A massive sword of rare metals that smashes foes. Cannot follow up, or strike first if initiating combat.",
+    "KnocksBack": true,
+    "effectiveness": [],
+    "isEngageWeapon": false
+  },
+  {
+    "id": 17,
+    "name": "Georgios",
+    "identifier": "georgios",
+    "might": 32,
+    "hit": 90,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 18,
+    "weaponType": "SWORD",
+    "weaponRank": "S",
+    "price": 10000,
+    "description": "A legendary blade that smashes foes. Cannot follow up, or strike first if initiating combat.",
+    "KnocksBack": true,
+    "effectiveness": [],
+    "isEngageWeapon": false
+  },
+  {
+    "id": 18,
+    "name": "Fólkvangr",
+    "identifier": "folkvangr",
+    "might": 10,
+    "hit": 90,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 6,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 4000,
+    "description": "Sword of Alfonse, prince of Askr. Grants Atk+3 for 1 turn if user has 50% HP or less at start of turn.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false
+  },
+  {
+    "id": 19,
+    "name": "Biting Blade",
+    "identifier": "biting-blade",
+    "might": 7,
+    "hit": 90,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 6,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 500,
+    "description": "Ddg+10, A sword with a sweet scent. Disappears when consumed as an item, but recovers user’s HP.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false
+  },
+  {
+    "id": 20,
+    "name": "Rapier - Marth",
+    "identifier": "rapier-marth",
+    "might": 7,
+    "hit": 95,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 3,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 100,
+    "description": "Sword wielded by Emblem Marth.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "CAVALRY",
+      "ARMOR"
+    ],
+    "isEngageWeapon": true
+  },
+  {
+    "id": 21,
+    "name": "Mercurius",
+    "identifier": "mercurius",
+    "might": 12,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 7,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 100,
+    "description": "Sword wielded by Emblem Marth. Doubles user's earned experience.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true
+  },
+  {
+    "id": 22,
+    "name": "Falchion - Marth",
+    "identifier": "falchion-marth",
+    "might": 12,
+    "hit": 100,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 10,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 100,
+    "description": "Sacred sword wielded by Emblem Marth.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "DRAGON"
+    ],
+    "isEngageWeapon": true
+  },
+  {
+    "id": 23,
+    "name": "Tyrfing",
+    "identifier": "tyrfing",
+    "might": 15,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 7,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 100,
+    "description": "Sword wielded by Emblem Sigurd. Grants Res+5.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true
+  },
+  {
+    "id": 24,
+    "name": "Lancereaver",
+    "identifier": "lancereaver",
+    "might": 9,
+    "hit": 80,
+    "crit": 5,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 9,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 100,
+    "description": "Unusual sword wielded by Emblem Roy. Grants advantage vs. lances but disadvantage vs. axes.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true
+  },
+  {
+    "id": 25,
+    "name": "Wyrmslayer - Roy",
+    "identifier": "wyrmslayer-roy",
+    "might": 10,
+    "hit": 70,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 5,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 100,
+    "description": "Sword wielded by Emblem Roy.",
+    "imageUrl": "wyrmslayer-roy.png",
+    "KnocksBack": false,
+    "effectiveness": [
+      "DRAGON"
+    ],
+    "isEngageWeapon": true
+  },
+  {
+    "id": 26,
+    "name": "Binding Blade",
+    "identifier": "binding-blade",
+    "might": 14,
+    "hit": 95,
+    "crit": 10,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 8,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 100,
+    "description": "Famous sword wielded by Emblem Roy. Grants Def/Res+5. Can strike close or at range.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true
+  },
+  {
+    "id": 27,
+    "name": "Light Brand",
+    "identifier": "light-brand",
+    "might": 15,
+    "hit": 75,
+    "crit": 20,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 6,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 100,
+    "description": "Magical sword wielded by Emblem Leif. Grants Lck+10. Can strike close or at range.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false
+  },
+  {
+    "id": 28,
+    "name": "Noble Rapier",
+    "identifier": "noble-rapier",
+    "might": 8,
+    "hit": 85,
+    "crit": 10,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 8,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 100,
+    "description": "Sword wielded by Emblem Lucina.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "CAVALRY",
+      "ARMOR"
+    ],
+    "isEngageWeapon": true
+  },
+  {
+    "id": 29,
+    "name": "Parallel Falchion",
+    "identifier": "parallel-falchion",
+    "might": 10,
+    "hit": 80,
+    "crit": 5,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 10,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 100,
+    "description": "Sacred sword wielded by Emblem Lucina.",
+    "KnocksBack": false,
+    "effectiveness": "DRAGON",
+    "isEngageWeapon": true
+  },
+  {
+    "id": 30,
+    "name": "Mani Katti",
+    "identifier": "mani-katti",
+    "might": 6,
+    "hit": 80,
+    "crit": 20,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 5,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 100,
+    "description": "Divine sword wielded by Emblem Lyn.",
+    "KnocksBack": false,
+    "effectiveness": "CAVALRY",
+    "isEngageWeapon": true
+  },
+  {
+    "id": 31,
+    "name": "Ragnell",
+    "identifier": "ragnell",
+    "might": 16,
+    "hit": 80,
+    "crit": 5,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 15,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 100,
+    "description": "Sacred sword wielded by Emblem Ike. Grants Def+5. Can strike close or at range.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true
+  },
+  {
+    "id": 32,
+    "name": "Blutgang",
+    "identifier": "blutgang",
+    "might": 8,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 7,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 100,
+    "description": "Magical sword wielded by Emblem Byleth.",
+    "KnocksBack": false,
+    "effectiveness": "DRAGON",
+    "isEngageWeapon": true
+  },
+  {
+    "id": 33,
+    "name": "Sword of the Creator",
+    "identifier": "sword-of-the-creator",
+    "might": 11,
+    "hit": 90,
+    "crit": 10,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 7,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 100,
+    "description": "Sword of Emblem Byleth. Raises damage with user's Mag. Can strike close or at range.",
+    "KnocksBack": false,
+    "effectiveness": "DRAGON",
+    "isEngageWeapon": true
+  },
+  {
+    "id": 34,
+    "name": "Dual Katana",
+    "identifier": "dual-katana",
+    "might": 8,
+    "hit": 75,
+    "crit": 5,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 7,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 100,
+    "description": "Unusual sword wielded by Emblem Corrin. Grants advantage vs. lances but disadvantage vs. axes.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true
+  },
+  {
+    "id": 35,
+    "name": "Wakizashi",
+    "identifier": "wakizashi",
+    "might": 10,
+    "hit": 75,
+    "crit": 0,
+    "range": [
+      2,
+      2
+    ],
+    "weight": 10,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 100,
+    "description": "Avo-10, Throwing sword wielded by Emblem Corrin. Can only strike at range, not close up.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true
+  },
+  {
+    "id": 36,
+    "name": "Yato",
+    "identifier": "yato",
+    "might": 16,
+    "hit": 85,
+    "crit": 10,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 9,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 100,
+    "description": "Sacred sword wielded by Emblem Corrin.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true
+  },
+  {
+    "id": 37,
+    "name": "Rapier - Eirika",
+    "identifier": "rapier-eirika",
+    "might": 7,
+    "hit": 95,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 3,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 100,
+    "description": "Sword wielded by Emblem Eirika.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "CAVALRY",
+      "ARMOR"
+    ],
+    "isEngageWeapon": true
+  },
+  {
+    "id": 38,
+    "name": "Wind Sword",
+    "identifier": "wind-sword",
+    "might": 10,
+    "hit": 70,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 9,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 100,
+    "description": "Magical sword wielded by Emblem Eirika. Can strike close or at range.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "FLYING"
+    ],
+    "isEngageWeapon": true
+  },
+  {
+    "id": 39,
+    "name": "Sieglinde",
+    "identifier": "sieglinde",
+    "might": 12,
+    "hit": 90,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 9,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 100,
+    "description": "Paired sword wielded by Emblem Eirika.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "CORRUPTED"
+    ],
+    "isEngageWeapon": true
+  },
+  {
+    "id": 40,
+    "name": "Oligoludia",
+    "identifier": "oligoludia",
+    "might": 8,
+    "hit": 90,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 7,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 100,
+    "description": "Sword wielded by Emblem Alear.",
+    "KnocksBack": false,
+    "effectiveness": "CORRUPTED",
+    "isEngageWeapon": true
+  },
+  {
+    "id": 41,
+    "name": "Lyrátion - Alear",
+    "identifier": "lyration-alear",
+    "might": 15,
+    "hit": 90,
+    "crit": 10,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 10,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 100,
+    "description": "Sword of Emblem Alear. If user defeats foe in player phase, fills adjacent allies' engage meters by 1.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true
+  },
+  {
+    "id": 42,
+    "name": "Runesword",
+    "identifier": "runesword",
+    "might": 12,
+    "hit": 65,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 11,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 100,
+    "description": "Magic sword of Emblem Hector. Can strike close or at range. Restore HP equal to 50% of damage dealt.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true
+  },
+  {
+    "id": 43,
+    "name": "Levin Sword - Robin",
+    "identifier": "levin-sword-robin",
+    "might": 10,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 8,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 100,
+    "description": "Magic sword wielded by Emblem Robin. Can hit foes with magic lightning from a distance.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true
+  },
+  {
+    "id": 44,
+    "name": "Falchion - Chrom",
+    "identifier": "falchion-chrom",
+    "might": 13,
+    "hit": 80,
+    "crit": 10,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 12,
+    "weaponType": "SWORD",
+    "weaponRank": "D",
+    "price": 100,
+    "description": "A legendary sword wielded by Emblem Chrom.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "DRAGON"
+    ],
+    "isEngageWeapon": true
+  }
+]

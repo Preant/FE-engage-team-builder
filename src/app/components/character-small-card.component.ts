@@ -83,7 +83,7 @@ import { AssetsService } from '@/app/services/assets.service';
 export class CharacterSmallCardComponent implements OnInit {
   private assetsService: AssetsService = inject(AssetsService);
   characterImageUrl: Signal<string> = computed((): string => {
-    return this.assetsService.getCharacterImage(this.character.resourceIdentifier);
+    return this.assetsService.getCharacterImage(this.character.identifier);
   });
   private isLongNameSignal: WritableSignal<boolean> = signal(false);
   isLongName: Signal<boolean> = computed((): boolean => this.isLongNameSignal());
@@ -109,7 +109,7 @@ export class CharacterSmallCardComponent implements OnInit {
 
     navigateToCharacter(): void {
       if (this.character) {
-        void this.router.navigate(['/characters', this.character.resourceIdentifier]);
+        void this.router.navigate(['/characters', this.character.identifier]);
       }
     }
 

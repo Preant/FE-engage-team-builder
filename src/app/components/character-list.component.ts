@@ -97,6 +97,6 @@ export class CharacterListComponent {
   }
 
   trackByCharacter(character: Character): string {
-    return character.resourceIdentifier;
+    return character.identifier;
   }
 }

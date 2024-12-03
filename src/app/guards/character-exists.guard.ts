@@ -8,14 +8,14 @@ export const characterExistsGuard: CanActivateFn = (route: ActivatedRouteSnapsho
   const characterService: CharacterService = inject(CharacterService);
   const router: Router = inject(Router);
 
-  const characterName: string | null = route.paramMap.get('name');
+  const identifier: string | null = route.paramMap.get('identifier');
 
-  if (!characterName) {
+  if (!identifier) {
     void router.navigate(['/characters']);
     return false;
   }
 
-  const characterExists: Character | undefined = characterService.getCharacterByName(characterName);
+  const characterExists: Character | undefined = characterService.getCharacterByIdentifier(identifier);
 
   if (!characterExists) {
     void router.navigate(['/characters']);

@@ -27,7 +27,7 @@
       "mov": 4,
       "bld": 4
     },
-    "resourceIdentifier": "alear"
+    "identifier": "alear"
   },
   {
     "id": 2,
@@ -57,7 +57,7 @@
       "mov": 6,
       "bld": 8
     },
-    "resourceIdentifier": "vander"
+    "identifier": "vander"
   },
   {
     "id": 3,
@@ -87,7 +87,7 @@
       "mov": 4,
       "bld": 4
     },
-    "resourceIdentifier": "clanne"
+    "identifier": "clanne"
   },
   {
     "id": 4,
@@ -117,7 +117,7 @@
       "mov": 4,
       "bld": 3
     },
-    "resourceIdentifier": "framme"
+    "identifier": "framme"
   },
   {
     "id": 5,
@@ -147,7 +147,7 @@
       "mov": 5,
       "bld": 6
     },
-    "resourceIdentifier": "alfred"
+    "identifier": "alfred"
   },
   {
     "id": 6,
@@ -177,7 +177,7 @@
       "mov": 4,
       "bld": 4
     },
-    "resourceIdentifier": "etie"
+    "identifier": "etie"
   },
   {
     "id": 7,
@@ -207,7 +207,7 @@
       "mov": 4,
       "bld": 9
     },
-    "resourceIdentifier": "boucheron"
+    "identifier": "boucheron"
   },
   {
     "id": 8,
@@ -237,7 +237,7 @@
       "mov": 4,
       "bld": 4
     },
-    "resourceIdentifier": "celine"
+    "identifier": "celine"
   },
   {
     "id": 9,
@@ -267,7 +267,7 @@
       "mov": 5,
       "bld": 5
     },
-    "resourceIdentifier": "chloe"
+    "identifier": "chloe"
   },
   {
     "id": 10,
@@ -297,7 +297,7 @@
       "mov": 4,
       "bld": 8
     },
-    "resourceIdentifier": "louis"
+    "identifier": "louis"
   },
   {
     "id": 11,
@@ -327,7 +327,7 @@
       "mov": 5,
       "bld": 5
     },
-    "resourceIdentifier": "yunaka"
+    "identifier": "yunaka"
   },
   {
     "id": 12,
@@ -357,7 +357,7 @@
       "mov": 4,
       "bld": 6
     },
-    "resourceIdentifier": "alcryst"
+    "identifier": "alcryst"
   },
   {
     "id": 13,
@@ -387,7 +387,7 @@
       "mov": 4,
       "bld": 4
     },
-    "resourceIdentifier": "citrinne"
+    "identifier": "citrinne"
   },
   {
     "id": 14,
@@ -417,7 +417,7 @@
       "mov": 4,
       "bld": 5
     },
-    "resourceIdentifier": "lapis"
+    "identifier": "lapis"
   },
   {
     "id": 15,
@@ -447,7 +447,7 @@
       "mov": 4,
       "bld": 9
     },
-    "resourceIdentifier": "diamant"
+    "identifier": "diamant"
   },
   {
     "id": 16,
@@ -477,7 +477,7 @@
       "mov": 5,
       "bld": 8
     },
-    "resourceIdentifier": "amber"
+    "identifier": "amber"
   },
   {
     "id": 17,
@@ -507,7 +507,7 @@
       "mov": 4,
       "bld": 8
     },
-    "resourceIdentifier": "jade"
+    "identifier": "jade"
   },
   {
     "id": 18,
@@ -537,7 +537,7 @@
       "mov": 5,
       "bld": 7
     },
-    "resourceIdentifier": "ivy"
+    "identifier": "ivy"
   },
   {
     "id": 19,
@@ -567,7 +567,7 @@
       "mov": 5,
       "bld": 9
     },
-    "resourceIdentifier": "kagetsu"
+    "identifier": "kagetsu"
   },
   {
     "id": 20,
@@ -597,7 +597,7 @@
       "mov": 5,
       "bld": 9
     },
-    "resourceIdentifier": "zelkov"
+    "identifier": "zelkov"
   },
   {
     "id": 21,
@@ -627,7 +627,7 @@
       "mov": 5,
       "bld": 8
     },
-    "resourceIdentifier": "fogado"
+    "identifier": "fogado"
   },
   {
     "id": 22,
@@ -657,7 +657,7 @@
       "mov": 5,
       "bld": 8
     },
-    "resourceIdentifier": "pandreo"
+    "identifier": "pandreo"
   },
   {
     "id": 23,
@@ -687,7 +687,7 @@
       "mov": 6,
       "bld": 11
     },
-    "resourceIdentifier": "bunet"
+    "identifier": "bunet"
   },
   {
     "id": 24,
@@ -717,7 +717,7 @@
       "mov": 4,
       "bld": 5
     },
-    "resourceIdentifier": "timerra"
+    "identifier": "timerra"
   },
   {
     "id": 25,
@@ -747,7 +747,7 @@
       "mov": 5,
       "bld": 11
     },
-    "resourceIdentifier": "panette"
+    "identifier": "panette"
   },
   {
     "id": 26,
@@ -777,7 +777,7 @@
       "mov": 6,
       "bld": 9
     },
-    "resourceIdentifier": "merrin"
+    "identifier": "merrin"
   },
   {
     "id": 27,
@@ -807,7 +807,7 @@
       "mov": 5,
       "bld": 5
     },
-    "resourceIdentifier": "hortensia"
+    "identifier": "hortensia"
   },
   {
     "id": 28,
@@ -837,7 +837,7 @@
       "mov": 5,
       "bld": 8
     },
-    "resourceIdentifier": "seadall"
+    "identifier": "seadall"
   },
   {
     "id": 29,
@@ -867,7 +867,7 @@
       "mov": 6,
       "bld": 8
     },
-    "resourceIdentifier": "rosado"
+    "identifier": "rosado"
   },
   {
     "id": 30,
@@ -897,7 +897,7 @@
       "mov": 5,
       "bld": 9
     },
-    "resourceIdentifier": "goldmary"
+    "identifier": "goldmary"
   },
   {
     "id": 31,
@@ -927,7 +927,7 @@
       "mov": 5,
       "bld": 10
     },
-    "resourceIdentifier": "lindon"
+    "identifier": "lindon"
   },
   {
     "id": 32,
@@ -957,7 +957,7 @@
       "mov": 5,
       "bld": 15
     },
-    "resourceIdentifier": "saphir"
+    "identifier": "saphir"
   },
   {
     "id": 33,
@@ -987,7 +987,7 @@
       "mov": 5,
       "bld": 7
     },
-    "resourceIdentifier": "veyle"
+    "identifier": "veyle"
   },
   {
     "id": 34,
@@ -1017,7 +1017,7 @@
       "mov": 6,
       "bld": 12
     },
-    "resourceIdentifier": "mauvier"
+    "identifier": "mauvier"
   },
   {
     "id": 35,
@@ -1047,7 +1047,7 @@
       "mov": 4,
       "bld": 7
     },
-    "resourceIdentifier": "anna"
+    "identifier": "anna"
   },
   {
     "id": 36,
@@ -1077,7 +1077,7 @@
       "mov": 4,
       "bld": 3
     },
-    "resourceIdentifier": "jean"
+    "identifier": "jean"
   },
   {
     "id": 37,
@@ -1107,7 +1107,7 @@
       "mov": 5,
       "bld": 8
     },
-    "resourceIdentifier": "nel"
+    "identifier": "nel"
   },
   {
     "id": 38,
@@ -1137,7 +1137,7 @@
       "mov": 5,
       "bld": 9
     },
-    "resourceIdentifier": "rafal"
+    "identifier": "rafal"
   },
   {
     "id": 39,
@@ -1167,7 +1167,7 @@
       "mov": 6,
       "bld": 9
     },
-    "resourceIdentifier": "zelestia"
+    "identifier": "zelestia"
   },
   {
     "id": 40,
@@ -1197,7 +1197,7 @@
       "mov": 5,
       "bld": 8
     },
-    "resourceIdentifier": "gregory"
+    "identifier": "gregory"
   },
   {
     "id": 41,
@@ -1227,6 +1227,6 @@
       "mov": 4,
       "bld": 13
     },
-    "resourceIdentifier": "madeline"
+    "identifier": "madeline"
   }
 ]

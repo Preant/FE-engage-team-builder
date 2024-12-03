@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { CHARACTER_RESOURCE_PATH, EMBLEM_RESOURCE_PATH } from '@/app/config/config';
+import { CHARACTER_RESOURCE_PATH, EMBLEM_RESOURCE_PATH, WEAPON_RESOURCE_PATH } from '@/app/config/config';
 
 @Injectable({
   providedIn: 'root'
@@ -16,5 +16,9 @@ export class AssetsService {
 
   getEmblemImage(emblemIdentifier: string): string {
     return `${EMBLEM_RESOURCE_PATH}${emblemIdentifier}/${emblemIdentifier}_portrait.png`;
+  }
+
+  getWeaponImage(weaponIdentifier: string): string {
+    return `${WEAPON_RESOURCE_PATH}${weaponIdentifier}.png`;
   }
 }

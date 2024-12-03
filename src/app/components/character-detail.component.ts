@@ -114,23 +114,23 @@ import { CharacterService } from '@/app/services/character.service';
     `]
 })
 export class CharacterDetailComponent {
+  private assetsService: AssetsService = inject(AssetsService);
+  private route: ActivatedRoute = inject(ActivatedRoute);
+  private characterService: CharacterService = inject(CharacterService);
+  private routeParams: Signal<ParamMap | undefined> = toSignal(this.route.paramMap);
+  public character: Signal<Character> = computed((): Character => {
+    const name: string = this.routeParams()?.get('identifier') ?? '';
+    return this.characterService.getCharacterByIdentifier(name) as Character;
+  });
   public baseStats: Signal<[string, number][]> = computed(() =>
     this.getStatsArray(this.character().base)
   );
   public growthStats: Signal<[string, number][]> = computed(() =>
     this.getStatsArray(this.character().growth)
   );
-  private assetsService: AssetsService = inject(AssetsService);
   public characterImageUrl: Signal<string> = computed((): string =>
-    this.assetsService.getCharacterImage(this.character().resourceIdentifier)
+    this.assetsService.getCharacterImage(this.character().identifier)
   );
-  private route: ActivatedRoute = inject(ActivatedRoute);
-  private characterService: CharacterService = inject(CharacterService);
-  private routeParams: Signal<ParamMap | undefined> = toSignal(this.route.paramMap);
-  public character: Signal<Character> = computed((): Character => {
-    const name: string = this.routeParams()?.get('name') ?? '';
-    return this.characterService.getCharacterByName(name) as Character;
-  });
 
   getGrowthStatClass(statName: string, value: number): string {
     if (statName === 'mov') {
