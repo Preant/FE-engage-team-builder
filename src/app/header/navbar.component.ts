@@ -9,7 +9,7 @@ import { NavItem } from '@/app/models/NavItem';
   standalone: true,
   imports: [CommonModule, RouterLink, RouterLinkActive, NgOptimizedImage],
   template: `
-        <nav class="bg-gradient-to-r from-rich_black-500 to-prussian_blue-500 p-4 shadow-lg h-[var(--header-height)]">
+        <nav class="bg-gradient-to-r from-rich_black-500 to-prussian_blue-500 p-4 shadow-lg h-full">
             <div class="container mx-auto flex justify-between items-center">
                 <a routerLink="/"
                    class="text-mauve-500 text-2xl font-bold inline-flex items-center group transition-all duration-300 ease-in-out transform hover:scale-105">

@@ -2,10 +2,10 @@ import { NgStyle } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 import { CharacterSmallCardComponent } from '@/app/components/character-small-card.component';
-import { PanelGridComponent } from '@/app/components/panel/panel-grid.component';
+import { ResourcesPanelGridComponent } from '@/app/components/panel/characters-panel-grid.component';
 import { Character } from '@/app/models/Character.model';
+import { CharactersPanelGridConfig } from '@/app/models/CharactersPanelGridConfig.model';
 import { Country } from '@/app/models/Country.enum';
-import { createPanelGridConfig } from '@/app/models/PanelGridConfig.model';
 import { CharacterService } from '@/app/services/character.service';
 
 @Component({
@@ -14,7 +14,8 @@ import { CharacterService } from '@/app/services/character.service';
   imports: [
     NgStyle,
     CharacterSmallCardComponent,
-    PanelGridComponent
+    ResourcesPanelGridComponent,
+    ResourcesPanelGridComponent
   ],
   template: `
         <div class="min-h-screen p-6 bg-gradient-to-br from-prussian_blue-400 to-rich_black-600">
@@ -25,19 +26,18 @@ import { CharacterService } from '@/app/services/character.service';
                             [ngStyle]="{'background-image': 'url(/api/placeholder/800/600)'}"
                     >
                         <div class="absolute inset-0 bg-gradient-to-br from-prussian_blue-500/90 to-rich_black-400/80"></div>
-
                         <div class="relative z-10">
                             <h2 class="text-2xl font-bold p-4 bg-gradient-to-r from-mauve-400/20 to-air_superiority_blue-500/20 backdrop-blur-sm text-mauve-100 font-cinzel border-b border-mauve-400/30 shadow-lg">
                                 {{ country }}
                             </h2>
 
                             <div class="p-6">
-                                <app-panel-grid
+                                <characters-panel-grid
                                         [items]="groupedCharacters[country]"
                                         [config]="getPanelConfig(country)"
-                                        [defaultItemTemplate]="characterTemplate"
+                                        [customTemplate]="characterTemplate"
                                         [trackByFn]="trackByCharacter"
-                                ></app-panel-grid>
+                                ></characters-panel-grid>
 
                                 <ng-template #characterTemplate let-character>
                                     <character-small-card
@@ -73,7 +73,7 @@ import { CharacterService } from '@/app/services/character.service';
 export class CharacterListComponent implements OnInit {
   public characters: Character[] = [];
   public groupedCharacters: { [key: string]: Character[] } = {};
-  public countries: string[] = Object.values(Country);
+  public countries: Country[] = Object.values(Country);
 
   constructor(private characterService: CharacterService) {
   }
@@ -85,25 +85,24 @@ export class CharacterListComponent implements OnInit {
     });
   }
 
-  getPanelConfig(country: string) {
-    const charactersCount = this.groupedCharacters[country]?.length || 0;
-    const cols = Math.min(4, Math.ceil(Math.sqrt(charactersCount)));
-    const rows = Math.ceil(charactersCount / cols);
+  getPanelConfig(country: Country): CharactersPanelGridConfig {
+    const charactersCount: number = this.groupedCharacters[country]?.length || 0;
+    const cols: number = Math.min(4, Math.ceil(Math.sqrt(charactersCount)));
+    const rows: number = Math.ceil(charactersCount / cols);
 
-    return createPanelGridConfig({
+    return {
       cols,
-      rows,
-      waitDurationBetweenVideoCycles: 0
-    });
+      rows
+    };
   }
 
-  trackByCharacter(index: number, character: Character): string {
+  trackByCharacter(character: Character): string {
     return character.resourceIdentifier;
   }
 
   private groupCharactersByCountry() {
     this.groupedCharacters = this.characters.reduce((acc, character) => {
-      const country = character.country;
+      const country: Country = character.country;
       if (!acc[country]) {
         acc[country] = [];
       }

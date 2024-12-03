@@ -15,10 +15,22 @@ import { NavbarComponent } from '@/app/header/navbar.component';
     NavbarComponent
   ],
   template: `
-        <app-navbar></app-navbar>
-        <router-outlet></router-outlet>
+        <div class="app-component">
+            <div class="header h-[var(--header-height)]">
+                <app-navbar></app-navbar>
+            </div>
+
+            <div class="h-[calc(100vh-var(--header-height))]">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
     `,
   styles: [`
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
     `]
 })
 export class AppComponent {

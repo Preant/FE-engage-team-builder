@@ -30,9 +30,7 @@ import { CharacterService } from '@/app/services/character.service';
                     </svg>
                     Characters
                 </a>
-                <!--                @if (character$ | async as character) {
-                                }-->
-                <ng-container *ngIf="character$ | async as character">
+                @if (character$ | async; as character) {
                     <div class="mb-12 text-left">
                         <h1 class="text-6xl font-bold text-air_superiority_blue-500 mb-4">{{ character.name }}</h1>
                         <p class="text-3xl text-paynes_gray-400">{{ character.country }}</p>
@@ -43,29 +41,31 @@ import { CharacterService } from '@/app/services/character.service';
                             <h2 class="text-4xl font-semibold mb-6 text-air_superiority_blue-400 border-b-2 border-air_superiority_blue-400 pb-2">
                                 Base Stats</h2>
                             <ul class="space-y-4">
-                                <li *ngFor="let stat of getStatsArray(character.base)"
-                                    class="flex justify-between items-center">
-                                    <span class="text-2xl font-bold text-paynes_gray-400 capitalize mr-4">{{ stat[0] }}</span>
-                                    <span class="text-3xl font-bold">{{ stat[1] }}</span>
-                                </li>
+                                @for (stat of getStatsArray(character.base); track stat[0]) {
+                                    <li class="flex justify-between items-center">
+                                        <span class="text-2xl font-bold text-paynes_gray-400 capitalize mr-4">{{ stat[0] }}</span>
+                                        <span class="text-3xl font-bold">{{ stat[1] }}</span>
+                                    </li>
+                                }
                             </ul>
                         </div>
                         <div class="md:w-auto">
                             <h2 class="text-4xl font-semibold mb-6 text-air_superiority_blue-400 border-b-2 border-air_superiority_blue-400 pb-2">
                                 Growth Stats</h2>
                             <ul class="space-y-4">
-                                <li *ngFor="let stat of getStatsArray(character.growth)"
-                                    class="flex justify-between items-center">
-                                    <span class="text-2xl font-bold text-paynes_gray-400 capitalize mr-4">{{ stat[0] }}</span>
-                                    <span class="text-3xl font-bold"
-                                          [ngClass]="getGrowthStatClass(stat[0], stat[1])">
-                                        {{ stat[1] }}%
-                                    </span>
-                                </li>
+                                @for (stat of getStatsArray(character.growth); track stat[0]) {
+                                    <li class="flex justify-between items-center">
+                                        <span class="text-2xl font-bold text-paynes_gray-400 capitalize mr-4">{{ stat[0] }}</span>
+                                        <span class="text-3xl font-bold"
+                                              [ngClass]="getGrowthStatClass(stat[0], stat[1])">
+                                            {{ stat[1] }}%
+                                        </span>
+                                    </li>
+                                }
                             </ul>
                         </div>
                     </div>
-                </ng-container>
+                }
             </div>
         </div>
     `,
