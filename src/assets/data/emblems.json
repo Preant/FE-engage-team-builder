@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "Marth",
+    "resourceIdentifier": "marth"
+  },
+  {
+    "id": 2,
+    "name": "Sigurd",
+    "resourceIdentifier": "sigurd"
+  },
+  {
+    "id": 3,
+    "name": "Celica",
+    "resourceIdentifier": "celica"
+  },
+  {
+    "id": 4,
+    "name": "Micaiah",
+    "resourceIdentifier": "micaiah"
+  },
+  {
+    "id": 5,
+    "name": "Roy",
+    "resourceIdentifier": "roy"
+  },
+  {
+    "id": 6,
+    "name": "Leif",
+    "resourceIdentifier": "leif"
+  },
+  {
+    "id": 7,
+    "name": "Lucina",
+    "resourceIdentifier": "lucina"
+  },
+  {
+    "id": 8,
+    "name": "Lyn",
+    "resourceIdentifier": "lyn"
+  },
+  {
+    "id": 9,
+    "name": "Ike",
+    "resourceIdentifier": "ike"
+  },
+  {
+    "id": 10,
+    "name": "Byleth",
+    "resourceIdentifier": "byleth"
+  },
+  {
+    "id": 11,
+    "name": "Corrin",
+    "resourceIdentifier": "corrin"
+  },
+  {
+    "id": 12,
+    "name": "Eirika",
+    "resourceIdentifier": "eirika"
+  },
+  {
+    "id": 13,
+    "name": "Alear",
+    "resourceIdentifier": "alear"
+  },
+  {
+    "id": 14,
+    "name": "Edelgard",
+    "resourceIdentifier": "edelgard"
+  },
+  {
+    "id": 15,
+    "name": "Tiki",
+    "resourceIdentifier": "tiki"
+  },
+  {
+    "id": 16,
+    "name": "Hector",
+    "resourceIdentifier": "hector"
+  },
+  {
+    "id": 17,
+    "name": "Veronica",
+    "resourceIdentifier": "veronica"
+  },
+  {
+    "id": 18,
+    "name": "Soren",
+    "resourceIdentifier": "soren"
+  },
+  {
+    "id": 19,
+    "name": "Camilla",
+    "resourceIdentifier": "camilla"
+  },
+  {
+    "id": 20,
+    "name": "Chrom",
+    "resourceIdentifier": "chrom"
+  }
+]

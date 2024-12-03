@@ -1,5 +1,5 @@
 import { NgStyle } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 
 import { CharacterSmallCardComponent } from '@/app/components/character-small-card.component';
 import { ResourcesPanelGridComponent } from '@/app/components/panel/characters-panel-grid.component';
@@ -14,13 +14,12 @@ import { CharacterService } from '@/app/services/character.service';
   imports: [
     NgStyle,
     CharacterSmallCardComponent,
-    ResourcesPanelGridComponent,
     ResourcesPanelGridComponent
   ],
   template: `
         <div class="min-h-screen p-6 bg-gradient-to-br from-prussian_blue-400 to-rich_black-600">
             <div class="grid grid-cols-1 gap-8">
-                @for (country of countries; track country) {
+                @for (country of countries(); track country) {
                     <div
                             class="country-box rounded-xl shadow-2xl overflow-hidden relative"
                             [ngStyle]="{'background-image': 'url(/api/placeholder/800/600)'}"
@@ -33,7 +32,7 @@ import { CharacterService } from '@/app/services/character.service';
 
                             <div class="p-6">
                                 <characters-panel-grid
-                                        [items]="groupedCharacters[country]"
+                                        [items]="groupedCharacters()[country]"
                                         [config]="getPanelConfig(country)"
                                         [customTemplate]="characterTemplate"
                                         [trackByFn]="trackByCharacter"
@@ -70,23 +69,24 @@ import { CharacterService } from '@/app/services/character.service';
         }
     `]
 })
-export class CharacterListComponent implements OnInit {
-  public characters: Character[] = [];
-  public groupedCharacters: { [key: string]: Character[] } = {};
-  public countries: Country[] = Object.values(Country);
-
-  constructor(private characterService: CharacterService) {
-  }
-
-  ngOnInit() {
-    this.characterService.getCharacters().subscribe((characters: Character[]) => {
-      this.characters = characters;
-      this.groupCharactersByCountry();
-    });
-  }
+export class CharacterListComponent {
+  public countries = signal<Country[]>(Object.values(Country));
+  private characterService = inject(CharacterService);
+  private charactersSignal = this.characterService.getCharacters();
+  public groupedCharacters = computed(() => {
+    const characters = this.charactersSignal();
+    return characters.reduce((acc, character) => {
+      const country: Country = character.country;
+      if (!acc[country]) {
+        acc[country] = [];
+      }
+      acc[country].push(character);
+      return acc;
+    }, {} as { [key: string]: Character[] });
+  });
 
   getPanelConfig(country: Country): CharactersPanelGridConfig {
-    const charactersCount: number = this.groupedCharacters[country]?.length || 0;
+    const charactersCount: number = this.groupedCharacters()[country]?.length || 0;
     const cols: number = Math.min(4, Math.ceil(Math.sqrt(charactersCount)));
     const rows: number = Math.ceil(charactersCount / cols);
 
@@ -98,16 +98,5 @@ export class CharacterListComponent implements OnInit {
 
   trackByCharacter(character: Character): string {
     return character.resourceIdentifier;
-  }
-
-  private groupCharactersByCountry() {
-    this.groupedCharacters = this.characters.reduce((acc, character) => {
-      const country: Country = character.country;
-      if (!acc[country]) {
-        acc[country] = [];
-      }
-      acc[country].push(character);
-      return acc;
-    }, {} as { [key: string]: Character[] });
   }
 }

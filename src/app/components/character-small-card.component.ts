@@ -1,10 +1,20 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectorRef, Component, computed, Input, OnInit, Signal, signal, WritableSignal } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  computed,
+  inject,
+  Input,
+  OnInit,
+  Signal,
+  signal,
+  WritableSignal
+} from '@angular/core';
 import { Router } from '@angular/router';
 
 import { LoaderComponent } from '@/app/components/loader/loader.component';
-import { CHARACTER_RESOURCE_PATH } from '@/app/config/config';
 import { Character } from '@/app/models/Character.model';
+import { AssetsService } from '@/app/services/assets.service';
 
 @Component({
   selector: 'character-small-card',
@@ -71,8 +81,9 @@ import { Character } from '@/app/models/Character.model';
     `]
 })
 export class CharacterSmallCardComponent implements OnInit {
+  private assetsService: AssetsService = inject(AssetsService);
   characterImageUrl: Signal<string> = computed((): string => {
-    return `${CHARACTER_RESOURCE_PATH}${this.character.resourceIdentifier}/${this.character.resourceIdentifier}_portrait.png`;
+    return this.assetsService.getCharacterImage(this.character.resourceIdentifier);
   });
   private isLongNameSignal: WritableSignal<boolean> = signal(false);
   isLongName: Signal<boolean> = computed((): boolean => this.isLongNameSignal());
