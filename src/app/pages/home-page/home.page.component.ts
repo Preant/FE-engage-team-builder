@@ -1,16 +1,25 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, inject } from '@angular/core';
 import { SplitAreaComponent, SplitComponent } from 'angular-split';
 
+import { CharacterListComponent } from '@/app/components/character-list.component';
+import { EmblemsComponent } from '@/app/components/emblems.component';
 import { ResourcesMenuComponent } from '@/app/components/resources-menu.component';
 import { NavbarComponent } from '@/app/header/navbar.component';
+import { ViewType } from '@/app/models/ViewType.enum';
+import { ViewStateService } from '@/app/services/view-state.service';
+
 
 @Component({
   standalone: true,
   imports: [
+    CommonModule,
     ResourcesMenuComponent,
     SplitComponent,
     SplitAreaComponent,
-    NavbarComponent
+    NavbarComponent,
+    CharacterListComponent,
+    EmblemsComponent
   ],
   template: `
         <div class="w-full h-full">
@@ -23,16 +32,20 @@ import { NavbarComponent } from '@/app/header/navbar.component';
                         <app-navbar/>
                     </div>
                     <div class="h-[calc(100vh-48px)]">
-                        <app-resources-menu/>
+                        @if (viewStateService.getCurrentView()() === ViewType.RESOURCES) {
+                            <app-resources-menu/>
+                        } @else if (viewStateService.getCurrentView()() === ViewType.CHARACTERS) {
+                            <character-list/>
+                        } @else if (viewStateService.getCurrentView()() === ViewType.EMBLEMS) {
+                            <app-emblems/>
+                        }
                     </div>
                 </as-split-area>
-
             </as-split>
         </div>
-    `,
-  styles: [`
-    `]
+    `
 })
 export class HomePageComponent {
-
+  viewStateService: ViewStateService = inject(ViewStateService);
+  protected readonly ViewType = ViewType;
 }

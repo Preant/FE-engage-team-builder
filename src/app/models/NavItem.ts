@@ -1,4 +1,6 @@
+import { ViewType } from '@/app/models/ViewType.enum';
+
 export type NavItem = {
     label: string;
-    link: string;
+    viewType: ViewType;
 }

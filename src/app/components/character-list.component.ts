@@ -1,11 +1,14 @@
 import { NgStyle } from '@angular/common';
 import { Component, computed, inject, signal } from '@angular/core';
 
+import { CarouselComponent, CarouselItem } from '@/app/components/carousel.component';
 import { CharacterSmallCardComponent } from '@/app/components/character-small-card.component';
 import { ResourcesPanelGridComponent } from '@/app/components/panel/characters-panel-grid.component';
 import { Character } from '@/app/models/Character.model';
 import { CharactersPanelGridConfig } from '@/app/models/CharactersPanelGridConfig.model';
 import { Country } from '@/app/models/Country.enum';
+import { ImageSize } from '@/app/models/ImageSize.enum';
+import { AssetsService } from '@/app/services/assets.service';
 import { CharacterService } from '@/app/services/character.service';
 
 @Component({
@@ -14,10 +17,13 @@ import { CharacterService } from '@/app/services/character.service';
   imports: [
     NgStyle,
     CharacterSmallCardComponent,
-    ResourcesPanelGridComponent
+    ResourcesPanelGridComponent,
+    CarouselComponent
   ],
   template: `
         <div class="min-h-screen p-6 bg-gradient-to-br from-prussian_blue-400 to-rich_black-600">
+            <app-carousel [items]="getCarouselItems()"
+                          (itemSelected)="handleItemSelected($event)"/>
             <div class="grid grid-cols-1 gap-8">
                 @for (country of countries(); track country) {
                     <div
@@ -71,6 +77,7 @@ import { CharacterService } from '@/app/services/character.service';
 })
 export class CharacterListComponent {
   public countries = signal<Country[]>(Object.values(Country));
+  private assetsService = inject(AssetsService);
   private characterService = inject(CharacterService);
   private charactersSignal = this.characterService.getCharacters();
   public groupedCharacters = computed(() => {
@@ -98,5 +105,19 @@ export class CharacterListComponent {
 
   trackByCharacter(character: Character): string {
     return character.identifier;
+  }
+
+  getCarouselItems(): CarouselItem[] {
+    return this.characterService.getCharacters()().map((character: Character) => ({
+      id: character.id,
+      label: character.name,
+      imageUrl: this.assetsService.getCharacterImage(character.identifier, ImageSize.SMALL)
+    }));
+
+
+  }
+
+  handleItemSelected(id: number): void {
+    console.log('Selected item id:', id);
   }
 }

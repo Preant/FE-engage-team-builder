@@ -5,6 +5,7 @@ import { PanelButtonComponent } from '@/app/components/panel/panel-button.compon
 import { ResourcesPanelGridComponent } from '@/app/components/panel/resources-panel-grid.component';
 import { VideoPlayerComponent } from '@/app/components/video-player/video-player.component';
 import { PanelButton } from '@/app/models/PanelButton.model';
+import { ViewType } from '@/app/models/ViewType.enum';
 
 @Component({
   selector: 'app-resources-menu',
@@ -24,7 +25,7 @@ export class ResourcesMenuComponent {
   public buttons: PanelButton[] = [
     {
       name: 'Characters',
-      link: '/characters',
+      viewType: ViewType.CHARACTERS,
       size: 'large',
       color: 'rich_black',
       gridArea: 'col-span-3 row-span-4',
@@ -34,7 +35,7 @@ export class ResourcesMenuComponent {
     },
     {
       name: 'Classes',
-      link: '/classes',
+      viewType: ViewType.CLASSES,
       size: 'small',
       color: '',
       gridArea: 'col-span-2 row-span-2',
@@ -44,7 +45,7 @@ export class ResourcesMenuComponent {
     },
     {
       name: 'Emblems',
-      link: '/emblems',
+      viewType: ViewType.EMBLEMS,
       size: 'large',
       color: 'paynes_gray',
       gridArea: 'col-span-2 row-span-6',
@@ -54,7 +55,7 @@ export class ResourcesMenuComponent {
     },
     {
       name: 'Skills',
-      link: '/skills',
+      viewType: ViewType.SKILLS,
       size: 'small',
       color: 'air_superiority_blue',
       gridArea: 'col-span-2 row-span-2',
@@ -64,7 +65,7 @@ export class ResourcesMenuComponent {
     },
     {
       name: 'Forging',
-      link: '/forging',
+      viewType: ViewType.FORGING,
       size: 'small',
       color: 'mauve',
       gridArea: 'col-span-1 row-span-4',
@@ -74,7 +75,7 @@ export class ResourcesMenuComponent {
     },
     {
       name: 'Weapons',
-      link: '/weapons',
+      viewType: ViewType.WEAPONS,
       size: 'small',
       color: 'prussian_blue',
       gridArea: 'col-span-2 row-span-2',

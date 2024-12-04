@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component, computed, Input, Signal, signal, WritableSignal } from '@angular/core';
+import { Component, computed, inject, Input, Signal, signal, WritableSignal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 import { PanelButton } from '@/app/models/PanelButton.model';
+import { ViewStateService } from '@/app/services/view-state.service';
 
 @Component({
   selector: 'app-panel-button',
@@ -13,7 +14,7 @@ import { PanelButton } from '@/app/models/PanelButton.model';
                 [ngClass]="classes()"
                 (mouseenter)="onMouseEnter()"
                 (mouseleave)="onMouseLeave()"
-                [routerLink]="button.link"
+                (click)="handleButtonClick()"
                 class="transition-all h-full w-full duration-300 ease-in-out flex items-end justify-center rounded-lg shadow-lg cursor-pointer overflow-hidden relative p-4"
         >
             <div class="absolute inset-0 w-full h-full overflow-hidden">
@@ -48,6 +49,7 @@ import { PanelButton } from '@/app/models/PanelButton.model';
     `]
 })
 export class PanelButtonComponent {
+  viewStateService: ViewStateService = inject(ViewStateService);
     @Input() button!: PanelButton;
     protected textClasses: Signal<string> = computed((): string => `
     ${this.button.size === 'large' ? 'text-4xl sm:text-5xl md:text-6xl' : 'text-xl sm:text-2xl md:text-3xl'}
@@ -66,5 +68,9 @@ export class PanelButtonComponent {
 
     onMouseLeave(): void {
       this.isHovered.set(false);
+    }
+
+    handleButtonClick(): void {
+      this.viewStateService.setView(this.button.viewType);
     }
 }

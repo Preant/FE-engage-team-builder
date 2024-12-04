@@ -1,8 +1,10 @@
 import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 import { NavItem } from '@/app/models/NavItem';
+import { ViewType } from '@/app/models/ViewType.enum';
+import { ViewStateService } from '@/app/services/view-state.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,8 +13,8 @@ import { NavItem } from '@/app/models/NavItem';
   template: `
         <nav class="h-full bg-gradient-to-r from-rich_black-500 to-prussian_blue-500 shadow-lg">
             <div class="container mx-auto flex justify-around items-center">
-                <a routerLink="/"
-                   class="text-mauve-500 text-2xl font-bold inline-flex items-center group transition-all duration-300 ease-in-out transform hover:scale-105">
+                <button (click)="switchViewType(ViewType.RESOURCES)"
+                        class="text-mauve-500 text-2xl font-bold inline-flex items-center group transition-all duration-300 ease-in-out transform hover:scale-105">
                     <img ngSrc="/assets/images/logo.png" alt="Logo" class="h-12 w-12 inline-block mr-2" width="500"
                          priority
                          height="500">
@@ -21,21 +23,21 @@ import { NavItem } from '@/app/models/NavItem';
                             Resources
                         </span>
                     </span>
-                </a>
+                </button>
                 <ul class="flex space-x-6">
                     @for (item of navItems; track $index) {
                         <li>
-                            <a [routerLink]="item.link"
-                               routerLinkActive="text-air_superiority_blue-500 font-bold"
-                               [routerLinkActiveOptions]="{exact: true}"
-                               class="text-mauve-500 hover:text-air_superiority_blue-500 transition-colors duration-300
+                            <button (click)="switchViewType(item.viewType)"
+                                    routerLinkActive="text-air_superiority_blue-500 font-bold"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    class="text-mauve-500 hover:text-air_superiority_blue-500 transition-colors duration-300
                            font-semibold text-m
                            relative after:content-[''] after:absolute after:w-full after:h-0.5
                            after:bg-air_superiority_blue-500 after:left-0 after:bottom-0
                            after:transform after:scale-x-0 after:transition-transform
                            after:duration-300 hover:after:scale-x-100">
                                 {{ item.label }}
-                            </a>
+                            </button>
                         </li>
                     }
 
@@ -55,8 +57,18 @@ import { NavItem } from '@/app/models/NavItem';
     `]
 })
 export class NavbarComponent {
+  viewStateService: ViewStateService = inject(ViewStateService);
   navItems: NavItem[] = [
-    { label: 'TeamBuilder', link: '/teambuilder' },
-    { label: 'Resources', link: '/resources' }
+    { label: 'Characters', viewType: ViewType.CHARACTERS },
+    { label: 'Classes', viewType: ViewType.CLASSES },
+    { label: 'Emblems', viewType: ViewType.EMBLEMS },
+    { label: 'Skills', viewType: ViewType.SKILLS },
+    { label: 'Weapons', viewType: ViewType.WEAPONS },
+    { label: 'Forging', viewType: ViewType.FORGING }
   ];
+  protected readonly ViewType = ViewType;
+
+  public switchViewType(viewType: ViewType): void {
+    this.viewStateService.setView(viewType);
+  }
 }

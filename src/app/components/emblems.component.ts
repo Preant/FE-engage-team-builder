@@ -107,7 +107,7 @@ export class EmblemsComponent {
 }
 
 @Component({
-  selector: 'app-emblem-detail',
+  selector: 'app-emblems',
   standalone: true,
   imports: [CommonModule],
   template: `

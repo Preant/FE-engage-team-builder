@@ -1,6 +1,8 @@
+import { ViewType } from '@/app/models/ViewType.enum';
+
 export interface PanelButton {
     name: string;
-    link: string;
+    viewType: ViewType;
     size: 'large' | 'small';
     color: string;
     gridArea: string;
