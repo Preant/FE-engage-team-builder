@@ -7,6 +7,7 @@ import { VideoPlayerComponent } from '@/app/components/video-player/video-player
 import { PanelButton } from '@/app/models/PanelButton.model';
 
 @Component({
+  selector: 'app-resources',
   standalone: true,
   imports: [CommonModule, ResourcesPanelGridComponent, PanelButtonComponent, VideoPlayerComponent],
   template: `
@@ -19,7 +20,7 @@ import { PanelButton } from '@/app/models/PanelButton.model';
         </div>
     `
 })
-export class ResourcesPageComponent {
+export class ResourcesComponent {
   public buttons: PanelButton[] = [
     {
       name: 'Characters',

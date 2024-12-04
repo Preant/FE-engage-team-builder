@@ -6,6 +6,7 @@ import { AssetsService } from '@/app/services/assets.service';
 import { EmblemService } from '@/app/services/emblem.service';
 
 @Component({
+  selector: 'app-emblems',
   standalone: true,
   imports: [CommonModule, RouterLink],
   template: `
@@ -68,7 +69,7 @@ import { EmblemService } from '@/app/services/emblem.service';
         }
     `]
 })
-export class EmblemsPageComponent {
+export class EmblemsComponent {
   private emblemService = inject(EmblemService);
   public emblems = this.emblemService.getEmblems();
   private assetsService = inject(AssetsService);

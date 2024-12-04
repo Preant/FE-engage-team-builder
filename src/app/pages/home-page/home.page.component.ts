@@ -1,18 +1,19 @@
 import { Component } from '@angular/core';
 
+import { ResourcesComponent } from '@/app/components/resources.component';
+
 @Component({
   standalone: true,
-  imports: [],
+  imports: [
+    ResourcesComponent
+  ],
   template: `
-        <div class="home">
-            Home
+        <div class="w-full h-full">
+            <app-resources/>
         </div>
     `,
   styles: [`
-    .home {
-      padding: 1rem;
-    }
-  `]
+    `]
 })
 export class HomePageComponent {
 

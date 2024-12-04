@@ -4,8 +4,8 @@ export enum WeaponType {
     LANCE = 'LANCE',
     BOW = 'BOW',
     TOME = 'TOME',
-    SPECIAL = 'SPECIAL',
+    DRAGONSTONE = 'DRAGONSTONE',
+    BLAST = 'BLAST',
     ART = 'ART',
-    DAGGER = 'DAGGER',
-    STAFF = 'STAFF'
+    DAGGER = 'DAGGER'
 }

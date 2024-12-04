@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { CharacterListComponent } from '@/app/components/character-list.component';
 
 @Component({
+  selector: 'app-characters',
   standalone: true,
   imports: [
     CharacterListComponent
@@ -13,6 +14,6 @@ import { CharacterListComponent } from '@/app/components/character-list.componen
   styles: `
     `
 })
-export class CharactersPageComponent {
+export class CharactersComponent {
 
 }

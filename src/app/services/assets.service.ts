@@ -15,7 +15,7 @@ export class AssetsService {
   }
 
   getEmblemImage(emblemIdentifier: string): string {
-    return `${EMBLEM_RESOURCE_PATH}${emblemIdentifier}/${emblemIdentifier}_portrait.png`;
+    return `${EMBLEM_RESOURCE_PATH}${emblemIdentifier}/${emblemIdentifier}_body.png`;
   }
 
   getWeaponImage(weaponIdentifier: string): string {

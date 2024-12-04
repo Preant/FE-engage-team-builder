@@ -57,7 +57,7 @@
   {
     "id": 12,
     "name": "Eirika",
-    "resourceIdentifier": "eirika"
+    "resourceIdentifier": "eirika-ephraim"
   },
   {
     "id": 13,
@@ -67,7 +67,7 @@
   {
     "id": 14,
     "name": "Edelgard",
-    "resourceIdentifier": "edelgard"
+    "resourceIdentifier": "three-houses"
   },
   {
     "id": 15,
@@ -97,6 +97,6 @@
   {
     "id": 20,
     "name": "Chrom",
-    "resourceIdentifier": "chrom"
+    "resourceIdentifier": "chrom-robin"
   }
 ]
