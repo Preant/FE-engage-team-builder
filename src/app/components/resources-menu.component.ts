@@ -7,11 +7,11 @@ import { VideoPlayerComponent } from '@/app/components/video-player/video-player
 import { PanelButton } from '@/app/models/PanelButton.model';
 
 @Component({
-  selector: 'app-resources',
+  selector: 'app-resources-menu',
   standalone: true,
   imports: [CommonModule, ResourcesPanelGridComponent, PanelButtonComponent, VideoPlayerComponent],
   template: `
-        <div class="w-full h-full bg-gradient-to-br from-rich_black-500 to-prussian_blue-500 p-4 flex items-center justify-center">
+        <div class="w-full h-full bg-gradient-to-br from-rich_black-500 to-prussian_blue-500 flex items-center justify-center">
             <resources-panel-grid
                     class="h-full"
                     [waitDurationBetweenVideoCycles]="3500"
@@ -20,7 +20,7 @@ import { PanelButton } from '@/app/models/PanelButton.model';
         </div>
     `
 })
-export class ResourcesComponent {
+export class ResourcesMenuComponent {
   public buttons: PanelButton[] = [
     {
       name: 'Characters',
