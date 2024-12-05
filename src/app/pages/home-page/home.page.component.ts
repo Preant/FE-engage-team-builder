@@ -2,9 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { SplitAreaComponent, SplitComponent } from 'angular-split';
 
-import { CharacterListComponent } from '@/app/components/character-list.component';
+import { CharactersComponent } from '@/app/components/characters.component';
 import { EmblemsComponent } from '@/app/components/emblems.component';
 import { ResourcesMenuComponent } from '@/app/components/resources-menu.component';
+import { TeamBuilderComponent } from '@/app/components/teambuilder.component';
 import { NavbarComponent } from '@/app/header/navbar.component';
 import { ViewType } from '@/app/models/ViewType.enum';
 import { ViewStateService } from '@/app/services/view-state.service';
@@ -18,14 +19,15 @@ import { ViewStateService } from '@/app/services/view-state.service';
     SplitComponent,
     SplitAreaComponent,
     NavbarComponent,
-    CharacterListComponent,
-    EmblemsComponent
+    EmblemsComponent,
+    CharactersComponent,
+    TeamBuilderComponent
   ],
   template: `
         <div class="w-full h-full">
             <as-split>
                 <as-split-area [size]="40">
-                    <app-resources-menu/>
+                    <app-team-builder/>
                 </as-split-area>
                 <as-split-area [size]="60">
                     <div class="h-12">
@@ -35,7 +37,7 @@ import { ViewStateService } from '@/app/services/view-state.service';
                         @if (viewStateService.getCurrentView()() === ViewType.RESOURCES) {
                             <app-resources-menu/>
                         } @else if (viewStateService.getCurrentView()() === ViewType.CHARACTERS) {
-                            <character-list/>
+                            <app-characters/>
                         } @else if (viewStateService.getCurrentView()() === ViewType.EMBLEMS) {
                             <app-emblems/>
                         }

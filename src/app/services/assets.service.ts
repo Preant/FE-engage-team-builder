@@ -18,11 +18,12 @@ export class AssetsService {
     return `${CHARACTER_RESOURCE_PATH}${characterIdentifier}/${characterIdentifier}_body.png`;
   }
 
-  getEmblemImage(emblemIdentifier: string, size: ImageSize = ImageSize.SMALL): string {
+  getEmblemImage(identifier: string, secondaryIdentifier: string | undefined, size: ImageSize = ImageSize.SMALL): string {
+    const effectiveIdentifier: string = secondaryIdentifier || identifier;
     if (size === ImageSize.SMALL) {
-      return `${EMBLEM_RESOURCE_PATH}${emblemIdentifier}_small.png`;
+      return `${EMBLEM_RESOURCE_PATH}${identifier}/${effectiveIdentifier}_body_small.png`;
     }
-    return `${EMBLEM_RESOURCE_PATH}${emblemIdentifier}.png`;
+    return `${EMBLEM_RESOURCE_PATH}${identifier}/${effectiveIdentifier}_body.png`;
   }
 
   getWeaponImage(weaponIdentifier: string, _size: ImageSize = ImageSize.SMALL): string {

@@ -57,17 +57,20 @@
   {
     "id": 12,
     "name": "Eirika",
-    "resourceIdentifier": "eirika-ephraim"
+    "resourceIdentifier": "eirika-ephraim",
+    "secondaryResourceIdentifier": "eirika"
   },
   {
     "id": 13,
     "name": "Alear",
-    "resourceIdentifier": "alear"
+    "resourceIdentifier": "alear",
+    "secondaryResourceIdentifier": "alear-f"
   },
   {
     "id": 14,
-    "name": "Edelgard",
-    "resourceIdentifier": "three-houses"
+    "name": "Three Houses",
+    "resourceIdentifier": "three-houses",
+    "secondaryResourceIdentifier": "edelgard"
   },
   {
     "id": 15,
@@ -97,6 +100,7 @@
   {
     "id": 20,
     "name": "Chrom",
-    "resourceIdentifier": "chrom-robin"
+    "resourceIdentifier": "chrom-robin",
+    "secondaryResourceIdentifier": "chrom"
   }
 ]
