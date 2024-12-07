@@ -4,6 +4,7 @@ import { Component, computed, inject, Input, Signal, signal, WritableSignal } fr
 import { Emblem } from '@/app/models/Emblem.model';
 import { ImageSize } from '@/app/models/ImageSize.enum';
 import { AssetsService } from '@/app/services/assets.service';
+import { EmblemService } from '@/app/services/resources.service';
 
 @Component({
   selector: 'emblem-detail',
@@ -20,7 +21,7 @@ import { AssetsService } from '@/app/services/assets.service';
             <div class="relative z-10 max-w-7xl mx-auto p-8">
                 <div class="mb-12 text-left">
                     <h1 class="text-6xl font-bold text-air_superiority_blue-500 mb-4">
-                        {{ emblem.name }}
+                        {{ currentEmblem().name }}
                     </h1>
                 </div>
 
@@ -33,49 +34,62 @@ import { AssetsService } from '@/app/services/assets.service';
                             <div class="space-y-4">
                                 <p class="text-2xl text-paynes_gray-400">
                                     Resource Identifier: <span
-                                        class="text-mauve-500">{{ emblem.identifier }}</span>
+                                        class="text-mauve-500">{{ currentEmblem().identifier }}</span>
                                 </p>
-                                @if (emblem.secondaryIdentifier) {
+                                @if (currentEmblem().secondaryIdentifier) {
                                     <p class="text-2xl text-paynes_gray-400">
                                         Secondary Identifier: <span
-                                            class="text-mauve-500">{{ emblem.secondaryIdentifier }}</span>
+                                            class="text-mauve-500">{{ currentEmblem().secondaryIdentifier }}</span>
                                     </p>
                                 }
                             </div>
                         </div>
                     </div>
                 </div>
+                @if (engageWeapons().length > 0) {
+                    <div class="mt-6">
+                        <h3 class="text-xl font-semibold text-baby_powder-500 mb-4">
+                            Engage Weapons
+                        </h3>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            @for (weapon of engageWeapons(); track weapon.id) {
+                                <div class="bg-gradient-to-br from-gunmetal-400/50 to-gunmetal-600/50 p-4 rounded-lg border border-rich_black-500">
+                                    <div class="flex items-center gap-3">
+                                        <img
+                                                [src]="getWeaponImage(weapon.identifier)"
+                                                [alt]="weapon.name"
+                                                class="w-12 h-12 object-contain"
+                                        />
+                                        <div>
+                                            <h4 class="text-baby_powder-500 font-medium">
+                                                {{ weapon.name }}
+                                            </h4>
+                                            <p class="text-sm text-gunmetal-200">
+                                                {{ weapon.description }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                }
             </div>
         </div>
-    `,
-  styles: [`
-        :host {
-            display: block;
-            width: 100%;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        .fade-in {
-            animation: fadeIn 0.5s ease-out;
-        }
-    `]
+    `
 })
 export class EmblemDetailComponent {
   private emblemSignal: WritableSignal<Emblem> = signal({} as Emblem);
-  private assetsService: AssetsService = inject(AssetsService);
-
-  public emblemImageUrl: Signal<string> = computed((): string =>
+  public currentEmblem: Signal<Emblem> = computed(() => this.emblemSignal());
+  private readonly emblemService = inject(EmblemService);
+  public engageWeapons = computed(() =>
+    this.emblemService.getEngageWeapons(this.currentEmblem().id)()
+  );
+  private readonly assetsService = inject(AssetsService);
+  public emblemImageUrl = computed(() =>
     this.assetsService.getEmblemImage(
-      this.emblemSignal().identifier,
-      this.emblemSignal().secondaryIdentifier,
+      this.currentEmblem().identifier,
+      this.currentEmblem().secondaryIdentifier,
       ImageSize.LARGE
     )
   );
@@ -88,4 +102,8 @@ export class EmblemDetailComponent {
   set emblem(value: Emblem) {
     this.emblemSignal.set(value);
   }
+
+    getWeaponImage(weaponIdentifier: string): string {
+      return this.assetsService.getWeaponImage(weaponIdentifier, ImageSize.SMALL);
+    }
 }

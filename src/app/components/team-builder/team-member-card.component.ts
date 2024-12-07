@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, computed, inject, Input } from '@angular/core';
 
+import { CharacterID, EmblemID, TeamMemberID, WeaponID } from '@/app/brands/ResourceID.brand';
 import { CustomSelectComponent, SelectOption } from '@/app/components/customSelect.component';
 import { ImageSize } from '@/app/models/ImageSize.enum';
 import { ViewType } from '@/app/models/ViewType.enum';
@@ -66,7 +67,7 @@ import { ViewStateService } from '@/app/services/view-state.service';
     `
 })
 export class TeamMemberCardComponent {
-    @Input({ required: true }) memberId!: number;
+    @Input({ required: true }) memberId!: TeamMemberID;
 
     private readonly teamService = inject(TeamService);
     // Core computed values
@@ -146,15 +147,15 @@ export class TeamMemberCardComponent {
     }
 
     // Event handlers
-    onCharacterSelected(option: SelectOption): void {
+    onCharacterSelected(option: SelectOption<CharacterID>): void {
       this.teamService.updateMemberCharacter(this.memberId, option.id);
     }
 
-    onEmblemSelected(option: SelectOption): void {
+    onEmblemSelected(option: SelectOption<EmblemID>): void {
       this.teamService.updateMemberEmblem(this.memberId, option.id);
     }
 
-    onWeaponSelect(option: SelectOption, weaponIndex: number): void {
+    onWeaponSelect(option: SelectOption<WeaponID>, weaponIndex: number): void {
       this.teamService.updateMemberWeapon(this.memberId, weaponIndex, option.id);
     }
 
@@ -167,10 +168,10 @@ export class TeamMemberCardComponent {
       }
     }
 
-    private getResourceSelectOptions(
-      resources: Array<{ id: number; name: string; identifier: string; secondaryIdentifier?: string }>,
+    private getResourceSelectOptions<T>(
+      resources: Array<{ id: T; name: string; identifier: string; secondaryIdentifier?: string }>,
       getImageUrl: (identifier: string, secondaryId?: string) => string
-    ): SelectOption[] {
+    ): SelectOption<T>[] {
       return resources.map(resource => ({
         id: resource.id,
         name: resource.name,

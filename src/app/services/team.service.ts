@@ -1,21 +1,27 @@
 import { computed, Injectable, signal } from '@angular/core';
 
-import { CharacterService, EmblemService, WeaponService } from './resources.service';
-
+import { brandAs } from '@/app/brands/brandAs';
+import { CharacterID, EmblemID, TeamMemberID, WeaponID } from '@/app/brands/ResourceID.brand';
 import { Team } from '@/app/models/Team.model';
+import { CharacterService, EmblemService, WeaponService } from '@/app/services/resources.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TeamService {
-  readonly members = computed(() => this.team().members);
   private readonly teamSignal = signal<Team>({
-    id: 1,
+    id: brandAs.TeamID(1),
     members: [
-      { id: 1, characterId: null, emblemId: null, weaponIds: [null, null, null, null] }
+      {
+        id: brandAs.TeamMemberID(1),
+        characterId: null,
+        emblemId: null,
+        weaponIds: [null, null, null, null]
+      }
     ]
   });
   readonly team = computed(() => this.teamSignal());
+  readonly members = computed(() => this.team().members);
 
   constructor(
         private characterService: CharacterService,
@@ -24,12 +30,12 @@ export class TeamService {
   ) {
   }
 
-  readonly getMemberById = (id: number) => computed(() =>
+  readonly getMemberById = (id: TeamMemberID) => computed(() =>
     this.members().find(m => m.id === id)
   );
 
   // Actions
-  updateMemberCharacter(memberId: number, characterId: number | null) {
+  updateMemberCharacter(memberId: TeamMemberID, characterId: CharacterID | null) {
     this.teamSignal.update(team => ({
       ...team,
       members: team.members.map(member =>
@@ -40,7 +46,7 @@ export class TeamService {
     }));
   }
 
-  updateMemberEmblem(memberId: number, emblemId: number | null) {
+  updateMemberEmblem(memberId: TeamMemberID, emblemId: EmblemID | null) {
     this.teamSignal.update(team => ({
       ...team,
       members: team.members.map(member =>
@@ -51,7 +57,7 @@ export class TeamService {
     }));
   }
 
-  updateMemberWeapon(memberId: number, weaponIndex: number, weaponId: number | null) {
+  updateMemberWeapon(memberId: TeamMemberID, weaponIndex: number, weaponId: WeaponID | null) {
     this.teamSignal.update(team => ({
       ...team,
       members: team.members.map(member =>
@@ -68,46 +74,48 @@ export class TeamService {
   }
 
   // Computed values for UI
-  getAvailableCharacters = (memberId: number) => computed(() => {
-    const usedIds = new Set(
+  getAvailableCharacters = (memberId: TeamMemberID) => computed(() => {
+    const usedIds = new Set<CharacterID>(
       this.members()
         .filter(m => m.id !== memberId)
         .map(m => m.characterId)
-        .filter((id): id is number => id !== null)
+        .filter((id): id is CharacterID => id !== null)
     );
 
     return this.characterService.getResources()()
       .filter(char => !usedIds.has(char.id));
   });
 
-  getAvailableEmblems = (memberId: number) => computed(() => {
-    const usedIds = new Set(
+  getAvailableEmblems = (memberId: TeamMemberID) => computed(() => {
+    const usedIds = new Set<EmblemID>(
       this.members()
         .filter(m => m.id !== memberId)
         .map(m => m.emblemId)
-        .filter((id): id is number => id !== null)
+        .filter((id): id is EmblemID => id !== null)
     );
 
     return this.emblemService.getResources()()
       .filter(emblem => !usedIds.has(emblem.id));
   });
 
-  getAvailableWeapons = (memberId: number, weaponSlotIndex: number) => computed(() => {
+  getAvailableWeapons = (memberId: TeamMemberID, weaponSlotIndex: number) => computed(() => {
     const member = this.getMemberById(memberId)();
     if (!member) {
       return [];
     }
 
-    const selectedWeaponIds = new Set(
+    const selectedWeaponIds = new Set<WeaponID>(
       member.weaponIds
-        .filter((id, index) => index !== weaponSlotIndex && id !== null)
+        .filter((id, index): id is WeaponID =>
+          index !== weaponSlotIndex && id !== null
+        )
     );
 
     return this.weaponService.getResources()()
       .filter(weapon => !selectedWeaponIds.has(weapon.id));
   });
 
-  getMemberWeapons = (memberId: number) => computed(() => {
+  getMemberWeapons = (memberId: TeamMemberID) => computed(() => {
     const member = this.getMemberById(memberId)();
     if (!member) {
       return [];

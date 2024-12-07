@@ -1,6 +1,9 @@
-export type Emblem = {
-    id: number;
+import { EmblemID, WeaponID } from '@/app/brands/ResourceID.brand';
+import { Resource } from '@/app/models/Resource.model';
+
+export type Emblem = Resource & {
+    id: EmblemID;
     name: string;
-    identifier: string;
     secondaryIdentifier: string | undefined;
+    engageWeapons: WeaponID[];
 }

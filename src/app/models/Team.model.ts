@@ -1,11 +1,13 @@
+import { CharacterID, EmblemID, TeamID, TeamMemberID, WeaponID } from '@/app/brands/ResourceID.brand';
+
 export type TeamMember = {
-    id: number;
-    characterId: number | null;
-    emblemId: number | null;
-    weaponIds: (number | null)[];
+    id: TeamMemberID;
+    characterId: CharacterID | null;
+    emblemId: EmblemID | null;
+    weaponIds: (WeaponID | null)[];
 }
 
 export type Team = {
-    id: number;
+    id: TeamID;
     members: TeamMember[];
 }

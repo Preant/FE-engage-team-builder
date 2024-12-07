@@ -1370,7 +1370,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 45,
+    "id": 68,
     "identifier": "siegmund",
     "name": "Siegmund",
     "might": 13,
@@ -1392,7 +1392,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 46,
+    "id": 69,
     "identifier": "areadbhar-dimitri",
     "name": "Areadbhar",
     "might": 14,
@@ -1412,7 +1412,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 47,
+    "id": 70,
     "identifier": "compact-axe",
     "name": "Compact Axe",
     "might": 6,
@@ -1432,7 +1432,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 48,
+    "id": 71,
     "identifier": "iron-axe",
     "name": "Iron Axe",
     "might": 9,
@@ -1452,7 +1452,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 49,
+    "id": 72,
     "identifier": "steel-axe",
     "name": "Steel Axe",
     "might": 13,
@@ -1472,7 +1472,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 50,
+    "id": 73,
     "identifier": "silver-axe",
     "name": "Silver Axe",
     "might": 16,
@@ -1492,7 +1492,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 51,
+    "id": 74,
     "identifier": "hand-axe",
     "name": "Hand Axe",
     "might": 7,
@@ -1512,7 +1512,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 52,
+    "id": 75,
     "identifier": "hammer",
     "name": "Hammer",
     "might": 9,
@@ -1534,7 +1534,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 53,
+    "id": 76,
     "identifier": "poleaxe",
     "name": "Poleaxe",
     "might": 8,
@@ -1556,7 +1556,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 54,
+    "id": 77,
     "identifier": "killer-axe",
     "name": "Killer Axe",
     "might": 11,
@@ -1576,7 +1576,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 55,
+    "id": 78,
     "identifier": "tomahawk",
     "name": "Tomahawk",
     "might": 14,
@@ -1596,7 +1596,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 56,
+    "id": 79,
     "identifier": "brave-axe",
     "name": "Brave Axe",
     "might": 6,
@@ -1616,7 +1616,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 57,
+    "id": 80,
     "identifier": "fragarach",
     "name": "Fragarach",
     "might": 19,
@@ -1636,7 +1636,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 58,
+    "id": 81,
     "identifier": "iron-greataxe",
     "name": "Iron Greataxe",
     "might": 18,
@@ -1656,7 +1656,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 59,
+    "id": 82,
     "identifier": "steel-greataxe",
     "name": "Steel Greataxe",
     "might": 26,
@@ -1676,7 +1676,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 60,
+    "id": 83,
     "identifier": "silver-greataxe",
     "name": "Silver Greataxe",
     "might": 32,
@@ -1696,7 +1696,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 61,
+    "id": 84,
     "identifier": "hurricane-axe",
     "name": "Hurricane Axe",
     "might": 20,
@@ -1718,7 +1718,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 62,
+    "id": 85,
     "identifier": "ukonvasara",
     "name": "Ukonvasara",
     "might": 38,
@@ -1738,7 +1738,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 63,
+    "id": 86,
     "identifier": "revanche",
     "name": "Revanche",
     "might": 10,
@@ -1758,7 +1758,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 64,
+    "id": 87,
     "identifier": "noatun",
     "name": "Nóatún",
     "might": 14,
@@ -1778,7 +1778,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 65,
+    "id": 88,
     "identifier": "lollichop",
     "name": "Lollichop",
     "might": 11,
@@ -1798,7 +1798,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 66,
+    "id": 89,
     "identifier": "killer-axe-leif",
     "name": "Killer Axe - Leif",
     "might": 11,
@@ -1818,7 +1818,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 67,
+    "id": 90,
     "identifier": "hammer-ike",
     "name": "Hammer - Ike",
     "might": 18,
@@ -1840,7 +1840,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 68,
+    "id": 91,
     "identifier": "urvan",
     "name": "Urvan",
     "might": 21,
@@ -1860,7 +1860,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 69,
+    "id": 92,
     "identifier": "aymr-edelgard",
     "name": "Aymr - Edelgard",
     "might": 24,
@@ -1882,7 +1882,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 74,
+    "id": 93,
     "identifier": "aymr-byleth",
     "name": "Aymr - Byleth",
     "might": 22,
@@ -1904,7 +1904,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 70,
+    "id": 94,
     "identifier": "wolf-beil",
     "name": "Wolf Beil",
     "might": 10,
@@ -1927,7 +1927,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 71,
+    "id": 95,
     "identifier": "armads",
     "name": "Armads",
     "might": 22,
@@ -1949,7 +1949,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 72,
+    "id": 96,
     "identifier": "bolt-axe",
     "name": "Bolt Axe",
     "might": 14,
@@ -1969,7 +1969,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 73,
+    "id": 97,
     "identifier": "camillas-axe",
     "name": "Camilla's Axe",
     "might": 19,
@@ -1989,7 +1989,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 74,
+    "id": 98,
     "identifier": "mini-bow",
     "name": "Mini Bow",
     "might": 3,
@@ -2011,7 +2011,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 75,
+    "id": 99,
     "identifier": "iron-bow",
     "name": "Iron Bow",
     "might": 6,
@@ -2033,7 +2033,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 76,
+    "id": 100,
     "identifier": "steel-bow",
     "name": "Steel Bow",
     "might": 10,
@@ -2055,7 +2055,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 77,
+    "id": 101,
     "identifier": "silver-bow",
     "name": "Silver Bow",
     "might": 13,
@@ -2077,7 +2077,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 78,
+    "id": 102,
     "identifier": "longbow",
     "name": "Longbow",
     "might": 7,
@@ -2099,7 +2099,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 79,
+    "id": 103,
     "identifier": "killer-bow",
     "name": "Killer Bow",
     "might": 7,
@@ -2121,7 +2121,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 80,
+    "id": 104,
     "identifier": "radiant-bow",
     "name": "Radiant Bow",
     "might": 19,
@@ -2143,7 +2143,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 81,
+    "id": 105,
     "identifier": "brave-bow",
     "name": "Brave Bow",
     "might": 4,
@@ -2165,7 +2165,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 82,
+    "id": 106,
     "identifier": "lendabair",
     "name": "Lendabair",
     "might": 16,
@@ -2187,7 +2187,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 83,
+    "id": 107,
     "identifier": "croissbow",
     "name": "Croissbow",
     "might": 8,
@@ -2209,7 +2209,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 84,
+    "id": 108,
     "identifier": "master-bow",
     "name": "Master Bow",
     "might": 6,
@@ -2231,7 +2231,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 85,
+    "id": 109,
     "identifier": "parthia",
     "name": "Parthia",
     "might": 17,
@@ -2253,7 +2253,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 86,
+    "id": 110,
     "identifier": "killer-bow-lyn",
     "name": "Killer Bow",
     "might": 9,
@@ -2275,7 +2275,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 87,
+    "id": 111,
     "identifier": "mulagir",
     "name": "Mulagir",
     "might": 16,
@@ -2298,7 +2298,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 88,
+    "id": 112,
     "identifier": "failnaught-byleth",
     "name": "Failnaught",
     "might": 13,
@@ -2321,7 +2321,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 89,
+    "id": 113,
     "identifier": "failnaught-claude",
     "name": "Failnaught",
     "might": 13,
@@ -2344,7 +2344,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 90,
+    "id": 114,
     "identifier": "short-knife",
     "name": "Short Knife",
     "might": 3,
@@ -2364,7 +2364,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 91,
+    "id": 115,
     "identifier": "iron-dagger",
     "name": "Iron Dagger",
     "might": 5,
@@ -2384,7 +2384,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 92,
+    "id": 116,
     "identifier": "steel-dagger",
     "name": "Steel Dagger",
     "might": 7,
@@ -2404,7 +2404,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 93,
+    "id": 117,
     "identifier": "silver-dagger",
     "name": "Silver Dagger",
     "might": 10,
@@ -2424,7 +2424,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 94,
+    "id": 118,
     "identifier": "kard",
     "name": "Kard",
     "might": 5,
@@ -2444,7 +2444,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 95,
+    "id": 119,
     "identifier": "stiletto",
     "name": "Stiletto",
     "might": 9,
@@ -2464,7 +2464,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 96,
+    "id": 120,
     "identifier": "peshkatz",
     "name": "Peshkatz",
     "might": 12,
@@ -2484,7 +2484,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 97,
+    "id": 121,
     "identifier": "misericorde",
     "name": "Misericorde",
     "might": 7,
@@ -2504,7 +2504,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 98,
+    "id": 122,
     "identifier": "cinquedea",
     "name": "Cinquedea",
     "might": 13,
@@ -2524,7 +2524,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 99,
+    "id": 123,
     "identifier": "carnwenhan",
     "name": "Carnwenhan",
     "might": 28,
@@ -2544,7 +2544,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 100,
+    "id": 124,
     "identifier": "confectioknife",
     "name": "Confectioknife",
     "might": 6,
@@ -2564,7 +2564,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 101,
+    "id": 125,
     "identifier": "surge",
     "name": "Surge",
     "might": 7,
@@ -2584,7 +2584,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 102,
+    "id": 126,
     "identifier": "fire",
     "name": "Fire",
     "might": 5,
@@ -2604,7 +2604,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 103,
+    "id": 127,
     "identifier": "thunder",
     "name": "Thunder",
     "might": 5,
@@ -2624,7 +2624,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 104,
+    "id": 128,
     "identifier": "wind",
     "name": "Wind",
     "might": 4,
@@ -2646,7 +2646,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 105,
+    "id": 129,
     "identifier": "elsurge",
     "name": "Elsurge",
     "might": 13,
@@ -2666,7 +2666,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 106,
+    "id": 130,
     "identifier": "elfire",
     "name": "Elfire",
     "might": 11,
@@ -2686,7 +2686,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 107,
+    "id": 131,
     "identifier": "elthunder",
     "name": "Elthunder",
     "might": 11,
@@ -2706,7 +2706,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 108,
+    "id": 132,
     "identifier": "elwind",
     "name": "Elwind",
     "might": 7,
@@ -2728,7 +2728,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 109,
+    "id": 133,
     "identifier": "bolganone",
     "name": "Bolganone",
     "might": 16,
@@ -2748,7 +2748,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 110,
+    "id": 134,
     "identifier": "thoron",
     "name": "Thoron",
     "might": 18,
@@ -2768,7 +2768,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 111,
+    "id": 135,
     "identifier": "excalibur",
     "name": "Excalibur",
     "might": 10,
@@ -2790,7 +2790,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 112,
+    "id": 136,
     "identifier": "nova",
     "name": "Nova",
     "might": 5,
@@ -2810,7 +2810,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 113,
+    "id": 137,
     "identifier": "meteor",
     "name": "Meteor",
     "might": 13,
@@ -2830,7 +2830,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 114,
+    "id": 138,
     "identifier": "obscurite",
     "name": "Obscurité",
     "might": 14,
@@ -2850,7 +2850,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 115,
+    "id": 139,
     "identifier": "tiramistorm",
     "name": "Tiramistorm",
     "might": 8,
@@ -2870,7 +2870,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 116,
+    "id": 140,
     "identifier": "seraphim",
     "name": "Seraphim",
     "might": 6,
@@ -2892,7 +2892,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 117,
+    "id": 141,
     "identifier": "ragnarok",
     "name": "Ragnarok",
     "might": 15,
@@ -2912,7 +2912,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 118,
+    "id": 142,
     "identifier": "shine",
     "name": "Shine",
     "might": 7,
@@ -2932,7 +2932,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 119,
+    "id": 143,
     "identifier": "nosferatu",
     "name": "Nosferatu",
     "might": 9,
@@ -2952,7 +2952,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 120,
+    "id": 144,
     "identifier": "thani",
     "name": "Thani",
     "might": 11,
@@ -2975,7 +2975,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 121,
+    "id": 145,
     "identifier": "hlidskjalf",
     "name": "Hliðskjálf",
     "might": 13,
@@ -2995,7 +2995,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 122,
+    "id": 146,
     "identifier": "elivagar",
     "name": "Élivágar",
     "might": 18,
@@ -3015,7 +3015,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 123,
+    "id": 147,
     "identifier": "bolting",
     "name": "Bolting",
     "might": 25,
@@ -3035,7 +3035,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 124,
+    "id": 148,
     "identifier": "rexcalibur",
     "name": "Rexcalibur",
     "might": 16,
@@ -3057,7 +3057,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 125,
+    "id": 149,
     "identifier": "lightning",
     "name": "Lightning",
     "might": 3,
@@ -3077,7 +3077,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 126,
+    "id": 150,
     "identifier": "thoron-robin",
     "name": "Thoron",
     "might": 14,
@@ -3097,7 +3097,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 127,
+    "id": 151,
     "identifier": "initiate-art",
     "name": "Initiate Art",
     "might": 5,
@@ -3117,7 +3117,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 128,
+    "id": 152,
     "identifier": "iron-body-art",
     "name": "Iron-Body Art",
     "might": 2,
@@ -3137,7 +3137,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 129,
+    "id": 153,
     "identifier": "steel-hand-art",
     "name": "Steel-Hand Art",
     "might": 5,
@@ -3157,7 +3157,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 130,
+    "id": 154,
     "identifier": "silver-spirit-art",
     "name": "Silver-Spirit Art",
     "might": 8,
@@ -3177,7 +3177,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 131,
+    "id": 155,
     "identifier": "shielding-art",
     "name": "Shielding Art",
     "might": 4,
@@ -3197,7 +3197,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 132,
+    "id": 156,
     "identifier": "flashing-fist-art",
     "name": "Flashing Fist Art",
     "might": 9,
@@ -3217,7 +3217,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 133,
+    "id": 157,
     "identifier": "divine-fist-art",
     "name": "Divine Fist Art",
     "might": 11,
@@ -3237,7 +3237,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 134,
+    "id": 158,
     "identifier": "scrollcake",
     "name": "Scrollcake",
     "might": 3,
@@ -3257,7 +3257,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 135,
+    "id": 159,
     "identifier": "vajra-mushti",
     "name": "Vajra-Mushti",
     "might": 5,
@@ -3277,7 +3277,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 136,
+    "id": 160,
     "identifier": "dragons-fist",
     "name": "Dragon's Fist",
     "might": 10,
@@ -3297,7 +3297,7 @@
     "isEngageWeapon": true
   },
   {
-    "id": 137,
+    "id": 161,
     "identifier": "fell-stone",
     "name": "Fell Stone",
     "might": 10,
@@ -3317,7 +3317,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 138,
+    "id": 162,
     "identifier": "fell-ruinstone",
     "name": "Fell Ruinstone",
     "might": 6,
@@ -3337,7 +3337,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 139,
+    "id": 163,
     "identifier": "fell-magicstone",
     "name": "Fell Magicstone",
     "might": 6,
@@ -3357,7 +3357,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 140,
+    "id": 164,
     "identifier": "fell-slaystone",
     "name": "Fell Slaystone",
     "might": 6,
@@ -3379,7 +3379,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 141,
+    "id": 165,
     "identifier": "fell-weightstone",
     "name": "Fell Weightstone",
     "might": 6,
@@ -3401,7 +3401,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 142,
+    "id": 166,
     "identifier": "standard-blast",
     "name": "Standard Blast",
     "might": 5,
@@ -3421,7 +3421,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 143,
+    "id": 167,
     "identifier": "magic-blast",
     "name": "Magic Blast",
     "might": 5,
@@ -3441,7 +3441,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 144,
+    "id": 168,
     "identifier": "freeze-blast",
     "name": "Freeze Blast",
     "might": 3,
@@ -3461,7 +3461,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 145,
+    "id": 169,
     "identifier": "silence-blast",
     "name": "Silence Blast",
     "might": 3,
@@ -3481,7 +3481,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 146,
+    "id": 170,
     "identifier": "break-blast",
     "name": "Break Blast",
     "might": 3,
@@ -3501,7 +3501,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 147,
+    "id": 171,
     "identifier": "venom-blast",
     "name": "Venom Blast",
     "might": 3,
@@ -3521,7 +3521,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 148,
+    "id": 172,
     "identifier": "tornado-blast",
     "name": "Tornado Blast",
     "might": 6,
@@ -3543,7 +3543,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 149,
+    "id": 173,
     "identifier": "armor-blast",
     "name": "Armor Blast",
     "might": 6,
@@ -3565,7 +3565,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 150,
+    "id": 174,
     "identifier": "rider-blast",
     "name": "Rider Blast",
     "might": 6,
@@ -3587,7 +3587,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 151,
+    "id": 175,
     "identifier": "wyrm-blast",
     "name": "Wyrm Blast",
     "might": 6,
@@ -3609,7 +3609,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 152,
+    "id": 176,
     "identifier": "holy-blast",
     "name": "Holy Blast",
     "might": 6,
@@ -3631,7 +3631,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 153,
+    "id": 177,
     "identifier": "mighty-blast",
     "name": "Mighty Blast",
     "might": 10,
@@ -3651,7 +3651,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 154,
+    "id": 178,
     "identifier": "eldritch-blast",
     "name": "Eldritch Blast",
     "might": 10,
@@ -3671,7 +3671,7 @@
     "isEngageWeapon": false
   },
   {
-    "id": 155,
+    "id": 179,
     "identifier": "piercing-blast",
     "name": "Piercing Blast",
     "might": 20,

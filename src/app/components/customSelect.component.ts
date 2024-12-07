@@ -11,8 +11,8 @@ import {
   WritableSignal
 } from '@angular/core';
 
-export type SelectOption = {
-    id: number;
+export type SelectOption<T> = {
+    id: T;
     name: string;
     iconUrl: string;
 }
@@ -111,15 +111,15 @@ export type SelectOption = {
         }
     `]
 })
-export class CustomSelectComponent {
-    @Input() options: SelectOption[] = [];
+export class CustomSelectComponent<T> {
+    @Input() options: SelectOption<T>[] = [];
     @Input() placeholder: string = 'Select an option';
     @Input({ required: true }) selectedId: number | string | null = null;
-    @Input() selectedOption: SelectOption | null = null;  // New input for the selected option
-    @Output() selectionChange: EventEmitter<SelectOption> = new EventEmitter<SelectOption>();
+    @Input() selectedOption: SelectOption<T> | null = null;
+    @Output() selectionChange: EventEmitter<SelectOption<T>> = new EventEmitter<SelectOption<T>>();
 
-    private displayOptionSignal: WritableSignal<SelectOption | null> = signal<SelectOption | null>(null);
-    displayOption: Signal<SelectOption | null> = this.displayOptionSignal.asReadonly();
+    private displayOptionSignal: WritableSignal<SelectOption<T> | null> = signal<SelectOption<T> | null>(null);
+    displayOption: Signal<SelectOption<T> | null> = this.displayOptionSignal.asReadonly();
 
     private isOpenSignal: WritableSignal<boolean> = signal(false);
     isOpen: Signal<boolean> = this.isOpenSignal.asReadonly();
@@ -152,7 +152,7 @@ export class CustomSelectComponent {
       this.isOpenSignal.update(value => !value);
     }
 
-    selectOption(option: SelectOption): void {
+    selectOption(option: SelectOption<T>): void {
       this.displayOptionSignal.set(option);
       this.selectionChange.emit(option);
       this.isOpenSignal.set(false);

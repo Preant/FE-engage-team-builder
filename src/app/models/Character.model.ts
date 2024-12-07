@@ -1,11 +1,11 @@
-import { Country } from './Country.enum';
-import { StatSheet } from './StatSheet.model';
+import { CharacterID } from '@/app/brands/ResourceID.brand';
+import { Resource } from '@/app/models/Resource.model';
+import { StatSheet } from '@/app/models/StatSheet.model';
 
-export type Character = {
-    id: number;
-    identifier: string;
+export type Character = Resource & {
+    id: CharacterID;
     name: string;
-    country: Country;
-    growth: StatSheet;
+    country: string;
     base: StatSheet;
+    growth: StatSheet;
 }

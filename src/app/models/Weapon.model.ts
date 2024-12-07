@@ -1,9 +1,11 @@
+import { Resource } from './Resource.model';
+
+import { WeaponID } from '@/app/brands/ResourceID.brand';
 import { EfficiencyType } from '@/app/models/EfficiencyType.enum';
 import { WeaponType } from '@/app/models/WeaponType.enum';
 
-export type Weapon = {
-    id: number;
-    identifier: string;
+export type Weapon = Resource & {
+    id: WeaponID;
     name: string;
     might: number;
     hit: number;

@@ -2,105 +2,204 @@
   {
     "id": 1,
     "name": "Marth",
-    "identifier": "marth"
+    "identifier": "marth",
+    "engageWeapons": [
+      20,
+      21,
+      22
+    ]
   },
   {
     "id": 2,
     "name": "Sigurd",
-    "identifier": "sigurd"
+    "identifier": "sigurd",
+    "engageWeapons": [
+      63,
+      64,
+      23
+    ]
   },
   {
     "id": 3,
     "name": "Celica",
-    "identifier": "celica"
+    "identifier": "celica",
+    "engageWeapons": [
+      140,
+      141
+    ]
   },
   {
     "id": 4,
     "name": "Micaiah",
-    "identifier": "micaiah"
+    "identifier": "micaiah",
+    "engageWeapons": [
+      142,
+      143,
+      144
+    ]
   },
   {
     "id": 5,
     "name": "Roy",
-    "identifier": "roy"
+    "identifier": "roy",
+    "engageWeapons": [
+      24,
+      25,
+      26
+    ]
   },
   {
     "id": 6,
     "name": "Leif",
-    "identifier": "leif"
+    "identifier": "leif",
+    "engageWeapons": [
+      89,
+      65,
+      27,
+      108
+    ]
   },
   {
     "id": 7,
     "name": "Lucina",
-    "identifier": "lucina"
+    "identifier": "lucina",
+    "engageWeapons": [
+      28,
+      109,
+      29
+    ]
   },
   {
     "id": 8,
     "name": "Lyn",
-    "identifier": "lyn"
+    "identifier": "lyn",
+    "engageWeapons": [
+      110,
+      30,
+      111
+    ]
   },
   {
     "id": 9,
     "name": "Ike",
-    "identifier": "ike"
+    "identifier": "ike",
+    "engageWeapons": [
+      90,
+      91,
+      31
+    ]
   },
   {
     "id": 10,
     "name": "Byleth",
-    "identifier": "byleth"
+    "identifier": "byleth",
+    "engageWeapons": [
+      32,
+      66,
+      67,
+      93,
+      112,
+      159,
+      33
+    ]
   },
   {
     "id": 11,
     "name": "Corrin",
-    "identifier": "corrin"
+    "identifier": "corrin",
+    "engageWeapons": [
+      34,
+      35,
+      36
+    ]
   },
   {
     "id": 12,
     "name": "Eirika",
     "identifier": "eirika-ephraim",
-    "secondaryIdentifier": "eirika"
+    "secondaryIdentifier": "eirika",
+    "engageWeapons": [
+      37,
+      38,
+      39,
+      68
+    ]
   },
   {
     "id": 13,
     "name": "Alear",
     "identifier": "alear",
-    "secondaryIdentifier": "alear-f"
+    "secondaryIdentifier": "alear-f",
+    "engageWeapons": [
+      41,
+      160,
+      40
+    ]
   },
   {
     "id": 14,
     "name": "Three Houses",
     "identifier": "three-houses",
-    "secondaryIdentifier": "edelgard"
+    "secondaryIdentifier": "edelgard",
+    "engageWeapons": [
+      92,
+      67,
+      112
+    ]
   },
   {
     "id": 15,
     "name": "Tiki",
-    "identifier": "tiki"
+    "identifier": "tiki",
+    "engageWeapons": []
   },
   {
     "id": 16,
     "name": "Hector",
-    "identifier": "hector"
+    "identifier": "hector",
+    "engageWeapons": [
+      94,
+      42,
+      95
+    ]
   },
   {
     "id": 17,
     "name": "Veronica",
-    "identifier": "veronica"
+    "identifier": "veronica",
+    "engageWeapons": [
+      145,
+      146
+    ]
   },
   {
     "id": 18,
     "name": "Soren",
-    "identifier": "soren"
+    "identifier": "soren",
+    "engageWeapons": [
+      147,
+      148
+    ]
   },
   {
     "id": 19,
     "name": "Camilla",
-    "identifier": "camilla"
+    "identifier": "camilla",
+    "engageWeapons": [
+      96,
+      149,
+      97
+    ]
   },
   {
     "id": 20,
     "name": "Chrom",
     "identifier": "chrom-robin",
-    "secondaryIdentifier": "chrom"
+    "secondaryIdentifier": "chrom",
+    "engageWeapons": [
+      44,
+      43,
+      150
+    ]
   }
 ]
