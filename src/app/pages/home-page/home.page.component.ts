@@ -5,11 +5,10 @@ import { SplitAreaComponent, SplitComponent } from 'angular-split';
 import { CharactersComponent } from '@/app/components/characters.component';
 import { EmblemsComponent } from '@/app/components/emblems.component';
 import { ResourcesMenuComponent } from '@/app/components/resources-menu.component';
-import { TeamBuilderComponent } from '@/app/components/teambuilder.component';
+import { TeamBuilderComponent } from '@/app/components/team-builder/teambuilder.component';
 import { NavbarComponent } from '@/app/header/navbar.component';
 import { ViewType } from '@/app/models/ViewType.enum';
 import { ViewStateService } from '@/app/services/view-state.service';
-
 
 @Component({
   standalone: true,
@@ -26,10 +25,10 @@ import { ViewStateService } from '@/app/services/view-state.service';
   template: `
         <div class="w-full h-full">
             <as-split>
-                <as-split-area [size]="40">
+                <as-split-area [size]="60">
                     <app-team-builder/>
                 </as-split-area>
-                <as-split-area [size]="60">
+                <as-split-area [size]="40">
                     <div class="h-12">
                         <app-navbar/>
                     </div>

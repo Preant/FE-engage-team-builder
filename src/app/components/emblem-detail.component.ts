@@ -33,12 +33,12 @@ import { AssetsService } from '@/app/services/assets.service';
                             <div class="space-y-4">
                                 <p class="text-2xl text-paynes_gray-400">
                                     Resource Identifier: <span
-                                        class="text-mauve-500">{{ emblem.resourceIdentifier }}</span>
+                                        class="text-mauve-500">{{ emblem.identifier }}</span>
                                 </p>
-                                @if (emblem.secondaryResourceIdentifier) {
+                                @if (emblem.secondaryIdentifier) {
                                     <p class="text-2xl text-paynes_gray-400">
                                         Secondary Identifier: <span
-                                            class="text-mauve-500">{{ emblem.secondaryResourceIdentifier }}</span>
+                                            class="text-mauve-500">{{ emblem.secondaryIdentifier }}</span>
                                     </p>
                                 }
                             </div>
@@ -74,8 +74,8 @@ export class EmblemDetailComponent {
 
   public emblemImageUrl: Signal<string> = computed((): string =>
     this.assetsService.getEmblemImage(
-      this.emblemSignal().resourceIdentifier,
-      this.emblemSignal().secondaryResourceIdentifier,
+      this.emblemSignal().identifier,
+      this.emblemSignal().secondaryIdentifier,
       ImageSize.LARGE
     )
   );

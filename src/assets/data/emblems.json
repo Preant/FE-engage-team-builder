@@ -2,105 +2,105 @@
   {
     "id": 1,
     "name": "Marth",
-    "resourceIdentifier": "marth"
+    "identifier": "marth"
   },
   {
     "id": 2,
     "name": "Sigurd",
-    "resourceIdentifier": "sigurd"
+    "identifier": "sigurd"
   },
   {
     "id": 3,
     "name": "Celica",
-    "resourceIdentifier": "celica"
+    "identifier": "celica"
   },
   {
     "id": 4,
     "name": "Micaiah",
-    "resourceIdentifier": "micaiah"
+    "identifier": "micaiah"
   },
   {
     "id": 5,
     "name": "Roy",
-    "resourceIdentifier": "roy"
+    "identifier": "roy"
   },
   {
     "id": 6,
     "name": "Leif",
-    "resourceIdentifier": "leif"
+    "identifier": "leif"
   },
   {
     "id": 7,
     "name": "Lucina",
-    "resourceIdentifier": "lucina"
+    "identifier": "lucina"
   },
   {
     "id": 8,
     "name": "Lyn",
-    "resourceIdentifier": "lyn"
+    "identifier": "lyn"
   },
   {
     "id": 9,
     "name": "Ike",
-    "resourceIdentifier": "ike"
+    "identifier": "ike"
   },
   {
     "id": 10,
     "name": "Byleth",
-    "resourceIdentifier": "byleth"
+    "identifier": "byleth"
   },
   {
     "id": 11,
     "name": "Corrin",
-    "resourceIdentifier": "corrin"
+    "identifier": "corrin"
   },
   {
     "id": 12,
     "name": "Eirika",
-    "resourceIdentifier": "eirika-ephraim",
-    "secondaryResourceIdentifier": "eirika"
+    "identifier": "eirika-ephraim",
+    "secondaryIdentifier": "eirika"
   },
   {
     "id": 13,
     "name": "Alear",
-    "resourceIdentifier": "alear",
-    "secondaryResourceIdentifier": "alear-f"
+    "identifier": "alear",
+    "secondaryIdentifier": "alear-f"
   },
   {
     "id": 14,
     "name": "Three Houses",
-    "resourceIdentifier": "three-houses",
-    "secondaryResourceIdentifier": "edelgard"
+    "identifier": "three-houses",
+    "secondaryIdentifier": "edelgard"
   },
   {
     "id": 15,
     "name": "Tiki",
-    "resourceIdentifier": "tiki"
+    "identifier": "tiki"
   },
   {
     "id": 16,
     "name": "Hector",
-    "resourceIdentifier": "hector"
+    "identifier": "hector"
   },
   {
     "id": 17,
     "name": "Veronica",
-    "resourceIdentifier": "veronica"
+    "identifier": "veronica"
   },
   {
     "id": 18,
     "name": "Soren",
-    "resourceIdentifier": "soren"
+    "identifier": "soren"
   },
   {
     "id": 19,
     "name": "Camilla",
-    "resourceIdentifier": "camilla"
+    "identifier": "camilla"
   },
   {
     "id": 20,
     "name": "Chrom",
-    "resourceIdentifier": "chrom-robin",
-    "secondaryResourceIdentifier": "chrom"
+    "identifier": "chrom-robin",
+    "secondaryIdentifier": "chrom"
   }
 ]

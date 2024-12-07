@@ -1,6 +1,6 @@
 export type Emblem = {
     id: number;
     name: string;
-    resourceIdentifier: string;
-    secondaryResourceIdentifier: string | undefined;
+    identifier: string;
+    secondaryIdentifier: string | undefined;
 }

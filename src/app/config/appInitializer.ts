@@ -1,20 +1,17 @@
 import { APP_INITIALIZER } from '@angular/core';
 
-import { CharacterService } from '@/app/services/character.service';
-import { EmblemService } from '@/app/services/emblem.service';
-import { WeaponService } from '@/app/services/weapon.service';
-
+import { CharacterService, EmblemService, WeaponService } from '@/app/services/resources.service';
 
 export function initializeWeapons(weaponService: WeaponService) {
-  return () => weaponService.loadWeaponsInformation();
+  return () => weaponService.loadResourcesInformation();
 }
 
 export function initializeCharacters(characterService: CharacterService) {
-  return () => characterService.loadCharactersInformation();
+  return () => characterService.loadResourcesInformation();
 }
 
 export function initializeEmblems(emblemService: EmblemService) {
-  return () => emblemService.loadEmblemsInformation();
+  return () => emblemService.loadResourcesInformation();
 }
 
 export const appInitializer = [

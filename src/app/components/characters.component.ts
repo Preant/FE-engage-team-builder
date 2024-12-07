@@ -5,7 +5,7 @@ import { CharacterDetailComponent } from '@/app/components/character-detail.comp
 import { Character } from '@/app/models/Character.model';
 import { ImageSize } from '@/app/models/ImageSize.enum';
 import { AssetsService } from '@/app/services/assets.service';
-import { CharacterService } from '@/app/services/character.service';
+import { CharacterService } from '@/app/services/resources.service';
 import { ViewStateService } from '@/app/services/view-state.service';
 
 @Component({
@@ -57,7 +57,7 @@ export class CharactersComponent {
   private assetsService: AssetsService = inject(AssetsService);
   private characterService: CharacterService = inject(CharacterService);
   private viewStateService: ViewStateService = inject(ViewStateService);
-  private charactersSignal: Signal<Character[]> = this.characterService.getCharacters();
+  private charactersSignal: Signal<Character[]> = this.characterService.getResources();
 
   constructor() {
     effect(() => {

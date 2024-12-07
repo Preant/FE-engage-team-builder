@@ -1,11 +1,11 @@
-import { Component, inject, signal, WritableSignal } from '@angular/core';
+import { Component, inject, Signal, signal, WritableSignal } from '@angular/core';
 
 import { CarouselComponent, CarouselItem } from '@/app/components/carousel.component';
 import { EmblemDetailComponent } from '@/app/components/emblem-detail.component';
 import { Emblem } from '@/app/models/Emblem.model';
 import { ImageSize } from '@/app/models/ImageSize.enum';
 import { AssetsService } from '@/app/services/assets.service';
-import { EmblemService } from '@/app/services/emblem.service';
+import { EmblemService } from '@/app/services/resources.service';
 
 @Component({
   selector: 'app-emblems',
@@ -53,24 +53,24 @@ import { EmblemService } from '@/app/services/emblem.service';
 })
 export class EmblemsComponent {
   selectedEmblem: WritableSignal<Emblem | null> = signal(null);
-  private assetsService = inject(AssetsService);
-  private emblemService = inject(EmblemService);
-  private emblemsSignal = this.emblemService.getEmblems();
+  private assetsService: AssetsService = inject(AssetsService);
+  private emblemService: EmblemService = inject(EmblemService);
+  private emblemsSignal: Signal<Emblem[]> = this.emblemService.getResources();
 
   getCarouselItems(): CarouselItem[] {
     return this.emblemsSignal().map((emblem: Emblem) => ({
       id: emblem.id,
       label: emblem.name,
       imageUrl: this.assetsService.getEmblemImage(
-        emblem.resourceIdentifier,
-        emblem.secondaryResourceIdentifier,
+        emblem.identifier,
+        emblem.secondaryIdentifier,
         ImageSize.SMALL
       )
     }));
   }
 
   handleItemSelected(id: number): void {
-    const emblem = this.emblemsSignal().find(emb => emb.id === id);
+    const emblem: Emblem | undefined = this.emblemsSignal().find((emblem: Emblem) => emblem.id === id);
     if (emblem) {
       this.selectedEmblem.set(emblem);
     }
