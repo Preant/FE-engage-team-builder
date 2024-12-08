@@ -2,9 +2,11 @@ import { HttpClient } from '@angular/common/http';
 import { computed, inject, Injectable } from '@angular/core';
 
 import { EmblemID, WeaponID } from '@/app/brands/ResourceID.brand';
-import { CHARACTER_DATA_PATH, EMBLEM_DATA_PATH, WEAPON_DATA_PATH } from '@/app/config/config';
+import { CHARACTER_DATA_PATH, EMBLEM_DATA_PATH, SKILL_DATA_PATH, WEAPON_DATA_PATH } from '@/app/config/config';
 import { Character } from '@/app/models/Character.model';
 import { Emblem } from '@/app/models/Emblem.model';
+import { Skill } from '@/app/models/Skill.model';
+import { SkillType } from '@/app/models/SkillType.enum';
 import { Weapon } from '@/app/models/Weapon.model';
 import { GenericResourceService } from '@/app/services/generic-resource.service.tsd';
 
@@ -42,7 +44,6 @@ export class EmblemService extends GenericResourceService<Emblem> {
     });
   }
 
-  // Méthode utilitaire pour vérifier si une arme appartient à un emblème
   isWeaponBelongingToEmblem(weaponId: WeaponID, emblemId: EmblemID): boolean {
     const emblem = this.getResourceById(emblemId);
     return emblem ? emblem.engageWeapons.includes(weaponId) : false;
@@ -56,5 +57,18 @@ export class EmblemService extends GenericResourceService<Emblem> {
 export class WeaponService extends GenericResourceService<Weapon> {
   constructor(http: HttpClient) {
     super(http, WEAPON_DATA_PATH);
+  }
+}
+
+@Injectable({
+  providedIn: 'root'
+})
+export class SkillService extends GenericResourceService<Skill> {
+  constructor(http: HttpClient) {
+    super(http, SKILL_DATA_PATH);
+  }
+
+  getSkillsByType(type: SkillType): Skill[] {
+    return this.resources().filter((skill: Skill) => skill.skillType === type);
   }
 }

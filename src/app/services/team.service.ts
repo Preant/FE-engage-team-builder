@@ -112,6 +112,7 @@ export class TeamService {
     );
 
     return this.weaponService.getResources()()
+      .filter(weapon => !weapon.isEngageWeapon)
       .filter(weapon => !selectedWeaponIds.has(weapon.id));
   });
 

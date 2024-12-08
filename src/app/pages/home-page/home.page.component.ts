@@ -5,6 +5,7 @@ import { SplitAreaComponent, SplitComponent } from 'angular-split';
 import { CharactersComponent } from '@/app/components/characters.component';
 import { EmblemsComponent } from '@/app/components/emblems.component';
 import { ResourcesMenuComponent } from '@/app/components/resources-menu.component';
+import { SkillsComponent } from '@/app/components/skills.component';
 import { TeamBuilderComponent } from '@/app/components/team-builder/teambuilder.component';
 import { NavbarComponent } from '@/app/header/navbar.component';
 import { ViewType } from '@/app/models/ViewType.enum';
@@ -20,7 +21,8 @@ import { ViewStateService } from '@/app/services/view-state.service';
     NavbarComponent,
     EmblemsComponent,
     CharactersComponent,
-    TeamBuilderComponent
+    TeamBuilderComponent,
+    SkillsComponent
   ],
   template: `
         <div class="w-full h-full">
@@ -39,6 +41,8 @@ import { ViewStateService } from '@/app/services/view-state.service';
                             <app-characters/>
                         } @else if (viewStateService.getCurrentView()() === ViewType.EMBLEMS) {
                             <app-emblems/>
+                        } @else if (viewStateService.getCurrentView()() === ViewType.SKILLS) {
+                            <app-skills/>
                         }
                     </div>
                 </as-split-area>
