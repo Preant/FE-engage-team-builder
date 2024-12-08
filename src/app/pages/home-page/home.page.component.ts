@@ -27,10 +27,10 @@ import { ViewStateService } from '@/app/services/view-state.service';
   template: `
         <div class="w-full h-full">
             <as-split>
-                <as-split-area [size]="60">
+                <as-split-area [size]="50" [minSize]="50">
                     <app-team-builder/>
                 </as-split-area>
-                <as-split-area [size]="40">
+                <as-split-area [size]="50" [maxSize]="50">
                     <div class="h-12">
                         <app-navbar/>
                     </div>

@@ -1,10 +1,17 @@
 import { HttpClient } from '@angular/common/http';
-import { computed, inject, Injectable } from '@angular/core';
+import { computed, inject, Injectable, Signal } from '@angular/core';
 
 import { EmblemID, WeaponID } from '@/app/brands/ResourceID.brand';
-import { CHARACTER_DATA_PATH, EMBLEM_DATA_PATH, SKILL_DATA_PATH, WEAPON_DATA_PATH } from '@/app/config/config';
+import {
+  CHARACTER_DATA_PATH,
+  EMBLEM_DATA_PATH,
+  ITEM_DATA_PATH,
+  SKILL_DATA_PATH,
+  WEAPON_DATA_PATH
+} from '@/app/config/config';
 import { Character } from '@/app/models/Character.model';
 import { Emblem } from '@/app/models/Emblem.model';
+import { Item } from '@/app/models/Item.model';
 import { Skill } from '@/app/models/Skill.model';
 import { SkillType } from '@/app/models/SkillType.enum';
 import { Weapon } from '@/app/models/Weapon.model';
@@ -24,12 +31,13 @@ export class CharacterService extends GenericResourceService<Character> {
 })
 export class EmblemService extends GenericResourceService<Emblem> {
   private weaponService: WeaponService = inject(WeaponService);
+  private itemService: ItemService = inject(ItemService);
 
   constructor(http: HttpClient) {
     super(http, EMBLEM_DATA_PATH);
   }
 
-  getEngageWeapons(emblemId: EmblemID) {
+  getEngageWeapons(emblemId: EmblemID): Signal<Weapon[]> {
     return computed(() => {
       const emblem = this.getResourceById(emblemId);
       if (!emblem) {
@@ -49,6 +57,32 @@ export class EmblemService extends GenericResourceService<Emblem> {
     return emblem ? emblem.engageWeapons.includes(weaponId) : false;
   }
 
+  getEngageItems(emblemId: EmblemID): Signal<Item[]> {
+    return computed(() => {
+      const emblem = this.getResourceById(emblemId);
+      if (!emblem) {
+        return [];
+      }
+
+      return emblem.engageItems
+        .map(itemId => this.itemService.getResourceById(itemId))
+        .filter((item): item is Item => item !== undefined);
+    });
+  }
+
+  getEmblemTools(emblemId: EmblemID): Signal<(Weapon | Item)[]> {
+    return computed(() => {
+      const emblem = this.getResourceById(emblemId);
+      if (!emblem) {
+        return [];
+      }
+
+      return [
+        ...this.getEngageWeapons(emblemId)(),
+        ...this.getEngageItems(emblemId)()
+      ];
+    });
+  }
 }
 
 @Injectable({
@@ -70,5 +104,14 @@ export class SkillService extends GenericResourceService<Skill> {
 
   getSkillsByType(type: SkillType): Skill[] {
     return this.resources().filter((skill: Skill) => skill.skillType === type);
+  }
+}
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ItemService extends GenericResourceService<Item> {
+  constructor(http: HttpClient) {
+    super(http, ITEM_DATA_PATH);
   }
 }

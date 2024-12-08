@@ -1,4 +1,4 @@
-import { EmblemID, WeaponID } from '@/app/brands/ResourceID.brand';
+import { EmblemID, ItemID, WeaponID } from '@/app/brands/ResourceID.brand';
 import { Resource } from '@/app/models/Resource.model';
 
 export type Emblem = Resource & {
@@ -6,4 +6,5 @@ export type Emblem = Resource & {
     name: string;
     secondaryIdentifier: string | undefined;
     engageWeapons: WeaponID[];
+    engageItems: ItemID[];
 }

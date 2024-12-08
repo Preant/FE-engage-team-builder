@@ -3,6 +3,7 @@ import { Component, computed, inject, Input, Signal, signal, WritableSignal } fr
 
 import { Emblem } from '@/app/models/Emblem.model';
 import { ImageSize } from '@/app/models/ImageSize.enum';
+import { isItem } from '@/app/models/Item.model';
 import { AssetsService } from '@/app/services/assets.service';
 import { EmblemService } from '@/app/services/resources.service';
 
@@ -52,20 +53,21 @@ import { EmblemService } from '@/app/services/resources.service';
                             Engage Weapons
                         </h3>
                         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                            @for (weapon of engageWeapons(); track weapon.id) {
-                                <div class="bg-gradient-to-br from-gunmetal-400/50 to-gunmetal-600/50 p-4 rounded-lg border border-rich_black-500">
+                            @for (tool of engageTools(); track tool.id) {
+                                <div
+                                        class="bg-gradient-to-br from-gunmetal-400/50 to-gunmetal-600/50 p-4 rounded-lg border border-rich_black-500">
                                     <div class="flex items-center gap-3">
                                         <img
-                                                [src]="getWeaponImage(weapon.identifier)"
-                                                [alt]="weapon.name"
+                                                [src]="isItem(tool) ? getItemImage(tool.identifier) : getWeaponImage(tool.identifier)"
+                                                [alt]="tool.name"
                                                 class="w-12 h-12 object-contain"
                                         />
                                         <div>
                                             <h4 class="text-baby_powder-500 font-medium">
-                                                {{ weapon.name }}
+                                                {{ tool.name }}
                                             </h4>
                                             <p class="text-sm text-gunmetal-200">
-                                                {{ weapon.description }}
+                                                {{ tool.description }}
                                             </p>
                                         </div>
                                     </div>
@@ -79,11 +81,18 @@ import { EmblemService } from '@/app/services/resources.service';
     `
 })
 export class EmblemDetailComponent {
+  protected readonly isItem = isItem;
   private emblemSignal: WritableSignal<Emblem> = signal({} as Emblem);
   public currentEmblem: Signal<Emblem> = computed(() => this.emblemSignal());
   private readonly emblemService = inject(EmblemService);
   public engageWeapons = computed(() =>
     this.emblemService.getEngageWeapons(this.currentEmblem().id)()
+  );
+  public engageItems = computed(() =>
+    this.emblemService.getEngageItems(this.currentEmblem().id)()
+  );
+  public engageTools = computed(() =>
+    this.emblemService.getEmblemTools(this.currentEmblem().id)()
   );
   private readonly assetsService = inject(AssetsService);
   public emblemImageUrl = computed(() =>
@@ -105,5 +114,9 @@ export class EmblemDetailComponent {
 
     getWeaponImage(weaponIdentifier: string): string {
       return this.assetsService.getWeaponImage(weaponIdentifier, ImageSize.SMALL);
+    }
+
+    getItemImage(itemIdentifier: string): string {
+      return this.assetsService.getItemImage(itemIdentifier, ImageSize.SMALL);
     }
 }
