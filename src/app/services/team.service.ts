@@ -1,15 +1,16 @@
-import { computed, Injectable, signal } from '@angular/core';
+import { computed, Injectable, Signal, signal, WritableSignal } from '@angular/core';
 
 import { brandAs } from '@/app/brands/brandAs';
 import { CharacterID, EmblemID, TeamMemberID, WeaponID } from '@/app/brands/ResourceID.brand';
-import { Team } from '@/app/models/Team.model';
+import { Team, TeamMember } from '@/app/models/Team.model';
 import { CharacterService, EmblemService, WeaponService } from '@/app/services/resources.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TeamService {
-  private readonly teamSignal = signal<Team>({
+  readonly members: Signal<TeamMember[]> = computed(() => this.team().members);
+  private readonly teamSignal: WritableSignal<Team> = signal<Team>({
     id: brandAs.TeamID(1),
     members: [
       {
@@ -20,8 +21,7 @@ export class TeamService {
       }
     ]
   });
-  readonly team = computed(() => this.teamSignal());
-  readonly members = computed(() => this.team().members);
+  readonly team: Signal<Team> = computed(() => this.teamSignal());
 
   constructor(
         private characterService: CharacterService,
@@ -30,11 +30,17 @@ export class TeamService {
   ) {
   }
 
-  readonly getMemberById = (id: TeamMemberID) => computed(() =>
-    this.members().find(m => m.id === id)
-  );
+  readonly findMemberById = (id: number) => computed(() =>
+    this.members().find(m => m.id === id));
 
-  // Actions
+  readonly getMemberById = (id: TeamMemberID) => computed(() => {
+    const member: TeamMember | undefined = this.members().find(m => m.id === id);
+    if (!member) {
+      throw new Error(`Member with ID ${id} not found`);
+    }
+    return member;
+  });
+
   updateMemberCharacter(memberId: TeamMemberID, characterId: CharacterID | null) {
     this.teamSignal.update(team => ({
       ...team,

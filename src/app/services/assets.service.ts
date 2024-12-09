@@ -4,6 +4,7 @@ import {
   CHARACTER_RESOURCE_PATH,
   EMBLEM_RESOURCE_PATH,
   ITEM_RESOURCE_PATH,
+  SKILL_RESOURCE_PATH,
   WEAPON_RESOURCE_PATH
 } from '@/app/config/config';
 import { ImageSize } from '@/app/models/ImageSize.enum';
@@ -37,5 +38,9 @@ export class AssetsService {
 
   getItemImage(itemIdentifier: string, _size: ImageSize = ImageSize.SMALL): string {
     return `${ITEM_RESOURCE_PATH}${itemIdentifier}.png`;
+  }
+
+  getSkillImage(skillIconUrl: string, _size: ImageSize = ImageSize.SMALL): string {
+    return `${SKILL_RESOURCE_PATH}${skillIconUrl}`;
   }
 }

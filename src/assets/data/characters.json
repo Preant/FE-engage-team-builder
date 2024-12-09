@@ -27,7 +27,8 @@
       "mov": 4,
       "bld": 4
     },
-    "identifier": "alear"
+    "identifier": "alear",
+    "personalSkillId": 125
   },
   {
     "id": 2,
@@ -57,7 +58,8 @@
       "mov": 6,
       "bld": 8
     },
-    "identifier": "vander"
+    "identifier": "vander",
+    "personalSkillId": 7
   },
   {
     "id": 3,
@@ -87,7 +89,8 @@
       "mov": 4,
       "bld": 4
     },
-    "identifier": "clanne"
+    "identifier": "clanne",
+    "personalSkillId": 419
   },
   {
     "id": 4,
@@ -117,7 +120,8 @@
       "mov": 4,
       "bld": 3
     },
-    "identifier": "framme"
+    "identifier": "framme",
+    "personalSkillId": 101
   },
   {
     "id": 5,
@@ -147,7 +151,8 @@
       "mov": 5,
       "bld": 6
     },
-    "identifier": "alfred"
+    "identifier": "alfred",
+    "personalSkillId": 321
   },
   {
     "id": 6,
@@ -177,7 +182,8 @@
       "mov": 4,
       "bld": 4
     },
-    "identifier": "etie"
+    "identifier": "etie",
+    "personalSkillId": 145
   },
   {
     "id": 7,
@@ -207,7 +213,8 @@
       "mov": 4,
       "bld": 9
     },
-    "identifier": "boucheron"
+    "identifier": "boucheron",
+    "personalSkillId": 279
   },
   {
     "id": 8,
@@ -237,7 +244,8 @@
       "mov": 4,
       "bld": 4
     },
-    "identifier": "celine"
+    "identifier": "celine",
+    "personalSkillId": 160
   },
   {
     "id": 9,
@@ -267,7 +275,8 @@
       "mov": 5,
       "bld": 5
     },
-    "identifier": "chloe"
+    "identifier": "chloe",
+    "personalSkillId": 148
   },
   {
     "id": 10,
@@ -297,7 +306,8 @@
       "mov": 4,
       "bld": 8
     },
-    "identifier": "louis"
+    "identifier": "louis",
+    "personalSkillId": 4
   },
   {
     "id": 11,
@@ -327,7 +337,8 @@
       "mov": 5,
       "bld": 5
     },
-    "identifier": "yunaka"
+    "identifier": "yunaka",
+    "personalSkillId": 411
   },
   {
     "id": 12,
@@ -357,7 +368,8 @@
       "mov": 4,
       "bld": 6
     },
-    "identifier": "alcryst"
+    "identifier": "alcryst",
+    "personalSkillId": 163
   },
   {
     "id": 13,
@@ -387,7 +399,8 @@
       "mov": 4,
       "bld": 4
     },
-    "identifier": "citrinne"
+    "identifier": "citrinne",
+    "personalSkillId": 157
   },
   {
     "id": 14,
@@ -417,7 +430,8 @@
       "mov": 4,
       "bld": 5
     },
-    "identifier": "lapis"
+    "identifier": "lapis",
+    "personalSkillId": 322
   },
   {
     "id": 15,
@@ -447,7 +461,8 @@
       "mov": 4,
       "bld": 9
     },
-    "identifier": "diamant"
+    "identifier": "diamant",
+    "personalSkillId": 147
   },
   {
     "id": 16,
@@ -477,7 +492,8 @@
       "mov": 5,
       "bld": 8
     },
-    "identifier": "amber"
+    "identifier": "amber",
+    "personalSkillId": 22
   },
   {
     "id": 17,
@@ -507,7 +523,8 @@
       "mov": 4,
       "bld": 8
     },
-    "identifier": "jade"
+    "identifier": "jade",
+    "personalSkillId": 274
   },
   {
     "id": 18,
@@ -537,7 +554,8 @@
       "mov": 5,
       "bld": 7
     },
-    "identifier": "ivy"
+    "identifier": "ivy",
+    "personalSkillId": 324
   },
   {
     "id": 19,
@@ -567,7 +585,8 @@
       "mov": 5,
       "bld": 9
     },
-    "identifier": "kagetsu"
+    "identifier": "kagetsu",
+    "personalSkillId": 45
   },
   {
     "id": 20,
@@ -597,7 +616,8 @@
       "mov": 5,
       "bld": 9
     },
-    "identifier": "zelkov"
+    "identifier": "zelkov",
+    "personalSkillId": 282
   },
   {
     "id": 21,
@@ -627,7 +647,8 @@
       "mov": 5,
       "bld": 8
     },
-    "identifier": "fogado"
+    "identifier": "fogado",
+    "personalSkillId": 92
   },
   {
     "id": 22,
@@ -657,7 +678,8 @@
       "mov": 5,
       "bld": 8
     },
-    "identifier": "pandreo"
+    "identifier": "pandreo",
+    "personalSkillId": 286
   },
   {
     "id": 23,
@@ -687,7 +709,8 @@
       "mov": 6,
       "bld": 11
     },
-    "identifier": "bunet"
+    "identifier": "bunet",
+    "personalSkillId": 319
   },
   {
     "id": 24,
@@ -717,7 +740,8 @@
       "mov": 4,
       "bld": 5
     },
-    "identifier": "timerra"
+    "identifier": "timerra",
+    "personalSkillId": 299
   },
   {
     "id": 25,
@@ -747,7 +771,8 @@
       "mov": 5,
       "bld": 11
     },
-    "identifier": "panette"
+    "identifier": "panette",
+    "personalSkillId": 47
   },
   {
     "id": 26,
@@ -777,7 +802,8 @@
       "mov": 6,
       "bld": 9
     },
-    "identifier": "merrin"
+    "identifier": "merrin",
+    "personalSkillId": 218
   },
   {
     "id": 27,
@@ -807,7 +833,8 @@
       "mov": 5,
       "bld": 5
     },
-    "identifier": "hortensia"
+    "identifier": "hortensia",
+    "personalSkillId": 43
   },
   {
     "id": 28,
@@ -837,7 +864,8 @@
       "mov": 5,
       "bld": 8
     },
-    "identifier": "seadall"
+    "identifier": "seadall",
+    "personalSkillId": 102
   },
   {
     "id": 29,
@@ -867,7 +895,8 @@
       "mov": 6,
       "bld": 8
     },
-    "identifier": "rosado"
+    "identifier": "rosado",
+    "personalSkillId": 379
   },
   {
     "id": 30,
@@ -897,7 +926,8 @@
       "mov": 5,
       "bld": 9
     },
-    "identifier": "goldmary"
+    "identifier": "goldmary",
+    "personalSkillId": 120
   },
   {
     "id": 31,
@@ -927,7 +957,8 @@
       "mov": 5,
       "bld": 10
     },
-    "identifier": "lindon"
+    "identifier": "lindon",
+    "personalSkillId": 421
   },
   {
     "id": 32,
@@ -957,7 +988,8 @@
       "mov": 5,
       "bld": 15
     },
-    "identifier": "saphir"
+    "identifier": "saphir",
+    "personalSkillId": 424
   },
   {
     "id": 33,
@@ -987,7 +1019,8 @@
       "mov": 5,
       "bld": 7
     },
-    "identifier": "veyle"
+    "identifier": "veyle",
+    "personalSkillId": 150
   },
   {
     "id": 34,
@@ -1017,7 +1050,8 @@
       "mov": 6,
       "bld": 12
     },
-    "identifier": "mauvier"
+    "identifier": "mauvier",
+    "personalSkillId": 98
   },
   {
     "id": 35,
@@ -1047,7 +1081,8 @@
       "mov": 4,
       "bld": 7
     },
-    "identifier": "anna"
+    "identifier": "anna",
+    "personalSkillId": 273
   },
   {
     "id": 36,
@@ -1077,7 +1112,8 @@
       "mov": 4,
       "bld": 3
     },
-    "identifier": "jean"
+    "identifier": "jean",
+    "personalSkillId": 146
   },
   {
     "id": 37,
@@ -1107,7 +1143,8 @@
       "mov": 5,
       "bld": 8
     },
-    "identifier": "nel"
+    "identifier": "nel",
+    "personalSkillId": 293
   },
   {
     "id": 38,
@@ -1137,7 +1174,8 @@
       "mov": 5,
       "bld": 9
     },
-    "identifier": "rafal"
+    "identifier": "rafal",
+    "personalSkillId": 315
   },
   {
     "id": 39,
@@ -1167,7 +1205,8 @@
       "mov": 6,
       "bld": 9
     },
-    "identifier": "zelestia"
+    "identifier": "zelestia",
+    "personalSkillId": 154
   },
   {
     "id": 40,
@@ -1197,7 +1236,8 @@
       "mov": 5,
       "bld": 8
     },
-    "identifier": "gregory"
+    "identifier": "gregory",
+    "personalSkillId": 381
   },
   {
     "id": 41,
@@ -1227,6 +1267,7 @@
       "mov": 4,
       "bld": 13
     },
-    "identifier": "madeline"
+    "identifier": "madeline",
+    "personalSkillId": 219
   }
 ]

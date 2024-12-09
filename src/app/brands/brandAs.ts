@@ -1,4 +1,12 @@
-import { characterID, emblemID, itemID, skillID, teamID, teamMemberID, weaponID } from './ResourceID.brand';
+import {
+  characterID,
+  emblemID,
+  itemID,
+  skillID,
+  teamID,
+  teamMemberID,
+  weaponID
+} from '@/app/brands/ResourceIDMethods.brand';
 
 export const brandAs = {
   CharacterID: characterID,

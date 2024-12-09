@@ -3,8 +3,10 @@ import { Component, computed, inject, Input, Signal, signal, WritableSignal } fr
 
 import { Character } from '@/app/models/Character.model';
 import { ImageSize } from '@/app/models/ImageSize.enum';
+import { Skill } from '@/app/models/Skill.model';
 import { StatSheet } from '@/app/models/StatSheet.model';
 import { AssetsService } from '@/app/services/assets.service';
+import { SkillService } from '@/app/services/resources.service';
 
 @Component({
   selector: 'character-detail',
@@ -27,6 +29,7 @@ import { AssetsService } from '@/app/services/assets.service';
                 </div>
 
                 <div class="flex flex-col md:flex-row gap-12">
+                    <!-- Stats Section -->
                     <div class="md:w-auto">
                         <h2 class="text-4xl font-semibold mb-6 text-air_superiority_blue-400 border-b-2 border-air_superiority_blue-400 pb-2">
                             Base Stats
@@ -62,6 +65,26 @@ import { AssetsService } from '@/app/services/assets.service';
                             }
                         </ul>
                     </div>
+
+                    <!-- Personal Skill Section -->
+                    <div class="md:w-auto">
+                        <h2 class="text-4xl font-semibold mb-6 text-air_superiority_blue-400 border-b-2 border-air_superiority_blue-400 pb-2">
+                            Personal Skill
+                        </h2>
+                        @if (personalSkill(); as skill) {
+                            <div class="bg-gradient-to-br from-gunmetal-400/50 to-gunmetal-600/50 p-6 rounded-lg border border-rich_black-500">
+                                <div class="flex items-center gap-4 mb-4">
+                                    <img
+                                            [src]="personalSkillImageUrl()"
+                                            [alt]="'Skill icon'"
+                                            class="w-12 h-12 object-contain rounded-lg bg-gunmetal-500/50"
+                                    />
+                                    <h3 class="text-2xl font-bold text-baby_powder-500">{{ skill.name }}</h3>
+                                </div>
+                                <p class="text-lg text-paynes_gray-200">{{ skill.description }}</p>
+                            </div>
+                        }
+                    </div>
                 </div>
             </div>
         </div>
@@ -94,7 +117,14 @@ export class CharacterDetailComponent {
   public growthStats: Signal<[string, number][]> = computed(() =>
     this.getStatsArray(this.characterSignal().growth)
   );
+  private skillService = inject(SkillService);
+  public personalSkill: Signal<Skill> = computed(() =>
+    this.skillService.getResourceById(this.characterSignal().personalSkillId)
+  );
   private assetsService: AssetsService = inject(AssetsService);
+  public personalSkillImageUrl: Signal<string> = computed(() =>
+    this.assetsService.getSkillImage(this.personalSkill().iconUrl)
+  );
   public characterImageUrl: Signal<string> = computed((): string =>
     this.assetsService.getCharacterImage(this.characterSignal().identifier, ImageSize.LARGE)
   );

@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 
 import { Skill } from '@/app/models/Skill.model';
 import { SkillType } from '@/app/models/SkillType.enum';
+import { AssetsService } from '@/app/services/assets.service';
 
 @Component({
   selector: 'skill-detail',
@@ -31,7 +32,7 @@ import { SkillType } from '@/app/models/SkillType.enum';
                                 <tr class="border-t border-rich_black-500 hover:bg-forest_green-500/10 transition-colors">
                                     <td class="p-4">
                                         <img
-                                                [src]="'assets/images/skills/' + skill.iconUrl"
+                                                [src]="getSkillIconUrl(skill)"
                                                 [alt]="skill.id"
                                                 class="w-12 h-12 object-contain"
                                         />
@@ -56,6 +57,12 @@ import { SkillType } from '@/app/models/SkillType.enum';
 export class SkillDetailComponent {
     @Input({ required: true }) skills!: Skill[];
     @Input({ required: true }) skillType!: SkillType;
+
+    private assetsService: AssetsService = inject(AssetsService);
+
+    public getSkillIconUrl(skill: Skill): string {
+      return this.assetsService.getSkillImage(skill.iconUrl);
+    }
 
     formatSkillType(type: string): string {
       return type.split('_').map(word =>

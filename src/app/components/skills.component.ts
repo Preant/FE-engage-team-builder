@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, signal, WritableSignal } from '@angular/core';
+import { Component, computed, inject, Signal, signal, WritableSignal } from '@angular/core';
 
 import { CarouselComponent, CarouselItem } from '@/app/components/carousel.component';
 import { SkillDetailComponent } from '@/app/components/skill-detail.component';
 import { Skill } from '@/app/models/Skill.model';
 import { SkillType } from '@/app/models/SkillType.enum';
+import { AssetsService } from '@/app/services/assets.service';
 import { SkillService } from '@/app/services/resources.service';
 
 @Component({
@@ -19,7 +20,7 @@ import { SkillService } from '@/app/services/resources.service';
         <div class="min-h-screen p-6 bg-gradient-to-br from-prussian_blue-400 to-rich_black-600">
             <div class="space-y-6">
                 <app-carousel
-                        [items]="getCarouselItems()"
+                        [items]="carouselItems()"
                         (itemSelected)="handleSkillTypeSelected($event)"/>
 
                 @if (selectedSkillType(); as skillType) {
@@ -57,6 +58,17 @@ import { SkillService } from '@/app/services/resources.service';
 export class SkillsComponent {
   selectedSkillType: WritableSignal<SkillType | null> = signal(null);
   private skillService: SkillService = inject(SkillService);
+  private assetsService: AssetsService = inject(AssetsService);
+  public carouselItems: Signal<CarouselItem[]> = computed(() => {
+    return Object.values(SkillType).map((type: SkillType, index: number) => {
+      const skills: Skill[] = this.skillService.getSkillsByType(type);
+      return {
+        id: index,
+        label: this.formatSkillType(type),
+        imageUrl: this.assetsService.getSkillImage(skills[Math.floor(Math.random() * skills.length)].iconUrl)
+      };
+    });
+  });
   private skills: SkillType[] = [
     SkillType.PERSONAL,
     SkillType.CLASS,
@@ -64,14 +76,6 @@ export class SkillsComponent {
     SkillType.EMBLEM_SYNC,
     SkillType.EMBLEM_ENGAGE
   ];
-
-  getCarouselItems(): CarouselItem[] {
-    return Object.values(SkillType).map((type: SkillType, index: number) => ({
-      id: index,
-      label: this.formatSkillType(type),
-      imageUrl: ''
-    }));
-  }
 
   handleSkillTypeSelected(id: number): void {
     this.selectedSkillType.set(this.skills[id]);
@@ -81,8 +85,8 @@ export class SkillsComponent {
     return this.skillService.getSkillsByType(type);
   }
 
-  private formatSkillType(type: string): string {
-    return type.split('_').map(word =>
+  private formatSkillType(type: SkillType): string {
+    return type.split('_').map((word: string): string =>
       word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
     ).join(' ');
   }

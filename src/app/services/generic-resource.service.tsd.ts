@@ -18,8 +18,12 @@ export abstract class GenericResourceService<T extends Resource> {
     return this.resources.asReadonly();
   }
 
-  public getResourceById(id: number): T | undefined {
-    return this.resources().find((resource: T): boolean => resource.id === id);
+  public getResourceById(id: number): T {
+    const resource: T | undefined = this.resources().find((resource: T): boolean => resource.id === id);
+    if (!resource) {
+      throw new Error(`Resource with id ${id} not found.`);
+    }
+    return resource;
   }
 
   public getResourceByIdentifier(identifier: string): T | undefined {

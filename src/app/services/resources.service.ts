@@ -39,10 +39,7 @@ export class EmblemService extends GenericResourceService<Emblem> {
 
   getEngageWeapons(emblemId: EmblemID): Signal<Weapon[]> {
     return computed(() => {
-      const emblem = this.getResourceById(emblemId);
-      if (!emblem) {
-        return [];
-      }
+      const emblem: Emblem = this.getResourceById(emblemId);
 
       return emblem.engageWeapons
         .map(weaponId => this.weaponService.getResourceById(weaponId))
@@ -59,10 +56,7 @@ export class EmblemService extends GenericResourceService<Emblem> {
 
   getEngageItems(emblemId: EmblemID): Signal<Item[]> {
     return computed(() => {
-      const emblem = this.getResourceById(emblemId);
-      if (!emblem) {
-        return [];
-      }
+      const emblem: Emblem = this.getResourceById(emblemId);
 
       return emblem.engageItems
         .map(itemId => this.itemService.getResourceById(itemId))
@@ -72,11 +66,6 @@ export class EmblemService extends GenericResourceService<Emblem> {
 
   getEmblemTools(emblemId: EmblemID): Signal<(Weapon | Item)[]> {
     return computed(() => {
-      const emblem = this.getResourceById(emblemId);
-      if (!emblem) {
-        return [];
-      }
-
       return [
         ...this.getEngageWeapons(emblemId)(),
         ...this.getEngageItems(emblemId)()
