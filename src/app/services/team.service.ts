@@ -1,15 +1,21 @@
-import { computed, Injectable, Signal, signal, WritableSignal } from '@angular/core';
+import { computed, inject, Injectable, Signal, signal, WritableSignal } from '@angular/core';
 
 import { brandAs } from '@/app/brands/brandAs';
-import { CharacterID, EmblemID, TeamMemberID, WeaponID } from '@/app/brands/ResourceID.brand';
-import { Team, TeamMember } from '@/app/models/Team.model';
-import { CharacterService, EmblemService, WeaponService } from '@/app/services/resources.service';
+import { CharacterID, EmblemID, SkillID, TeamMemberID, WeaponID } from '@/app/brands/ResourceID.brand';
+import { Skill } from '@/app/models/Skill.model';
+import { SkillType } from '@/app/models/SkillType.enum';
+import { SkillSlotIndex, Team, TeamMember } from '@/app/models/Team.model';
+import { CharacterService, EmblemService, SkillService, WeaponService } from '@/app/services/resources.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TeamService {
   readonly members: Signal<TeamMember[]> = computed(() => this.team().members);
+  private characterService: CharacterService = inject(CharacterService);
+  private emblemService: EmblemService = inject(EmblemService);
+  private weaponService: WeaponService = inject(WeaponService);
+  private skillService: SkillService = inject(SkillService);
   private readonly teamSignal: WritableSignal<Team> = signal<Team>({
     id: brandAs.TeamID(1),
     members: [
@@ -17,17 +23,14 @@ export class TeamService {
         id: brandAs.TeamMemberID(1),
         characterId: null,
         emblemId: null,
-        weaponIds: [null, null, null, null]
+        weaponIds: [null, null, null, null],
+        inheritableSkillIds: [null, null] // Initialize with tuple
       }
     ]
   });
   readonly team: Signal<Team> = computed(() => this.teamSignal());
 
-  constructor(
-        private characterService: CharacterService,
-        private emblemService: EmblemService,
-        private weaponService: WeaponService
-  ) {
+  constructor() {
   }
 
   readonly findMemberById = (id: number) => computed(() =>
@@ -79,6 +82,22 @@ export class TeamService {
     }));
   }
 
+  updateMemberSkill(memberId: TeamMemberID, skillIndex: SkillSlotIndex, skillId: SkillID | null) {
+    this.teamSignal.update(team => ({
+      ...team,
+      members: team.members.map(member =>
+        member.id === memberId
+          ? {
+            ...member,
+            inheritableSkillIds: skillIndex === 0
+              ? [skillId, member.inheritableSkillIds[1]]
+              : [member.inheritableSkillIds[0], skillId]
+          }
+          : member
+      )
+    }));
+  }
+
   // Computed values for UI
   getAvailableCharacters = (memberId: TeamMemberID) => computed(() => {
     const usedIds = new Set<CharacterID>(
@@ -120,6 +139,32 @@ export class TeamService {
     return this.weaponService.getResources()()
       .filter(weapon => !weapon.isEngageWeapon)
       .filter(weapon => !selectedWeaponIds.has(weapon.id));
+  });
+
+
+  getAvailableInheritableSkills = (memberId: TeamMemberID, skillIndex: SkillSlotIndex) => computed(() => {
+    const member = this.getMemberById(memberId)();
+    if (!member || !member.emblemId) {
+      return [];
+    }
+
+    const otherSkillId = member.inheritableSkillIds[skillIndex === 0 ? 1 : 0];
+
+    return this.skillService.getSkillsByType(SkillType.EMBLEM_INHERITABLE)
+      .filter(skill => skill.id !== otherSkillId);
+  });
+
+
+  getMemberSkills = (memberId: TeamMemberID) => computed(() => {
+    const member = this.getMemberById(memberId)();
+    if (!member) {
+      return [null, null] as [Skill | null, Skill | null];
+    }
+
+    return [
+      member.inheritableSkillIds[0] ? this.skillService.getResourceById(member.inheritableSkillIds[0]) : null,
+      member.inheritableSkillIds[1] ? this.skillService.getResourceById(member.inheritableSkillIds[1]) : null
+    ] as [Skill | null, Skill | null];
   });
 
   getMemberWeapons = (memberId: TeamMemberID) => computed(() => {

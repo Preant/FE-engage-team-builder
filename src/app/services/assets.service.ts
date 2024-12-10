@@ -40,7 +40,7 @@ export class AssetsService {
     return `${ITEM_RESOURCE_PATH}${itemIdentifier}.png`;
   }
 
-  getSkillImage(skillIconUrl: string, _size: ImageSize = ImageSize.SMALL): string {
-    return `${SKILL_RESOURCE_PATH}${skillIconUrl}`;
+  getSkillImage(skillIdentifier: string, _size: ImageSize = ImageSize.SMALL): string {
+    return `${SKILL_RESOURCE_PATH}${skillIdentifier}.png`;
   }
 }

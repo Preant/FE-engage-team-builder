@@ -61,7 +61,7 @@ export class SkillDetailComponent {
     private assetsService: AssetsService = inject(AssetsService);
 
     public getSkillIconUrl(skill: Skill): string {
-      return this.assetsService.getSkillImage(skill.iconUrl);
+      return this.assetsService.getSkillImage(skill.identifier);
     }
 
     formatSkillType(type: string): string {

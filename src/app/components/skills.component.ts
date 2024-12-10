@@ -65,7 +65,7 @@ export class SkillsComponent {
       return {
         id: index,
         label: this.formatSkillType(type),
-        imageUrl: this.assetsService.getSkillImage(skills[Math.floor(Math.random() * skills.length)].iconUrl)
+        imageUrl: this.assetsService.getSkillImage(skills[Math.floor(Math.random() * skills.length)].identifier)
       };
     });
   });

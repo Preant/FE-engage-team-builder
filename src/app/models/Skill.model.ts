@@ -4,7 +4,6 @@ import { SkillType } from '@/app/models/SkillType.enum';
 
 export type Skill = Resource & {
     id: SkillID
-    iconUrl: string;
     name: string;
     skillType: SkillType;
     description: string;

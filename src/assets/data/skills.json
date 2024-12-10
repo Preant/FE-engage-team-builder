@@ -2,2982 +2,2982 @@
   {
     "id": 1,
     "name": "Adaptability",
-    "iconUrl": "Adaptability.png",
+    "identifier": "Adaptability",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe initiates combat, unit counters with the best weapon available."
   },
   {
     "id": 2,
     "name": "Adaptability+",
-    "iconUrl": "Adaptability_plus.png",
+    "identifier": "Adaptability_plus",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Enhanced version: If foe initiates combat, unit counters with the best weapon available."
   },
   {
     "id": 3,
     "name": "Adaptable",
-    "iconUrl": "Adaptable.png",
+    "identifier": "Adaptable",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Adapts to combat situations with increased flexibility."
   },
   {
     "id": 4,
     "name": "Admiration",
-    "iconUrl": "Admiration.png",
+    "identifier": "Admiration",
     "skillType": "PERSONAL",
     "description": "If two female allies are adjacent within 2 spaces, this unit takes 2 less damage during combat."
   },
   {
     "id": 5,
     "name": "Advance",
-    "iconUrl": "Advance.png",
+    "identifier": "Advance",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Use to move 1 space toward a foe that is 2 spaces away and attack."
   },
   {
     "id": 6,
     "name": "Air Raid",
-    "iconUrl": "Air_Raid.png",
+    "identifier": "Air_Raid",
     "skillType": "CLASS",
     "description": "If unit initiates combat from a space a foe cannot enter, grants Spd+5 during combat."
   },
   {
     "id": 7,
     "name": "Alabaster Duty",
-    "iconUrl": "Alabaster_Duty.png",
+    "identifier": "Alabaster_Duty",
     "skillType": "PERSONAL",
     "description": "If unit is adjacent to the Divine Dragon, grants Crit+5 during combat to both of them."
   },
   {
     "id": 8,
     "name": "Alacrity",
-    "iconUrl": "Alacrity.png",
+    "identifier": "Alacrity",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit initiates combat with a Spd advantage of 9 or more, unit’s follow-up (if possible) occurs before foe can counterattack."
   },
   {
     "id": 9,
     "name": "Alacrity+",
-    "iconUrl": "Alacrity-1.png",
+    "identifier": "Alacrity-1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit initiates combat with a Spd advantage of 7 or more, unit’s follow-up (if possible) occurs before foe can counterattack."
   },
   {
     "id": 10,
     "name": "Alacrity++",
-    "iconUrl": "Alacrity-2.png",
+    "identifier": "Alacrity-2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit initiates combat with a Spd advantage of 5 or more, unit’s follow-up (if possible) occurs before foe can counterattack."
   },
   {
     "id": 11,
     "name": "All for One",
-    "iconUrl": "All_for_One.png",
+    "identifier": "All_for_One",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Use to make a sword attack against an adjacent foe. All allies within 2 spaces chain attack."
   },
   {
     "id": 12,
     "name": "Allied Defense",
-    "iconUrl": "Allied_Defense.png",
+    "identifier": "Allied_Defense",
     "skillType": "CLASS",
     "description": "If unit is between an ally and a foe, reduces damage to unit by 3 during combat with that foe."
   },
   {
     "id": 13,
     "name": "Anima Focus",
-    "iconUrl": "anima_focus.png",
+    "identifier": "anima_focus",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "When using tomes, unit inflicts Def-3 with fire, Hit-20 with thunder, or Mov-2 with wind magic for 1 turn."
   },
   {
     "id": 14,
     "name": "Arms Shield",
-    "iconUrl": "Arms_Shield.png",
+    "identifier": "Arms_Shield",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "When unit has weapon advantage, unit takes 3 less damage."
   },
   {
     "id": 15,
     "name": "Arms Shield+",
-    "iconUrl": "Arms_Shield-1.png",
+    "identifier": "Arms_Shield-1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "When unit has weapon advantage, unit takes 5 less damage."
   },
   {
     "id": 16,
     "name": "Arms Shield++",
-    "iconUrl": "Arms_Shield-2.png",
+    "identifier": "Arms_Shield-2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "When unit has weapon advantage, unit takes 7 less damage."
   },
   {
     "id": 17,
     "name": "Art Focus 1",
-    "iconUrl": "Art_Focus_1.png",
+    "identifier": "Art_Focus_1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit+10 at a cost of Ddg-10 when using an art."
   },
   {
     "id": 18,
     "name": "Art Focus 2",
-    "iconUrl": "Art_Focus_2.png",
+    "identifier": "Art_Focus_2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit+15 at a cost of Ddg-10 when using an art."
   },
   {
     "id": 19,
     "name": "Art Focus 3",
-    "iconUrl": "Art_Focus_3.png",
+    "identifier": "Art_Focus_3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit+20 at a cost of Ddg-10 when using an art."
   },
   {
     "id": 20,
     "name": "Art Focus 4",
-    "iconUrl": "Art_Focus_4.png",
+    "identifier": "Art_Focus_4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit+25 at a cost of Ddg-10 when using an art."
   },
   {
     "id": 21,
     "name": "Art Focus 5",
-    "iconUrl": "Art_Focus_5.png",
+    "identifier": "Art_Focus_5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit+30 at a cost of Ddg-10 when using an art."
   },
   {
     "id": 22,
     "name": "Aspiring Hero",
-    "iconUrl": "Aspiring_Hero.png",
+    "identifier": "Aspiring_Hero",
     "skillType": "PERSONAL",
     "description": "If no other units are within 1 space of unit or foe, grants Hit+20 at a cost of Avo-10 during combat."
   },
   {
     "id": 23,
     "name": "Assign Decoy",
-    "iconUrl": "assign_decoy.png",
+    "identifier": "assign_decoy",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Use to make one chosen ally more likely to be targeted by enemies for 1 turn."
   },
   {
     "id": 24,
     "name": "Astra Storm",
-    "iconUrl": "Astra_Storm.png",
+    "identifier": "Astra_Storm",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Use to launch 5 bow attacks at 30% damage, up to range 10."
   },
   {
     "id": 25,
     "name": "Attuned",
-    "iconUrl": "Attuned.png",
+    "identifier": "Attuned",
     "skillType": "EMBLEM_ENGAGE",
     "description": "If unit initiates combat and defeats foe, grants engage partner +4 to all seven basic stats while engaged."
   },
   {
     "id": 26,
     "name": "Augment",
-    "iconUrl": "Augment.png",
+    "identifier": "Augment",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Grants staff range +5 and area of effect +1."
   },
   {
     "id": 27,
     "name": "Avoid +10",
-    "iconUrl": "Avoid_10.png",
+    "identifier": "Avoid_10",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Avo+10."
   },
   {
     "id": 28,
     "name": "Avoid +15",
-    "iconUrl": "Avoid_15.png",
+    "identifier": "Avoid_15",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Avo+15."
   },
   {
     "id": 29,
     "name": "Avoid +20",
-    "iconUrl": "Avoid_20.png",
+    "identifier": "Avoid_20",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Avo+20."
   },
   {
     "id": 30,
     "name": "Avoid +25",
-    "iconUrl": "Avoid_25.png",
+    "identifier": "Avoid_25",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Avo+25."
   },
   {
     "id": 31,
     "name": "Avoid +30",
-    "iconUrl": "Avoid_30.png",
+    "identifier": "Avoid_30",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Avo+30."
   },
   {
     "id": 32,
     "name": "Axe Guard 1",
-    "iconUrl": "axe_guard1.png",
+    "identifier": "axe_guard1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with an axe, unit takes 1 less damage during combat."
   },
   {
     "id": 33,
     "name": "Axe Guard 2",
-    "iconUrl": "axe_guard2.png",
+    "identifier": "axe_guard2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with an axe, unit takes 2 less damage during combat."
   },
   {
     "id": 34,
     "name": "Axe Guard 3",
-    "iconUrl": "axe_guard3.png",
+    "identifier": "axe_guard3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with an axe, unit takes 3 less damage during combat."
   },
   {
     "id": 35,
     "name": "Axe Guard 4",
-    "iconUrl": "axe_guard4.png",
+    "identifier": "axe_guard4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with an axe, unit takes 4 less damage during combat."
   },
   {
     "id": 36,
     "name": "Axe Guard 5",
-    "iconUrl": "axe_guard5.png",
+    "identifier": "axe_guard5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with an axe, unit takes 5 less damage during combat."
   },
   {
     "id": 37,
     "name": "Axe Power 1",
-    "iconUrl": "Axe_Power_1.png",
+    "identifier": "Axe_Power_1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Atk+2 at a cost of Avo-10 when using an axe."
   },
   {
     "id": 38,
     "name": "Axe Power 2",
-    "iconUrl": "Axe_Power_2.png",
+    "identifier": "Axe_Power_2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Atk+4 at a cost of Avo-10 when using an axe."
   },
   {
     "id": 39,
     "name": "Axe Power 3",
-    "iconUrl": "Axe_Power_3.png",
+    "identifier": "Axe_Power_3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Atk+6 at a cost of Avo-10 when using an axe."
   },
   {
     "id": 40,
     "name": "Axe Power 4",
-    "iconUrl": "Axe_Power_4.png",
+    "identifier": "Axe_Power_4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Atk+8 at a cost of Avo-10 when using an axe."
   },
   {
     "id": 41,
     "name": "Axe Power 5",
-    "iconUrl": "Axe_Power_5.png",
+    "identifier": "Axe_Power_5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Atk+10 at a cost of Avo-10 when using an axe."
   },
   {
     "id": 42,
     "name": "Back at You",
-    "iconUrl": "Back_at_You.png",
+    "identifier": "Back_at_You",
     "skillType": "CLASS",
     "description": "When countering, unit may deal extra damage = half of damage taken."
   },
   {
     "id": 43,
     "name": "Big Personality",
-    "iconUrl": "Big_Personality.png",
+    "identifier": "Big_Personality",
     "skillType": "PERSONAL",
     "description": "When unit uses a healing staff, grants range +1."
   },
   {
     "id": 44,
     "name": "Blazing Lion",
-    "iconUrl": "Blazing_Lion.png",
+    "identifier": "Blazing_Lion",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Use to attack adjacent foe and an area 3 spaces wide. Target area and the 2 rows beyond it are set on fire."
   },
   {
     "id": 45,
     "name": "Blinding Flash",
-    "iconUrl": "Blinding_Flash.png",
+    "identifier": "Blinding_Flash",
     "skillType": "PERSONAL",
     "description": "If unit initiates combat, inflicts Avo-10 on foe during combat."
   },
   {
     "id": 46,
     "name": "Block Recovery",
-    "iconUrl": "block_recovery.png",
+    "identifier": "block_recovery",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "When attacking a broken foe with a tome, grants a chance the foe will remain broken."
   },
   {
     "id": 47,
     "name": "Blood Fury",
-    "iconUrl": "Blood_Fury.png",
+    "identifier": "Blood_Fury",
     "skillType": "PERSONAL",
     "description": "If unit's HP is not at max after combat, grants Crit+10 as long as unit's HP stays below max."
   },
   {
     "id": 48,
     "name": "Blue Skies",
-    "iconUrl": "Blue_Skies.png",
+    "identifier": "Blue_Skies",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Unit takes 3 less damage and deals +3 damage."
   },
   {
     "id": 49,
     "name": "Blue Skies+",
-    "iconUrl": "Blue_Skies-1.png",
+    "identifier": "Blue_Skies-1",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Unit takes 5 less damage and deals +5 damage."
   },
   {
     "id": 50,
     "name": "Bond Blast",
-    "iconUrl": "Bond_Blast.png",
+    "identifier": "Bond_Blast",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Use to make a sword attack from the unit and engage partner followed by a magic beam attack against an adjacent foe."
   },
   {
     "id": 51,
     "name": "Bond Forger",
-    "iconUrl": "Bond_Forger.png",
+    "identifier": "Bond_Forger",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit/Avo+20 to unit and allies within 2 spaces that are synced or engaged with an Emblem."
   },
   {
     "id": 52,
     "name": "Bond Forger+",
-    "iconUrl": "Bond_Forger-1.png",
+    "identifier": "Bond_Forger-1",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Grants Hit/Avo+30 to unit and allies within 2 spaces that are synced or engaged with an Emblem."
   },
   {
     "id": 53,
     "name": "Bonded Shield",
-    "iconUrl": "Bonded_Shield.png",
+    "identifier": "Bonded_Shield",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Use to prevent first attacks on adjacent allies until your next turn. Trigger %=80.\n[Dragon] +10% to trigger rate.\n[Cavalry] Trigger %=100 for cavalry allies.\n[Armored] Trigger %=100 for armored allies.\n[Flying] Trigger %=100 for flying allies.\n[Qi Adept] Trigger %=100."
   },
   {
     "id": 54,
     "name": "Book of Worlds",
-    "iconUrl": "book_of_worlds.png",
+    "identifier": "book_of_worlds",
     "skillType": "EMBLEM_SYNC",
     "description": "Book of Worlds advances 1 stage (to max 5) for each consecutive round that unit uses Wait. Reverts to base stage if unit triggers the effect."
   },
   {
     "id": 55,
     "name": "Book of Worlds 1",
-    "iconUrl": "book_of_worlds1.png",
+    "identifier": "book_of_worlds1",
     "skillType": "EMBLEM_SYNC",
     "description": "If unit initiates combat, freezes foe after combat."
   },
   {
     "id": 56,
     "name": "Book of Worlds 2",
-    "iconUrl": "book_of_worlds2.png",
+    "identifier": "book_of_worlds2",
     "skillType": "EMBLEM_SYNC",
     "description": "If unit initiates combat, freezes foe and sets foe’s space on fire after combat."
   },
   {
     "id": 57,
     "name": "Book of Worlds 3",
-    "iconUrl": "book_of_worlds3.png",
+    "identifier": "book_of_worlds3",
     "skillType": "EMBLEM_SYNC",
     "description": "If unit initiates combat, deals 10 damage, freezes foe, and sets foe’s space on fire after combat."
   },
   {
     "id": 58,
     "name": "Book of Worlds 4",
-    "iconUrl": "book_of_worlds4.png",
+    "identifier": "book_of_worlds4",
     "skillType": "EMBLEM_SYNC",
     "description": "If unit initiates combat, restores HP equal to damage dealt during combat, then deals 10 damage, freezes foe, and sets foe’s space on fire after combat."
   },
   {
     "id": 59,
     "name": "Book of Worlds 5",
-    "iconUrl": "book_of_worlds5.png",
+    "identifier": "book_of_worlds5",
     "skillType": "EMBLEM_SYNC",
     "description": "If unit initiates combat, restores HP to self and adjacent allies equal to damage dealt during combat, then deals 10 damage, freezes foe, and sets foe’s space on fire after combat."
   },
   {
     "id": 60,
     "name": "Boon of Elyos",
-    "iconUrl": "Boon_of_Elyos.png",
+    "identifier": "Boon_of_Elyos",
     "skillType": "EMBLEM_ENGAGE",
     "description": "If unit initiates combat, grants bonus to Crit and Ddg equal to 2× the number of allies who have acted this turn."
   },
   {
     "id": 61,
     "name": "Bow Agility 1",
-    "iconUrl": "Bow_Agility_1.png",
+    "identifier": "Bow_Agility_1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Avo+10 at a cost of Crit-10 when using a bow."
   },
   {
     "id": 62,
     "name": "Bow Agility 2",
-    "iconUrl": "Bow_Agility_2.png",
+    "identifier": "Bow_Agility_2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Avo+15 at a cost of Crit-10 when using a bow."
   },
   {
     "id": 63,
     "name": "Bow Agility 3",
-    "iconUrl": "Bow_Agility_3.png",
+    "identifier": "Bow_Agility_3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Avo+20 at a cost of Crit-10 when using a bow."
   },
   {
     "id": 64,
     "name": "Bow Agility 4",
-    "iconUrl": "Bow_Agility_4.png",
+    "identifier": "Bow_Agility_4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Avo+25 at a cost of Crit-10 when using a bow."
   },
   {
     "id": 65,
     "name": "Bow Agility 5",
-    "iconUrl": "Bow_Agility_5.png",
+    "identifier": "Bow_Agility_5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Avo+30 at a cost of Crit-10 when using a bow."
   },
   {
     "id": 66,
     "name": "Bow Focus 1",
-    "iconUrl": "Bow_Focus_1.png",
+    "identifier": "Bow_Focus_1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit+10 at a cost of Ddg-10 when using a bow."
   },
   {
     "id": 67,
     "name": "Bow Focus 2",
-    "iconUrl": "Bow_Focus_2.png",
+    "identifier": "Bow_Focus_2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit+15 at a cost of Ddg-10 when using a bow."
   },
   {
     "id": 68,
     "name": "Bow Focus 3",
-    "iconUrl": "Bow_Focus_3.png",
+    "identifier": "Bow_Focus_3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit+20 at a cost of Ddg-10 when using a bow."
   },
   {
     "id": 69,
     "name": "Bow Focus 4",
-    "iconUrl": "Bow_Focus_4.png",
+    "identifier": "Bow_Focus_4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit+25 at a cost of Ddg-10 when using a bow."
   },
   {
     "id": 70,
     "name": "Bow Focus 5",
-    "iconUrl": "Bow_Focus_5.png",
+    "identifier": "Bow_Focus_5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit+30 at a cost of Ddg-10 when using a bow."
   },
   {
     "id": 71,
     "name": "Bow Guard 1",
-    "iconUrl": "Bow_Guard1.png",
+    "identifier": "Bow_Guard1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a bow, unit takes 1 less damage during combat."
   },
   {
     "id": 72,
     "name": "Bow Guard 2",
-    "iconUrl": "Bow_Guard2.png",
+    "identifier": "Bow_Guard2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a bow, unit takes 2 less damage during combat."
   },
   {
     "id": 73,
     "name": "Bow Guard 3",
-    "iconUrl": "Bow_Guard3.png",
+    "identifier": "Bow_Guard3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a bow, unit takes 3 less damage during combat."
   },
   {
     "id": 74,
     "name": "Bow Guard 4",
-    "iconUrl": "Bow_Guard4.png",
+    "identifier": "Bow_Guard4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a bow, unit takes 4 less damage during combat."
   },
   {
     "id": 75,
     "name": "Bow Guard 5",
-    "iconUrl": "Bow_Guard5.png",
+    "identifier": "Bow_Guard5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a bow, unit takes 5 less damage during combat."
   },
   {
     "id": 76,
     "name": "Brave Assist",
-    "iconUrl": "Brave_Assist.png",
+    "identifier": "Brave_Assist",
     "skillType": "CLASS",
     "description": "If unit’s HP is at max while unit makes a chain attack, unit attacks twice."
   },
   {
     "id": 77,
     "name": "Bravery",
-    "iconUrl": "Bravery.png",
+    "identifier": "Bravery",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Unit deals +3 damage."
   },
   {
     "id": 78,
     "name": "Bravery+",
-    "iconUrl": "Bravery-1.png",
+    "identifier": "Bravery-1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Unit deals +5 damage."
   },
   {
     "id": 79,
     "name": "Break Defenses",
-    "iconUrl": "Break_Defenses.png",
+    "identifier": "Break_Defenses",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit’s attack breaks foe, unit makes an extra attack at 50% damage."
   },
   {
     "id": 80,
     "name": "Brute Force",
-    "iconUrl": "brute_force.png",
+    "identifier": "brute_force",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "While making a physical attack, critical hits deal increased damage. [Damage increased by one third.]"
   },
   {
     "id": 81,
     "name": "Build 1",
-    "iconUrl": "Build_3.png",
+    "identifier": "Build_3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Bld+3."
   },
   {
     "id": 82,
     "name": "Build 2",
-    "iconUrl": "Build_4.png",
+    "identifier": "Build_4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Bld+4."
   },
   {
     "id": 83,
     "name": "Build 3",
-    "iconUrl": "Build_5.png",
+    "identifier": "Build_5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Bld+5."
   },
   {
     "id": 84,
     "name": "Call Doubles",
-    "iconUrl": "Call_Doubles.png",
+    "identifier": "Call_Doubles",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Creates four illusory doubles that can make chain attacks with unit."
   },
   {
     "id": 85,
     "name": "Canter",
-    "iconUrl": "Canter.png",
+    "identifier": "Canter",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Unit can move 2 spaces after acting."
   },
   {
     "id": 86,
     "name": "Canter+",
-    "iconUrl": "Canter-1.png",
+    "identifier": "Canter-1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Unit can move 3 spaces after acting."
   },
   {
     "id": 87,
     "name": "Careful Aim",
-    "iconUrl": "Careful_Aim.png",
+    "identifier": "Careful_Aim",
     "skillType": "CLASS",
     "description": "If unit initiates combat without moving first, grants Hit+40 during combat."
   },
   {
     "id": 88,
     "name": "Cataclysm",
-    "iconUrl": "cataclysm.png",
+    "identifier": "cataclysm",
     "skillType": "EMBLEM_ENGAGE",
     "description": "\tUse to attack foes in an area with fire, thunder and wind magic at 40% damage. Wind is effective: Flying.\n[Dragon] Sets terrain on fire.\n[Mystical] +10% damage.\n[Qi Adept] 20% chance of breaking target."
   },
   {
     "id": 89,
     "name": "Cataclysm+",
-    "iconUrl": "cataclysm.png",
+    "identifier": "cataclysm",
     "skillType": "EMBLEM_ENGAGE",
     "description": "\tUse to attack foes in an area with fire, thunder and wind magic at 40% damage. Wind is effective: Flying.\n[Dragon] Sets terrain on fire.\n[Mystical] +10% damage.\n[Qi Adept] 20% chance of breaking target."
   },
   {
     "id": 90,
     "name": "Chaos Style",
-    "iconUrl": "Chaos_Style.png",
+    "identifier": "Chaos_Style",
     "skillType": "CLASS",
     "description": "If unit initiates combat with a physical attack against a foe armed with magic or vice versa, grants Spd+3 during combat."
   },
   {
     "id": 91,
     "name": "Charm",
-    "iconUrl": "charm.png",
+    "identifier": "charm",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit's attack triggers a chain attack, increases chain attack accuracy to 90%."
   },
   {
     "id": 92,
     "name": "Charmer",
-    "iconUrl": "Charmer.png",
+    "identifier": "Charmer",
     "skillType": "PERSONAL",
     "description": "During combat with a foe who was also unit's most recent opponent, inflicts Crit-10 on that foe."
   },
   {
     "id": 93,
     "name": "Clear the Way",
-    "iconUrl": "Clear_the_Way.png",
+    "identifier": "Clear_the_Way",
     "skillType": "CLASS",
     "description": "Unit's space and adjacent spaces have a movement cost of 1 for allies."
   },
   {
     "id": 94,
     "name": "Cleric",
-    "iconUrl": "Cleric.png",
+    "identifier": "Cleric",
     "skillType": "EMBLEM_SYNC",
     "description": "Unit can equip staves up to level C."
   },
   {
     "id": 95,
     "name": "Cleric+",
-    "iconUrl": "Cleric-1.png",
+    "identifier": "Cleric-1",
     "skillType": "EMBLEM_SYNC",
     "description": "Unit can equip staves up to level B."
   },
   {
     "id": 96,
     "name": "Cleric++",
-    "iconUrl": "Cleric-2.png",
+    "identifier": "Cleric-2",
     "skillType": "EMBLEM_SYNC",
     "description": "Unit can equip staves up to level A."
   },
   {
     "id": 97,
     "name": "Combat Arts",
-    "iconUrl": "Combat_Arts.png",
+    "identifier": "Combat_Arts",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Enables use of Edelgard, Dimitri, or Claude's Combat Art. Spends some remaining engage turns."
   },
   {
     "id": 98,
     "name": "Contemplative",
-    "iconUrl": "Contemplative.png",
+    "identifier": "Contemplative",
     "skillType": "PERSONAL",
     "description": "If unit uses Wait without attacking or using items, grants Def+2 for 1 turn."
   },
   {
     "id": 99,
     "name": "Contract",
-    "iconUrl": "contract.png",
+    "identifier": "contract",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Use to grant another action to an adjacent ally who has already acted."
   },
   {
     "id": 100,
     "name": "Convoy",
-    "iconUrl": "convoy.png",
+    "identifier": "convoy",
     "skillType": "CLASS",
     "description": "Use to deposit or retrieve weapons and items."
   },
   {
     "id": 101,
     "name": "Crimson Cheer",
-    "iconUrl": "Crimson_Cheer.png",
+    "identifier": "Crimson_Cheer",
     "skillType": "PERSONAL",
     "description": "If unit is adjacent to the Divine Dragon, grants Avo+10 during combat to both of them."
   },
   {
     "id": 102,
     "name": "Curious Dance",
-    "iconUrl": "Curious_Dance.png",
+    "identifier": "Curious_Dance",
     "skillType": "PERSONAL",
     "description": "At start of turn, allies within 2 spaces of unit recover 10% of their max HP."
   },
   {
     "id": 103,
     "name": "Dark Inferno",
-    "iconUrl": "dark_inferno.png",
+    "identifier": "dark_inferno",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Use to deal damage to foes on certain spaces near unit and set those spaces on fire.\n[Dragon] Increases area of effect.\n[Mystical] +20% damage.\n[Qi Adept] Adds Glow to adjacent spaces."
   },
   {
     "id": 104,
     "name": "Dark Inferno+",
-    "iconUrl": "dark_inferno.png",
+    "identifier": "dark_inferno",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Use to deal damage to foes on certain spaces near unit and set those spaces on fire.\n[Dragon] Increases area of effect.\n[Mystical] +20% damage.\n[Qi Adept] Adds Glow to adjacent spaces."
   },
   {
     "id": 105,
     "name": "Decisive Strike",
-    "iconUrl": "decisive_strike.png",
+    "identifier": "decisive_strike",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit initiates combat and lands a critical, deals 5 damage to foe after combat."
   },
   {
     "id": 106,
     "name": "Decisive Strike+",
-    "iconUrl": "decisive_strike_plus.png",
+    "identifier": "decisive_strike_plus",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit initiates combat and lands a critical, deals 10 damage to foe after combat."
   },
   {
     "id": 107,
     "name": "Defense 1",
-    "iconUrl": "Defense_1.png",
+    "identifier": "Defense_1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Def+1."
   },
   {
     "id": 108,
     "name": "Defense 2",
-    "iconUrl": "Defense_2.png",
+    "identifier": "Defense_2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Def+2."
   },
   {
     "id": 109,
     "name": "Defense 3",
-    "iconUrl": "Defense_3.png",
+    "identifier": "Defense_3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Def+3."
   },
   {
     "id": 110,
     "name": "Defense 4",
-    "iconUrl": "Defense_4.png",
+    "identifier": "Defense_4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Def+4."
   },
   {
     "id": 111,
     "name": "Defense 5",
-    "iconUrl": "Defense_5.png",
+    "identifier": "Defense_5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Def+5."
   },
   {
     "id": 112,
     "name": "Demolish",
-    "iconUrl": "Demolish.png",
+    "identifier": "Demolish",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Break destructible terrain in a single blow when using Destroy."
   },
   {
     "id": 113,
     "name": "Detoxify",
-    "iconUrl": "detoxify.png",
+    "identifier": "detoxify",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Cures poison at start of turn."
   },
   {
     "id": 114,
     "name": "Dexterity 1",
-    "iconUrl": "Dexterity_1.png",
+    "identifier": "Dexterity_1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Dex+1."
   },
   {
     "id": 115,
     "name": "Dexterity 2",
-    "iconUrl": "Dexterity_2.png",
+    "identifier": "Dexterity_2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Dex+2."
   },
   {
     "id": 116,
     "name": "Dexterity 3",
-    "iconUrl": "Dexterity_3.png",
+    "identifier": "Dexterity_3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Dex+3."
   },
   {
     "id": 117,
     "name": "Dexterity 4",
-    "iconUrl": "Dexterity_4.png",
+    "identifier": "Dexterity_4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Dex+4."
   },
   {
     "id": 118,
     "name": "Dexterity 5",
-    "iconUrl": "Dexterity_5.png",
+    "identifier": "Dexterity_5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Dex+5."
   },
   {
     "id": 119,
     "name": "Diffuse Healer",
-    "iconUrl": "Diffuse_Healer.png",
+    "identifier": "Diffuse_Healer",
     "skillType": "CLASS",
     "description": "When unit is healed by a staff, all adjacent allies also recover 50% of the HP that the unit recovered."
   },
   {
     "id": 120,
     "name": "Disarming Sigh",
-    "iconUrl": "Disarming_Sigh.png",
+    "identifier": "Disarming_Sigh",
     "skillType": "PERSONAL",
     "description": "If foe is male, inflicts Hit-20 on that foe during combat."
   },
   {
     "id": 121,
     "name": "Divine Pulse",
-    "iconUrl": "Divine_Pulse.png",
+    "identifier": "Divine_Pulse",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "May turn a missed attack into a hit. Trigger %=30. Chance increases with high Lck."
   },
   {
     "id": 122,
     "name": "Divine Pulse+",
-    "iconUrl": "Divine_Pulse-1.png",
+    "identifier": "Divine_Pulse-1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "May turn a missed attack into a hit. Trigger %=50. Chance increases with high Lck."
   },
   {
     "id": 123,
     "name": "Divine Speed",
-    "iconUrl": "Divine_Speed.png",
+    "identifier": "Divine_Speed",
     "skillType": "EMBLEM_SYNC",
     "description": "Unit performs an extra attack at 50% damage in combat.\n[Covert] If extra attack hits, poisons foe.\n[Dragon] Unit recovers HP equal to damage dealt by extra attack."
   },
   {
     "id": 124,
     "name": "Divine Spirit",
-    "iconUrl": "Divine_Spirit.png",
+    "identifier": "Divine_Spirit",
     "skillType": "CLASS",
     "description": "Unit's engage meter is shortened one step."
   },
   {
     "id": 125,
     "name": "Divinely Inspiring",
-    "iconUrl": "Divinely_Inspiring.png",
+    "identifier": "Divinely_Inspiring",
     "skillType": "PERSONAL",
     "description": "Adjacent allies deal +3 damage and take 1 less damage."
   },
   {
     "id": 126,
     "name": "Dodge +10",
-    "iconUrl": "Dodge_10.png",
+    "identifier": "Dodge_10",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Ddg+10."
   },
   {
     "id": 127,
     "name": "Dodge +15",
-    "iconUrl": "Dodge_15.png",
+    "identifier": "Dodge_15",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Ddg+15."
   },
   {
     "id": 128,
     "name": "Dodge +20",
-    "iconUrl": "Dodge_20.png",
+    "identifier": "Dodge_20",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Ddg+20."
   },
   {
     "id": 129,
     "name": "Dodge +25",
-    "iconUrl": "Dodge_25.png",
+    "identifier": "Dodge_25",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Ddg+25."
   },
   {
     "id": 130,
     "name": "Dodge +30",
-    "iconUrl": "Dodge_30.png",
+    "identifier": "Dodge_30",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Ddg+30."
   },
   {
     "id": 131,
     "name": "Draconic Form",
-    "iconUrl": "Draconic_Form.png",
+    "identifier": "Draconic_Form",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Unit transforms into and fights as a dragon while engaged. Grants +10 to max HP and +5 to Bld and all basic stats."
   },
   {
     "id": 132,
     "name": "Draconic Hex",
-    "iconUrl": "Draconic_Hex.png",
+    "identifier": "Draconic_Hex",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit initiates combat, inflicts -4 to all of foe's basic stats after combat."
   },
   {
     "id": 133,
     "name": "Dragon Blast",
-    "iconUrl": "Dragon_Blast.png",
+    "identifier": "Dragon_Blast",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Use to make two attacks against an adjacent foe with a sword and powerful magic beam."
   },
   {
     "id": 134,
     "name": "Dragon Vein",
-    "iconUrl": "Dragon_Vein.png",
+    "identifier": "Dragon_Vein",
     "skillType": "EMBLEM_SYNC",
     "description": "Use to add a special effect to certain spaces.\n[Dragon] Choose any Vein effect.\n[Backup] Creates stone pillars that increase Def/Res.\n[Cavalry] Creates water that decreases Avo.\n[Covert] Creates fog that increases Avo.\n[Armored] Creates vines that grant immunity to break.\n[Flying] Creates healing glow that restores HP.\n[Mystical] Creates flames that inflict damage.\n[Qi Adept] Creates ice pillars that hinder movement."
   },
   {
     "id": 135,
     "name": "Dragon Vein EX",
-    "iconUrl": "dragon_vein_ex.png",
+    "identifier": "dragon_vein_ex",
     "skillType": "EMBLEM_SYNC",
     "description": "Use to add a special effect to certain spaces.\n[Dragon] Choose any Vein effect.\n[Backup] Creates stone pillars that increase Def/Res.\n[Cavalry] Creates water that decreases Avo.\n[Covert] Creates smoke that decreases Def/Avo.\n[Armored] Creates vines that grant immunity to break.\n[Flying] Creates healing glow that restores HP.\n[Mystical] Creates flames that inflict damage.\n[Qi Adept] Creates ice floor that increases movement."
   },
   {
     "id": 136,
     "name": "Dreadful Aura",
-    "iconUrl": "Dreadful_Aura.png",
+    "identifier": "Dreadful_Aura",
     "skillType": "EMBLEM_ENGAGE",
     "description": "If unit initiates combat, target foe and all foes within 1 space of it cannot move for 1 turn after combat."
   },
   {
     "id": 137,
     "name": "Dual Assist",
-    "iconUrl": "Dual_Assist.png",
+    "identifier": "Dual_Assist",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit is able to chain attack, unit will do so when allies attack foes unit could reach by moving. Trigger %=35."
   },
   {
     "id": 138,
     "name": "Dual Assist+",
-    "iconUrl": "Dual_Assist-1.png",
+    "identifier": "Dual_Assist-1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit is able to chain attack, unit will do so when allies attack foes unit could reach by moving. Trigger %=70."
   },
   {
     "id": 139,
     "name": "Dual Strike",
-    "iconUrl": "Dual_Strike.png",
+    "identifier": "Dual_Strike",
     "skillType": "EMBLEM_SYNC",
     "description": "Unit participates in chain attacks as if it were a backup unit."
   },
   {
     "id": 140,
     "name": "Dual Support",
-    "iconUrl": "Dual_Support.png",
+    "identifier": "Dual_Support",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants a bonus to Avo that increases with unit's support level with adjacent allies."
   },
   {
     "id": 141,
     "name": "Echo",
-    "iconUrl": "Echo.png",
+    "identifier": "Echo",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Use to attack with magic at 50% damage. Use a second time to launch another 50% attack."
   },
   {
     "id": 142,
     "name": "Eclipse Brace",
-    "iconUrl": "Eclipse_Brace.png",
+    "identifier": "Eclipse_Brace",
     "skillType": "EMBLEM_ENGAGE",
     "description": "If unit initiates combat, unit deals extra damage=20% of foe’s Def with physical attacks and recovers HP=30% of damage dealt."
   },
   {
     "id": 143,
     "name": "Eclipse Brace+",
-    "iconUrl": "Eclipse_Brace-1.png",
+    "identifier": "Eclipse_Brace-1",
     "skillType": "EMBLEM_ENGAGE",
     "description": "If unit initiates combat, unit deals extra damage=30% of foe’s Def with physical attacks and recovers HP=50% of damage dealt."
   },
   {
     "id": 144,
     "name": "Enchant",
-    "iconUrl": "enchant.png",
+    "identifier": "enchant",
     "skillType": "CLASS",
     "description": "Enables enchanting of weapons and items with special effects."
   },
   {
     "id": 145,
     "name": "Energized",
-    "iconUrl": "Energized.png",
+    "identifier": "Energized",
     "skillType": "PERSONAL",
     "description": "When unit recovers HP using an item, grants Str+2 for 1 turn."
   },
   {
     "id": 146,
     "name": "Expertise",
-    "iconUrl": "Expertise.png",
+    "identifier": "Expertise",
     "skillType": "PERSONAL",
     "description": "Grants unit enhanced stat growth when leveling up."
   },
   {
     "id": 147,
     "name": "Fair Fight",
-    "iconUrl": "Fair_Fight.png",
+    "identifier": "Fair_Fight",
     "skillType": "PERSONAL",
     "description": "If unit initiates combat, grants Hit+15 to unit and foe if foe is able to counterattack."
   },
   {
     "id": 148,
     "name": "Fairy-Tale Folk",
-    "iconUrl": "Fairy-Tale_Folk.png",
+    "identifier": "Fairy-Tale_Folk",
     "skillType": "PERSONAL",
     "description": "If a male and a female ally are adjacent within 2 spaces, unit deals +2 damage during combat."
   },
   {
     "id": 149,
     "name": "Favorite Food",
-    "iconUrl": "Favorite_Food.png",
+    "identifier": "Favorite_Food",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "When unit eats a packed lunch, its engage meter is maxed out."
   },
   {
     "id": 150,
     "name": "Fell Protection",
-    "iconUrl": "Fell_Protection.png",
+    "identifier": "Fell_Protection",
     "skillType": "PERSONAL",
     "description": "Adjacent allies deal +1 damage and take 3 less damage."
   },
   {
     "id": 151,
     "name": "Fell Spirit",
-    "iconUrl": "Fell_Spirit.png",
+    "identifier": "Fell_Spirit",
     "skillType": "CLASS",
     "description": "At the start of each turn, unit's engage meter is filled by 1."
   },
   {
     "id": 152,
     "name": "Flare",
-    "iconUrl": "flare.png",
+    "identifier": "flare",
     "skillType": "EMBLEM_ENGAGE",
     "description": "When attacking with tomes, inflicts Res-20% on foe, and unit recovers 50% of damage dealt."
   },
   {
     "id": 153,
     "name": "Friendly Rivalry",
-    "iconUrl": "Friendly_Rivalry.png",
+    "identifier": "Friendly_Rivalry",
     "skillType": "EMBLEM_SYNC",
     "description": "At start of player phase, the Emblem will randomly switch to Edelgard, Dimitri, or Claude."
   },
   {
     "id": 154,
     "name": "Friendly Boost",
-    "iconUrl": "friendly-boost.png",
+    "identifier": "friendly-boost",
     "skillType": "PERSONAL",
     "description": "When unit defeats a foe, grants Hit+20 to allies within 2 spaces for 1 turn."
   },
   {
     "id": 155,
     "name": "Gallop",
-    "iconUrl": "Gallop.png",
+    "identifier": "Gallop",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Grants Mov+5."
   },
   {
     "id": 156,
     "name": "Gambit",
-    "iconUrl": "Gambit.png",
+    "identifier": "Gambit",
     "skillType": "EMBLEM_SYNC",
     "description": "Effects change based on synced Emblem."
   },
   {
     "id": 157,
     "name": "Generosity",
-    "iconUrl": "Generosity.png",
+    "identifier": "Generosity",
     "skillType": "PERSONAL",
     "description": "When this unit uses a healing item, adjacent allies also recover the same amount of HP."
   },
   {
     "id": 158,
     "name": "Gentility",
-    "iconUrl": "Gentility.png",
+    "identifier": "Gentility",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Unit takes 3 less damage."
   },
   {
     "id": 159,
     "name": "Gentility+",
-    "iconUrl": "Gentility-1.png",
+    "identifier": "Gentility-1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Unit takes 5 less damage."
   },
   {
     "id": 160,
     "name": "Gentle Flower",
-    "iconUrl": "Gentle_Flower.png",
+    "identifier": "Gentle_Flower",
     "skillType": "PERSONAL",
     "description": "Recovery items used by allies within 2 spaces heal +50% HP."
   },
   {
     "id": 161,
     "name": "Geosphere",
-    "iconUrl": "Geosphere.png",
+    "identifier": "Geosphere",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "At start of player phase, if there are allies adjacent to unit, grants Def/Res+3 to unit and those allies for 1 turn."
   },
   {
     "id": 162,
     "name": "Geosphere+",
-    "iconUrl": "Geosphere_1.png",
+    "identifier": "Geosphere_1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "At start of player phase, if there are allies adjacent to unit, grants Def/Res+5 to unit and those allies for 1 turn."
   },
   {
     "id": 163,
     "name": "Get Behind Me",
-    "iconUrl": "Get_Behind_Me.png",
+    "identifier": "Get_Behind_Me",
     "skillType": "PERSONAL",
     "description": "When an ally within 2 spaces is attacked, grants Str+3 to unit for 1 turn."
   },
   {
     "id": 164,
     "name": "Giga Levin Sword",
-    "iconUrl": "giga_levin_sword.png",
+    "identifier": "giga_levin_sword",
     "skillType": "EMBLEM_ENGAGE",
     "description": " Sword\tUse to attack with a magic sword. Magic attack that uses physical attack power. Swords only.\n[Dragon] Deals extra damage = half of Str.\n[Flying] Deals extra damage = Bld.\n[Mystical] Deals extra damage = half of Mag."
   },
   {
     "id": 165,
     "name": "Giga Levin Sword+",
-    "iconUrl": "giga_levin_sword.png",
+    "identifier": "giga_levin_sword",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Use to attack with a magic sword. Magic attack that uses physical attack power. Swords only. Adjacent allies chain attack.\n[Dragon] Deals extra damage = half of Str.\n[Flying] Deals extra damage = Bld.\n[Mystical] Deals extra damage = half of Mag."
   },
   {
     "id": 166,
     "name": "Goddess Dance",
-    "iconUrl": "Goddess_Dance.png",
+    "identifier": "Goddess_Dance",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Use to grant another action to all adjacent allies."
   },
   {
     "id": 167,
     "name": "Golden Lotus",
-    "iconUrl": "Golden_Lotus.png",
+    "identifier": "Golden_Lotus",
     "skillType": "CLASS",
     "description": "During combat, may prevent 50% of physical damage taken. Trigger %=Dex."
   },
   {
     "id": 168,
     "name": "Grasping Void",
-    "iconUrl": "Grasping_Void.png",
+    "identifier": "Grasping_Void",
     "skillType": "CLASS",
     "description": "When attacking with a tome, unit may deal extra damage = half of foe's Mag. Trigger %=Dex."
   },
   {
     "id": 169,
     "name": "Great Aether",
-    "iconUrl": "Great_Aether.png",
+    "identifier": "Great_Aether",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Use to grant Def/Res+5, but unit can't counter for 1 turn. Next turn, attack a 2-space area, heal HP=30% of damage dealt."
   },
   {
     "id": 170,
     "name": "Great Sacrifice",
-    "iconUrl": "Great_Sacrifice.png",
+    "identifier": "Great_Sacrifice",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Use to restore full HP to all allies, even those not under the player's control. After use, unit's HP=1."
   },
   {
     "id": 171,
     "name": "Groundswell",
-    "iconUrl": "groundswell.png",
+    "identifier": "groundswell",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "After unit acts or waits in flames, miasma, or similar terrain effect, unit clears effect and recovers 10 HP."
   },
   {
     "id": 172,
     "name": "Headlong Rush",
-    "iconUrl": "Headlong_Rush.png",
+    "identifier": "Headlong_Rush",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants immunity to freeze."
   },
   {
     "id": 173,
     "name": "Healing Light",
-    "iconUrl": "Healing_Light.png",
+    "identifier": "Healing_Light",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "When unit heals an ally with a staff, unit also recovers HP=50% of the amount healed."
   },
   {
     "id": 174,
     "name": "Heavy Attack",
-    "iconUrl": "heavy_attack.png",
+    "identifier": "heavy_attack",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "When making a physical attack, if an equipped weapon's Wt exceeds unit's Bld, adds excess as damage."
   },
   {
     "id": 175,
     "name": "Hero Summon",
-    "iconUrl": "hero_summon.png",
+    "identifier": "hero_summon",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Use to summon a random unit."
   },
   {
     "id": 176,
     "name": "Hit +10",
-    "iconUrl": "Hit_10.png",
+    "identifier": "Hit_10",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit+10."
   },
   {
     "id": 177,
     "name": "Hit +15",
-    "iconUrl": "Hit_15.png",
+    "identifier": "Hit_15",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit+15."
   },
   {
     "id": 178,
     "name": "Hit +20",
-    "iconUrl": "Hit_20.png",
+    "identifier": "Hit_20",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit+20."
   },
   {
     "id": 179,
     "name": "Hit +25",
-    "iconUrl": "Hit_25.png",
+    "identifier": "Hit_25",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit+25."
   },
   {
     "id": 180,
     "name": "Hit +30",
-    "iconUrl": "Hit_30.png",
+    "identifier": "Hit_30",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit+30."
   },
   {
     "id": 181,
     "name": "Hobble",
-    "iconUrl": "Hobble.png",
+    "identifier": "Hobble",
     "skillType": "CLASS",
     "description": "If unit initiates combat with a knife, inflicts Mov-2 on foe for 1 turn."
   },
   {
     "id": 182,
     "name": "Hold Out",
-    "iconUrl": "Hold_Out.png",
+    "identifier": "Hold_Out",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit had 30% HP or more at start of combat, unit always survives combat with at least 1 HP."
   },
   {
     "id": 183,
     "name": "Hold Out+",
-    "iconUrl": "Hold_Out-1.png",
+    "identifier": "Hold_Out-1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit had 20% HP or more at start of combat, unit always survives combat with at least 1 HP."
   },
   {
     "id": 184,
     "name": "Hold Out++",
-    "iconUrl": "Hold_Out-2.png",
+    "identifier": "Hold_Out-2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit had 10% HP or more at start of combat, unit always survives combat with at least 1 HP."
   },
   {
     "id": 185,
     "name": "Hold Out+++",
-    "iconUrl": "Hold_Out-3.png",
+    "identifier": "Hold_Out-3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit had 2 HP or more at start of combat, unit always survives combat with at least 1 HP."
   },
   {
     "id": 186,
     "name": "Holy Aura",
-    "iconUrl": "Holy_Aura.png",
+    "identifier": "Holy_Aura",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Unit is Effective: Fell Dragon. Allies within 2 spaces with Effective: Dragon gain Effective: Fell Dragon."
   },
   {
     "id": 187,
     "name": "Holy Shield",
-    "iconUrl": "Holy_Shield.png",
+    "identifier": "Holy_Shield",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Neutralizes Effective against this unit."
   },
   {
     "id": 188,
     "name": "Holy Stance",
-    "iconUrl": "Holy_Stance.png",
+    "identifier": "Holy_Stance",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If a Corrupted attacks unit, deals 10% of damage taken back to foe."
   },
   {
     "id": 189,
     "name": "Holy Stance+",
-    "iconUrl": "Holy_Stance-1.png",
+    "identifier": "Holy_Stance-1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If a Corrupted attacks unit, deals 30% of damage taken back to foe."
   },
   {
     "id": 190,
     "name": "Holy Stance++",
-    "iconUrl": "Holy_Stance-2.png",
+    "identifier": "Holy_Stance-2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If a Corrupted attacks unit, deals 50% of damage taken back to foe."
   },
   {
     "id": 191,
     "name": "Houses Unite",
-    "iconUrl": "Houses_Unite.png",
+    "identifier": "Houses_Unite",
     "skillType": "EMBLEM_ENGAGE",
     "description": "\tUse to attack with Aymr, Areadbhar, and Failnaught at 50% damage.\n[Dragon] +10% damage.\n[Cavalry] +10% damage with Areadbhar.\n[Covert] +10% damage with Failnaught.\n[Armored] +10% damage with Aymr.\n[Qi Adept] Breaks foe."
   },
   {
     "id": 192,
     "name": "Houses Unite+",
-    "iconUrl": "Houses_Unite.png",
+    "identifier": "Houses_Unite",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Use to attack with Aymr, Areadbhar, and Failnaught at 50% damage. After combat, take another action.\n[Dragon] +10% damage.\n[Cavalry] +10% damage with Areadbhar.\n[Covert] +10% damage with Failnaught.\n[Armored] +10% damage with Aymr.\n[Qi Adept] Breaks foe."
   },
   {
     "id": 193,
     "name": "HP +10",
-    "iconUrl": "HP_10.png",
+    "identifier": "HP_10",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants HP+10."
   },
   {
     "id": 194,
     "name": "HP +12",
-    "iconUrl": "HP_12.png",
+    "identifier": "HP_12",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants HP+12."
   },
   {
     "id": 195,
     "name": "HP +15",
-    "iconUrl": "HP_15.png",
+    "identifier": "HP_15",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants HP+15."
   },
   {
     "id": 196,
     "name": "HP +5",
-    "iconUrl": "HP_5.png",
+    "identifier": "HP_5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants HP+5."
   },
   {
     "id": 197,
     "name": "HP +7",
-    "iconUrl": "HP_7.png",
+    "identifier": "HP_7",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants HP+7."
   },
   {
     "id": 198,
     "name": "HP Lck +10",
-    "iconUrl": "HP_Lck_10.png",
+    "identifier": "HP_Lck_10",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants HP+10 and Lck+10."
   },
   {
     "id": 199,
     "name": "HP Lck +2",
-    "iconUrl": "HP_Lck_2.png",
+    "identifier": "HP_Lck_2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants HP+2 and Lck+2."
   },
   {
     "id": 200,
     "name": "HP Lck +4",
-    "iconUrl": "HP_Lck_4.png",
+    "identifier": "HP_Lck_4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants HP+4 and Lck+4."
   },
   {
     "id": 201,
     "name": "HP Lck +6",
-    "iconUrl": "HP_Lck_6.png",
+    "identifier": "HP_Lck_6",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants HP+6 and Lck+6."
   },
   {
     "id": 202,
     "name": "HP Lck +8",
-    "iconUrl": "HP_Lck_8.png",
+    "identifier": "HP_Lck_8",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants HP+8 and Lck+8."
   },
   {
     "id": 203,
     "name": "Ignis",
-    "iconUrl": "Ignis.png",
+    "identifier": "Ignis",
     "skillType": "CLASS",
     "description": "During combat, may add half of Str to magic damage or half of Mag to all other damage. Trigger %=Dex."
   },
   {
     "id": 204,
     "name": "Impenetrable",
-    "iconUrl": "impenetrable.png",
+    "identifier": "impenetrable",
     "skillType": "EMBLEM_ENGAGE",
     "description": "If foe initiates combat, grants Def/Res+30% during combat."
   },
   {
     "id": 205,
     "name": "Instruct",
-    "iconUrl": "Instruct.png",
+    "identifier": "Instruct",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Use to grant allies within 2 spaces a stat bonus based on user's type. Bonus lasts for 1 turn."
   },
   {
     "id": 206,
     "name": "Keen Insight",
-    "iconUrl": "keen_insight.png",
+    "identifier": "keen_insight",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "When unit deals Effective damage, deal +5 damage."
   },
   {
     "id": 207,
     "name": "Keen Insight+",
-    "iconUrl": "keen_insight_plus.png",
+    "identifier": "keen_insight_plus",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "When unit deals Effective damage, deal +7 damage."
   },
   {
     "id": 208,
     "name": "Knife Guard 1",
-    "iconUrl": "knife_guard1.png",
+    "identifier": "knife_guard1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a knife, unit takes 1 less damage during combat."
   },
   {
     "id": 209,
     "name": "Knife Guard 2",
-    "iconUrl": "knife_guard2.png",
+    "identifier": "knife_guard2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a knife, unit takes 2 less damage during combat."
   },
   {
     "id": 210,
     "name": "Knife Guard 3",
-    "iconUrl": "knife_guard3.png",
+    "identifier": "knife_guard3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a knife, unit takes 3 less damage during combat."
   },
   {
     "id": 211,
     "name": "Knife Guard 4",
-    "iconUrl": "knife_guard4.png",
+    "identifier": "knife_guard4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a knife, unit takes 4 less damage during combat."
   },
   {
     "id": 212,
     "name": "Knife Guard 5",
-    "iconUrl": "knife_guard5.png",
+    "identifier": "knife_guard5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a knife, unit takes 5 less damage during combat."
   },
   {
     "id": 213,
     "name": "Knife Precision 1",
-    "iconUrl": "Knife_Precision_1.png",
+    "identifier": "Knife_Precision_1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit/Avo+3 when using a knife."
   },
   {
     "id": 214,
     "name": "Knife Precision 2",
-    "iconUrl": "Knife_Precision_2.png",
+    "identifier": "Knife_Precision_2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit/Avo+5 when using a knife."
   },
   {
     "id": 215,
     "name": "Knife Precision 3",
-    "iconUrl": "Knife_Precision_3.png",
+    "identifier": "Knife_Precision_3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit/Avo+7 when using a knife."
   },
   {
     "id": 216,
     "name": "Knife Precision 4",
-    "iconUrl": "Knife_Precision_4.png",
+    "identifier": "Knife_Precision_4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit/Avo+10 when using a knife."
   },
   {
     "id": 217,
     "name": "Knife Precision 5",
-    "iconUrl": "Knife_Precision_5.png",
+    "identifier": "Knife_Precision_5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit/Avo+15 when using a knife."
   },
   {
     "id": 218,
     "name": "Knightly Escort",
-    "iconUrl": "Knightly_Escort.png",
+    "identifier": "Knightly_Escort",
     "skillType": "PERSONAL",
     "description": "When 2 or more female allies are within 2 spaces, grants Hit/Avo+5 to unit and those allies."
   },
   {
     "id": 219,
     "name": "Knightly Code",
-    "iconUrl": "knightly-code.png",
+    "identifier": "knightly-code",
     "skillType": "PERSONAL",
     "description": "If foe initiates combat and unit is adjacent to an ally, unit takes 2 less damage."
   },
   {
     "id": 220,
     "name": "Laguz Friend",
-    "iconUrl": "Laguz_Friend.png",
+    "identifier": "Laguz_Friend",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Unit takes 50% less damage, but sets unit's Avo to 0."
   },
   {
     "id": 221,
     "name": "Lance Agility 1",
-    "iconUrl": "Lance_Agility_1.png",
+    "identifier": "Lance_Agility_1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Avo+10 at a cost of Crit-10 when using a lance."
   },
   {
     "id": 222,
     "name": "Lance Agility 2",
-    "iconUrl": "Lance_Agility_2.png",
+    "identifier": "Lance_Agility_2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Avo+15 at a cost of Crit-10 when using a lance."
   },
   {
     "id": 223,
     "name": "Lance Agility 3",
-    "iconUrl": "Lance_Agility_3.png",
+    "identifier": "Lance_Agility_3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Avo+20 at a cost of Crit-10 when using a lance."
   },
   {
     "id": 224,
     "name": "Lance Agility 4",
-    "iconUrl": "Lance_Agility_4.png",
+    "identifier": "Lance_Agility_4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Avo+25 at a cost of Crit-10 when using a lance."
   },
   {
     "id": 225,
     "name": "Lance Agility 5",
-    "iconUrl": "Lance_Agility_5.png",
+    "identifier": "Lance_Agility_5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Avo+30 at a cost of Crit-10 when using a lance."
   },
   {
     "id": 226,
     "name": "Lance Guard 1",
-    "iconUrl": "lance_guard1.png",
+    "identifier": "lance_guard1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a lance, unit takes 1 less damage during combat."
   },
   {
     "id": 227,
     "name": "Lance Guard 2",
-    "iconUrl": "lance_guard2.png",
+    "identifier": "lance_guard2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a lance, unit takes 2 less damage during combat."
   },
   {
     "id": 228,
     "name": "Lance Guard 3",
-    "iconUrl": "lance_guard3.png",
+    "identifier": "lance_guard3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a lance, unit takes 3 less damage during combat."
   },
   {
     "id": 229,
     "name": "Lance Guard 4",
-    "iconUrl": "lance_guard4.png",
+    "identifier": "lance_guard4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a lance, unit takes 4 less damage during combat."
   },
   {
     "id": 230,
     "name": "Lance Guard 5",
-    "iconUrl": "lance_guard5.png",
+    "identifier": "lance_guard5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a lance, unit takes 5 less damage during combat."
   },
   {
     "id": 231,
     "name": "Lance Power 1",
-    "iconUrl": "Lance_Power_1.png",
+    "identifier": "Lance_Power_1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Atk+2 at a cost of Avo-10 when using a lance."
   },
   {
     "id": 232,
     "name": "Lance Power 2",
-    "iconUrl": "Lance_Power_2.png",
+    "identifier": "Lance_Power_2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Atk+4 at a cost of Avo-10 when using a lance."
   },
   {
     "id": 233,
     "name": "Lance Power 3",
-    "iconUrl": "Lance_Power_3.png",
+    "identifier": "Lance_Power_3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Atk+6 at a cost of Avo-10 when using a lance."
   },
   {
     "id": 234,
     "name": "Lance Power 4",
-    "iconUrl": "Lance_Power_4.png",
+    "identifier": "Lance_Power_4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Atk+8 at a cost of Avo-10 when using a lance."
   },
   {
     "id": 235,
     "name": "Lance Power 5",
-    "iconUrl": "Lance_Power_5.png",
+    "identifier": "Lance_Power_5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Atk+10 at a cost of Avo-10 when using a lance."
   },
   {
     "id": 236,
     "name": "Let Fly",
-    "iconUrl": "let_fly.png",
+    "identifier": "let_fly",
     "skillType": "CLASS",
     "description": "Use to perform a guaranteed-hit, area-of-effect attack at the start of the next player phase. Unit loses equipped weapon."
   },
   {
     "id": 237,
     "name": "Level Boost",
-    "iconUrl": "level_boost.png",
+    "identifier": "level_boost",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "When unit defeats a foe of a higher level, grants Lvl+1 until the end of battle."
   },
   {
     "id": 238,
     "name": "Lifesphere",
-    "iconUrl": "Lifesphere.png",
+    "identifier": "Lifesphere",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit uses Wait without attacking or using items, restores 20 HP and heals status effects."
   },
   {
     "id": 239,
     "name": "Lifesphere+",
-    "iconUrl": "Lifesphere-1.png",
+    "identifier": "Lifesphere-1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit uses Wait without attacking or using items, restores 30 HP and heals status effects."
   },
   {
     "id": 240,
     "name": "Lifesphere++",
-    "iconUrl": "Lifesphere-2.png",
+    "identifier": "Lifesphere-2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit uses Wait without attacking or using items, restores 40 HP and heals status effects."
   },
   {
     "id": 241,
     "name": "Lightsphere",
-    "iconUrl": "Lightsphere.png",
+    "identifier": "Lightsphere",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit initiates combat, halves chance of receiving critical hit from foe."
   },
   {
     "id": 242,
     "name": "Lineage",
-    "iconUrl": "Lineage.png",
+    "identifier": "Lineage",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Increases unit's earned experience by 20%."
   },
   {
     "id": 243,
     "name": "Lodestar Rush",
-    "iconUrl": "Lodestar_Rush.png",
+    "identifier": "Lodestar_Rush",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Use to launch 7 consecutive sword attacks at 30% damage. Adjacent foe only."
   },
   {
     "id": 244,
     "name": "Lost & Found",
-    "iconUrl": "Lost_Found.png",
+    "identifier": "Lost_Found",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit finishes an action or waits next to an ally, may find an item and increase support with that ally."
   },
   {
     "id": 245,
     "name": "Luck +10",
-    "iconUrl": "Luck_10.png",
+    "identifier": "Luck_10",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Lck+10."
   },
   {
     "id": 246,
     "name": "Luck +12",
-    "iconUrl": "Luck_12.png",
+    "identifier": "Luck_12",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Lck+12."
   },
   {
     "id": 247,
     "name": "Luck +2",
-    "iconUrl": "Luck_2.png",
+    "identifier": "Luck_2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Lck+2."
   },
   {
     "id": 248,
     "name": "Luck +4",
-    "iconUrl": "Luck_4.png",
+    "identifier": "Luck_4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Lck+4."
   },
   {
     "id": 249,
     "name": "Luck +6",
-    "iconUrl": "Luck_6.png",
+    "identifier": "Luck_6",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Lck+6."
   },
   {
     "id": 250,
     "name": "Luck +8",
-    "iconUrl": "Luck_8.png",
+    "identifier": "Luck_8",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Lck+8."
   },
   {
     "id": 251,
     "name": "Luna",
-    "iconUrl": "Luna.png",
+    "identifier": "Luna",
     "skillType": "CLASS",
     "description": "While making an attack, may ignore half of foe's Def/Res. Trigger %=Dex."
   },
   {
     "id": 252,
     "name": "Lunar Brace",
-    "iconUrl": "Lunar_Brace.png",
+    "identifier": "Lunar_Brace",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit initiates combat with a physical attack, deals extra damage=20% of foe’s Def."
   },
   {
     "id": 253,
     "name": "Lunar Brace+",
-    "iconUrl": "Lunar_Brace-1.png",
+    "identifier": "Lunar_Brace-1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit initiates combat with a physical attack, deals extra damage=30% of foe’s Def."
   },
   {
     "id": 254,
     "name": "Mag +10",
-    "iconUrl": "mag_dex1.png",
+    "identifier": "mag_dex1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Mag+1 and Dex+1."
   },
   {
     "id": 255,
     "name": "Mag +12",
-    "iconUrl": "mag_dex2.png",
+    "identifier": "mag_dex2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Mag+2 and Dex+2."
   },
   {
     "id": 256,
     "name": "Mag +15",
-    "iconUrl": "mag_dex3.png",
+    "identifier": "mag_dex3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Mag+3 and Dex+3."
   },
   {
     "id": 257,
     "name": "Mag +20",
-    "iconUrl": "mag_dex4.png",
+    "identifier": "mag_dex4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Mag+4 and Dex+4."
   },
   {
     "id": 258,
     "name": "Mag +25",
-    "iconUrl": "mag_dex5.png",
+    "identifier": "mag_dex5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Mag+5 and Dex+5."
   },
   {
     "id": 259,
     "name": "Mag Res 1",
-    "iconUrl": "mag_res1.png",
+    "identifier": "mag_res1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Mag+1 and Res+1."
   },
   {
     "id": 260,
     "name": "Mag Res 2",
-    "iconUrl": "mag_res2.png",
+    "identifier": "mag_res2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Mag+2 and Res+2."
   },
   {
     "id": 261,
     "name": "Mag Res 3",
-    "iconUrl": "mag_res3.png",
+    "identifier": "mag_res3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Mag+3 and Res+3."
   },
   {
     "id": 262,
     "name": "Mag Res 4",
-    "iconUrl": "mag_res4.png",
+    "identifier": "mag_res4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Mag+4 and Res+4."
   },
   {
     "id": 263,
     "name": "Mag Res 5",
-    "iconUrl": "mag_res5.png",
+    "identifier": "mag_res5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Mag+5 and Res+5."
   },
   {
     "id": 264,
     "name": "Magic 2",
-    "iconUrl": "Magic_2.png",
+    "identifier": "Magic_2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Mag+2"
   },
   {
     "id": 265,
     "name": "Magic 3",
-    "iconUrl": "Magic_3.png",
+    "identifier": "Magic_3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Mag+3"
   },
   {
     "id": 266,
     "name": "Magic 4",
-    "iconUrl": "Magic_4.png",
+    "identifier": "Magic_4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Mag+4"
   },
   {
     "id": 267,
     "name": "Magic 5",
-    "iconUrl": "Magic_5.png",
+    "identifier": "Magic_5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Mag+5"
   },
   {
     "id": 268,
     "name": "Magic Guard 1",
-    "iconUrl": "magic_guard1.png",
+    "identifier": "magic_guard1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a tome, unit takes 1 less damage during combat."
   },
   {
     "id": 269,
     "name": "Magic Guard 2",
-    "iconUrl": "magic_guard2.png",
+    "identifier": "magic_guard2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a tome, unit takes 2 less damage during combat."
   },
   {
     "id": 270,
     "name": "Magic Guard 3",
-    "iconUrl": "magic_guard3.png",
+    "identifier": "magic_guard3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a tome, unit takes 3 less damage during combat."
   },
   {
     "id": 271,
     "name": "Magic Guard 4",
-    "iconUrl": "magic_guard4.png",
+    "identifier": "magic_guard4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a tome, unit takes 4 less damage during combat."
   },
   {
     "id": 272,
     "name": "Magic Guard 5",
-    "iconUrl": "magic_guard5.png",
+    "identifier": "magic_guard5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a tome, unit takes 5 less damage during combat."
   },
   {
     "id": 273,
     "name": "Make a Killing",
-    "iconUrl": "Make_a_Killing.png",
+    "identifier": "Make_a_Killing",
     "skillType": "PERSONAL",
     "description": "May obtain 500G when unit defeats a foe. Trigger %=Lck."
   },
   {
     "id": 274,
     "name": "Meditation",
-    "iconUrl": "Meditation.png",
+    "identifier": "Meditation",
     "skillType": "PERSONAL",
     "description": "If unit uses Wait without attacking or using items, grants Res+2 for 1 turn."
   },
   {
     "id": 275,
     "name": "Mentorship",
-    "iconUrl": "Mentorship.png",
+    "identifier": "Mentorship",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants 1.2× EXP modifier to unit and adjacent allies."
   },
   {
     "id": 276,
     "name": "Merciless",
-    "iconUrl": "Merciless.png",
+    "identifier": "Merciless",
     "skillType": "CLASS",
     "description": "Unit deals +50% damage against broken foes."
   },
   {
     "id": 277,
     "name": "Momentum",
-    "iconUrl": "Momentum.png",
+    "identifier": "Momentum",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Atk+1 to first attack during combat for each space unit moved before attacking. (Max +10)"
   },
   {
     "id": 278,
     "name": "Momentum+",
-    "iconUrl": "Momentum-1.png",
+    "identifier": "Momentum-1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Atk+1 to first attack during combat for each space unit moved before attacking."
   },
   {
     "id": 279,
     "name": "Moved to Tears",
-    "iconUrl": "Moved_to_Tears.png",
+    "identifier": "Moved_to_Tears",
     "skillType": "PERSONAL",
     "description": "When an ally joins a chain attack in this unit's combat, unit deals +2 damage."
   },
   {
     "id": 280,
     "name": "Night and Day",
-    "iconUrl": "Night_and_Day.png",
+    "identifier": "Night_and_Day",
     "skillType": "EMBLEM_SYNC",
     "description": "Use to switch Emblems and swap between Lunar Brace/Gentility and Solar Brace/Bravery for all allies."
   },
   {
     "id": 281,
     "name": "No Distractions",
-    "iconUrl": "No_Distractions.png",
+    "identifier": "No_Distractions",
     "skillType": "CLASS",
     "description": "Grants Crit+10 during combat with a foe that can't counter."
   },
   {
     "id": 282,
     "name": "Not Quite",
-    "iconUrl": "Not_Quite.png",
+    "identifier": "Not_Quite",
     "skillType": "PERSONAL",
     "description": "If foe initiates combat, inflicts Hit-10 on that foe during combat."
   },
   {
     "id": 283,
     "name": "Other Half",
-    "iconUrl": "other_half.png",
+    "identifier": "other_half",
     "skillType": "EMBLEM_ENGAGE",
     "description": "If unit initiates combat, Robin chain attacks. Grants Mag+10 while engaged."
   },
   {
     "id": 284,
     "name": "Override",
-    "iconUrl": "Override.png",
+    "identifier": "Override",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Use to attack and move through a line of adjacent foes. Sword/lance only."
   },
   {
     "id": 285,
     "name": "Pair Up",
-    "iconUrl": "Pair_Up.png",
+    "identifier": "Pair_Up",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Prevents damage from foes' chain attacks against unit."
   },
   {
     "id": 286,
     "name": "Party Animal",
-    "iconUrl": "Party_Animal.png",
+    "identifier": "Party_Animal",
     "skillType": "PERSONAL",
     "description": "Grants a bonus to Hit and Avo equal to 3× the number of allies and foes within 2 spaces."
   },
   {
     "id": 287,
     "name": "Pass",
-    "iconUrl": "Pass.png",
+    "identifier": "Pass",
     "skillType": "CLASS",
     "description": "Foes do not block this unit's movement."
   },
   {
     "id": 288,
     "name": "Perceptive",
-    "iconUrl": "Perceptive.png",
+    "identifier": "Perceptive",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If the unit initiates combat, grants Avo+15 during combat. Avo increases with high Spd."
   },
   {
     "id": 289,
     "name": "Perceptive+",
-    "iconUrl": "Perceptive-1.png",
+    "identifier": "Perceptive-1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If the unit initiates combat, grants Avo+30 during combat. Avo increases with high Spd."
   },
   {
     "id": 290,
     "name": "Piercing Glare",
-    "iconUrl": "piercing_glare.png",
+    "identifier": "piercing_glare",
     "skillType": "EMBLEM_SYNC",
     "description": "Use when HP is full to consume 20% of max HP and prevent foes from entering the 4 spaces diagonally adjacent to unit for 1 turn."
   },
   {
     "id": 291,
     "name": "Pincer Attack",
-    "iconUrl": "Pincer_Attack.png",
+    "identifier": "Pincer_Attack",
     "skillType": "CLASS",
     "description": "If unit initiates combat while an ally is on the opposite side of the foe, always follow up (if weapon allows)."
   },
   {
     "id": 292,
     "name": "Pivot",
-    "iconUrl": "Pivot.png",
+    "identifier": "Pivot",
     "skillType": "CLASS",
     "description": "Use to move to the opposite side of an adjacent ally."
   },
   {
     "id": 293,
     "name": "Protective",
-    "iconUrl": "protective.png",
+    "identifier": "protective",
     "skillType": "PERSONAL",
     "description": "If foe initiates combat against Nil/Rafal, grants Crit+10 to unit for 1 turn."
   },
   {
     "id": 294,
     "name": "Quadruple Hit",
-    "iconUrl": "Quadruple_Hit.png",
+    "identifier": "Quadruple_Hit",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Use to attack once each with sword, lance, axe, and bow."
   },
   {
     "id": 295,
     "name": "Quality Time",
-    "iconUrl": "Quality_Time.png",
+    "identifier": "Quality_Time",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "After unit acts or waits, restores 5 HP to adjacent allies and slightly increases support with them."
   },
   {
     "id": 296,
     "name": "Quality Time+",
-    "iconUrl": "Quality_Time-1.png",
+    "identifier": "Quality_Time-1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "After unit acts or waits, restores 10 HP to adjacent allies and slightly increases support with them."
   },
   {
     "id": 297,
     "name": "Quick Riposte",
-    "iconUrl": "quick_riposte.png",
+    "identifier": "quick_riposte",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit's HP is 80% or more and foe initiates combat, unit will always follow up (if weapon allows)."
   },
   {
     "id": 298,
     "name": "Quick Riposte+",
-    "iconUrl": "quick_riposte_plus.png",
+    "identifier": "quick_riposte_plus",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit's HP is 60% or more and foe initiates combat, unit will always follow up (if weapon allows)."
   },
   {
     "id": 299,
     "name": "Racket of Solm",
-    "iconUrl": "Racket_of_Solm.png",
+    "identifier": "Racket_of_Solm",
     "skillType": "PERSONAL",
     "description": "Inflicts Crit-5 on foes within 3 spaces."
   },
   {
     "id": 300,
     "name": "Rally Spectrum",
-    "iconUrl": "rally_spectrum.png",
+    "identifier": "rally_spectrum",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Use to grant adjacent allies +3 to all seven basic stats for 1 turn."
   },
   {
     "id": 301,
     "name": "Rally Spectrum+",
-    "iconUrl": "rally_spectrum_plus.png",
+    "identifier": "rally_spectrum_plus",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Use to grant allies within 2 spaces +3 to all seven basic stats for 1 turn."
   },
   {
     "id": 302,
     "name": "Reforge",
-    "iconUrl": "Reforge.png",
+    "identifier": "Reforge",
     "skillType": "CLASS",
     "description": "If unit's HP is 11 or more and an adjacent ally is broken after combat, sacrifices 10 HP and removes the break status from that ally."
   },
   {
     "id": 303,
     "name": "Reposition",
-    "iconUrl": "Reposition.png",
+    "identifier": "Reposition",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Use to move an adjacent ally to the opposite side of unit."
   },
   {
     "id": 304,
     "name": "Reprisal",
-    "iconUrl": "reprisal.png",
+    "identifier": "reprisal",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit's HP is not full, adds 30% of lost HP to Atk."
   },
   {
     "id": 305,
     "name": "Reprisal+",
-    "iconUrl": "reprisal_plus.png",
+    "identifier": "reprisal_plus",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit's HP is not full, adds 50% of lost HP to Atk."
   },
   {
     "id": 306,
     "name": "Resistance 2",
-    "iconUrl": "Resistance_2.png",
+    "identifier": "Resistance_2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Res+2."
   },
   {
     "id": 307,
     "name": "Resistance 3",
-    "iconUrl": "Resistance_3.png",
+    "identifier": "Resistance_3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Res+3."
   },
   {
     "id": 308,
     "name": "Resistance 4",
-    "iconUrl": "Resistance_4.png",
+    "identifier": "Resistance_4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Res+4."
   },
   {
     "id": 309,
     "name": "Resistance 5",
-    "iconUrl": "Resistance_5.png",
+    "identifier": "Resistance_5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Res+5."
   },
   {
     "id": 310,
     "name": "Resolve",
-    "iconUrl": "Resolve.png",
+    "identifier": "Resolve",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit's HP is 75% or less after combat, grants Def/Res+5 as long as unit's HP stays below 75%."
   },
   {
     "id": 311,
     "name": "Resolve+",
-    "iconUrl": "Resolve-1.png",
+    "identifier": "Resolve-1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit’s HP is 75% or less after combat, grants Def/Res+7 as long as unit’s HP stays below 75%."
   },
   {
     "id": 312,
     "name": "Resonance",
-    "iconUrl": "Resonance.png",
+    "identifier": "Resonance",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "When equipped with a tome, if unit's HP is 2 or more, unit loses 1 HP at start of combat and deals +2 damage during combat."
   },
   {
     "id": 313,
     "name": "Resonance+",
-    "iconUrl": "Resonance-1.png",
+    "identifier": "Resonance-1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "When equipped with a tome, if unit’s HP is 2 or more, unit loses 1 HP at start of combat and deals +3 damage during combat."
   },
   {
     "id": 314,
     "name": "Rise Above",
-    "iconUrl": "Rise_Above.png",
+    "identifier": "Rise_Above",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Grants Lvl+5."
   },
   {
     "id": 315,
     "name": "Rivalry",
-    "iconUrl": "rivalry.png",
+    "identifier": "rivalry",
     "skillType": "PERSONAL",
     "description": "When an ally within 2 spaces defeats a foe, grants Crit+10 to unit for 1 turn."
   },
   {
     "id": 316,
     "name": "Run Through",
-    "iconUrl": "Run_Through.png",
+    "identifier": "Run_Through",
     "skillType": "CLASS",
     "description": "Use to attack an adjacent foe, then move to the space opposite that foe."
   },
   {
     "id": 317,
     "name": "Sacred Twins",
-    "iconUrl": "Sacred_Twins.png",
+    "identifier": "Sacred_Twins",
     "skillType": "EMBLEM_ENGAGE",
     "description": "While engaged with Eirika, changes Lunar Brace to Eclipse Brace and Gentility to Blue Skies for all allies."
   },
   {
     "id": 318,
     "name": "Sandstorm",
-    "iconUrl": "Sandstorm.png",
+    "identifier": "Sandstorm",
     "skillType": "CLASS",
     "description": "While making a physical attack, may calculate damage with 150% of Def instead of Str. Trigger %=Dex."
   },
   {
     "id": 319,
     "name": "Seconds",
-    "iconUrl": "Seconds.png",
+    "identifier": "Seconds",
     "skillType": "PERSONAL",
     "description": "On eating a packed lunch, unit may obtain another of the same item. Trigger %=Lck."
   },
   {
     "id": 320,
     "name": "Self-Healing",
-    "iconUrl": "Self-Healing.png",
+    "identifier": "Self-Healing",
     "skillType": "CLASS",
     "description": "Unit can target itself with healing staves."
   },
   {
     "id": 321,
     "name": "Self-Improver",
-    "iconUrl": "Self-Improver.png",
+    "identifier": "Self-Improver",
     "skillType": "PERSONAL",
     "description": "If unit uses Wait without attacking or using items, grants Str+2 for 1 turn."
   },
   {
     "id": 322,
     "name": "Share Spoils",
-    "iconUrl": "Share_Spoils.png",
+    "identifier": "Share_Spoils",
     "skillType": "PERSONAL",
     "description": "If there is an ally within 1 space, grants Hit/Avo+10 at a cost of Crit-10 to unit."
   },
   {
     "id": 323,
     "name": "Silence Ward",
-    "iconUrl": "Silence_Ward.png",
+    "identifier": "Silence_Ward",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants immunity to silence."
   },
   {
     "id": 324,
     "name": "Single-Minded",
-    "iconUrl": "Single-Minded.png",
+    "identifier": "Single-Minded",
     "skillType": "PERSONAL",
     "description": "During combat with a foe who was also unit's most recent opponent, grants Hit+20."
   },
   {
     "id": 325,
     "name": "Smash",
-    "iconUrl": "Smash.png",
+    "identifier": "Smash",
     "skillType": "CLASS",
     "description": "When making a smash attack, push the target 2 spaces instead of 1."
   },
   {
     "id": 326,
     "name": "Soar",
-    "iconUrl": "soar.png",
+    "identifier": "soar",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Grants Mov+2. Unit can cross terrain as if flying."
   },
   {
     "id": 327,
     "name": "Sol",
-    "iconUrl": "Sol.png",
+    "identifier": "Sol",
     "skillType": "CLASS",
     "description": "Unit may recover HP=50% damage dealt. Trigger %=Dex."
   },
   {
     "id": 328,
     "name": "Solar Brace",
-    "iconUrl": "Solar_Brace.png",
+    "identifier": "Solar_Brace",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit initiates combat, unit recovers HP=30% of damage dealt."
   },
   {
     "id": 329,
     "name": "Solar Brace+",
-    "iconUrl": "Solar_Brace-1.png",
+    "identifier": "Solar_Brace-1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit initiates combat, unit recovers HP=50% of damage dealt."
   },
   {
     "id": 330,
     "name": "Soulblade",
-    "iconUrl": "Soulblade.png",
+    "identifier": "Soulblade",
     "skillType": "CLASS",
     "description": "When attacking with a sword, damage is calculated using average of foe's Def and Res."
   },
   {
     "id": 331,
     "name": "Soul Conversion",
-    "iconUrl": "sp_conversion.png",
+    "identifier": "sp_conversion",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants +20 SP for each defeated foe. Triggers even without a ring or bracelet equipped."
   },
   {
     "id": 332,
     "name": "Spd/Dex +1",
-    "iconUrl": "spd_dex1.png",
+    "identifier": "spd_dex1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Spd+1 and Dex+1."
   },
   {
     "id": 333,
     "name": "Spd/Dex +2",
-    "iconUrl": "spd_dex2.png",
+    "identifier": "spd_dex2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Spd+2 and Dex+2."
   },
   {
     "id": 334,
     "name": "Spd/Dex +3",
-    "iconUrl": "spd_dex3.png",
+    "identifier": "spd_dex3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Spd+3 and Dex+3."
   },
   {
     "id": 335,
     "name": "Spd/Dex +4",
-    "iconUrl": "spd_dex4.png",
+    "identifier": "spd_dex4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Spd+4 and Dex+4."
   },
   {
     "id": 336,
     "name": "Spd/Dex +5",
-    "iconUrl": "spd_dex5.png",
+    "identifier": "spd_dex5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Spd+5 and Dex+5."
   },
   {
     "id": 337,
     "name": "Spd/Res +1",
-    "iconUrl": "spd_res1.png",
+    "identifier": "spd_res1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Spd+1 and Res+1."
   },
   {
     "id": 338,
     "name": "Spd/Res +2",
-    "iconUrl": "spd_res2.png",
+    "identifier": "spd_res2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Spd+2 and Res+2."
   },
   {
     "id": 339,
     "name": "Spd/Res +3",
-    "iconUrl": "spd_res3.png",
+    "identifier": "spd_res3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Spd+3 and Res+3."
   },
   {
     "id": 340,
     "name": "Spd/Res +4",
-    "iconUrl": "spd_res4.png",
+    "identifier": "spd_res4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Spd+4 and Res+4."
   },
   {
     "id": 341,
     "name": "Spd/Res +5",
-    "iconUrl": "spd_res5.png",
+    "identifier": "spd_res5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Spd+5 and Res+5."
   },
   {
     "id": 342,
     "name": "Special Dance",
-    "iconUrl": "Special_Dance.png",
+    "identifier": "Special_Dance",
     "skillType": "CLASS",
     "description": "If unit uses Dance, grants Dex/Spd/Lck+3 to target for 1 turn."
   },
   {
     "id": 343,
     "name": "Special Guard 1",
-    "iconUrl": "Special_Guard1.png",
+    "identifier": "Special_Guard1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a special attack, unit takes 1 less damage during combat."
   },
   {
     "id": 344,
     "name": "Special Guard 2",
-    "iconUrl": "Special_Guard2.png",
+    "identifier": "Special_Guard2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a special attack, unit takes 2 less damage during combat."
   },
   {
     "id": 345,
     "name": "Special Guard 3",
-    "iconUrl": "Special_Guard3.png",
+    "identifier": "Special_Guard3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a special attack, unit takes 3 less damage during combat."
   },
   {
     "id": 346,
     "name": "Special Guard 4",
-    "iconUrl": "Special_Guard4.png",
+    "identifier": "Special_Guard4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a special attack, unit takes 4 less damage during combat."
   },
   {
     "id": 347,
     "name": "Special Guard 5",
-    "iconUrl": "Special_Guard5.png",
+    "identifier": "Special_Guard5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a special attack, unit takes 5 less damage during combat."
   },
   {
     "id": 348,
     "name": "Speed 1",
-    "iconUrl": "Speed_1.png",
+    "identifier": "Speed_1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Spd+1."
   },
   {
     "id": 349,
     "name": "Speed 2",
-    "iconUrl": "Speed_2.png",
+    "identifier": "Speed_2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Spd+2."
   },
   {
     "id": 350,
     "name": "Speed 3",
-    "iconUrl": "Speed_3.png",
+    "identifier": "Speed_3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Spd+3."
   },
   {
     "id": 351,
     "name": "Speed 4",
-    "iconUrl": "Speed_4.png",
+    "identifier": "Speed_4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Spd+4."
   },
   {
     "id": 352,
     "name": "Speed 5",
-    "iconUrl": "Speed_5.png",
+    "identifier": "Speed_5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Spd+5."
   },
   {
     "id": 353,
     "name": "Speedtaker",
-    "iconUrl": "Speedtaker.png",
+    "identifier": "Speedtaker",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants a stacking Spd+2 each time unit initiates combat and defeats a foe. Bonus lasts for the rest of the battle."
   },
   {
     "id": 354,
     "name": "Spell Harmony",
-    "iconUrl": "Spell_Harmony.png",
+    "identifier": "Spell_Harmony",
     "skillType": "CLASS",
     "description": "If unit initiates combat with a tome, grants Atk equal to the number of adjacent allies with tomes."
   },
   {
     "id": 355,
     "name": "Staff Mastery 1",
-    "iconUrl": "Staff_Mastery_1.png",
+    "identifier": "Staff_Mastery_1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit+10 when using a staff. Staves also heal an additional 3 HP."
   },
   {
     "id": 356,
     "name": "Staff Mastery 2",
-    "iconUrl": "Staff_Mastery_2.png",
+    "identifier": "Staff_Mastery_2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit+15 when using a staff. Staves also heal an additional 5 HP."
   },
   {
     "id": 357,
     "name": "Staff Mastery 3",
-    "iconUrl": "Staff_Mastery_3.png",
+    "identifier": "Staff_Mastery_3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit+20 when using a staff. Staves also heal an additional 7 HP."
   },
   {
     "id": 358,
     "name": "Staff Mastery 4",
-    "iconUrl": "Staff_Mastery_4.png",
+    "identifier": "Staff_Mastery_4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit+25 when using a staff. Staves also heal an additional 10 HP."
   },
   {
     "id": 359,
     "name": "Staff Mastery 5",
-    "iconUrl": "Staff_Mastery_5.png",
+    "identifier": "Staff_Mastery_5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit+30 when using a staff. Staves also heal an additional 15 HP."
   },
   {
     "id": 360,
     "name": "Starsphere",
-    "iconUrl": "Starsphere.png",
+    "identifier": "Starsphere",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants unit enhanced stat growth when leveling up."
   },
   {
     "id": 361,
     "name": "Storm's Eye",
-    "iconUrl": "storms_eye.png",
+    "identifier": "storms_eye",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Grants immunity to break. Foe cannot follow up. Unit follows up. Lasts 1 turn. Sword/axe only.\n[Dragon] Prevent one critical hit.\n[Backup] Crit+20.\n[Covert] Avo+30."
   },
   {
     "id": 362,
     "name": "Storm's Eye+",
-    "iconUrl": "storms_eye.png",
+    "identifier": "storms_eye",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Grants immunity to break. Foe cannot follow up. Unit counters before foe’s first attack and follows up. Lasts 1 turn. Sword/axe only.\n[Dragon] Prevent one critical hit.\n[Backup] Crit+20.\n[Covert] Avo+30."
   },
   {
     "id": 363,
     "name": "Str/Def +1",
-    "iconUrl": "str_def1.png",
+    "identifier": "str_def1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Str+1 and Def+1."
   },
   {
     "id": 364,
     "name": "Str/Def +2",
-    "iconUrl": "str_def2.png",
+    "identifier": "str_def2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Str+2 and Def+2."
   },
   {
     "id": 365,
     "name": "Str/Def +3",
-    "iconUrl": "str_def3.png",
+    "identifier": "str_def3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Str+3 and Def+3."
   },
   {
     "id": 366,
     "name": "Str/Def +4",
-    "iconUrl": "str_def4.png",
+    "identifier": "str_def4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Str+4 and Def+4."
   },
   {
     "id": 367,
     "name": "Str/Def +5",
-    "iconUrl": "str_def5.png",
+    "identifier": "str_def5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Str+5 and Def+5."
   },
   {
     "id": 368,
     "name": "Str/Dex +1",
-    "iconUrl": "Str_Dex_1.png",
+    "identifier": "Str_Dex_1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Str+1 and Dex+1."
   },
   {
     "id": 369,
     "name": "Str/Dex +2",
-    "iconUrl": "Str_Dex_2.png",
+    "identifier": "Str_Dex_2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Str+2 and Dex+2."
   },
   {
     "id": 370,
     "name": "Str/Dex +3",
-    "iconUrl": "Str_Dex_3.png",
+    "identifier": "Str_Dex_3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Str+3 and Dex+3."
   },
   {
     "id": 371,
     "name": "Str/Dex +4",
-    "iconUrl": "Str_Dex_4.png",
+    "identifier": "Str_Dex_4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Str+4 and Dex+4."
   },
   {
     "id": 372,
     "name": "Str/Dex +5",
-    "iconUrl": "Str_Dex_5.png",
+    "identifier": "Str_Dex_5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Str+5 and Dex+5."
   },
   {
     "id": 373,
     "name": "Strength 1",
-    "iconUrl": "Strength_1.png",
+    "identifier": "Strength_1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Str+1."
   },
   {
     "id": 374,
     "name": "Strength 2",
-    "iconUrl": "Strength_2.png",
+    "identifier": "Strength_2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Str+2."
   },
   {
     "id": 375,
     "name": "Strength 3",
-    "iconUrl": "Strength_3.png",
+    "identifier": "Strength_3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Str+3."
   },
   {
     "id": 376,
     "name": "Strength 4",
-    "iconUrl": "Strength_4.png",
+    "identifier": "Strength_4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Str+4."
   },
   {
     "id": 377,
     "name": "Strength 5",
-    "iconUrl": "Strength_5.png",
+    "identifier": "Strength_5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Str+5."
   },
   {
     "id": 378,
     "name": "Strength 6",
-    "iconUrl": "Strength_6.png",
+    "identifier": "Strength_6",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Str+6."
   },
   {
     "id": 379,
     "name": "Stunning Smile",
-    "iconUrl": "Stunning_Smile.png",
+    "identifier": "Stunning_Smile",
     "skillType": "PERSONAL",
     "description": "If foe is male, inflicts Avo-20 on that foe during combat."
   },
   {
     "id": 380,
     "name": "Surprise Attack",
-    "iconUrl": "surprise_attack.png",
+    "identifier": "surprise_attack",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit initiates combat from terrain that provides an Avo bonus, foe cannot counterattack."
   },
   {
     "id": 381,
     "name": "Survival Plan",
-    "iconUrl": "survival-plan.png",
+    "identifier": "survival-plan",
     "skillType": "PERSONAL",
     "description": "When there are more foes than allies within 3 spaces, grants Avo+20."
   },
   {
     "id": 382,
     "name": "Swap",
-    "iconUrl": "Swap.png",
+    "identifier": "Swap",
     "skillType": "CLASS",
     "description": "Use to switch places with an adjacent ally."
   },
   {
     "id": 383,
     "name": "Sword Agility 1",
-    "iconUrl": "Sword_Agility_1.png",
+    "identifier": "Sword_Agility_1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Avo+10 at a cost of Crit-10 when using a sword."
   },
   {
     "id": 384,
     "name": "Sword Agility 2",
-    "iconUrl": "Sword_Agility_2.png",
+    "identifier": "Sword_Agility_2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Avo+15 at a cost of Crit-10 when using a sword."
   },
   {
     "id": 385,
     "name": "Sword Agility 3",
-    "iconUrl": "Sword_Agility_3.png",
+    "identifier": "Sword_Agility_3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Avo+20 at a cost of Crit-10 when using a sword."
   },
   {
     "id": 386,
     "name": "Sword Agility 4",
-    "iconUrl": "Sword_Agility_4.png",
+    "identifier": "Sword_Agility_4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Avo+25 at a cost of Crit-10 when using a sword."
   },
   {
     "id": 387,
     "name": "Sword Agility 5",
-    "iconUrl": "Sword_Agility_5.png",
+    "identifier": "Sword_Agility_5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Avo+30 at a cost of Crit-10 when using a sword."
   },
   {
     "id": 388,
     "name": "Sword Focus 1",
-    "iconUrl": "Sword_Focus_1.png",
+    "identifier": "Sword_Focus_1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit+10 at a cost of Ddg-10 when using a sword."
   },
   {
     "id": 389,
     "name": "Sword Focus 2",
-    "iconUrl": "Sword_Focus_2.png",
+    "identifier": "Sword_Focus_2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit+15 at a cost of Ddg-10 when using a sword."
   },
   {
     "id": 390,
     "name": "Sword Focus 3",
-    "iconUrl": "Sword_Focus_3.png",
+    "identifier": "Sword_Focus_3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit+20 at a cost of Ddg-10 when using a sword."
   },
   {
     "id": 391,
     "name": "Sword Focus 4",
-    "iconUrl": "Sword_Focus_4.png",
+    "identifier": "Sword_Focus_4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit+25 at a cost of Ddg-10 when using a sword."
   },
   {
     "id": 392,
     "name": "Sword Focus 5",
-    "iconUrl": "Sword_Focus_5.png",
+    "identifier": "Sword_Focus_5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit+30 at a cost of Ddg-10 when using a sword."
   },
   {
     "id": 393,
     "name": "Sword Guard 1",
-    "iconUrl": "sword_guard1.png",
+    "identifier": "sword_guard1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a sword, unit takes 1 less damage during combat."
   },
   {
     "id": 394,
     "name": "Sword Guard 2",
-    "iconUrl": "sword_guard2.png",
+    "identifier": "sword_guard2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a sword, unit takes 2 less damage during combat."
   },
   {
     "id": 395,
     "name": "Sword Guard 3",
-    "iconUrl": "sword_guard3.png",
+    "identifier": "sword_guard3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a sword, unit takes 3 less damage during combat."
   },
   {
     "id": 396,
     "name": "Sword Guard 4",
-    "iconUrl": "sword_guard4.png",
+    "identifier": "sword_guard4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a sword, unit takes 4 less damage during combat."
   },
   {
     "id": 397,
     "name": "Sword Guard 5",
-    "iconUrl": "sword_guard5.png",
+    "identifier": "sword_guard5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If foe is equipped with a sword, unit takes 5 less damage during combat."
   },
   {
     "id": 398,
     "name": "Sword Power 1",
-    "iconUrl": "Sword_Power_1.png",
+    "identifier": "Sword_Power_1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Atk+2 at a cost of Avo-10 when using a sword."
   },
   {
     "id": 399,
     "name": "Sword Power 2",
-    "iconUrl": "Sword_Power_2.png",
+    "identifier": "Sword_Power_2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Atk+4 at a cost of Avo-10 when using a sword."
   },
   {
     "id": 400,
     "name": "Sword Power 3",
-    "iconUrl": "Sword_Power_3.png",
+    "identifier": "Sword_Power_3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Atk+6 at a cost of Avo-10 when using a sword."
   },
   {
     "id": 401,
     "name": "Sword Power 4",
-    "iconUrl": "Sword_Power_4.png",
+    "identifier": "Sword_Power_4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Atk+8 at a cost of Avo-10 when using a sword."
   },
   {
     "id": 402,
     "name": "Sword Power 5",
-    "iconUrl": "Sword_Power_5.png",
+    "identifier": "Sword_Power_5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Atk+10 at a cost of Avo-10 when using a sword."
   },
   {
     "id": 403,
     "name": "Divine Blessing",
-    "iconUrl": "Tiki_Engage.png",
+    "identifier": "Tiki_Engage",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Use to grant 1 ally a Revival Stone.\n[Dragon] Restore 20 HP to ally.\n[Qi Adept] Heal their status effects."
   },
   {
     "id": 404,
     "name": "Divine Blessing+",
-    "iconUrl": "Tiki_Engage.png",
+    "identifier": "Tiki_Engage",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Use to grant 1 ally a Revival Stone. If ally is not synced, fully restore HP. If ally is synced, +3 to engage meter. If ally is engaged, restore engage turns.\n[Dragon] Restore 20 HP to ally.\n[Qi Adept] Heal their status effects."
   },
   {
     "id": 405,
     "name": "Tome Precision 1",
-    "iconUrl": "Tome_Precision_1.png",
+    "identifier": "Tome_Precision_1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit/Avo+3 when using a tome."
   },
   {
     "id": 406,
     "name": "Tome Precision 2",
-    "iconUrl": "Tome_Precision_2.png",
+    "identifier": "Tome_Precision_2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit/Avo+5 when using a tome."
   },
   {
     "id": 407,
     "name": "Tome Precision 3",
-    "iconUrl": "Tome_Precision_3.png",
+    "identifier": "Tome_Precision_3",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit/Avo+7 when using a tome."
   },
   {
     "id": 408,
     "name": "Tome Precision 4",
-    "iconUrl": "Tome_Precision_4.png",
+    "identifier": "Tome_Precision_4",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit/Avo+10 when using a tome."
   },
   {
     "id": 409,
     "name": "Tome Precision 5",
-    "iconUrl": "Tome_Precision_5.png",
+    "identifier": "Tome_Precision_5",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "Grants Hit/Avo+15 when using a tome."
   },
   {
     "id": 410,
     "name": "Torrential Roar",
-    "iconUrl": "Torrential_Roar.png",
+    "identifier": "Torrential_Roar",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Use to attack 3 spaces in a line, turning those spaces into water terrain."
   },
   {
     "id": 411,
     "name": "Trained to Kill",
-    "iconUrl": "Trained_to_Kill.png",
+    "identifier": "Trained_to_Kill",
     "skillType": "PERSONAL",
     "description": "While unit occupies terrain that provides an Avo bonus, grants Crit+15."
   },
   {
     "id": 412,
     "name": "Twin Strike",
-    "iconUrl": "Twin_Strike.png",
+    "identifier": "Twin_Strike",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Use to make a sword attack followed by a lance attack from Ephraim on adjacent foe. Effective: Corrupted."
   },
   {
     "id": 413,
     "name": "Unyielding",
-    "iconUrl": "Unyielding.png",
+    "identifier": "Unyielding",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "At start of player phase, if HP is 20% or less, restores 20% of unit's max HP."
   },
   {
     "id": 414,
     "name": "Unyielding+",
-    "iconUrl": "Unyielding-1.png",
+    "identifier": "Unyielding-1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "At start of player phase, if HP is 30% or less, restores 30% of unit's max HP."
   },
   {
     "id": 415,
     "name": "Unyielding++",
-    "iconUrl": "Unyielding-2.png",
+    "identifier": "Unyielding-2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "At start of player phase, if HP is 40% or less, restores 40% of unit's max HP."
   },
   {
     "id": 416,
     "name": "Vantage",
-    "iconUrl": "Vantage.png",
+    "identifier": "Vantage",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit's HP is 25% or less and foe initiates combat, unit can counter before foe's first attack."
   },
   {
     "id": 417,
     "name": "Vantage+",
-    "iconUrl": "Vantage-1.png",
+    "identifier": "Vantage-1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit's HP is 50% or less and foe initiates combat, unit can counter before foe's first attack."
   },
   {
     "id": 418,
     "name": "Vantage++",
-    "iconUrl": "Vantage-2.png",
+    "identifier": "Vantage-2",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit's HP is 75% or less and foe initiates combat, unit can counter before foe's first attack."
   },
   {
     "id": 419,
     "name": "Verdant Faith",
-    "iconUrl": "Verdant_Faith.png",
+    "identifier": "Verdant_Faith",
     "skillType": "PERSONAL",
     "description": "If unit is adjacent to the Divine Dragon, grants Hit+10 during combat to both of them."
   },
   {
     "id": 420,
     "name": "Warp",
-    "iconUrl": "Warp_Ragnarok.png",
+    "identifier": "Warp_Ragnarok",
     "skillType": "EMBLEM_ENGAGE",
     "description": "Use to warp up to 10 spaces and make a powerful magic attack."
   },
   {
     "id": 421,
     "name": "Weapon Insight",
-    "iconUrl": "Weapon_Insight.png",
+    "identifier": "Weapon_Insight",
     "skillType": "PERSONAL",
     "description": "If unit is equipped with a weapon of lower level than foe's, grants Crit+20 during combat."
   },
   {
     "id": 422,
     "name": "Weapon Sync",
-    "iconUrl": "Weapon_Sync.png",
+    "identifier": "Weapon_Sync",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit initiates combat using same weapon type as the synced Emblem, grants Atk+5. If engaged, grants Atk+5 regardless of weapon type."
   },
   {
     "id": 423,
     "name": "Weapon Sync+",
-    "iconUrl": "Weapon_Sync-1.png",
+    "identifier": "Weapon_Sync-1",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "If unit initiates combat using same weapon type as the synced Emblem, grants Atk+7. If engaged, grants Atk+7 regardless of weapon type."
   },
   {
     "id": 424,
     "name": "Will to Win",
-    "iconUrl": "Will_to_Win.png",
+    "identifier": "Will_to_Win",
     "skillType": "PERSONAL",
     "description": "If unit's HP is 50% or less at start of combat, grants Hit/Avo+20 during combat."
   },
   {
     "id": 425,
     "name": "World Tree",
-    "iconUrl": "World_Tree.png",
+    "identifier": "World_Tree",
     "skillType": "CLASS",
     "description": "When unit uses a staff, may not consume a use. Trigger %=Dex."
   },
   {
     "id": 426,
     "name": "Wrath",
-    "iconUrl": "Wrath.png",
+    "identifier": "Wrath",
     "skillType": "EMBLEM_INHERITABLE",
     "description": "At start of combat, for each HP the unit has lost, grants Crit+1 during combat. (Max +30)"
   }

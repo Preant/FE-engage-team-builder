@@ -123,7 +123,7 @@ export class CharacterDetailComponent {
   );
   private assetsService: AssetsService = inject(AssetsService);
   public personalSkillImageUrl: Signal<string> = computed(() =>
-    this.assetsService.getSkillImage(this.personalSkill().iconUrl)
+    this.assetsService.getSkillImage(this.personalSkill().identifier)
   );
   public characterImageUrl: Signal<string> = computed((): string =>
     this.assetsService.getCharacterImage(this.characterSignal().identifier, ImageSize.LARGE)
