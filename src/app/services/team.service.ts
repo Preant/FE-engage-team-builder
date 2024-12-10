@@ -11,7 +11,6 @@ import { CharacterService, EmblemService, SkillService, WeaponService } from '@/
   providedIn: 'root'
 })
 export class TeamService {
-  readonly members: Signal<TeamMember[]> = computed(() => this.team().members);
   private characterService: CharacterService = inject(CharacterService);
   private emblemService: EmblemService = inject(EmblemService);
   private weaponService: WeaponService = inject(WeaponService);
@@ -29,6 +28,7 @@ export class TeamService {
     ]
   });
   readonly team: Signal<Team> = computed(() => this.teamSignal());
+  readonly members: Signal<TeamMember[]> = computed(() => this.team().members);
 
   constructor() {
   }
@@ -144,7 +144,7 @@ export class TeamService {
 
   getAvailableInheritableSkills = (memberId: TeamMemberID, skillIndex: SkillSlotIndex) => computed(() => {
     const member = this.getMemberById(memberId)();
-    if (!member || !member.emblemId) {
+    if (!member) {
       return [];
     }
 

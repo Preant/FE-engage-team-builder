@@ -69,10 +69,8 @@ import { ViewStateService } from '@/app/services/view-state.service';
                             }
                         </div>
                     </div>
-                </div>
 
-                <!-- Inheritable Skills Selection -->
-                @if (member().emblemId) {
+                    <!-- Inheritable Skills Selection -->
                     <div class="flex-grow">
                         <h3 class="text-baby_powder-500 text-sm mb-2 font-semibold">Inheritable Skills</h3>
                         <div class="flex space-x-2">
@@ -92,7 +90,7 @@ import { ViewStateService } from '@/app/services/view-state.service';
                             />
                         </div>
                     </div>
-                }
+                </div>
             </div>
         </div>
     `
