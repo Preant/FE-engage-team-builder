@@ -9,13 +9,12 @@ import { CharacterService } from '@/app/services/resources.service';
 import { ViewStateService } from '@/app/services/view-state.service';
 
 @Component({
-  selector: 'app-characters',
-  standalone: true,
-  imports: [
-    CarouselComponent,
-    CharacterDetailComponent
-  ],
-  template: `
+    selector: 'app-characters',
+    imports: [
+        CarouselComponent,
+        CharacterDetailComponent
+    ],
+    template: `
         <div class="min-h-screen p-6 bg-gradient-to-br from-prussian_blue-400 to-rich_black-600">
             <div class="space-y-6">
                 <app-carousel
@@ -30,7 +29,7 @@ import { ViewStateService } from '@/app/services/view-state.service';
             </div>
         </div>
     `,
-  styles: [`
+    styles: [`
         :host {
             display: block;
             min-height: 100vh;

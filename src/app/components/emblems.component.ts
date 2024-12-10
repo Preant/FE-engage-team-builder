@@ -8,13 +8,12 @@ import { AssetsService } from '@/app/services/assets.service';
 import { EmblemService } from '@/app/services/resources.service';
 
 @Component({
-  selector: 'app-emblems',
-  standalone: true,
-  imports: [
-    CarouselComponent,
-    EmblemDetailComponent
-  ],
-  template: `
+    selector: 'app-emblems',
+    imports: [
+        CarouselComponent,
+        EmblemDetailComponent
+    ],
+    template: `
         <div class="min-h-screen p-6 bg-gradient-to-br from-prussian_blue-400 to-rich_black-600">
             <div class="space-y-6">
                 <app-carousel
@@ -29,7 +28,7 @@ import { EmblemService } from '@/app/services/resources.service';
             </div>
         </div>
     `,
-  styles: [`
+    styles: [`
         :host {
             display: block;
             min-height: 100vh;

@@ -1,14 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, computed, inject, Input, Signal, signal, WritableSignal } from '@angular/core';
-import { RouterLink } from '@angular/router';
 
 import { PanelButton } from '@/app/models/PanelButton.model';
 import { ViewStateService } from '@/app/services/view-state.service';
 
 @Component({
   selector: 'app-panel-button',
-  standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule],
   template: `
         <div
                 [ngClass]="classes()"
@@ -37,6 +35,7 @@ import { ViewStateService } from '@/app/services/view-state.service';
       </span>
         </div>
     `,
+  standalone: true,
   styles: [`
         .gradient-text {
             background-clip: text;

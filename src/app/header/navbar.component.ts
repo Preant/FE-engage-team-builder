@@ -1,6 +1,6 @@
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterLinkActive } from '@angular/router';
 
 import { NavItem } from '@/app/models/NavItem';
 import { ViewType } from '@/app/models/ViewType.enum';
@@ -8,8 +8,7 @@ import { ViewStateService } from '@/app/services/view-state.service';
 
 @Component({
   selector: 'app-navbar',
-  standalone: true,
-  imports: [CommonModule, RouterLink, RouterLinkActive, NgOptimizedImage],
+  imports: [CommonModule, RouterLinkActive, NgOptimizedImage],
   template: `
         <nav class="h-full bg-gradient-to-r from-rich_black-500 to-prussian_blue-500 shadow-lg">
             <div class="container mx-auto flex justify-around items-center">
@@ -45,6 +44,7 @@ import { ViewStateService } from '@/app/services/view-state.service';
             </div>
         </nav>
     `,
+  standalone: true,
   styles: [`
         .gradient-text {
             background-image: linear-gradient(to right, #ff0000, #ff00ff, #6969db);

@@ -1,18 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
-import { PanelButtonComponent } from '@/app/components/panel/panel-button.component';
 import { ResourcesPanelGridComponent } from '@/app/components/panel/resources-panel-grid.component';
-import { VideoPlayerComponent } from '@/app/components/video-player/video-player.component';
 import { PanelButton } from '@/app/models/PanelButton.model';
 import { ViewType } from '@/app/models/ViewType.enum';
 
 @Component({
   selector: 'app-resources-menu',
+  imports: [CommonModule, ResourcesPanelGridComponent],
   standalone: true,
-  imports: [CommonModule, ResourcesPanelGridComponent, PanelButtonComponent, VideoPlayerComponent],
   template: `
-        <div class="w-full h-full bg-gradient-to-br from-rich_black-500 to-prussian_blue-500 flex items-center justify-center">
+        <div
+                class="w-full h-full bg-gradient-to-br from-rich_black-500 to-prussian_blue-500 flex items-center justify-center">
             <resources-panel-grid
                     class="h-full"
                     [waitDurationBetweenVideoCycles]="3500"

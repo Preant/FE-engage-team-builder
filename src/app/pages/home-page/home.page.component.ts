@@ -12,19 +12,18 @@ import { ViewType } from '@/app/models/ViewType.enum';
 import { ViewStateService } from '@/app/services/view-state.service';
 
 @Component({
-  standalone: true,
-  imports: [
-    CommonModule,
-    ResourcesMenuComponent,
-    SplitComponent,
-    SplitAreaComponent,
-    NavbarComponent,
-    EmblemsComponent,
-    CharactersComponent,
-    TeamBuilderComponent,
-    SkillsComponent
-  ],
-  template: `
+    imports: [
+        CommonModule,
+        ResourcesMenuComponent,
+        SplitComponent,
+        SplitAreaComponent,
+        NavbarComponent,
+        EmblemsComponent,
+        CharactersComponent,
+        TeamBuilderComponent,
+        SkillsComponent
+    ],
+    template: `
         <div class="w-full h-full">
             <as-split>
                 <as-split-area [size]="50" [minSize]="50">

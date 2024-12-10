@@ -7,7 +7,6 @@ import { PanelButton } from '@/app/models/PanelButton.model';
 
 @Component({
   selector: 'resources-panel-grid',
-  standalone: true,
   imports: [CommonModule, PanelButtonComponent, VideoPlayerComponent],
   template: `
         <div class="w-full h-full bg-prussian_blue-100/5 rounded-xl shadow-2xl overflow-hidden p-4">
@@ -32,6 +31,7 @@ import { PanelButton } from '@/app/models/PanelButton.model';
             </div>
         </div>
     `,
+  standalone: true,
   styles: [`
         :host {
             display: block;

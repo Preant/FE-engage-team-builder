@@ -6,10 +6,9 @@ import { SkillType } from '@/app/models/SkillType.enum';
 import { AssetsService } from '@/app/services/assets.service';
 
 @Component({
-  selector: 'skill-detail',
-  standalone: true,
-  imports: [CommonModule],
-  template: `
+    selector: 'skill-detail',
+    imports: [CommonModule],
+    template: `
         <div class="min-h-screen w-full bg-rich_black-500 text-mauve-500 relative overflow-hidden">
             <div class="relative z-10 max-w-7xl mx-auto p-8">
                 <div class="mb-12 text-left">
@@ -47,7 +46,7 @@ import { AssetsService } from '@/app/services/assets.service';
             </div>
         </div>
     `,
-  styles: [`
+    styles: [`
         :host {
             display: block;
             width: 100%;

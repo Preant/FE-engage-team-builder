@@ -12,10 +12,9 @@ import { ViewStateService } from '@/app/services/view-state.service';
 
 
 @Component({
-  selector: 'app-team-member-card',
-  standalone: true,
-  imports: [CommonModule, CustomSelectComponent],
-  template: `
+    selector: 'app-team-member-card',
+    imports: [CommonModule, CustomSelectComponent],
+    template: `
         <div class="bg-gradient-to-br from-gunmetal-400/50 to-gunmetal-600/50 rounded-lg p-4 backdrop-blur-sm border border-rich_black-500">
             <div class="flex flex-col space-y-4">
                 <div class="flex items-start space-x-4">

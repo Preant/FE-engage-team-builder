@@ -8,10 +8,9 @@ import { AssetsService } from '@/app/services/assets.service';
 import { EmblemService } from '@/app/services/resources.service';
 
 @Component({
-  selector: 'emblem-detail',
-  standalone: true,
-  imports: [CommonModule],
-  template: `
+    selector: 'emblem-detail',
+    imports: [CommonModule],
+    template: `
         <div class="min-h-screen w-full bg-rich_black-500 text-mauve-500 relative overflow-hidden">
             <div
                     class="absolute inset-0 bg-cover bg-center opacity-20"

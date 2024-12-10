@@ -9,10 +9,9 @@ import { AssetsService } from '@/app/services/assets.service';
 import { SkillService } from '@/app/services/resources.service';
 
 @Component({
-  selector: 'character-detail',
-  standalone: true,
-  imports: [CommonModule],
-  template: `
+    selector: 'character-detail',
+    imports: [CommonModule],
+    template: `
         <div class="min-h-screen w-full bg-rich_black-500 text-mauve-500 relative overflow-hidden">
             <div
                     class="absolute inset-0 bg-cover bg-center opacity-20"
@@ -89,7 +88,7 @@ import { SkillService } from '@/app/services/resources.service';
             </div>
         </div>
     `,
-  styles: [`
+    styles: [`
         :host {
             display: block;
             width: 100%;

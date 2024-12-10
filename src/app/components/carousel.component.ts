@@ -8,10 +8,9 @@ export type CarouselItem = {
 }
 
 @Component({
-  selector: 'app-carousel',
-  standalone: true,
-  imports: [CommonModule],
-  template: `
+    selector: 'app-carousel',
+    imports: [CommonModule],
+    template: `
         <div class="border-2 border-rich_black-500 rounded-lg bg-gradient-to-br from-gunmetal-400/50 to-gunmetal-600/50 backdrop-blur-sm">
             <div
                     class="w-full overflow-x-auto scrollbar-hide"
@@ -44,7 +43,7 @@ export type CarouselItem = {
             </div>
         </div>
     `,
-  styles: [`
+    styles: [`
         .scrollbar-hide {
             -ms-overflow-style: none;
             scrollbar-width: none;

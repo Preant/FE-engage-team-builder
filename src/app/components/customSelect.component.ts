@@ -22,28 +22,27 @@ export type SelectOption<T> = {
 }
 
 @Component({
-  selector: 'app-custom-select',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
-  animations: [
-    trigger('dropdownAnimation', [
-      state('void', style({
-        transform: 'translateY(-8px)',
-        opacity: 0
-      })),
-      state('*', style({
-        transform: 'translateY(0)',
-        opacity: 1
-      })),
-      transition(':enter', [
-        animate('200ms ease-out')
-      ]),
-      transition(':leave', [
-        animate('150ms ease-in')
-      ])
-    ])
-  ],
-  template: `
+    selector: 'app-custom-select',
+    imports: [CommonModule, FormsModule],
+    animations: [
+        trigger('dropdownAnimation', [
+            state('void', style({
+                transform: 'translateY(-8px)',
+                opacity: 0
+            })),
+            state('*', style({
+                transform: 'translateY(0)',
+                opacity: 1
+            })),
+            transition(':enter', [
+                animate('200ms ease-out')
+            ]),
+            transition(':leave', [
+                animate('150ms ease-in')
+            ])
+        ])
+    ],
+    template: `
         <div class="relative">
             <!-- Main Select Button -->
             <div
@@ -126,7 +125,7 @@ export type SelectOption<T> = {
             }
         </div>
     `,
-  styles: [`
+    styles: [`
         :host {
             display: block;
         }

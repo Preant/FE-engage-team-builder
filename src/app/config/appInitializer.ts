@@ -1,4 +1,4 @@
-import { APP_INITIALIZER } from '@angular/core';
+import { inject, provideAppInitializer } from '@angular/core';
 
 import {
   CharacterService,
@@ -29,9 +29,24 @@ export function initializeItems(itemService: ItemService) {
 }
 
 export const appInitializer = [
-  { provide: APP_INITIALIZER, useFactory: initializeWeapons, deps: [WeaponService], multi: true },
-  { provide: APP_INITIALIZER, useFactory: initializeCharacters, deps: [CharacterService], multi: true },
-  { provide: APP_INITIALIZER, useFactory: initializeEmblems, deps: [EmblemService], multi: true },
-  { provide: APP_INITIALIZER, useFactory: initializeSkills, deps: [SkillService], multi: true },
-  { provide: APP_INITIALIZER, useFactory: initializeItems, deps: [ItemService], multi: true }
+  provideAppInitializer(() => {
+        const initializerFn = (initializeWeapons)(inject(WeaponService));
+        return initializerFn();
+      }),
+  provideAppInitializer(() => {
+        const initializerFn = (initializeCharacters)(inject(CharacterService));
+        return initializerFn();
+      }),
+  provideAppInitializer(() => {
+        const initializerFn = (initializeEmblems)(inject(EmblemService));
+        return initializerFn();
+      }),
+  provideAppInitializer(() => {
+        const initializerFn = (initializeSkills)(inject(SkillService));
+        return initializerFn();
+      }),
+  provideAppInitializer(() => {
+        const initializerFn = (initializeItems)(inject(ItemService));
+        return initializerFn();
+      })
 ];

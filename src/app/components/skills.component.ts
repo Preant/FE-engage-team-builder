@@ -9,14 +9,13 @@ import { AssetsService } from '@/app/services/assets.service';
 import { SkillService } from '@/app/services/resources.service';
 
 @Component({
-  selector: 'app-skills',
-  standalone: true,
-  imports: [
-    CommonModule,
-    CarouselComponent,
-    SkillDetailComponent
-  ],
-  template: `
+    selector: 'app-skills',
+    imports: [
+        CommonModule,
+        CarouselComponent,
+        SkillDetailComponent
+    ],
+    template: `
         <div class="min-h-screen p-6 bg-gradient-to-br from-prussian_blue-400 to-rich_black-600">
             <div class="space-y-6">
                 <app-carousel
@@ -33,7 +32,7 @@ import { SkillService } from '@/app/services/resources.service';
             </div>
         </div>
     `,
-  styles: [`
+    styles: [`
         :host {
             display: block;
             min-height: 100vh;
