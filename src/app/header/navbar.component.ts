@@ -64,6 +64,7 @@ export class NavbarComponent {
     { label: 'Emblems', viewType: ViewType.EMBLEMS },
     { label: 'Skills', viewType: ViewType.SKILLS },
     { label: 'Weapons', viewType: ViewType.WEAPONS },
+    { label: 'Staves', viewType: ViewType.STAVES },
     { label: 'Forging', viewType: ViewType.FORGING }
   ];
   protected readonly ViewType = ViewType;

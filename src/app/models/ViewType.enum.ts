@@ -5,5 +5,6 @@ export enum ViewType {
     EMBLEMS = 'emblems',
     SKILLS = 'skills',
     FORGING = 'forging',
-    WEAPONS = 'weapons'
+    WEAPONS = 'weapons',
+    STAVES = 'staves'
 }

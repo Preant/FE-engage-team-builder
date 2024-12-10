@@ -64,16 +64,15 @@ export class ResourcesMenuComponent {
       isVideo: false
     },
     {
-      name: 'Forging',
-      viewType: ViewType.FORGING,
+      name: 'Staves',
+      viewType: ViewType.STAVES,
       size: 'small',
-      color: 'mauve',
-      gridArea: 'col-span-1 row-span-3',
-      textGradient: 'from-indigo-400 via-purple-500 to-pink-500',
-      content: ['/assets/images/forging.png'],
+      color: 'gunmetal',
+      gridArea: 'col-span-1 row-span-1',
+      textGradient: 'from-blue-400 via-green-500 to-yellow-500',
+      content: ['/assets/images/staves.png'],
       isVideo: false
     },
-
     {
       name: 'Skills',
       viewType: ViewType.SKILLS,
@@ -82,6 +81,16 @@ export class ResourcesMenuComponent {
       gridArea: 'col-span-2 row-span-2',
       textGradient: 'from-yellow-400 via-red-500 to-pink-500',
       content: ['/assets/images/skills.png'],
+      isVideo: false
+    },
+    {
+      name: 'Forging',
+      viewType: ViewType.FORGING,
+      size: 'small',
+      color: 'mauve',
+      gridArea: 'col-span-1 row-span-2',
+      textGradient: 'from-indigo-400 via-purple-500 to-pink-500',
+      content: ['/assets/images/forging.png'],
       isVideo: false
     }
   ];
