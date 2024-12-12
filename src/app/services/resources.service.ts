@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { computed, inject, Injectable, Signal } from '@angular/core';
 
-import { EmblemID, WeaponID } from '@/app/brands/ResourceID.brand';
+import { EmblemID, SkillID, WeaponID } from '@/app/brands/ResourceID.brand';
 import {
   CHARACTER_DATA_PATH,
   EMBLEM_DATA_PATH,
@@ -87,12 +87,72 @@ export class WeaponService extends GenericResourceService<Weapon> {
   providedIn: 'root'
 })
 export class SkillService extends GenericResourceService<Skill> {
+  skillEvolveChain: Signal<Skill[][]> = computed(() => {
+    const skills: Skill[] = this.resourceSignal();
+    const skillEvolveChain: Skill[][] = [];
+    const processedBaseSkills = new Set<SkillID>();
+
+    skills.forEach((skill: Skill) => {
+      if (!skill.evolvedFrom) {
+        return;
+      }
+      // Get the base skill of the current chain
+      const baseSkill: Skill = this.getBaseSkill(skill, skills);
+
+      // If we've already processed this base skill's chain, skip it
+      if (processedBaseSkills.has(baseSkill.id)) {
+        return;
+      }
+
+      // Build the complete evolution chain starting from the base skill
+      const evolutionChain: Skill[] = this.buildEvolutionChain(baseSkill, skills);
+
+      // Add the chain to our results and mark the base skill as processed
+      skillEvolveChain.push(evolutionChain);
+      processedBaseSkills.add(baseSkill.id);
+    });
+
+    return skillEvolveChain;
+  });
+
   constructor(http: HttpClient) {
     super(http, SKILL_DATA_PATH);
   }
 
   getSkillsByType(type: SkillType): Skill[] {
-    return this.resources().filter((skill: Skill) => skill.skillType === type);
+    return this.resourceSignal().filter((skill: Skill) => skill.skillType === type);
+  }
+
+  getSkillEvolveChainBySkillId(skillId: SkillID): Skill[] {
+    return this.skillEvolveChain().find((chain: Skill[]) => chain.map((skill: Skill): SkillID => skill.id).includes(skillId)) || [];
+  }
+
+  private getBaseSkill(skill: Skill, allSkills: Skill[]): Skill {
+    let currentSkill: Skill = skill;
+    while (currentSkill.evolvedFrom) {
+      const previousSkill: Skill | undefined = allSkills.find((skill: Skill) => skill.id === currentSkill.evolvedFrom);
+      if (!previousSkill) {
+        break;
+      }
+      currentSkill = previousSkill;
+    }
+    return currentSkill;
+  }
+
+  private buildEvolutionChain(baseSkill: Skill, allSkills: Skill[]): Skill[] {
+    const chain: Skill[] = [baseSkill];
+    let currentSkill: Skill = baseSkill;
+
+    while (chain.length < 6) { // MAX_CHAIN_LENGTH = 6
+      const evolvedSkill: Skill | undefined = allSkills.find((skill: Skill) => skill.evolvedFrom === currentSkill.id);
+      if (!evolvedSkill) {
+        break;
+      }
+      chain.push(evolvedSkill);
+      currentSkill = evolvedSkill;
+    }
+
+    return chain;
   }
 }
 

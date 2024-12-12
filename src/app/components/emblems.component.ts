@@ -1,4 +1,4 @@
-import { Component, inject, Signal, signal, WritableSignal } from '@angular/core';
+import { Component, inject, signal, WritableSignal } from '@angular/core';
 
 import { CarouselComponent, CarouselItem } from '@/app/components/carousel.component';
 import { EmblemDetailComponent } from '@/app/components/emblem-detail.component';
@@ -8,12 +8,12 @@ import { AssetsService } from '@/app/services/assets.service';
 import { EmblemService } from '@/app/services/resources.service';
 
 @Component({
-    selector: 'app-emblems',
-    imports: [
-        CarouselComponent,
-        EmblemDetailComponent
-    ],
-    template: `
+  selector: 'app-emblems',
+  imports: [
+    CarouselComponent,
+    EmblemDetailComponent
+  ],
+  template: `
         <div class="min-h-screen p-6 bg-gradient-to-br from-prussian_blue-400 to-rich_black-600">
             <div class="space-y-6">
                 <app-carousel
@@ -28,7 +28,8 @@ import { EmblemService } from '@/app/services/resources.service';
             </div>
         </div>
     `,
-    styles: [`
+  standalone: true,
+  styles: [`
         :host {
             display: block;
             min-height: 100vh;
@@ -54,10 +55,9 @@ export class EmblemsComponent {
   selectedEmblem: WritableSignal<Emblem | null> = signal(null);
   private assetsService: AssetsService = inject(AssetsService);
   private emblemService: EmblemService = inject(EmblemService);
-  private emblemsSignal: Signal<Emblem[]> = this.emblemService.getResources();
 
   getCarouselItems(): CarouselItem[] {
-    return this.emblemsSignal().map((emblem: Emblem) => ({
+    return this.emblemService.resources().map((emblem: Emblem) => ({
       id: emblem.id,
       label: emblem.name,
       imageUrl: this.assetsService.getEmblemImage(
@@ -69,7 +69,7 @@ export class EmblemsComponent {
   }
 
   handleItemSelected(id: number): void {
-    const emblem: Emblem | undefined = this.emblemsSignal().find((emblem: Emblem) => emblem.id === id);
+    const emblem: Emblem | undefined = this.emblemService.resources().find((emblem: Emblem) => emblem.id === id);
     if (emblem) {
       this.selectedEmblem.set(emblem);
     }

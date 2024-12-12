@@ -6,7 +6,8 @@ import { Resource } from '@/app/models/Resource.model';
 
 @Injectable()
 export abstract class GenericResourceService<T extends Resource> {
-  protected resources: WritableSignal<T[]> = signal<T[]>([]);
+  protected resourceSignal: WritableSignal<T[]> = signal<T[]>([]);
+  readonly resources: Signal<T[]> = this.resourceSignal.asReadonly();
 
   protected constructor(
         protected http: HttpClient,
@@ -14,12 +15,8 @@ export abstract class GenericResourceService<T extends Resource> {
   ) {
   }
 
-  public getResources(): Signal<T[]> {
-    return this.resources.asReadonly();
-  }
-
   public getResourceById(id: number): T {
-    const resource: T | undefined = this.resources().find((resource: T): boolean => resource.id === id);
+    const resource: T | undefined = this.resourceSignal().find((resource: T): boolean => resource.id === id);
     if (!resource) {
       throw new Error(`Resource with id ${id} not found.`);
     }
@@ -27,7 +24,7 @@ export abstract class GenericResourceService<T extends Resource> {
   }
 
   public getResourceByIdentifier(identifier: string): T | undefined {
-    return this.resources().find((resource: T): boolean => resource.identifier === identifier);
+    return this.resourceSignal().find((resource: T): boolean => resource.identifier === identifier);
   }
 
   public async loadResourcesInformation(): Promise<void> {
@@ -35,7 +32,7 @@ export abstract class GenericResourceService<T extends Resource> {
       const resources: T[] = await firstValueFrom(
         this.http.get<T[]>(this.dataPath)
       );
-      this.resources.set(resources);
+      this.resourceSignal.set(resources);
     } catch (error) {
       console.error(`Error fetching resources:`, error);
       throw error;

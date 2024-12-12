@@ -1,13 +1,15 @@
-import { CharacterID, EmblemID, SkillID, TeamID, TeamMemberID, WeaponID } from '@/app/brands/ResourceID.brand';
-
-export type SkillSlotIndex = 0 | 1;
+import { TeamID, TeamMemberID } from '@/app/brands/ResourceID.brand';
+import { Character } from '@/app/models/Character.model';
+import { Emblem } from '@/app/models/Emblem.model';
+import { Skill } from '@/app/models/Skill.model';
+import { Weapon } from '@/app/models/Weapon.model';
 
 export type TeamMember = {
     id: TeamMemberID;
-    characterId: CharacterID | null;
-    emblemId: EmblemID | null;
-    weaponIds: (WeaponID | null)[];
-    inheritableSkillIds: [(SkillID | null), (SkillID | null)];
+    character: Character | null;
+    emblem: Emblem | null;
+    weapons: (Weapon | null)[];
+    inheritableSkills: (Skill | null)[];
 }
 
 export type Team = {

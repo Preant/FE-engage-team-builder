@@ -9,3 +9,7 @@ export const EMBLEM_RESOURCE_PATH: string = 'assets/images/emblems/';
 export const WEAPON_RESOURCE_PATH: string = 'assets/images/weapons/';
 export const ITEM_RESOURCE_PATH: string = 'assets/images/items/';
 export const SKILL_RESOURCE_PATH: string = 'assets/images/skills/';
+
+export const TEAM_MEMBER_SIZE: number = 15;
+export const WEAPON_BY_MEMBER_SIZE: number = 4;
+export const INHERITABLE_SKILL_SIZE: number = 2;

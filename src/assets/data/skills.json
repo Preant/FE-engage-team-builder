@@ -4,6 +4,7 @@
     "name": "Adaptability",
     "identifier": "Adaptability",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "If foe initiates combat, unit counters with the best weapon available."
   },
   {
@@ -11,6 +12,7 @@
     "name": "Adaptability+",
     "identifier": "Adaptability_plus",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 1,
     "description": "Enhanced version: If foe initiates combat, unit counters with the best weapon available."
   },
   {
@@ -18,6 +20,7 @@
     "name": "Adaptable",
     "identifier": "Adaptable",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Adapts to combat situations with increased flexibility."
   },
   {
@@ -25,6 +28,7 @@
     "name": "Admiration",
     "identifier": "Admiration",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "If two female allies are adjacent within 2 spaces, this unit takes 2 less damage during combat."
   },
   {
@@ -32,6 +36,7 @@
     "name": "Advance",
     "identifier": "Advance",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Use to move 1 space toward a foe that is 2 spaces away and attack."
   },
   {
@@ -39,6 +44,7 @@
     "name": "Air Raid",
     "identifier": "Air_Raid",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "If unit initiates combat from a space a foe cannot enter, grants Spd+5 during combat."
   },
   {
@@ -46,6 +52,7 @@
     "name": "Alabaster Duty",
     "identifier": "Alabaster_Duty",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "If unit is adjacent to the Divine Dragon, grants Crit+5 during combat to both of them."
   },
   {
@@ -53,6 +60,7 @@
     "name": "Alacrity",
     "identifier": "Alacrity",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "If unit initiates combat with a Spd advantage of 9 or more, unit’s follow-up (if possible) occurs before foe can counterattack."
   },
   {
@@ -60,6 +68,7 @@
     "name": "Alacrity+",
     "identifier": "Alacrity-1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 8,
     "description": "If unit initiates combat with a Spd advantage of 7 or more, unit’s follow-up (if possible) occurs before foe can counterattack."
   },
   {
@@ -67,6 +76,7 @@
     "name": "Alacrity++",
     "identifier": "Alacrity-2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 9,
     "description": "If unit initiates combat with a Spd advantage of 5 or more, unit’s follow-up (if possible) occurs before foe can counterattack."
   },
   {
@@ -74,6 +84,7 @@
     "name": "All for One",
     "identifier": "All_for_One",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Use to make a sword attack against an adjacent foe. All allies within 2 spaces chain attack."
   },
   {
@@ -81,6 +92,7 @@
     "name": "Allied Defense",
     "identifier": "Allied_Defense",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "If unit is between an ally and a foe, reduces damage to unit by 3 during combat with that foe."
   },
   {
@@ -88,6 +100,7 @@
     "name": "Anima Focus",
     "identifier": "anima_focus",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "When using tomes, unit inflicts Def-3 with fire, Hit-20 with thunder, or Mov-2 with wind magic for 1 turn."
   },
   {
@@ -95,6 +108,7 @@
     "name": "Arms Shield",
     "identifier": "Arms_Shield",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "When unit has weapon advantage, unit takes 3 less damage."
   },
   {
@@ -102,6 +116,7 @@
     "name": "Arms Shield+",
     "identifier": "Arms_Shield-1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 14,
     "description": "When unit has weapon advantage, unit takes 5 less damage."
   },
   {
@@ -109,6 +124,7 @@
     "name": "Arms Shield++",
     "identifier": "Arms_Shield-2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 15,
     "description": "When unit has weapon advantage, unit takes 7 less damage."
   },
   {
@@ -116,6 +132,7 @@
     "name": "Art Focus 1",
     "identifier": "Art_Focus_1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Hit+10 at a cost of Ddg-10 when using an art."
   },
   {
@@ -123,6 +140,7 @@
     "name": "Art Focus 2",
     "identifier": "Art_Focus_2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 17,
     "description": "Grants Hit+15 at a cost of Ddg-10 when using an art."
   },
   {
@@ -130,6 +148,7 @@
     "name": "Art Focus 3",
     "identifier": "Art_Focus_3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 18,
     "description": "Grants Hit+20 at a cost of Ddg-10 when using an art."
   },
   {
@@ -137,6 +156,7 @@
     "name": "Art Focus 4",
     "identifier": "Art_Focus_4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 19,
     "description": "Grants Hit+25 at a cost of Ddg-10 when using an art."
   },
   {
@@ -144,6 +164,7 @@
     "name": "Art Focus 5",
     "identifier": "Art_Focus_5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 20,
     "description": "Grants Hit+30 at a cost of Ddg-10 when using an art."
   },
   {
@@ -151,6 +172,7 @@
     "name": "Aspiring Hero",
     "identifier": "Aspiring_Hero",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "If no other units are within 1 space of unit or foe, grants Hit+20 at a cost of Avo-10 during combat."
   },
   {
@@ -158,6 +180,7 @@
     "name": "Assign Decoy",
     "identifier": "assign_decoy",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Use to make one chosen ally more likely to be targeted by enemies for 1 turn."
   },
   {
@@ -165,6 +188,7 @@
     "name": "Astra Storm",
     "identifier": "Astra_Storm",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Use to launch 5 bow attacks at 30% damage, up to range 10."
   },
   {
@@ -172,6 +196,7 @@
     "name": "Attuned",
     "identifier": "Attuned",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "If unit initiates combat and defeats foe, grants engage partner +4 to all seven basic stats while engaged."
   },
   {
@@ -179,6 +204,7 @@
     "name": "Augment",
     "identifier": "Augment",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Grants staff range +5 and area of effect +1."
   },
   {
@@ -186,6 +212,7 @@
     "name": "Avoid +10",
     "identifier": "Avoid_10",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Avo+10."
   },
   {
@@ -193,6 +220,7 @@
     "name": "Avoid +15",
     "identifier": "Avoid_15",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 27,
     "description": "Grants Avo+15."
   },
   {
@@ -200,6 +228,7 @@
     "name": "Avoid +20",
     "identifier": "Avoid_20",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 28,
     "description": "Grants Avo+20."
   },
   {
@@ -207,6 +236,7 @@
     "name": "Avoid +25",
     "identifier": "Avoid_25",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 29,
     "description": "Grants Avo+25."
   },
   {
@@ -214,6 +244,7 @@
     "name": "Avoid +30",
     "identifier": "Avoid_30",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 30,
     "description": "Grants Avo+30."
   },
   {
@@ -221,6 +252,7 @@
     "name": "Axe Guard 1",
     "identifier": "axe_guard1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "If foe is equipped with an axe, unit takes 1 less damage during combat."
   },
   {
@@ -228,6 +260,7 @@
     "name": "Axe Guard 2",
     "identifier": "axe_guard2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 32,
     "description": "If foe is equipped with an axe, unit takes 2 less damage during combat."
   },
   {
@@ -235,6 +268,7 @@
     "name": "Axe Guard 3",
     "identifier": "axe_guard3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 33,
     "description": "If foe is equipped with an axe, unit takes 3 less damage during combat."
   },
   {
@@ -242,6 +276,7 @@
     "name": "Axe Guard 4",
     "identifier": "axe_guard4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 34,
     "description": "If foe is equipped with an axe, unit takes 4 less damage during combat."
   },
   {
@@ -249,6 +284,7 @@
     "name": "Axe Guard 5",
     "identifier": "axe_guard5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 35,
     "description": "If foe is equipped with an axe, unit takes 5 less damage during combat."
   },
   {
@@ -256,6 +292,7 @@
     "name": "Axe Power 1",
     "identifier": "Axe_Power_1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Atk+2 at a cost of Avo-10 when using an axe."
   },
   {
@@ -263,6 +300,7 @@
     "name": "Axe Power 2",
     "identifier": "Axe_Power_2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 37,
     "description": "Grants Atk+4 at a cost of Avo-10 when using an axe."
   },
   {
@@ -270,6 +308,7 @@
     "name": "Axe Power 3",
     "identifier": "Axe_Power_3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 38,
     "description": "Grants Atk+6 at a cost of Avo-10 when using an axe."
   },
   {
@@ -277,6 +316,7 @@
     "name": "Axe Power 4",
     "identifier": "Axe_Power_4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 39,
     "description": "Grants Atk+8 at a cost of Avo-10 when using an axe."
   },
   {
@@ -284,6 +324,7 @@
     "name": "Axe Power 5",
     "identifier": "Axe_Power_5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 40,
     "description": "Grants Atk+10 at a cost of Avo-10 when using an axe."
   },
   {
@@ -291,6 +332,7 @@
     "name": "Back at You",
     "identifier": "Back_at_You",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "When countering, unit may deal extra damage = half of damage taken."
   },
   {
@@ -298,6 +340,7 @@
     "name": "Big Personality",
     "identifier": "Big_Personality",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "When unit uses a healing staff, grants range +1."
   },
   {
@@ -305,6 +348,7 @@
     "name": "Blazing Lion",
     "identifier": "Blazing_Lion",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Use to attack adjacent foe and an area 3 spaces wide. Target area and the 2 rows beyond it are set on fire."
   },
   {
@@ -312,6 +356,7 @@
     "name": "Blinding Flash",
     "identifier": "Blinding_Flash",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "If unit initiates combat, inflicts Avo-10 on foe during combat."
   },
   {
@@ -319,6 +364,7 @@
     "name": "Block Recovery",
     "identifier": "block_recovery",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "When attacking a broken foe with a tome, grants a chance the foe will remain broken."
   },
   {
@@ -326,6 +372,7 @@
     "name": "Blood Fury",
     "identifier": "Blood_Fury",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "If unit's HP is not at max after combat, grants Crit+10 as long as unit's HP stays below max."
   },
   {
@@ -333,6 +380,7 @@
     "name": "Blue Skies",
     "identifier": "Blue_Skies",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Unit takes 3 less damage and deals +3 damage."
   },
   {
@@ -340,6 +388,7 @@
     "name": "Blue Skies+",
     "identifier": "Blue_Skies-1",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": 48,
     "description": "Unit takes 5 less damage and deals +5 damage."
   },
   {
@@ -347,6 +396,7 @@
     "name": "Bond Blast",
     "identifier": "Bond_Blast",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Use to make a sword attack from the unit and engage partner followed by a magic beam attack against an adjacent foe."
   },
   {
@@ -354,6 +404,7 @@
     "name": "Bond Forger",
     "identifier": "Bond_Forger",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Hit/Avo+20 to unit and allies within 2 spaces that are synced or engaged with an Emblem."
   },
   {
@@ -361,6 +412,7 @@
     "name": "Bond Forger+",
     "identifier": "Bond_Forger-1",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": 51,
     "description": "Grants Hit/Avo+30 to unit and allies within 2 spaces that are synced or engaged with an Emblem."
   },
   {
@@ -368,6 +420,7 @@
     "name": "Bonded Shield",
     "identifier": "Bonded_Shield",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Use to prevent first attacks on adjacent allies until your next turn. Trigger %=80.\n[Dragon] +10% to trigger rate.\n[Cavalry] Trigger %=100 for cavalry allies.\n[Armored] Trigger %=100 for armored allies.\n[Flying] Trigger %=100 for flying allies.\n[Qi Adept] Trigger %=100."
   },
   {
@@ -375,6 +428,7 @@
     "name": "Book of Worlds",
     "identifier": "book_of_worlds",
     "skillType": "EMBLEM_SYNC",
+    "evolvedFrom": null,
     "description": "Book of Worlds advances 1 stage (to max 5) for each consecutive round that unit uses Wait. Reverts to base stage if unit triggers the effect."
   },
   {
@@ -382,6 +436,7 @@
     "name": "Book of Worlds 1",
     "identifier": "book_of_worlds1",
     "skillType": "EMBLEM_SYNC",
+    "evolvedFrom": null,
     "description": "If unit initiates combat, freezes foe after combat."
   },
   {
@@ -389,6 +444,7 @@
     "name": "Book of Worlds 2",
     "identifier": "book_of_worlds2",
     "skillType": "EMBLEM_SYNC",
+    "evolvedFrom": 55,
     "description": "If unit initiates combat, freezes foe and sets foe’s space on fire after combat."
   },
   {
@@ -396,6 +452,7 @@
     "name": "Book of Worlds 3",
     "identifier": "book_of_worlds3",
     "skillType": "EMBLEM_SYNC",
+    "evolvedFrom": 56,
     "description": "If unit initiates combat, deals 10 damage, freezes foe, and sets foe’s space on fire after combat."
   },
   {
@@ -403,6 +460,7 @@
     "name": "Book of Worlds 4",
     "identifier": "book_of_worlds4",
     "skillType": "EMBLEM_SYNC",
+    "evolvedFrom": 57,
     "description": "If unit initiates combat, restores HP equal to damage dealt during combat, then deals 10 damage, freezes foe, and sets foe’s space on fire after combat."
   },
   {
@@ -410,6 +468,7 @@
     "name": "Book of Worlds 5",
     "identifier": "book_of_worlds5",
     "skillType": "EMBLEM_SYNC",
+    "evolvedFrom": 58,
     "description": "If unit initiates combat, restores HP to self and adjacent allies equal to damage dealt during combat, then deals 10 damage, freezes foe, and sets foe’s space on fire after combat."
   },
   {
@@ -417,6 +476,7 @@
     "name": "Boon of Elyos",
     "identifier": "Boon_of_Elyos",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "If unit initiates combat, grants bonus to Crit and Ddg equal to 2× the number of allies who have acted this turn."
   },
   {
@@ -424,6 +484,7 @@
     "name": "Bow Agility 1",
     "identifier": "Bow_Agility_1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Avo+10 at a cost of Crit-10 when using a bow."
   },
   {
@@ -431,6 +492,7 @@
     "name": "Bow Agility 2",
     "identifier": "Bow_Agility_2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 61,
     "description": "Grants Avo+15 at a cost of Crit-10 when using a bow."
   },
   {
@@ -438,6 +500,7 @@
     "name": "Bow Agility 3",
     "identifier": "Bow_Agility_3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 62,
     "description": "Grants Avo+20 at a cost of Crit-10 when using a bow."
   },
   {
@@ -445,6 +508,7 @@
     "name": "Bow Agility 4",
     "identifier": "Bow_Agility_4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 63,
     "description": "Grants Avo+25 at a cost of Crit-10 when using a bow."
   },
   {
@@ -452,6 +516,7 @@
     "name": "Bow Agility 5",
     "identifier": "Bow_Agility_5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 64,
     "description": "Grants Avo+30 at a cost of Crit-10 when using a bow."
   },
   {
@@ -459,6 +524,7 @@
     "name": "Bow Focus 1",
     "identifier": "Bow_Focus_1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Hit+10 at a cost of Ddg-10 when using a bow."
   },
   {
@@ -466,6 +532,7 @@
     "name": "Bow Focus 2",
     "identifier": "Bow_Focus_2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 66,
     "description": "Grants Hit+15 at a cost of Ddg-10 when using a bow."
   },
   {
@@ -473,6 +540,7 @@
     "name": "Bow Focus 3",
     "identifier": "Bow_Focus_3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 67,
     "description": "Grants Hit+20 at a cost of Ddg-10 when using a bow."
   },
   {
@@ -480,6 +548,7 @@
     "name": "Bow Focus 4",
     "identifier": "Bow_Focus_4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 68,
     "description": "Grants Hit+25 at a cost of Ddg-10 when using a bow."
   },
   {
@@ -487,6 +556,7 @@
     "name": "Bow Focus 5",
     "identifier": "Bow_Focus_5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 69,
     "description": "Grants Hit+30 at a cost of Ddg-10 when using a bow."
   },
   {
@@ -494,6 +564,7 @@
     "name": "Bow Guard 1",
     "identifier": "Bow_Guard1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "If foe is equipped with a bow, unit takes 1 less damage during combat."
   },
   {
@@ -501,6 +572,7 @@
     "name": "Bow Guard 2",
     "identifier": "Bow_Guard2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 71,
     "description": "If foe is equipped with a bow, unit takes 2 less damage during combat."
   },
   {
@@ -508,6 +580,7 @@
     "name": "Bow Guard 3",
     "identifier": "Bow_Guard3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 72,
     "description": "If foe is equipped with a bow, unit takes 3 less damage during combat."
   },
   {
@@ -515,6 +588,7 @@
     "name": "Bow Guard 4",
     "identifier": "Bow_Guard4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 73,
     "description": "If foe is equipped with a bow, unit takes 4 less damage during combat."
   },
   {
@@ -522,6 +596,7 @@
     "name": "Bow Guard 5",
     "identifier": "Bow_Guard5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 74,
     "description": "If foe is equipped with a bow, unit takes 5 less damage during combat."
   },
   {
@@ -529,6 +604,7 @@
     "name": "Brave Assist",
     "identifier": "Brave_Assist",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "If unit’s HP is at max while unit makes a chain attack, unit attacks twice."
   },
   {
@@ -536,6 +612,7 @@
     "name": "Bravery",
     "identifier": "Bravery",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Unit deals +3 damage."
   },
   {
@@ -543,6 +620,7 @@
     "name": "Bravery+",
     "identifier": "Bravery-1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 77,
     "description": "Unit deals +5 damage."
   },
   {
@@ -550,6 +628,7 @@
     "name": "Break Defenses",
     "identifier": "Break_Defenses",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "If unit’s attack breaks foe, unit makes an extra attack at 50% damage."
   },
   {
@@ -557,6 +636,7 @@
     "name": "Brute Force",
     "identifier": "brute_force",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "While making a physical attack, critical hits deal increased damage. [Damage increased by one third.]"
   },
   {
@@ -564,6 +644,7 @@
     "name": "Build 1",
     "identifier": "Build_3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Bld+3."
   },
   {
@@ -571,6 +652,7 @@
     "name": "Build 2",
     "identifier": "Build_4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 81,
     "description": "Grants Bld+4."
   },
   {
@@ -578,6 +660,7 @@
     "name": "Build 3",
     "identifier": "Build_5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 82,
     "description": "Grants Bld+5."
   },
   {
@@ -585,6 +668,7 @@
     "name": "Call Doubles",
     "identifier": "Call_Doubles",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Creates four illusory doubles that can make chain attacks with unit."
   },
   {
@@ -592,6 +676,7 @@
     "name": "Canter",
     "identifier": "Canter",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Unit can move 2 spaces after acting."
   },
   {
@@ -599,6 +684,7 @@
     "name": "Canter+",
     "identifier": "Canter-1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 85,
     "description": "Unit can move 3 spaces after acting."
   },
   {
@@ -606,6 +692,7 @@
     "name": "Careful Aim",
     "identifier": "Careful_Aim",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "If unit initiates combat without moving first, grants Hit+40 during combat."
   },
   {
@@ -613,6 +700,7 @@
     "name": "Cataclysm",
     "identifier": "cataclysm",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "\tUse to attack foes in an area with fire, thunder and wind magic at 40% damage. Wind is effective: Flying.\n[Dragon] Sets terrain on fire.\n[Mystical] +10% damage.\n[Qi Adept] 20% chance of breaking target."
   },
   {
@@ -620,6 +708,7 @@
     "name": "Cataclysm+",
     "identifier": "cataclysm",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": 88,
     "description": "\tUse to attack foes in an area with fire, thunder and wind magic at 40% damage. Wind is effective: Flying.\n[Dragon] Sets terrain on fire.\n[Mystical] +10% damage.\n[Qi Adept] 20% chance of breaking target."
   },
   {
@@ -627,6 +716,7 @@
     "name": "Chaos Style",
     "identifier": "Chaos_Style",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "If unit initiates combat with a physical attack against a foe armed with magic or vice versa, grants Spd+3 during combat."
   },
   {
@@ -634,6 +724,7 @@
     "name": "Charm",
     "identifier": "charm",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "If unit's attack triggers a chain attack, increases chain attack accuracy to 90%."
   },
   {
@@ -641,6 +732,7 @@
     "name": "Charmer",
     "identifier": "Charmer",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "During combat with a foe who was also unit's most recent opponent, inflicts Crit-10 on that foe."
   },
   {
@@ -648,6 +740,7 @@
     "name": "Clear the Way",
     "identifier": "Clear_the_Way",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "Unit's space and adjacent spaces have a movement cost of 1 for allies."
   },
   {
@@ -655,6 +748,7 @@
     "name": "Cleric",
     "identifier": "Cleric",
     "skillType": "EMBLEM_SYNC",
+    "evolvedFrom": null,
     "description": "Unit can equip staves up to level C."
   },
   {
@@ -662,6 +756,7 @@
     "name": "Cleric+",
     "identifier": "Cleric-1",
     "skillType": "EMBLEM_SYNC",
+    "evolvedFrom": 94,
     "description": "Unit can equip staves up to level B."
   },
   {
@@ -669,6 +764,7 @@
     "name": "Cleric++",
     "identifier": "Cleric-2",
     "skillType": "EMBLEM_SYNC",
+    "evolvedFrom": 95,
     "description": "Unit can equip staves up to level A."
   },
   {
@@ -676,6 +772,7 @@
     "name": "Combat Arts",
     "identifier": "Combat_Arts",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Enables use of Edelgard, Dimitri, or Claude's Combat Art. Spends some remaining engage turns."
   },
   {
@@ -683,6 +780,7 @@
     "name": "Contemplative",
     "identifier": "Contemplative",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "If unit uses Wait without attacking or using items, grants Def+2 for 1 turn."
   },
   {
@@ -690,6 +788,7 @@
     "name": "Contract",
     "identifier": "contract",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Use to grant another action to an adjacent ally who has already acted."
   },
   {
@@ -697,6 +796,7 @@
     "name": "Convoy",
     "identifier": "convoy",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "Use to deposit or retrieve weapons and items."
   },
   {
@@ -704,6 +804,7 @@
     "name": "Crimson Cheer",
     "identifier": "Crimson_Cheer",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "If unit is adjacent to the Divine Dragon, grants Avo+10 during combat to both of them."
   },
   {
@@ -711,6 +812,7 @@
     "name": "Curious Dance",
     "identifier": "Curious_Dance",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "At start of turn, allies within 2 spaces of unit recover 10% of their max HP."
   },
   {
@@ -718,6 +820,7 @@
     "name": "Dark Inferno",
     "identifier": "dark_inferno",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Use to deal damage to foes on certain spaces near unit and set those spaces on fire.\n[Dragon] Increases area of effect.\n[Mystical] +20% damage.\n[Qi Adept] Adds Glow to adjacent spaces."
   },
   {
@@ -725,6 +828,7 @@
     "name": "Dark Inferno+",
     "identifier": "dark_inferno",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": 103,
     "description": "Use to deal damage to foes on certain spaces near unit and set those spaces on fire.\n[Dragon] Increases area of effect.\n[Mystical] +20% damage.\n[Qi Adept] Adds Glow to adjacent spaces."
   },
   {
@@ -732,6 +836,7 @@
     "name": "Decisive Strike",
     "identifier": "decisive_strike",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "If unit initiates combat and lands a critical, deals 5 damage to foe after combat."
   },
   {
@@ -739,6 +844,7 @@
     "name": "Decisive Strike+",
     "identifier": "decisive_strike_plus",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 105,
     "description": "If unit initiates combat and lands a critical, deals 10 damage to foe after combat."
   },
   {
@@ -746,6 +852,7 @@
     "name": "Defense 1",
     "identifier": "Defense_1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Def+1."
   },
   {
@@ -753,6 +860,7 @@
     "name": "Defense 2",
     "identifier": "Defense_2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 107,
     "description": "Grants Def+2."
   },
   {
@@ -760,6 +868,7 @@
     "name": "Defense 3",
     "identifier": "Defense_3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 108,
     "description": "Grants Def+3."
   },
   {
@@ -767,6 +876,7 @@
     "name": "Defense 4",
     "identifier": "Defense_4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 109,
     "description": "Grants Def+4."
   },
   {
@@ -774,6 +884,7 @@
     "name": "Defense 5",
     "identifier": "Defense_5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 110,
     "description": "Grants Def+5."
   },
   {
@@ -781,6 +892,7 @@
     "name": "Demolish",
     "identifier": "Demolish",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Break destructible terrain in a single blow when using Destroy."
   },
   {
@@ -788,6 +900,7 @@
     "name": "Detoxify",
     "identifier": "detoxify",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Cures poison at start of turn."
   },
   {
@@ -795,6 +908,7 @@
     "name": "Dexterity 1",
     "identifier": "Dexterity_1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Dex+1."
   },
   {
@@ -802,6 +916,7 @@
     "name": "Dexterity 2",
     "identifier": "Dexterity_2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 114,
     "description": "Grants Dex+2."
   },
   {
@@ -809,6 +924,7 @@
     "name": "Dexterity 3",
     "identifier": "Dexterity_3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 115,
     "description": "Grants Dex+3."
   },
   {
@@ -816,6 +932,7 @@
     "name": "Dexterity 4",
     "identifier": "Dexterity_4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 116,
     "description": "Grants Dex+4."
   },
   {
@@ -823,6 +940,7 @@
     "name": "Dexterity 5",
     "identifier": "Dexterity_5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 117,
     "description": "Grants Dex+5."
   },
   {
@@ -830,6 +948,7 @@
     "name": "Diffuse Healer",
     "identifier": "Diffuse_Healer",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "When unit is healed by a staff, all adjacent allies also recover 50% of the HP that the unit recovered."
   },
   {
@@ -837,6 +956,7 @@
     "name": "Disarming Sigh",
     "identifier": "Disarming_Sigh",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "If foe is male, inflicts Hit-20 on that foe during combat."
   },
   {
@@ -844,6 +964,7 @@
     "name": "Divine Pulse",
     "identifier": "Divine_Pulse",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "May turn a missed attack into a hit. Trigger %=30. Chance increases with high Lck."
   },
   {
@@ -851,6 +972,7 @@
     "name": "Divine Pulse+",
     "identifier": "Divine_Pulse-1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 121,
     "description": "May turn a missed attack into a hit. Trigger %=50. Chance increases with high Lck."
   },
   {
@@ -858,6 +980,7 @@
     "name": "Divine Speed",
     "identifier": "Divine_Speed",
     "skillType": "EMBLEM_SYNC",
+    "evolvedFrom": null,
     "description": "Unit performs an extra attack at 50% damage in combat.\n[Covert] If extra attack hits, poisons foe.\n[Dragon] Unit recovers HP equal to damage dealt by extra attack."
   },
   {
@@ -865,6 +988,7 @@
     "name": "Divine Spirit",
     "identifier": "Divine_Spirit",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "Unit's engage meter is shortened one step."
   },
   {
@@ -872,6 +996,7 @@
     "name": "Divinely Inspiring",
     "identifier": "Divinely_Inspiring",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "Adjacent allies deal +3 damage and take 1 less damage."
   },
   {
@@ -879,6 +1004,7 @@
     "name": "Dodge +10",
     "identifier": "Dodge_10",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Ddg+10."
   },
   {
@@ -886,6 +1012,7 @@
     "name": "Dodge +15",
     "identifier": "Dodge_15",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 126,
     "description": "Grants Ddg+15."
   },
   {
@@ -893,6 +1020,7 @@
     "name": "Dodge +20",
     "identifier": "Dodge_20",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 127,
     "description": "Grants Ddg+20."
   },
   {
@@ -900,6 +1028,7 @@
     "name": "Dodge +25",
     "identifier": "Dodge_25",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 128,
     "description": "Grants Ddg+25."
   },
   {
@@ -907,6 +1036,7 @@
     "name": "Dodge +30",
     "identifier": "Dodge_30",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 129,
     "description": "Grants Ddg+30."
   },
   {
@@ -914,6 +1044,7 @@
     "name": "Draconic Form",
     "identifier": "Draconic_Form",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Unit transforms into and fights as a dragon while engaged. Grants +10 to max HP and +5 to Bld and all basic stats."
   },
   {
@@ -921,6 +1052,7 @@
     "name": "Draconic Hex",
     "identifier": "Draconic_Hex",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "If unit initiates combat, inflicts -4 to all of foe's basic stats after combat."
   },
   {
@@ -928,6 +1060,7 @@
     "name": "Dragon Blast",
     "identifier": "Dragon_Blast",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Use to make two attacks against an adjacent foe with a sword and powerful magic beam."
   },
   {
@@ -935,6 +1068,7 @@
     "name": "Dragon Vein",
     "identifier": "Dragon_Vein",
     "skillType": "EMBLEM_SYNC",
+    "evolvedFrom": null,
     "description": "Use to add a special effect to certain spaces.\n[Dragon] Choose any Vein effect.\n[Backup] Creates stone pillars that increase Def/Res.\n[Cavalry] Creates water that decreases Avo.\n[Covert] Creates fog that increases Avo.\n[Armored] Creates vines that grant immunity to break.\n[Flying] Creates healing glow that restores HP.\n[Mystical] Creates flames that inflict damage.\n[Qi Adept] Creates ice pillars that hinder movement."
   },
   {
@@ -942,6 +1076,7 @@
     "name": "Dragon Vein EX",
     "identifier": "dragon_vein_ex",
     "skillType": "EMBLEM_SYNC",
+    "evolvedFrom": null,
     "description": "Use to add a special effect to certain spaces.\n[Dragon] Choose any Vein effect.\n[Backup] Creates stone pillars that increase Def/Res.\n[Cavalry] Creates water that decreases Avo.\n[Covert] Creates smoke that decreases Def/Avo.\n[Armored] Creates vines that grant immunity to break.\n[Flying] Creates healing glow that restores HP.\n[Mystical] Creates flames that inflict damage.\n[Qi Adept] Creates ice floor that increases movement."
   },
   {
@@ -949,6 +1084,7 @@
     "name": "Dreadful Aura",
     "identifier": "Dreadful_Aura",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "If unit initiates combat, target foe and all foes within 1 space of it cannot move for 1 turn after combat."
   },
   {
@@ -956,6 +1092,7 @@
     "name": "Dual Assist",
     "identifier": "Dual_Assist",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "If unit is able to chain attack, unit will do so when allies attack foes unit could reach by moving. Trigger %=35."
   },
   {
@@ -963,6 +1100,7 @@
     "name": "Dual Assist+",
     "identifier": "Dual_Assist-1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 137,
     "description": "If unit is able to chain attack, unit will do so when allies attack foes unit could reach by moving. Trigger %=70."
   },
   {
@@ -970,6 +1108,7 @@
     "name": "Dual Strike",
     "identifier": "Dual_Strike",
     "skillType": "EMBLEM_SYNC",
+    "evolvedFrom": null,
     "description": "Unit participates in chain attacks as if it were a backup unit."
   },
   {
@@ -977,6 +1116,7 @@
     "name": "Dual Support",
     "identifier": "Dual_Support",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants a bonus to Avo that increases with unit's support level with adjacent allies."
   },
   {
@@ -984,6 +1124,7 @@
     "name": "Echo",
     "identifier": "Echo",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Use to attack with magic at 50% damage. Use a second time to launch another 50% attack."
   },
   {
@@ -991,6 +1132,7 @@
     "name": "Eclipse Brace",
     "identifier": "Eclipse_Brace",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "If unit initiates combat, unit deals extra damage=20% of foe’s Def with physical attacks and recovers HP=30% of damage dealt."
   },
   {
@@ -998,6 +1140,7 @@
     "name": "Eclipse Brace+",
     "identifier": "Eclipse_Brace-1",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": 142,
     "description": "If unit initiates combat, unit deals extra damage=30% of foe’s Def with physical attacks and recovers HP=50% of damage dealt."
   },
   {
@@ -1005,6 +1148,7 @@
     "name": "Enchant",
     "identifier": "enchant",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "Enables enchanting of weapons and items with special effects."
   },
   {
@@ -1012,6 +1156,7 @@
     "name": "Energized",
     "identifier": "Energized",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "When unit recovers HP using an item, grants Str+2 for 1 turn."
   },
   {
@@ -1019,6 +1164,7 @@
     "name": "Expertise",
     "identifier": "Expertise",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "Grants unit enhanced stat growth when leveling up."
   },
   {
@@ -1026,6 +1172,7 @@
     "name": "Fair Fight",
     "identifier": "Fair_Fight",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "If unit initiates combat, grants Hit+15 to unit and foe if foe is able to counterattack."
   },
   {
@@ -1033,6 +1180,7 @@
     "name": "Fairy-Tale Folk",
     "identifier": "Fairy-Tale_Folk",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "If a male and a female ally are adjacent within 2 spaces, unit deals +2 damage during combat."
   },
   {
@@ -1040,6 +1188,7 @@
     "name": "Favorite Food",
     "identifier": "Favorite_Food",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "When unit eats a packed lunch, its engage meter is maxed out."
   },
   {
@@ -1047,6 +1196,7 @@
     "name": "Fell Protection",
     "identifier": "Fell_Protection",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "Adjacent allies deal +1 damage and take 3 less damage."
   },
   {
@@ -1054,6 +1204,7 @@
     "name": "Fell Spirit",
     "identifier": "Fell_Spirit",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "At the start of each turn, unit's engage meter is filled by 1."
   },
   {
@@ -1061,6 +1212,7 @@
     "name": "Flare",
     "identifier": "flare",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "When attacking with tomes, inflicts Res-20% on foe, and unit recovers 50% of damage dealt."
   },
   {
@@ -1068,6 +1220,7 @@
     "name": "Friendly Rivalry",
     "identifier": "Friendly_Rivalry",
     "skillType": "EMBLEM_SYNC",
+    "evolvedFrom": null,
     "description": "At start of player phase, the Emblem will randomly switch to Edelgard, Dimitri, or Claude."
   },
   {
@@ -1075,6 +1228,7 @@
     "name": "Friendly Boost",
     "identifier": "friendly-boost",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "When unit defeats a foe, grants Hit+20 to allies within 2 spaces for 1 turn."
   },
   {
@@ -1082,6 +1236,7 @@
     "name": "Gallop",
     "identifier": "Gallop",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Grants Mov+5."
   },
   {
@@ -1089,6 +1244,7 @@
     "name": "Gambit",
     "identifier": "Gambit",
     "skillType": "EMBLEM_SYNC",
+    "evolvedFrom": null,
     "description": "Effects change based on synced Emblem."
   },
   {
@@ -1096,6 +1252,7 @@
     "name": "Generosity",
     "identifier": "Generosity",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "When this unit uses a healing item, adjacent allies also recover the same amount of HP."
   },
   {
@@ -1103,6 +1260,7 @@
     "name": "Gentility",
     "identifier": "Gentility",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Unit takes 3 less damage."
   },
   {
@@ -1110,6 +1268,7 @@
     "name": "Gentility+",
     "identifier": "Gentility-1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 158,
     "description": "Unit takes 5 less damage."
   },
   {
@@ -1117,6 +1276,7 @@
     "name": "Gentle Flower",
     "identifier": "Gentle_Flower",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "Recovery items used by allies within 2 spaces heal +50% HP."
   },
   {
@@ -1124,6 +1284,7 @@
     "name": "Geosphere",
     "identifier": "Geosphere",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "At start of player phase, if there are allies adjacent to unit, grants Def/Res+3 to unit and those allies for 1 turn."
   },
   {
@@ -1131,6 +1292,7 @@
     "name": "Geosphere+",
     "identifier": "Geosphere_1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 161,
     "description": "At start of player phase, if there are allies adjacent to unit, grants Def/Res+5 to unit and those allies for 1 turn."
   },
   {
@@ -1138,6 +1300,7 @@
     "name": "Get Behind Me",
     "identifier": "Get_Behind_Me",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "When an ally within 2 spaces is attacked, grants Str+3 to unit for 1 turn."
   },
   {
@@ -1145,6 +1308,7 @@
     "name": "Giga Levin Sword",
     "identifier": "giga_levin_sword",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": " Sword\tUse to attack with a magic sword. Magic attack that uses physical attack power. Swords only.\n[Dragon] Deals extra damage = half of Str.\n[Flying] Deals extra damage = Bld.\n[Mystical] Deals extra damage = half of Mag."
   },
   {
@@ -1152,6 +1316,7 @@
     "name": "Giga Levin Sword+",
     "identifier": "giga_levin_sword",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": 164,
     "description": "Use to attack with a magic sword. Magic attack that uses physical attack power. Swords only. Adjacent allies chain attack.\n[Dragon] Deals extra damage = half of Str.\n[Flying] Deals extra damage = Bld.\n[Mystical] Deals extra damage = half of Mag."
   },
   {
@@ -1159,6 +1324,7 @@
     "name": "Goddess Dance",
     "identifier": "Goddess_Dance",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Use to grant another action to all adjacent allies."
   },
   {
@@ -1166,6 +1332,7 @@
     "name": "Golden Lotus",
     "identifier": "Golden_Lotus",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "During combat, may prevent 50% of physical damage taken. Trigger %=Dex."
   },
   {
@@ -1173,6 +1340,7 @@
     "name": "Grasping Void",
     "identifier": "Grasping_Void",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "When attacking with a tome, unit may deal extra damage = half of foe's Mag. Trigger %=Dex."
   },
   {
@@ -1180,6 +1348,7 @@
     "name": "Great Aether",
     "identifier": "Great_Aether",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Use to grant Def/Res+5, but unit can't counter for 1 turn. Next turn, attack a 2-space area, heal HP=30% of damage dealt."
   },
   {
@@ -1187,6 +1356,7 @@
     "name": "Great Sacrifice",
     "identifier": "Great_Sacrifice",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Use to restore full HP to all allies, even those not under the player's control. After use, unit's HP=1."
   },
   {
@@ -1194,6 +1364,7 @@
     "name": "Groundswell",
     "identifier": "groundswell",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "After unit acts or waits in flames, miasma, or similar terrain effect, unit clears effect and recovers 10 HP."
   },
   {
@@ -1201,6 +1372,7 @@
     "name": "Headlong Rush",
     "identifier": "Headlong_Rush",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants immunity to freeze."
   },
   {
@@ -1208,6 +1380,7 @@
     "name": "Healing Light",
     "identifier": "Healing_Light",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "When unit heals an ally with a staff, unit also recovers HP=50% of the amount healed."
   },
   {
@@ -1215,6 +1388,7 @@
     "name": "Heavy Attack",
     "identifier": "heavy_attack",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "When making a physical attack, if an equipped weapon's Wt exceeds unit's Bld, adds excess as damage."
   },
   {
@@ -1222,6 +1396,7 @@
     "name": "Hero Summon",
     "identifier": "hero_summon",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Use to summon a random unit."
   },
   {
@@ -1229,6 +1404,7 @@
     "name": "Hit +10",
     "identifier": "Hit_10",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Hit+10."
   },
   {
@@ -1236,6 +1412,7 @@
     "name": "Hit +15",
     "identifier": "Hit_15",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 176,
     "description": "Grants Hit+15."
   },
   {
@@ -1243,6 +1420,7 @@
     "name": "Hit +20",
     "identifier": "Hit_20",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 177,
     "description": "Grants Hit+20."
   },
   {
@@ -1250,6 +1428,7 @@
     "name": "Hit +25",
     "identifier": "Hit_25",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 178,
     "description": "Grants Hit+25."
   },
   {
@@ -1257,6 +1436,7 @@
     "name": "Hit +30",
     "identifier": "Hit_30",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 179,
     "description": "Grants Hit+30."
   },
   {
@@ -1264,6 +1444,7 @@
     "name": "Hobble",
     "identifier": "Hobble",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "If unit initiates combat with a knife, inflicts Mov-2 on foe for 1 turn."
   },
   {
@@ -1271,6 +1452,7 @@
     "name": "Hold Out",
     "identifier": "Hold_Out",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "If unit had 30% HP or more at start of combat, unit always survives combat with at least 1 HP."
   },
   {
@@ -1278,6 +1460,7 @@
     "name": "Hold Out+",
     "identifier": "Hold_Out-1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 182,
     "description": "If unit had 20% HP or more at start of combat, unit always survives combat with at least 1 HP."
   },
   {
@@ -1285,6 +1468,7 @@
     "name": "Hold Out++",
     "identifier": "Hold_Out-2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 183,
     "description": "If unit had 10% HP or more at start of combat, unit always survives combat with at least 1 HP."
   },
   {
@@ -1292,6 +1476,7 @@
     "name": "Hold Out+++",
     "identifier": "Hold_Out-3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 184,
     "description": "If unit had 2 HP or more at start of combat, unit always survives combat with at least 1 HP."
   },
   {
@@ -1299,6 +1484,7 @@
     "name": "Holy Aura",
     "identifier": "Holy_Aura",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Unit is Effective: Fell Dragon. Allies within 2 spaces with Effective: Dragon gain Effective: Fell Dragon."
   },
   {
@@ -1306,6 +1492,7 @@
     "name": "Holy Shield",
     "identifier": "Holy_Shield",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Neutralizes Effective against this unit."
   },
   {
@@ -1313,6 +1500,7 @@
     "name": "Holy Stance",
     "identifier": "Holy_Stance",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "If a Corrupted attacks unit, deals 10% of damage taken back to foe."
   },
   {
@@ -1320,6 +1508,7 @@
     "name": "Holy Stance+",
     "identifier": "Holy_Stance-1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 188,
     "description": "If a Corrupted attacks unit, deals 30% of damage taken back to foe."
   },
   {
@@ -1327,6 +1516,7 @@
     "name": "Holy Stance++",
     "identifier": "Holy_Stance-2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 189,
     "description": "If a Corrupted attacks unit, deals 50% of damage taken back to foe."
   },
   {
@@ -1334,6 +1524,7 @@
     "name": "Houses Unite",
     "identifier": "Houses_Unite",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "\tUse to attack with Aymr, Areadbhar, and Failnaught at 50% damage.\n[Dragon] +10% damage.\n[Cavalry] +10% damage with Areadbhar.\n[Covert] +10% damage with Failnaught.\n[Armored] +10% damage with Aymr.\n[Qi Adept] Breaks foe."
   },
   {
@@ -1341,6 +1532,7 @@
     "name": "Houses Unite+",
     "identifier": "Houses_Unite",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": 191,
     "description": "Use to attack with Aymr, Areadbhar, and Failnaught at 50% damage. After combat, take another action.\n[Dragon] +10% damage.\n[Cavalry] +10% damage with Areadbhar.\n[Covert] +10% damage with Failnaught.\n[Armored] +10% damage with Aymr.\n[Qi Adept] Breaks foe."
   },
   {
@@ -1348,6 +1540,7 @@
     "name": "HP +10",
     "identifier": "HP_10",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 197,
     "description": "Grants HP+10."
   },
   {
@@ -1355,6 +1548,7 @@
     "name": "HP +12",
     "identifier": "HP_12",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 193,
     "description": "Grants HP+12."
   },
   {
@@ -1362,6 +1556,7 @@
     "name": "HP +15",
     "identifier": "HP_15",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 194,
     "description": "Grants HP+15."
   },
   {
@@ -1369,6 +1564,7 @@
     "name": "HP +5",
     "identifier": "HP_5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants HP+5."
   },
   {
@@ -1376,6 +1572,7 @@
     "name": "HP +7",
     "identifier": "HP_7",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 196,
     "description": "Grants HP+7."
   },
   {
@@ -1383,6 +1580,7 @@
     "name": "HP Lck +10",
     "identifier": "HP_Lck_10",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 202,
     "description": "Grants HP+10 and Lck+10."
   },
   {
@@ -1390,6 +1588,7 @@
     "name": "HP Lck +2",
     "identifier": "HP_Lck_2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants HP+2 and Lck+2."
   },
   {
@@ -1397,6 +1596,7 @@
     "name": "HP Lck +4",
     "identifier": "HP_Lck_4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 199,
     "description": "Grants HP+4 and Lck+4."
   },
   {
@@ -1404,6 +1604,7 @@
     "name": "HP Lck +6",
     "identifier": "HP_Lck_6",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 200,
     "description": "Grants HP+6 and Lck+6."
   },
   {
@@ -1411,6 +1612,7 @@
     "name": "HP Lck +8",
     "identifier": "HP_Lck_8",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 201,
     "description": "Grants HP+8 and Lck+8."
   },
   {
@@ -1418,6 +1620,7 @@
     "name": "Ignis",
     "identifier": "Ignis",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "During combat, may add half of Str to magic damage or half of Mag to all other damage. Trigger %=Dex."
   },
   {
@@ -1425,6 +1628,7 @@
     "name": "Impenetrable",
     "identifier": "impenetrable",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "If foe initiates combat, grants Def/Res+30% during combat."
   },
   {
@@ -1432,6 +1636,7 @@
     "name": "Instruct",
     "identifier": "Instruct",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Use to grant allies within 2 spaces a stat bonus based on user's type. Bonus lasts for 1 turn."
   },
   {
@@ -1439,6 +1644,7 @@
     "name": "Keen Insight",
     "identifier": "keen_insight",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "When unit deals Effective damage, deal +5 damage."
   },
   {
@@ -1446,6 +1652,7 @@
     "name": "Keen Insight+",
     "identifier": "keen_insight_plus",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 206,
     "description": "When unit deals Effective damage, deal +7 damage."
   },
   {
@@ -1453,6 +1660,7 @@
     "name": "Knife Guard 1",
     "identifier": "knife_guard1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "If foe is equipped with a knife, unit takes 1 less damage during combat."
   },
   {
@@ -1460,6 +1668,7 @@
     "name": "Knife Guard 2",
     "identifier": "knife_guard2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 208,
     "description": "If foe is equipped with a knife, unit takes 2 less damage during combat."
   },
   {
@@ -1467,6 +1676,7 @@
     "name": "Knife Guard 3",
     "identifier": "knife_guard3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 209,
     "description": "If foe is equipped with a knife, unit takes 3 less damage during combat."
   },
   {
@@ -1474,6 +1684,7 @@
     "name": "Knife Guard 4",
     "identifier": "knife_guard4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 210,
     "description": "If foe is equipped with a knife, unit takes 4 less damage during combat."
   },
   {
@@ -1481,6 +1692,7 @@
     "name": "Knife Guard 5",
     "identifier": "knife_guard5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 211,
     "description": "If foe is equipped with a knife, unit takes 5 less damage during combat."
   },
   {
@@ -1488,6 +1700,7 @@
     "name": "Knife Precision 1",
     "identifier": "Knife_Precision_1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Hit/Avo+3 when using a knife."
   },
   {
@@ -1495,6 +1708,7 @@
     "name": "Knife Precision 2",
     "identifier": "Knife_Precision_2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 213,
     "description": "Grants Hit/Avo+5 when using a knife."
   },
   {
@@ -1502,6 +1716,7 @@
     "name": "Knife Precision 3",
     "identifier": "Knife_Precision_3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 214,
     "description": "Grants Hit/Avo+7 when using a knife."
   },
   {
@@ -1509,6 +1724,7 @@
     "name": "Knife Precision 4",
     "identifier": "Knife_Precision_4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 215,
     "description": "Grants Hit/Avo+10 when using a knife."
   },
   {
@@ -1516,6 +1732,7 @@
     "name": "Knife Precision 5",
     "identifier": "Knife_Precision_5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 216,
     "description": "Grants Hit/Avo+15 when using a knife."
   },
   {
@@ -1523,6 +1740,7 @@
     "name": "Knightly Escort",
     "identifier": "Knightly_Escort",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "When 2 or more female allies are within 2 spaces, grants Hit/Avo+5 to unit and those allies."
   },
   {
@@ -1530,6 +1748,7 @@
     "name": "Knightly Code",
     "identifier": "knightly-code",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "If foe initiates combat and unit is adjacent to an ally, unit takes 2 less damage."
   },
   {
@@ -1537,6 +1756,7 @@
     "name": "Laguz Friend",
     "identifier": "Laguz_Friend",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Unit takes 50% less damage, but sets unit's Avo to 0."
   },
   {
@@ -1544,6 +1764,7 @@
     "name": "Lance Agility 1",
     "identifier": "Lance_Agility_1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Avo+10 at a cost of Crit-10 when using a lance."
   },
   {
@@ -1551,6 +1772,7 @@
     "name": "Lance Agility 2",
     "identifier": "Lance_Agility_2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 221,
     "description": "Grants Avo+15 at a cost of Crit-10 when using a lance."
   },
   {
@@ -1558,6 +1780,7 @@
     "name": "Lance Agility 3",
     "identifier": "Lance_Agility_3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 222,
     "description": "Grants Avo+20 at a cost of Crit-10 when using a lance."
   },
   {
@@ -1565,6 +1788,7 @@
     "name": "Lance Agility 4",
     "identifier": "Lance_Agility_4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 223,
     "description": "Grants Avo+25 at a cost of Crit-10 when using a lance."
   },
   {
@@ -1572,6 +1796,7 @@
     "name": "Lance Agility 5",
     "identifier": "Lance_Agility_5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 224,
     "description": "Grants Avo+30 at a cost of Crit-10 when using a lance."
   },
   {
@@ -1579,6 +1804,7 @@
     "name": "Lance Guard 1",
     "identifier": "lance_guard1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "If foe is equipped with a lance, unit takes 1 less damage during combat."
   },
   {
@@ -1586,6 +1812,7 @@
     "name": "Lance Guard 2",
     "identifier": "lance_guard2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 226,
     "description": "If foe is equipped with a lance, unit takes 2 less damage during combat."
   },
   {
@@ -1593,6 +1820,7 @@
     "name": "Lance Guard 3",
     "identifier": "lance_guard3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 227,
     "description": "If foe is equipped with a lance, unit takes 3 less damage during combat."
   },
   {
@@ -1600,6 +1828,7 @@
     "name": "Lance Guard 4",
     "identifier": "lance_guard4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 228,
     "description": "If foe is equipped with a lance, unit takes 4 less damage during combat."
   },
   {
@@ -1607,6 +1836,7 @@
     "name": "Lance Guard 5",
     "identifier": "lance_guard5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 229,
     "description": "If foe is equipped with a lance, unit takes 5 less damage during combat."
   },
   {
@@ -1614,6 +1844,7 @@
     "name": "Lance Power 1",
     "identifier": "Lance_Power_1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Atk+2 at a cost of Avo-10 when using a lance."
   },
   {
@@ -1621,6 +1852,7 @@
     "name": "Lance Power 2",
     "identifier": "Lance_Power_2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 231,
     "description": "Grants Atk+4 at a cost of Avo-10 when using a lance."
   },
   {
@@ -1628,6 +1860,7 @@
     "name": "Lance Power 3",
     "identifier": "Lance_Power_3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 232,
     "description": "Grants Atk+6 at a cost of Avo-10 when using a lance."
   },
   {
@@ -1635,6 +1868,7 @@
     "name": "Lance Power 4",
     "identifier": "Lance_Power_4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 233,
     "description": "Grants Atk+8 at a cost of Avo-10 when using a lance."
   },
   {
@@ -1642,6 +1876,7 @@
     "name": "Lance Power 5",
     "identifier": "Lance_Power_5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 234,
     "description": "Grants Atk+10 at a cost of Avo-10 when using a lance."
   },
   {
@@ -1649,6 +1884,7 @@
     "name": "Let Fly",
     "identifier": "let_fly",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "Use to perform a guaranteed-hit, area-of-effect attack at the start of the next player phase. Unit loses equipped weapon."
   },
   {
@@ -1656,6 +1892,7 @@
     "name": "Level Boost",
     "identifier": "level_boost",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "When unit defeats a foe of a higher level, grants Lvl+1 until the end of battle."
   },
   {
@@ -1663,6 +1900,7 @@
     "name": "Lifesphere",
     "identifier": "Lifesphere",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "If unit uses Wait without attacking or using items, restores 20 HP and heals status effects."
   },
   {
@@ -1670,6 +1908,7 @@
     "name": "Lifesphere+",
     "identifier": "Lifesphere-1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 238,
     "description": "If unit uses Wait without attacking or using items, restores 30 HP and heals status effects."
   },
   {
@@ -1677,6 +1916,7 @@
     "name": "Lifesphere++",
     "identifier": "Lifesphere-2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 239,
     "description": "If unit uses Wait without attacking or using items, restores 40 HP and heals status effects."
   },
   {
@@ -1684,6 +1924,7 @@
     "name": "Lightsphere",
     "identifier": "Lightsphere",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "If unit initiates combat, halves chance of receiving critical hit from foe."
   },
   {
@@ -1691,6 +1932,7 @@
     "name": "Lineage",
     "identifier": "Lineage",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Increases unit's earned experience by 20%."
   },
   {
@@ -1698,6 +1940,7 @@
     "name": "Lodestar Rush",
     "identifier": "Lodestar_Rush",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Use to launch 7 consecutive sword attacks at 30% damage. Adjacent foe only."
   },
   {
@@ -1705,6 +1948,7 @@
     "name": "Lost & Found",
     "identifier": "Lost_Found",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "If unit finishes an action or waits next to an ally, may find an item and increase support with that ally."
   },
   {
@@ -1712,6 +1956,7 @@
     "name": "Luck +10",
     "identifier": "Luck_10",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 250,
     "description": "Grants Lck+10."
   },
   {
@@ -1719,6 +1964,7 @@
     "name": "Luck +12",
     "identifier": "Luck_12",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 245,
     "description": "Grants Lck+12."
   },
   {
@@ -1726,6 +1972,7 @@
     "name": "Luck +2",
     "identifier": "Luck_2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Lck+2."
   },
   {
@@ -1733,6 +1980,7 @@
     "name": "Luck +4",
     "identifier": "Luck_4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 247,
     "description": "Grants Lck+4."
   },
   {
@@ -1740,6 +1988,7 @@
     "name": "Luck +6",
     "identifier": "Luck_6",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 248,
     "description": "Grants Lck+6."
   },
   {
@@ -1747,6 +1996,7 @@
     "name": "Luck +8",
     "identifier": "Luck_8",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 249,
     "description": "Grants Lck+8."
   },
   {
@@ -1754,6 +2004,7 @@
     "name": "Luna",
     "identifier": "Luna",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "While making an attack, may ignore half of foe's Def/Res. Trigger %=Dex."
   },
   {
@@ -1761,6 +2012,7 @@
     "name": "Lunar Brace",
     "identifier": "Lunar_Brace",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "If unit initiates combat with a physical attack, deals extra damage=20% of foe’s Def."
   },
   {
@@ -1768,41 +2020,47 @@
     "name": "Lunar Brace+",
     "identifier": "Lunar_Brace-1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 252,
     "description": "If unit initiates combat with a physical attack, deals extra damage=30% of foe’s Def."
   },
   {
     "id": 254,
-    "name": "Mag +10",
+    "name": "Mag Dex 1",
     "identifier": "mag_dex1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Mag+1 and Dex+1."
   },
   {
     "id": 255,
-    "name": "Mag +12",
+    "name": "Mag Dex 2",
     "identifier": "mag_dex2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 254,
     "description": "Grants Mag+2 and Dex+2."
   },
   {
     "id": 256,
-    "name": "Mag +15",
+    "name": "Mag Dex 3",
     "identifier": "mag_dex3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 255,
     "description": "Grants Mag+3 and Dex+3."
   },
   {
     "id": 257,
-    "name": "Mag +20",
+    "name": "Mag Dex 4",
     "identifier": "mag_dex4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 256,
     "description": "Grants Mag+4 and Dex+4."
   },
   {
     "id": 258,
-    "name": "Mag +25",
+    "name": "Mag Dex 5",
     "identifier": "mag_dex5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 257,
     "description": "Grants Mag+5 and Dex+5."
   },
   {
@@ -1810,6 +2068,7 @@
     "name": "Mag Res 1",
     "identifier": "mag_res1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Mag+1 and Res+1."
   },
   {
@@ -1817,6 +2076,7 @@
     "name": "Mag Res 2",
     "identifier": "mag_res2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 259,
     "description": "Grants Mag+2 and Res+2."
   },
   {
@@ -1824,6 +2084,7 @@
     "name": "Mag Res 3",
     "identifier": "mag_res3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 260,
     "description": "Grants Mag+3 and Res+3."
   },
   {
@@ -1831,6 +2092,7 @@
     "name": "Mag Res 4",
     "identifier": "mag_res4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 261,
     "description": "Grants Mag+4 and Res+4."
   },
   {
@@ -1838,6 +2100,7 @@
     "name": "Mag Res 5",
     "identifier": "mag_res5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 262,
     "description": "Grants Mag+5 and Res+5."
   },
   {
@@ -1845,6 +2108,7 @@
     "name": "Magic 2",
     "identifier": "Magic_2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Mag+2"
   },
   {
@@ -1852,6 +2116,7 @@
     "name": "Magic 3",
     "identifier": "Magic_3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 264,
     "description": "Grants Mag+3"
   },
   {
@@ -1859,6 +2124,7 @@
     "name": "Magic 4",
     "identifier": "Magic_4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 265,
     "description": "Grants Mag+4"
   },
   {
@@ -1866,6 +2132,7 @@
     "name": "Magic 5",
     "identifier": "Magic_5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 266,
     "description": "Grants Mag+5"
   },
   {
@@ -1873,6 +2140,7 @@
     "name": "Magic Guard 1",
     "identifier": "magic_guard1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "If foe is equipped with a tome, unit takes 1 less damage during combat."
   },
   {
@@ -1880,6 +2148,7 @@
     "name": "Magic Guard 2",
     "identifier": "magic_guard2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 268,
     "description": "If foe is equipped with a tome, unit takes 2 less damage during combat."
   },
   {
@@ -1887,6 +2156,7 @@
     "name": "Magic Guard 3",
     "identifier": "magic_guard3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 269,
     "description": "If foe is equipped with a tome, unit takes 3 less damage during combat."
   },
   {
@@ -1894,6 +2164,7 @@
     "name": "Magic Guard 4",
     "identifier": "magic_guard4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 270,
     "description": "If foe is equipped with a tome, unit takes 4 less damage during combat."
   },
   {
@@ -1901,6 +2172,7 @@
     "name": "Magic Guard 5",
     "identifier": "magic_guard5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 271,
     "description": "If foe is equipped with a tome, unit takes 5 less damage during combat."
   },
   {
@@ -1908,6 +2180,7 @@
     "name": "Make a Killing",
     "identifier": "Make_a_Killing",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "May obtain 500G when unit defeats a foe. Trigger %=Lck."
   },
   {
@@ -1915,6 +2188,7 @@
     "name": "Meditation",
     "identifier": "Meditation",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "If unit uses Wait without attacking or using items, grants Res+2 for 1 turn."
   },
   {
@@ -1922,6 +2196,7 @@
     "name": "Mentorship",
     "identifier": "Mentorship",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants 1.2× EXP modifier to unit and adjacent allies."
   },
   {
@@ -1929,6 +2204,7 @@
     "name": "Merciless",
     "identifier": "Merciless",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "Unit deals +50% damage against broken foes."
   },
   {
@@ -1936,6 +2212,7 @@
     "name": "Momentum",
     "identifier": "Momentum",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Atk+1 to first attack during combat for each space unit moved before attacking. (Max +10)"
   },
   {
@@ -1943,6 +2220,7 @@
     "name": "Momentum+",
     "identifier": "Momentum-1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 277,
     "description": "Grants Atk+1 to first attack during combat for each space unit moved before attacking."
   },
   {
@@ -1950,6 +2228,7 @@
     "name": "Moved to Tears",
     "identifier": "Moved_to_Tears",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "When an ally joins a chain attack in this unit's combat, unit deals +2 damage."
   },
   {
@@ -1957,6 +2236,7 @@
     "name": "Night and Day",
     "identifier": "Night_and_Day",
     "skillType": "EMBLEM_SYNC",
+    "evolvedFrom": null,
     "description": "Use to switch Emblems and swap between Lunar Brace/Gentility and Solar Brace/Bravery for all allies."
   },
   {
@@ -1964,6 +2244,7 @@
     "name": "No Distractions",
     "identifier": "No_Distractions",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "Grants Crit+10 during combat with a foe that can't counter."
   },
   {
@@ -1971,6 +2252,7 @@
     "name": "Not Quite",
     "identifier": "Not_Quite",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "If foe initiates combat, inflicts Hit-10 on that foe during combat."
   },
   {
@@ -1978,6 +2260,7 @@
     "name": "Other Half",
     "identifier": "other_half",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "If unit initiates combat, Robin chain attacks. Grants Mag+10 while engaged."
   },
   {
@@ -1985,6 +2268,7 @@
     "name": "Override",
     "identifier": "Override",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Use to attack and move through a line of adjacent foes. Sword/lance only."
   },
   {
@@ -1992,6 +2276,7 @@
     "name": "Pair Up",
     "identifier": "Pair_Up",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Prevents damage from foes' chain attacks against unit."
   },
   {
@@ -1999,6 +2284,7 @@
     "name": "Party Animal",
     "identifier": "Party_Animal",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "Grants a bonus to Hit and Avo equal to 3× the number of allies and foes within 2 spaces."
   },
   {
@@ -2006,6 +2292,7 @@
     "name": "Pass",
     "identifier": "Pass",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "Foes do not block this unit's movement."
   },
   {
@@ -2013,6 +2300,7 @@
     "name": "Perceptive",
     "identifier": "Perceptive",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "If the unit initiates combat, grants Avo+15 during combat. Avo increases with high Spd."
   },
   {
@@ -2020,6 +2308,7 @@
     "name": "Perceptive+",
     "identifier": "Perceptive-1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 288,
     "description": "If the unit initiates combat, grants Avo+30 during combat. Avo increases with high Spd."
   },
   {
@@ -2027,6 +2316,7 @@
     "name": "Piercing Glare",
     "identifier": "piercing_glare",
     "skillType": "EMBLEM_SYNC",
+    "evolvedFrom": null,
     "description": "Use when HP is full to consume 20% of max HP and prevent foes from entering the 4 spaces diagonally adjacent to unit for 1 turn."
   },
   {
@@ -2034,6 +2324,7 @@
     "name": "Pincer Attack",
     "identifier": "Pincer_Attack",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "If unit initiates combat while an ally is on the opposite side of the foe, always follow up (if weapon allows)."
   },
   {
@@ -2041,6 +2332,7 @@
     "name": "Pivot",
     "identifier": "Pivot",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "Use to move to the opposite side of an adjacent ally."
   },
   {
@@ -2048,6 +2340,7 @@
     "name": "Protective",
     "identifier": "protective",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "If foe initiates combat against Nil/Rafal, grants Crit+10 to unit for 1 turn."
   },
   {
@@ -2055,6 +2348,7 @@
     "name": "Quadruple Hit",
     "identifier": "Quadruple_Hit",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Use to attack once each with sword, lance, axe, and bow."
   },
   {
@@ -2062,6 +2356,7 @@
     "name": "Quality Time",
     "identifier": "Quality_Time",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "After unit acts or waits, restores 5 HP to adjacent allies and slightly increases support with them."
   },
   {
@@ -2069,6 +2364,7 @@
     "name": "Quality Time+",
     "identifier": "Quality_Time-1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 295,
     "description": "After unit acts or waits, restores 10 HP to adjacent allies and slightly increases support with them."
   },
   {
@@ -2076,6 +2372,7 @@
     "name": "Quick Riposte",
     "identifier": "quick_riposte",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "If unit's HP is 80% or more and foe initiates combat, unit will always follow up (if weapon allows)."
   },
   {
@@ -2083,6 +2380,7 @@
     "name": "Quick Riposte+",
     "identifier": "quick_riposte_plus",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 297,
     "description": "If unit's HP is 60% or more and foe initiates combat, unit will always follow up (if weapon allows)."
   },
   {
@@ -2090,6 +2388,7 @@
     "name": "Racket of Solm",
     "identifier": "Racket_of_Solm",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "Inflicts Crit-5 on foes within 3 spaces."
   },
   {
@@ -2097,6 +2396,7 @@
     "name": "Rally Spectrum",
     "identifier": "rally_spectrum",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Use to grant adjacent allies +3 to all seven basic stats for 1 turn."
   },
   {
@@ -2104,6 +2404,7 @@
     "name": "Rally Spectrum+",
     "identifier": "rally_spectrum_plus",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 300,
     "description": "Use to grant allies within 2 spaces +3 to all seven basic stats for 1 turn."
   },
   {
@@ -2111,6 +2412,7 @@
     "name": "Reforge",
     "identifier": "Reforge",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "If unit's HP is 11 or more and an adjacent ally is broken after combat, sacrifices 10 HP and removes the break status from that ally."
   },
   {
@@ -2118,6 +2420,7 @@
     "name": "Reposition",
     "identifier": "Reposition",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Use to move an adjacent ally to the opposite side of unit."
   },
   {
@@ -2125,6 +2428,7 @@
     "name": "Reprisal",
     "identifier": "reprisal",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "If unit's HP is not full, adds 30% of lost HP to Atk."
   },
   {
@@ -2132,6 +2436,7 @@
     "name": "Reprisal+",
     "identifier": "reprisal_plus",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 304,
     "description": "If unit's HP is not full, adds 50% of lost HP to Atk."
   },
   {
@@ -2139,6 +2444,7 @@
     "name": "Resistance 2",
     "identifier": "Resistance_2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Res+2."
   },
   {
@@ -2146,6 +2452,7 @@
     "name": "Resistance 3",
     "identifier": "Resistance_3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 306,
     "description": "Grants Res+3."
   },
   {
@@ -2153,6 +2460,7 @@
     "name": "Resistance 4",
     "identifier": "Resistance_4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 307,
     "description": "Grants Res+4."
   },
   {
@@ -2160,6 +2468,7 @@
     "name": "Resistance 5",
     "identifier": "Resistance_5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 308,
     "description": "Grants Res+5."
   },
   {
@@ -2167,6 +2476,7 @@
     "name": "Resolve",
     "identifier": "Resolve",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "If unit's HP is 75% or less after combat, grants Def/Res+5 as long as unit's HP stays below 75%."
   },
   {
@@ -2174,6 +2484,7 @@
     "name": "Resolve+",
     "identifier": "Resolve-1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 310,
     "description": "If unit’s HP is 75% or less after combat, grants Def/Res+7 as long as unit’s HP stays below 75%."
   },
   {
@@ -2181,6 +2492,7 @@
     "name": "Resonance",
     "identifier": "Resonance",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "When equipped with a tome, if unit's HP is 2 or more, unit loses 1 HP at start of combat and deals +2 damage during combat."
   },
   {
@@ -2188,6 +2500,7 @@
     "name": "Resonance+",
     "identifier": "Resonance-1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 312,
     "description": "When equipped with a tome, if unit’s HP is 2 or more, unit loses 1 HP at start of combat and deals +3 damage during combat."
   },
   {
@@ -2195,6 +2508,7 @@
     "name": "Rise Above",
     "identifier": "Rise_Above",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Grants Lvl+5."
   },
   {
@@ -2202,6 +2516,7 @@
     "name": "Rivalry",
     "identifier": "rivalry",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "When an ally within 2 spaces defeats a foe, grants Crit+10 to unit for 1 turn."
   },
   {
@@ -2209,6 +2524,7 @@
     "name": "Run Through",
     "identifier": "Run_Through",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "Use to attack an adjacent foe, then move to the space opposite that foe."
   },
   {
@@ -2216,6 +2532,7 @@
     "name": "Sacred Twins",
     "identifier": "Sacred_Twins",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "While engaged with Eirika, changes Lunar Brace to Eclipse Brace and Gentility to Blue Skies for all allies."
   },
   {
@@ -2223,6 +2540,7 @@
     "name": "Sandstorm",
     "identifier": "Sandstorm",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "While making a physical attack, may calculate damage with 150% of Def instead of Str. Trigger %=Dex."
   },
   {
@@ -2230,6 +2548,7 @@
     "name": "Seconds",
     "identifier": "Seconds",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "On eating a packed lunch, unit may obtain another of the same item. Trigger %=Lck."
   },
   {
@@ -2237,6 +2556,7 @@
     "name": "Self-Healing",
     "identifier": "Self-Healing",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "Unit can target itself with healing staves."
   },
   {
@@ -2244,6 +2564,7 @@
     "name": "Self-Improver",
     "identifier": "Self-Improver",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "If unit uses Wait without attacking or using items, grants Str+2 for 1 turn."
   },
   {
@@ -2251,6 +2572,7 @@
     "name": "Share Spoils",
     "identifier": "Share_Spoils",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "If there is an ally within 1 space, grants Hit/Avo+10 at a cost of Crit-10 to unit."
   },
   {
@@ -2258,6 +2580,7 @@
     "name": "Silence Ward",
     "identifier": "Silence_Ward",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants immunity to silence."
   },
   {
@@ -2265,6 +2588,7 @@
     "name": "Single-Minded",
     "identifier": "Single-Minded",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "During combat with a foe who was also unit's most recent opponent, grants Hit+20."
   },
   {
@@ -2272,6 +2596,7 @@
     "name": "Smash",
     "identifier": "Smash",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "When making a smash attack, push the target 2 spaces instead of 1."
   },
   {
@@ -2279,6 +2604,7 @@
     "name": "Soar",
     "identifier": "soar",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Grants Mov+2. Unit can cross terrain as if flying."
   },
   {
@@ -2286,6 +2612,7 @@
     "name": "Sol",
     "identifier": "Sol",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "Unit may recover HP=50% damage dealt. Trigger %=Dex."
   },
   {
@@ -2293,6 +2620,7 @@
     "name": "Solar Brace",
     "identifier": "Solar_Brace",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "If unit initiates combat, unit recovers HP=30% of damage dealt."
   },
   {
@@ -2300,6 +2628,7 @@
     "name": "Solar Brace+",
     "identifier": "Solar_Brace-1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 328,
     "description": "If unit initiates combat, unit recovers HP=50% of damage dealt."
   },
   {
@@ -2307,6 +2636,7 @@
     "name": "Soulblade",
     "identifier": "Soulblade",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "When attacking with a sword, damage is calculated using average of foe's Def and Res."
   },
   {
@@ -2314,6 +2644,7 @@
     "name": "Soul Conversion",
     "identifier": "sp_conversion",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants +20 SP for each defeated foe. Triggers even without a ring or bracelet equipped."
   },
   {
@@ -2321,6 +2652,7 @@
     "name": "Spd/Dex +1",
     "identifier": "spd_dex1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Spd+1 and Dex+1."
   },
   {
@@ -2328,6 +2660,7 @@
     "name": "Spd/Dex +2",
     "identifier": "spd_dex2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 332,
     "description": "Grants Spd+2 and Dex+2."
   },
   {
@@ -2335,6 +2668,7 @@
     "name": "Spd/Dex +3",
     "identifier": "spd_dex3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 333,
     "description": "Grants Spd+3 and Dex+3."
   },
   {
@@ -2342,6 +2676,7 @@
     "name": "Spd/Dex +4",
     "identifier": "spd_dex4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 334,
     "description": "Grants Spd+4 and Dex+4."
   },
   {
@@ -2349,6 +2684,7 @@
     "name": "Spd/Dex +5",
     "identifier": "spd_dex5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 335,
     "description": "Grants Spd+5 and Dex+5."
   },
   {
@@ -2356,6 +2692,7 @@
     "name": "Spd/Res +1",
     "identifier": "spd_res1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Spd+1 and Res+1."
   },
   {
@@ -2363,6 +2700,7 @@
     "name": "Spd/Res +2",
     "identifier": "spd_res2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 337,
     "description": "Grants Spd+2 and Res+2."
   },
   {
@@ -2370,6 +2708,7 @@
     "name": "Spd/Res +3",
     "identifier": "spd_res3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 338,
     "description": "Grants Spd+3 and Res+3."
   },
   {
@@ -2377,6 +2716,7 @@
     "name": "Spd/Res +4",
     "identifier": "spd_res4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 339,
     "description": "Grants Spd+4 and Res+4."
   },
   {
@@ -2384,6 +2724,7 @@
     "name": "Spd/Res +5",
     "identifier": "spd_res5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 340,
     "description": "Grants Spd+5 and Res+5."
   },
   {
@@ -2391,6 +2732,7 @@
     "name": "Special Dance",
     "identifier": "Special_Dance",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "If unit uses Dance, grants Dex/Spd/Lck+3 to target for 1 turn."
   },
   {
@@ -2398,6 +2740,7 @@
     "name": "Special Guard 1",
     "identifier": "Special_Guard1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "If foe is equipped with a special attack, unit takes 1 less damage during combat."
   },
   {
@@ -2405,6 +2748,7 @@
     "name": "Special Guard 2",
     "identifier": "Special_Guard2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 343,
     "description": "If foe is equipped with a special attack, unit takes 2 less damage during combat."
   },
   {
@@ -2412,6 +2756,7 @@
     "name": "Special Guard 3",
     "identifier": "Special_Guard3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 344,
     "description": "If foe is equipped with a special attack, unit takes 3 less damage during combat."
   },
   {
@@ -2419,6 +2764,7 @@
     "name": "Special Guard 4",
     "identifier": "Special_Guard4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 345,
     "description": "If foe is equipped with a special attack, unit takes 4 less damage during combat."
   },
   {
@@ -2426,6 +2772,7 @@
     "name": "Special Guard 5",
     "identifier": "Special_Guard5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 346,
     "description": "If foe is equipped with a special attack, unit takes 5 less damage during combat."
   },
   {
@@ -2433,6 +2780,7 @@
     "name": "Speed 1",
     "identifier": "Speed_1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Spd+1."
   },
   {
@@ -2440,6 +2788,7 @@
     "name": "Speed 2",
     "identifier": "Speed_2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 348,
     "description": "Grants Spd+2."
   },
   {
@@ -2447,6 +2796,7 @@
     "name": "Speed 3",
     "identifier": "Speed_3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 349,
     "description": "Grants Spd+3."
   },
   {
@@ -2454,6 +2804,7 @@
     "name": "Speed 4",
     "identifier": "Speed_4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 350,
     "description": "Grants Spd+4."
   },
   {
@@ -2461,6 +2812,7 @@
     "name": "Speed 5",
     "identifier": "Speed_5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 351,
     "description": "Grants Spd+5."
   },
   {
@@ -2468,6 +2820,7 @@
     "name": "Speedtaker",
     "identifier": "Speedtaker",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants a stacking Spd+2 each time unit initiates combat and defeats a foe. Bonus lasts for the rest of the battle."
   },
   {
@@ -2475,6 +2828,7 @@
     "name": "Spell Harmony",
     "identifier": "Spell_Harmony",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "If unit initiates combat with a tome, grants Atk equal to the number of adjacent allies with tomes."
   },
   {
@@ -2482,6 +2836,7 @@
     "name": "Staff Mastery 1",
     "identifier": "Staff_Mastery_1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Hit+10 when using a staff. Staves also heal an additional 3 HP."
   },
   {
@@ -2489,6 +2844,7 @@
     "name": "Staff Mastery 2",
     "identifier": "Staff_Mastery_2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 355,
     "description": "Grants Hit+15 when using a staff. Staves also heal an additional 5 HP."
   },
   {
@@ -2496,6 +2852,7 @@
     "name": "Staff Mastery 3",
     "identifier": "Staff_Mastery_3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 356,
     "description": "Grants Hit+20 when using a staff. Staves also heal an additional 7 HP."
   },
   {
@@ -2503,6 +2860,7 @@
     "name": "Staff Mastery 4",
     "identifier": "Staff_Mastery_4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 357,
     "description": "Grants Hit+25 when using a staff. Staves also heal an additional 10 HP."
   },
   {
@@ -2510,6 +2868,7 @@
     "name": "Staff Mastery 5",
     "identifier": "Staff_Mastery_5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 358,
     "description": "Grants Hit+30 when using a staff. Staves also heal an additional 15 HP."
   },
   {
@@ -2517,6 +2876,7 @@
     "name": "Starsphere",
     "identifier": "Starsphere",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants unit enhanced stat growth when leveling up."
   },
   {
@@ -2524,6 +2884,7 @@
     "name": "Storm's Eye",
     "identifier": "storms_eye",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Grants immunity to break. Foe cannot follow up. Unit follows up. Lasts 1 turn. Sword/axe only.\n[Dragon] Prevent one critical hit.\n[Backup] Crit+20.\n[Covert] Avo+30."
   },
   {
@@ -2531,6 +2892,7 @@
     "name": "Storm's Eye+",
     "identifier": "storms_eye",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": 361,
     "description": "Grants immunity to break. Foe cannot follow up. Unit counters before foe’s first attack and follows up. Lasts 1 turn. Sword/axe only.\n[Dragon] Prevent one critical hit.\n[Backup] Crit+20.\n[Covert] Avo+30."
   },
   {
@@ -2538,6 +2900,7 @@
     "name": "Str/Def +1",
     "identifier": "str_def1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Str+1 and Def+1."
   },
   {
@@ -2545,6 +2908,7 @@
     "name": "Str/Def +2",
     "identifier": "str_def2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 363,
     "description": "Grants Str+2 and Def+2."
   },
   {
@@ -2552,6 +2916,7 @@
     "name": "Str/Def +3",
     "identifier": "str_def3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 364,
     "description": "Grants Str+3 and Def+3."
   },
   {
@@ -2559,6 +2924,7 @@
     "name": "Str/Def +4",
     "identifier": "str_def4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 365,
     "description": "Grants Str+4 and Def+4."
   },
   {
@@ -2566,6 +2932,7 @@
     "name": "Str/Def +5",
     "identifier": "str_def5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 366,
     "description": "Grants Str+5 and Def+5."
   },
   {
@@ -2573,6 +2940,7 @@
     "name": "Str/Dex +1",
     "identifier": "Str_Dex_1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Str+1 and Dex+1."
   },
   {
@@ -2580,6 +2948,7 @@
     "name": "Str/Dex +2",
     "identifier": "Str_Dex_2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 368,
     "description": "Grants Str+2 and Dex+2."
   },
   {
@@ -2587,6 +2956,7 @@
     "name": "Str/Dex +3",
     "identifier": "Str_Dex_3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 369,
     "description": "Grants Str+3 and Dex+3."
   },
   {
@@ -2594,6 +2964,7 @@
     "name": "Str/Dex +4",
     "identifier": "Str_Dex_4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 370,
     "description": "Grants Str+4 and Dex+4."
   },
   {
@@ -2601,6 +2972,7 @@
     "name": "Str/Dex +5",
     "identifier": "Str_Dex_5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 371,
     "description": "Grants Str+5 and Dex+5."
   },
   {
@@ -2608,6 +2980,7 @@
     "name": "Strength 1",
     "identifier": "Strength_1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Str+1."
   },
   {
@@ -2615,6 +2988,7 @@
     "name": "Strength 2",
     "identifier": "Strength_2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 373,
     "description": "Grants Str+2."
   },
   {
@@ -2622,6 +2996,7 @@
     "name": "Strength 3",
     "identifier": "Strength_3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 374,
     "description": "Grants Str+3."
   },
   {
@@ -2629,6 +3004,7 @@
     "name": "Strength 4",
     "identifier": "Strength_4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 375,
     "description": "Grants Str+4."
   },
   {
@@ -2636,6 +3012,7 @@
     "name": "Strength 5",
     "identifier": "Strength_5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 376,
     "description": "Grants Str+5."
   },
   {
@@ -2643,6 +3020,7 @@
     "name": "Strength 6",
     "identifier": "Strength_6",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 377,
     "description": "Grants Str+6."
   },
   {
@@ -2650,6 +3028,7 @@
     "name": "Stunning Smile",
     "identifier": "Stunning_Smile",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "If foe is male, inflicts Avo-20 on that foe during combat."
   },
   {
@@ -2657,6 +3036,7 @@
     "name": "Surprise Attack",
     "identifier": "surprise_attack",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "If unit initiates combat from terrain that provides an Avo bonus, foe cannot counterattack."
   },
   {
@@ -2664,6 +3044,7 @@
     "name": "Survival Plan",
     "identifier": "survival-plan",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "When there are more foes than allies within 3 spaces, grants Avo+20."
   },
   {
@@ -2671,6 +3052,7 @@
     "name": "Swap",
     "identifier": "Swap",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "Use to switch places with an adjacent ally."
   },
   {
@@ -2678,6 +3060,7 @@
     "name": "Sword Agility 1",
     "identifier": "Sword_Agility_1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Avo+10 at a cost of Crit-10 when using a sword."
   },
   {
@@ -2685,6 +3068,7 @@
     "name": "Sword Agility 2",
     "identifier": "Sword_Agility_2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 383,
     "description": "Grants Avo+15 at a cost of Crit-10 when using a sword."
   },
   {
@@ -2692,6 +3076,7 @@
     "name": "Sword Agility 3",
     "identifier": "Sword_Agility_3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 384,
     "description": "Grants Avo+20 at a cost of Crit-10 when using a sword."
   },
   {
@@ -2699,6 +3084,7 @@
     "name": "Sword Agility 4",
     "identifier": "Sword_Agility_4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 385,
     "description": "Grants Avo+25 at a cost of Crit-10 when using a sword."
   },
   {
@@ -2706,6 +3092,7 @@
     "name": "Sword Agility 5",
     "identifier": "Sword_Agility_5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 386,
     "description": "Grants Avo+30 at a cost of Crit-10 when using a sword."
   },
   {
@@ -2713,6 +3100,7 @@
     "name": "Sword Focus 1",
     "identifier": "Sword_Focus_1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Hit+10 at a cost of Ddg-10 when using a sword."
   },
   {
@@ -2720,6 +3108,7 @@
     "name": "Sword Focus 2",
     "identifier": "Sword_Focus_2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 388,
     "description": "Grants Hit+15 at a cost of Ddg-10 when using a sword."
   },
   {
@@ -2727,6 +3116,7 @@
     "name": "Sword Focus 3",
     "identifier": "Sword_Focus_3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 389,
     "description": "Grants Hit+20 at a cost of Ddg-10 when using a sword."
   },
   {
@@ -2734,6 +3124,7 @@
     "name": "Sword Focus 4",
     "identifier": "Sword_Focus_4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 390,
     "description": "Grants Hit+25 at a cost of Ddg-10 when using a sword."
   },
   {
@@ -2741,6 +3132,7 @@
     "name": "Sword Focus 5",
     "identifier": "Sword_Focus_5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 391,
     "description": "Grants Hit+30 at a cost of Ddg-10 when using a sword."
   },
   {
@@ -2748,6 +3140,7 @@
     "name": "Sword Guard 1",
     "identifier": "sword_guard1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "If foe is equipped with a sword, unit takes 1 less damage during combat."
   },
   {
@@ -2755,6 +3148,7 @@
     "name": "Sword Guard 2",
     "identifier": "sword_guard2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 393,
     "description": "If foe is equipped with a sword, unit takes 2 less damage during combat."
   },
   {
@@ -2762,6 +3156,7 @@
     "name": "Sword Guard 3",
     "identifier": "sword_guard3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 394,
     "description": "If foe is equipped with a sword, unit takes 3 less damage during combat."
   },
   {
@@ -2769,6 +3164,7 @@
     "name": "Sword Guard 4",
     "identifier": "sword_guard4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 395,
     "description": "If foe is equipped with a sword, unit takes 4 less damage during combat."
   },
   {
@@ -2776,6 +3172,7 @@
     "name": "Sword Guard 5",
     "identifier": "sword_guard5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 396,
     "description": "If foe is equipped with a sword, unit takes 5 less damage during combat."
   },
   {
@@ -2783,6 +3180,7 @@
     "name": "Sword Power 1",
     "identifier": "Sword_Power_1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Atk+2 at a cost of Avo-10 when using a sword."
   },
   {
@@ -2790,6 +3188,7 @@
     "name": "Sword Power 2",
     "identifier": "Sword_Power_2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 398,
     "description": "Grants Atk+4 at a cost of Avo-10 when using a sword."
   },
   {
@@ -2797,6 +3196,7 @@
     "name": "Sword Power 3",
     "identifier": "Sword_Power_3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 399,
     "description": "Grants Atk+6 at a cost of Avo-10 when using a sword."
   },
   {
@@ -2804,6 +3204,7 @@
     "name": "Sword Power 4",
     "identifier": "Sword_Power_4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 400,
     "description": "Grants Atk+8 at a cost of Avo-10 when using a sword."
   },
   {
@@ -2811,6 +3212,7 @@
     "name": "Sword Power 5",
     "identifier": "Sword_Power_5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 401,
     "description": "Grants Atk+10 at a cost of Avo-10 when using a sword."
   },
   {
@@ -2818,6 +3220,7 @@
     "name": "Divine Blessing",
     "identifier": "Tiki_Engage",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Use to grant 1 ally a Revival Stone.\n[Dragon] Restore 20 HP to ally.\n[Qi Adept] Heal their status effects."
   },
   {
@@ -2825,6 +3228,7 @@
     "name": "Divine Blessing+",
     "identifier": "Tiki_Engage",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": 403,
     "description": "Use to grant 1 ally a Revival Stone. If ally is not synced, fully restore HP. If ally is synced, +3 to engage meter. If ally is engaged, restore engage turns.\n[Dragon] Restore 20 HP to ally.\n[Qi Adept] Heal their status effects."
   },
   {
@@ -2832,6 +3236,7 @@
     "name": "Tome Precision 1",
     "identifier": "Tome_Precision_1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "Grants Hit/Avo+3 when using a tome."
   },
   {
@@ -2839,6 +3244,7 @@
     "name": "Tome Precision 2",
     "identifier": "Tome_Precision_2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 405,
     "description": "Grants Hit/Avo+5 when using a tome."
   },
   {
@@ -2846,6 +3252,7 @@
     "name": "Tome Precision 3",
     "identifier": "Tome_Precision_3",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 406,
     "description": "Grants Hit/Avo+7 when using a tome."
   },
   {
@@ -2853,6 +3260,7 @@
     "name": "Tome Precision 4",
     "identifier": "Tome_Precision_4",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 407,
     "description": "Grants Hit/Avo+10 when using a tome."
   },
   {
@@ -2860,6 +3268,7 @@
     "name": "Tome Precision 5",
     "identifier": "Tome_Precision_5",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 408,
     "description": "Grants Hit/Avo+15 when using a tome."
   },
   {
@@ -2867,6 +3276,7 @@
     "name": "Torrential Roar",
     "identifier": "Torrential_Roar",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Use to attack 3 spaces in a line, turning those spaces into water terrain."
   },
   {
@@ -2874,6 +3284,7 @@
     "name": "Trained to Kill",
     "identifier": "Trained_to_Kill",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "While unit occupies terrain that provides an Avo bonus, grants Crit+15."
   },
   {
@@ -2881,6 +3292,7 @@
     "name": "Twin Strike",
     "identifier": "Twin_Strike",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Use to make a sword attack followed by a lance attack from Ephraim on adjacent foe. Effective: Corrupted."
   },
   {
@@ -2888,6 +3300,7 @@
     "name": "Unyielding",
     "identifier": "Unyielding",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "At start of player phase, if HP is 20% or less, restores 20% of unit's max HP."
   },
   {
@@ -2895,6 +3308,7 @@
     "name": "Unyielding+",
     "identifier": "Unyielding-1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 413,
     "description": "At start of player phase, if HP is 30% or less, restores 30% of unit's max HP."
   },
   {
@@ -2902,6 +3316,7 @@
     "name": "Unyielding++",
     "identifier": "Unyielding-2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 414,
     "description": "At start of player phase, if HP is 40% or less, restores 40% of unit's max HP."
   },
   {
@@ -2909,6 +3324,7 @@
     "name": "Vantage",
     "identifier": "Vantage",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "If unit's HP is 25% or less and foe initiates combat, unit can counter before foe's first attack."
   },
   {
@@ -2916,6 +3332,7 @@
     "name": "Vantage+",
     "identifier": "Vantage-1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 416,
     "description": "If unit's HP is 50% or less and foe initiates combat, unit can counter before foe's first attack."
   },
   {
@@ -2923,6 +3340,7 @@
     "name": "Vantage++",
     "identifier": "Vantage-2",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 417,
     "description": "If unit's HP is 75% or less and foe initiates combat, unit can counter before foe's first attack."
   },
   {
@@ -2930,6 +3348,7 @@
     "name": "Verdant Faith",
     "identifier": "Verdant_Faith",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "If unit is adjacent to the Divine Dragon, grants Hit+10 during combat to both of them."
   },
   {
@@ -2937,6 +3356,7 @@
     "name": "Warp",
     "identifier": "Warp_Ragnarok",
     "skillType": "EMBLEM_ENGAGE",
+    "evolvedFrom": null,
     "description": "Use to warp up to 10 spaces and make a powerful magic attack."
   },
   {
@@ -2944,6 +3364,7 @@
     "name": "Weapon Insight",
     "identifier": "Weapon_Insight",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "If unit is equipped with a weapon of lower level than foe's, grants Crit+20 during combat."
   },
   {
@@ -2951,6 +3372,7 @@
     "name": "Weapon Sync",
     "identifier": "Weapon_Sync",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "If unit initiates combat using same weapon type as the synced Emblem, grants Atk+5. If engaged, grants Atk+5 regardless of weapon type."
   },
   {
@@ -2958,6 +3380,7 @@
     "name": "Weapon Sync+",
     "identifier": "Weapon_Sync-1",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": 422,
     "description": "If unit initiates combat using same weapon type as the synced Emblem, grants Atk+7. If engaged, grants Atk+7 regardless of weapon type."
   },
   {
@@ -2965,6 +3388,7 @@
     "name": "Will to Win",
     "identifier": "Will_to_Win",
     "skillType": "PERSONAL",
+    "evolvedFrom": null,
     "description": "If unit's HP is 50% or less at start of combat, grants Hit/Avo+20 during combat."
   },
   {
@@ -2972,6 +3396,7 @@
     "name": "World Tree",
     "identifier": "World_Tree",
     "skillType": "CLASS",
+    "evolvedFrom": null,
     "description": "When unit uses a staff, may not consume a use. Trigger %=Dex."
   },
   {
@@ -2979,6 +3404,7 @@
     "name": "Wrath",
     "identifier": "Wrath",
     "skillType": "EMBLEM_INHERITABLE",
+    "evolvedFrom": null,
     "description": "At start of combat, for each HP the unit has lost, grants Crit+1 during combat. (Max +30)"
   }
 ]

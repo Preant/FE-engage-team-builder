@@ -4,7 +4,6 @@ import { Resource } from '@/app/models/Resource.model';
 
 export type Item = Resource & {
     id: ItemID;
-    name: string;
     uses: number | 'inf';
     hit: number | 'inf';
     range: [number, number];

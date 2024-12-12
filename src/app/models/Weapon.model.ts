@@ -6,7 +6,6 @@ import { WeaponType } from '@/app/models/WeaponType.enum';
 
 export type Weapon = Resource & {
     id: WeaponID;
-    name: string;
     might: number;
     hit: number;
     crit: number;
@@ -19,4 +18,5 @@ export type Weapon = Resource & {
     KnocksBack: boolean;
     effectiveness: EfficiencyType[];
     isEngageWeapon: boolean;
+    isUnique: boolean;
 }

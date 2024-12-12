@@ -4,7 +4,7 @@ import { SkillType } from '@/app/models/SkillType.enum';
 
 export type Skill = Resource & {
     id: SkillID
-    name: string;
     skillType: SkillType;
+    evolvedFrom: SkillID | null;
     description: string;
 }

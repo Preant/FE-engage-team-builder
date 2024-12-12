@@ -8,12 +8,12 @@ export type CarouselItem = {
 }
 
 @Component({
-    selector: 'app-carousel',
-    imports: [CommonModule],
-    template: `
+  selector: 'app-carousel',
+  imports: [CommonModule],
+  template: `
         <div class="border-2 border-rich_black-500 rounded-lg bg-gradient-to-br from-gunmetal-400/50 to-gunmetal-600/50 backdrop-blur-sm">
             <div
-                    class="w-full overflow-x-auto scrollbar-hide"
+                    class="w-full scrollbar-hide overflow-x-auto"
                     (wheel)="handleWheel($event)">
                 <div class="flex gap-4 p-4">
                     @for (item of items; track item.id) {
@@ -43,7 +43,8 @@ export type CarouselItem = {
             </div>
         </div>
     `,
-    styles: [`
+  standalone: true,
+  styles: [`
         .scrollbar-hide {
             -ms-overflow-style: none;
             scrollbar-width: none;

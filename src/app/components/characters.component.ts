@@ -1,4 +1,4 @@
-import { Component, effect, inject, Signal, signal, WritableSignal } from '@angular/core';
+import { Component, effect, inject, signal, WritableSignal } from '@angular/core';
 
 import { CarouselComponent, CarouselItem } from '@/app/components/carousel.component';
 import { CharacterDetailComponent } from '@/app/components/character-detail.component';
@@ -9,12 +9,12 @@ import { CharacterService } from '@/app/services/resources.service';
 import { ViewStateService } from '@/app/services/view-state.service';
 
 @Component({
-    selector: 'app-characters',
-    imports: [
-        CarouselComponent,
-        CharacterDetailComponent
-    ],
-    template: `
+  selector: 'app-characters',
+  imports: [
+    CarouselComponent,
+    CharacterDetailComponent
+  ],
+  template: `
         <div class="min-h-screen p-6 bg-gradient-to-br from-prussian_blue-400 to-rich_black-600">
             <div class="space-y-6">
                 <app-carousel
@@ -29,7 +29,8 @@ import { ViewStateService } from '@/app/services/view-state.service';
             </div>
         </div>
     `,
-    styles: [`
+  standalone: true,
+  styles: [`
         :host {
             display: block;
             min-height: 100vh;
@@ -56,23 +57,22 @@ export class CharactersComponent {
   private assetsService: AssetsService = inject(AssetsService);
   private characterService: CharacterService = inject(CharacterService);
   private viewStateService: ViewStateService = inject(ViewStateService);
-  private charactersSignal: Signal<Character[]> = this.characterService.getResources();
 
   constructor() {
     effect(() => {
       const selectedId: number | null = this.viewStateService.getSelectedCharacterId()();
       if (selectedId !== null) {
-        const character: Character | undefined = this.charactersSignal().find((character: Character) => character.id === selectedId);
+        const character: Character | undefined = this.characterService.resources().find((character: Character) => character.id === selectedId);
         if (character) {
           this.selectedCharacter.set(character);
         }
         this.viewStateService.setSelectedCharacterId(null);
       }
-    }, { allowSignalWrites: true });
+    });
   }
 
   getCarouselItems(): CarouselItem[] {
-    return this.charactersSignal().map((character: Character): CarouselItem => ({
+    return this.characterService.resources().map((character: Character): CarouselItem => ({
       id: character.id,
       label: character.name,
       imageUrl: this.assetsService.getCharacterImage(character.identifier, ImageSize.SMALL)
@@ -80,7 +80,7 @@ export class CharactersComponent {
   }
 
   handleItemSelected(id: number): void {
-    const character: Character | undefined = this.charactersSignal().find((character: Character) => character.id === id);
+    const character: Character | undefined = this.characterService.resources().find((character: Character) => character.id === id);
     if (character) {
       this.selectedCharacter.set(character);
     }
