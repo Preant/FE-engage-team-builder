@@ -4,12 +4,14 @@ import { computed, inject, Injectable, Signal } from '@angular/core';
 import { EmblemID, SkillID, WeaponID } from '@/app/brands/ResourceID.brand';
 import {
   CHARACTER_DATA_PATH,
+  CLASS_DATA_PATH,
   EMBLEM_DATA_PATH,
   ITEM_DATA_PATH,
   SKILL_DATA_PATH,
   WEAPON_DATA_PATH
 } from '@/app/config/config';
 import { Character } from '@/app/models/Character.model';
+import { Class } from '@/app/models/Class.model';
 import { Emblem } from '@/app/models/Emblem.model';
 import { Item } from '@/app/models/Item.model';
 import { Skill } from '@/app/models/Skill.model';
@@ -162,5 +164,14 @@ export class SkillService extends GenericResourceService<Skill> {
 export class ItemService extends GenericResourceService<Item> {
   constructor(http: HttpClient) {
     super(http, ITEM_DATA_PATH);
+  }
+}
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ClassService extends GenericResourceService<Class> {
+  constructor(http: HttpClient) {
+    super(http, CLASS_DATA_PATH);
   }
 }

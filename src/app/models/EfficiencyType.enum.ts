@@ -3,5 +3,5 @@ export enum EfficiencyType {
     ARMOR = 'ARMOR',
     FLYING = 'FLYING',
     DRAGON = 'DRAGON',
-    CORRUPTED = 'CORRUPTED'
+    FELL = 'FELL'
 }

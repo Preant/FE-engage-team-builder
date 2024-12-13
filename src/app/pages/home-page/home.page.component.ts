@@ -3,6 +3,7 @@ import { Component, inject, Signal } from '@angular/core';
 import { SplitAreaComponent, SplitComponent } from 'angular-split';
 
 import { CharactersComponent } from '@/app/components/characters.component';
+import { ClassesComponent } from '@/app/components/classes.component';
 import { EmblemsComponent } from '@/app/components/emblems.component';
 import { ResourcesMenuComponent } from '@/app/components/resources-menu.component';
 import { SkillsComponent } from '@/app/components/skills.component';
@@ -23,7 +24,8 @@ import { ViewStateService } from '@/app/services/view-state.service';
     EmblemsComponent,
     CharactersComponent,
     SkillsComponent,
-    TeamBuilderComponent
+    TeamBuilderComponent,
+    ClassesComponent
   ],
   standalone: true,
   template: `
@@ -45,6 +47,8 @@ import { ViewStateService } from '@/app/services/view-state.service';
                             <app-emblems/>
                         } @else if (viewStateService.getCurrentView()() === ViewType.SKILLS) {
                             <app-skills/>
+                        } @else if (viewStateService.getCurrentView()() === ViewType.CLASSES) {
+                            <app-classes/>
                         }
                     </div>
                 </as-split-area>

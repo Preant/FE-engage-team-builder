@@ -1,4 +1,13 @@
-import { CharacterID, EmblemID, ItemID, SkillID, TeamID, TeamMemberID, WeaponID } from '@/app/brands/ResourceID.brand';
+import {
+  CharacterID,
+  ClassID,
+  EmblemID,
+  ItemID,
+  SkillID,
+  TeamID,
+  TeamMemberID,
+  WeaponID
+} from '@/app/brands/ResourceID.brand';
 import { TEAM_MEMBER_SIZE } from '@/app/config/config';
 
 export function characterID(id: number): CharacterID {
@@ -51,6 +60,13 @@ export function itemID(id: number): ItemID {
     throw new Error('Item ID must be greater than 0');
   }
   return id as ItemID;
+}
+
+export function classID(id: number): ClassID {
+  if (!greaterThanZero(id)) {
+    throw new Error('Class ID must be greater than 0');
+  }
+  return id as ClassID;
 }
 
 function greaterThanZero(id: number): boolean {

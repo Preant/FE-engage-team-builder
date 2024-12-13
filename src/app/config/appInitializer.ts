@@ -2,6 +2,7 @@ import { inject, provideAppInitializer } from '@angular/core';
 
 import {
   CharacterService,
+  ClassService,
   EmblemService,
   ItemService,
   SkillService,
@@ -28,25 +29,33 @@ export function initializeItems(itemService: ItemService) {
   return () => itemService.loadResourcesInformation();
 }
 
+export function initializeClasses(classService: ClassService) {
+  return () => classService.loadResourcesInformation();
+}
+
 export const appInitializer = [
   provideAppInitializer(() => {
-        const initializerFn = (initializeWeapons)(inject(WeaponService));
-        return initializerFn();
-      }),
+    const initializerFn = (initializeWeapons)(inject(WeaponService));
+    return initializerFn();
+  }),
   provideAppInitializer(() => {
-        const initializerFn = (initializeCharacters)(inject(CharacterService));
-        return initializerFn();
-      }),
+    const initializerFn = (initializeCharacters)(inject(CharacterService));
+    return initializerFn();
+  }),
   provideAppInitializer(() => {
-        const initializerFn = (initializeEmblems)(inject(EmblemService));
-        return initializerFn();
-      }),
+    const initializerFn = (initializeEmblems)(inject(EmblemService));
+    return initializerFn();
+  }),
   provideAppInitializer(() => {
-        const initializerFn = (initializeSkills)(inject(SkillService));
-        return initializerFn();
-      }),
+    const initializerFn = (initializeSkills)(inject(SkillService));
+    return initializerFn();
+  }),
   provideAppInitializer(() => {
-        const initializerFn = (initializeItems)(inject(ItemService));
-        return initializerFn();
-      })
+    const initializerFn = (initializeItems)(inject(ItemService));
+    return initializerFn();
+  }),
+  provideAppInitializer(() => {
+    const initializerFn = (initializeClasses)(inject(ClassService));
+    return initializerFn();
+  })
 ];

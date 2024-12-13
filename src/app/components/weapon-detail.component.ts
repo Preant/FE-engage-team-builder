@@ -95,8 +95,8 @@ import { WeaponService } from '@/app/services/weapon.service';
                                 <li class="flex justify-between items-center">
                                     <span class="text-2xl font-bold text-paynes_gray-400">Rank</span>
                                     <span class="text-3xl font-bold"
-                                          [class]="getRankClass(weapon()?.weaponRank || 'E')">
-                    {{ weapon()?.weaponRank }}
+                                          [class]="getRankClass(weapon()?.rank || 'E')">
+                    {{ weapon()?.rank }}
                   </span>
                                 </li>
                                 <li class="flex justify-between items-center">
@@ -167,15 +167,15 @@ export class WeaponDetailComponent {
   private route: ActivatedRoute = inject(ActivatedRoute);
   private weaponService: WeaponService = inject(WeaponService);
   private assetsService: AssetsService = inject(AssetsService);
+  public weaponImageUrl: Signal<string> = computed((): string => {
+    const weapon = this.weapon();
+    return weapon ? this.assetsService.getWeaponImage(weapon.identifier) : '';
+  });
   private routeParams: Signal<ParamMap | undefined> = toSignal(this.route.paramMap);
   // Now weapon can be undefined
   public weapon: Signal<Weapon | undefined> = computed((): Weapon | undefined => {
     const name: string = this.routeParams()?.get('identifier') ?? '';
     return this.weaponService.getWeaponByIdentifier(name);
-  });
-  public weaponImageUrl: Signal<string> = computed((): string => {
-    const weapon = this.weapon();
-    return weapon ? this.assetsService.getWeaponImage(weapon.identifier) : '';
   });
 
   formatRange(range: [number, number] | number): string {

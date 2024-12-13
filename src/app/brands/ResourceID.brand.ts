@@ -7,3 +7,4 @@ export type TeamID = Branded<number, 'TeamID'>;
 export type TeamMemberID = Branded<number, 'TeamMemberID'>;
 export type SkillID = Branded<number, 'SkillID'>;
 export type ItemID = Branded<number, 'ItemID'>;
+export type ClassID = Branded<number, 'ClassID'>;

@@ -4,9 +4,11 @@ import {
   CHARACTER_RESOURCE_PATH,
   EMBLEM_RESOURCE_PATH,
   ITEM_RESOURCE_PATH,
+  MISCELLANEOUS_RESOURCE_PATH,
   SKILL_RESOURCE_PATH,
   WEAPON_RESOURCE_PATH
 } from '@/app/config/config';
+import { EfficiencyType } from '@/app/models/EfficiencyType.enum';
 import { ImageSize } from '@/app/models/ImageSize.enum';
 
 @Injectable({
@@ -42,5 +44,9 @@ export class AssetsService {
 
   getSkillImage(skillIdentifier: string, _size: ImageSize = ImageSize.SMALL): string {
     return `${SKILL_RESOURCE_PATH}${skillIdentifier}.png`;
+  }
+
+  getEfficiencyTypeImage(efficiencyType: EfficiencyType, _size: ImageSize = ImageSize.SMALL): string {
+    return `${MISCELLANEOUS_RESOURCE_PATH}icons/effective-${efficiencyType.toLowerCase()}.png`;
   }
 }

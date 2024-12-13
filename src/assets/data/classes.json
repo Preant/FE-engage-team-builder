@@ -1,0 +1,1750 @@
+[
+  {
+    "id": 1,
+    "name": "Dragon Child",
+    "identifier": "dragon-child",
+    "weapons": [
+      [
+        "SWORD",
+        "B"
+      ]
+    ],
+    "type": "DRAGON",
+    "evolvedFrom": null,
+    "weakness": [
+      "DRAGON"
+    ],
+    "isAdvanced": false,
+    "skill": null,
+    "signatureCharacter": 1,
+    "stats": {
+      "base": {
+        "hp": 22,
+        "str": 6,
+        "mag": 0,
+        "dex": 2,
+        "spd": 7,
+        "def": 5,
+        "res": 3,
+        "lck": 2,
+        "mov": 4,
+        "bld": 4
+      },
+      "growth": {
+        "hp": 10,
+        "str": 10,
+        "mag": 0,
+        "dex": 10,
+        "spd": 15,
+        "def": 10,
+        "res": 10,
+        "lck": 5,
+        "mov": 0,
+        "bld": 5
+      },
+      "max": {
+        "hp": 68,
+        "str": 41,
+        "mag": 25,
+        "dex": 36,
+        "spd": 43,
+        "def": 35,
+        "res": 25,
+        "lck": 35,
+        "mov": 6,
+        "bld": 13
+      }
+    }
+  },
+  {
+    "id": 2,
+    "name": "Divine Dragon",
+    "identifier": "divine-dragon",
+    "weapons": [
+      [
+        "SWORD",
+        "A"
+      ],
+      [
+        "ART",
+        "B"
+      ]
+    ],
+    "type": "DRAGON",
+    "evolvedFrom": 1,
+    "weakness": [
+      "DRAGON"
+    ],
+    "isAdvanced": true,
+    "skill": 124,
+    "signatureCharacter": 1,
+    "stats": {
+      "base": {
+        "hp": 24,
+        "str": 8,
+        "mag": 1,
+        "dex": 4,
+        "spd": 8,
+        "def": 6,
+        "res": 5,
+        "lck": 3,
+        "mov": 5,
+        "bld": 7
+      },
+      "growth": {
+        "hp": 10,
+        "str": 10,
+        "mag": 0,
+        "dex": 10,
+        "spd": 15,
+        "def": 15,
+        "res": 15,
+        "lck": 10,
+        "mov": 0,
+        "bld": 5
+      },
+      "max": {
+        "hp": 68,
+        "str": 41,
+        "mag": 25,
+        "dex": 36,
+        "spd": 43,
+        "def": 35,
+        "res": 25,
+        "lck": 35,
+        "mov": 6,
+        "bld": 13
+      }
+    }
+  },
+  {
+    "id": 3,
+    "name": "Fell Child",
+    "identifier": "fell-child",
+    "weapons": [
+      [
+        "DAGGER",
+        "B"
+      ],
+      [
+        "TOME",
+        "S"
+      ]
+    ],
+    "type": "DRAGON",
+    "evolvedFrom": null,
+    "weakness": [
+      "FELL"
+    ],
+    "isAdvanced": true,
+    "skill": 151,
+    "signatureCharacter": 33,
+    "stats": {
+      "base": {
+        "hp": 20,
+        "str": 3,
+        "mag": 7,
+        "dex": 4,
+        "spd": 5,
+        "def": 2,
+        "res": 7,
+        "lck": 3,
+        "mov": 5,
+        "bld": 4
+      },
+      "growth": {
+        "hp": 10,
+        "str": 10,
+        "mag": 25,
+        "dex": 10,
+        "spd": 5,
+        "def": 10,
+        "res": 25,
+        "lck": 0,
+        "mov": 0,
+        "bld": 0
+      },
+      "max": {
+      }
+    }
+  },
+  {
+    "id": 4,
+    "name": "Noble",
+    "identifier": "noble-alfred",
+    "weapons": [
+      [
+        "SPEAR",
+        "B"
+      ]
+    ],
+    "type": "CAVALRY",
+    "evolvedFrom": null,
+    "weakness": [
+      "CAVALRY"
+    ],
+    "isAdvanced": false,
+    "skill": null,
+    "signatureCharacter": 5,
+    "stats": {}
+  },
+  {
+    "id": 5,
+    "name": "Avenir",
+    "identifier": "avenir",
+    "weapons": [
+      [
+        "SPEAR",
+        "A"
+      ],
+      [
+        "SWORD",
+        "B"
+      ]
+    ],
+    "type": "CAVALRY",
+    "evolvedFrom": 4,
+    "weakness": [
+      "CAVALRY"
+    ],
+    "isAdvanced": true,
+    "skill": 167,
+    "signatureCharacter": 5,
+    "stats": {}
+  },
+  {
+    "id": 6,
+    "name": "Noble",
+    "identifier": "noble-celine",
+    "weapons": [
+      [
+        "SWORD",
+        "B"
+      ],
+      [
+        "TOME",
+        "B"
+      ]
+    ],
+    "type": "MYSTICAL",
+    "evolvedFrom": null,
+    "weakness": [],
+    "isAdvanced": false,
+    "skill": null,
+    "signatureCharacter": 8,
+    "stats": {}
+  },
+  {
+    "id": 7,
+    "name": "Vidame",
+    "identifier": "vidame",
+    "weapons": [
+      [
+        "SWORD",
+        "B"
+      ],
+      [
+        "TOME",
+        "A"
+      ],
+      [
+        "STAFF",
+        "B"
+      ]
+    ],
+    "type": "MYSTICAL",
+    "evolvedFrom": 6,
+    "weakness": [],
+    "isAdvanced": true,
+    "skill": 203,
+    "signatureCharacter": 8,
+    "stats": {}
+  },
+  {
+    "id": 8,
+    "name": "Lord",
+    "identifier": "lord-diamant",
+    "weapons": [
+      [
+        "SWORD",
+        "B"
+      ]
+    ],
+    "type": "BACKUP",
+    "evolvedFrom": null,
+    "weakness": [],
+    "isAdvanced": false,
+    "skill": null,
+    "signatureCharacter": 15,
+    "stats": {}
+  },
+  {
+    "id": 9,
+    "name": "Successeur",
+    "identifier": "successeur",
+    "weapons": [
+      [
+        "SWORD",
+        "S"
+      ],
+      [
+        "AXE",
+        "A"
+      ]
+    ],
+    "type": "BACKUP",
+    "evolvedFrom": 8,
+    "weakness": [],
+    "isAdvanced": true,
+    "skill": 327,
+    "signatureCharacter": 15,
+    "stats": {}
+  },
+  {
+    "id": 10,
+    "name": "Lord",
+    "identifier": "lord-alcryst",
+    "weapons": [
+      [
+        "BOW",
+        "B"
+      ]
+    ],
+    "type": "COVERT",
+    "evolvedFrom": null,
+    "weakness": [],
+    "isAdvanced": false,
+    "skill": null,
+    "signatureCharacter": 12,
+    "stats": {}
+  },
+  {
+    "id": 11,
+    "name": "Tireur d'élite",
+    "identifier": "tireur-delite",
+    "weapons": [
+      [
+        "BOW",
+        "S"
+      ]
+    ],
+    "type": "COVERT",
+    "evolvedFrom": 10,
+    "weakness": [],
+    "isAdvanced": true,
+    "skill": 251,
+    "signatureCharacter": 12,
+    "stats": {}
+  },
+  {
+    "id": 12,
+    "name": "Wing Tamer",
+    "identifier": "wing-tamer-ivy",
+    "weapons": [
+      [
+        "TOME",
+        "B"
+      ],
+      [
+        "STAFF",
+        "B"
+      ]
+    ],
+    "type": "FLYING",
+    "evolvedFrom": null,
+    "weakness": [
+      "FLYING",
+      "DRAGON"
+    ],
+    "isAdvanced": false,
+    "skill": null,
+    "signatureCharacter": 18,
+    "stats": {}
+  },
+  {
+    "id": 13,
+    "name": "Lindwurm",
+    "identifier": "lindwurm",
+    "weapons": [
+      [
+        "TOME",
+        "S"
+      ],
+      [
+        "STAFF",
+        "B"
+      ]
+    ],
+    "type": "FLYING",
+    "evolvedFrom": 12,
+    "weakness": [
+      "FLYING",
+      "DRAGON"
+    ],
+    "isAdvanced": true,
+    "skill": 168,
+    "signatureCharacter": 18,
+    "stats": {}
+  },
+  {
+    "id": 14,
+    "name": "Wind Tamer",
+    "identifier": "wind-tamer-hortensia",
+    "weapons": [
+      [
+        "TOME",
+        "B"
+      ],
+      [
+        "STAFF",
+        "B"
+      ]
+    ],
+    "type": "FLYING",
+    "evolvedFrom": null,
+    "weakness": [
+      "FLYING"
+    ],
+    "isAdvanced": false,
+    "skill": null,
+    "signatureCharacter": 27,
+    "stats": {}
+  },
+  {
+    "id": 15,
+    "name": "Sleipnir Rider",
+    "identifier": "sleipnir-rider",
+    "weapons": [
+      [
+        "TOME",
+        "B"
+      ],
+      [
+        "STAFF",
+        "S"
+      ]
+    ],
+    "type": "FLYING",
+    "evolvedFrom": 14,
+    "weakness": [
+      "FLYING"
+    ],
+    "isAdvanced": true,
+    "skill": 425,
+    "signatureCharacter": 27,
+    "stats": {}
+  },
+  {
+    "id": 16,
+    "name": "Sentinel",
+    "identifier": "sentinel-timerra",
+    "weapons": [
+      [
+        "SPEAR",
+        "B"
+      ]
+    ],
+    "type": "BACKUP",
+    "evolvedFrom": null,
+    "weakness": [],
+    "isAdvanced": false,
+    "skill": null,
+    "signatureCharacter": 24,
+    "stats": {}
+  },
+  {
+    "id": 17,
+    "name": "Picket",
+    "identifier": "picket",
+    "weapons": [
+      [
+        "SPEAR",
+        "S"
+      ]
+    ],
+    "type": "BACKUP",
+    "evolvedFrom": 16,
+    "weakness": [],
+    "isAdvanced": true,
+    "skill": 318,
+    "signatureCharacter": 24,
+    "stats": {}
+  },
+  {
+    "id": 18,
+    "name": "Sentinel",
+    "identifier": "sentinel-fogado",
+    "weapons": [
+      [
+        "BOW",
+        "B"
+      ]
+    ],
+    "type": "CAVALRY",
+    "evolvedFrom": null,
+    "weakness": [
+      "CAVALRY"
+    ],
+    "isAdvanced": false,
+    "skill": null,
+    "signatureCharacter": 21,
+    "stats": {}
+  },
+  {
+    "id": 19,
+    "name": "Cupido",
+    "identifier": "cupido",
+    "weapons": [
+      [
+        "BOW",
+        "A"
+      ],
+      [
+        "SWORD",
+        "B"
+      ]
+    ],
+    "type": "CAVALRY",
+    "evolvedFrom": 18,
+    "weakness": [
+      "CAVALRY"
+    ],
+    "isAdvanced": true,
+    "skill": 42,
+    "signatureCharacter": 21,
+    "stats": {}
+  },
+  {
+    "id": 20,
+    "name": "Sword Fighter",
+    "identifier": "sword-fighter",
+    "weapons": [
+      [
+        "SWORD",
+        "B"
+      ]
+    ],
+    "type": "BACKUP",
+    "evolvedFrom": null,
+    "weakness": [],
+    "isAdvanced": false,
+    "skill": null,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 21,
+    "name": "Swordmaster",
+    "identifier": "swordmaster",
+    "weapons": [
+      [
+        "SWORD",
+        "S"
+      ]
+    ],
+    "type": "BACKUP",
+    "evolvedFrom": 20,
+    "weakness": [],
+    "isAdvanced": true,
+    "skill": 316,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 22,
+    "name": "Hero",
+    "identifier": "hero-axe",
+    "weapons": [
+      [
+        "SWORD",
+        "A"
+      ],
+      [
+        "AXE",
+        "CC"
+      ]
+    ],
+    "type": "BACKUP",
+    "evolvedFrom": 20,
+    "weakness": [],
+    "isAdvanced": true,
+    "skill": 76,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 23,
+    "name": "Hero",
+    "identifier": "hero-lance",
+    "weapons": [
+      [
+        "SWORD",
+        "A"
+      ],
+      [
+        "SPEAR",
+        "CC"
+      ]
+    ],
+    "type": "BACKUP",
+    "evolvedFrom": 20,
+    "weakness": [],
+    "isAdvanced": true,
+    "skill": 76,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 24,
+    "name": "Lance Fighter",
+    "identifier": "lance-fighter",
+    "weapons": [
+      [
+        "SPEAR",
+        "B"
+      ]
+    ],
+    "type": "BACKUP",
+    "evolvedFrom": null,
+    "weakness": [],
+    "isAdvanced": false,
+    "skill": null,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 25,
+    "name": "Halberdier",
+    "identifier": "halberdier",
+    "weapons": [
+      [
+        "SPEAR",
+        "S"
+      ]
+    ],
+    "type": "BACKUP",
+    "evolvedFrom": 24,
+    "weakness": [],
+    "isAdvanced": true,
+    "skill": 291,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 26,
+    "name": "Royal Knight",
+    "identifier": "royal-knight",
+    "weapons": [
+      [
+        "SPEAR",
+        "A"
+      ],
+      [
+        "STAFF",
+        "CC"
+      ]
+    ],
+    "type": "CAVALRY",
+    "evolvedFrom": 24,
+    "weakness": [
+      "CAVALRY"
+    ],
+    "isAdvanced": true,
+    "skill": 302,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 27,
+    "name": "Axe Fighter",
+    "identifier": "axe-fighter",
+    "weapons": [
+      [
+        "AXE",
+        "B"
+      ]
+    ],
+    "type": "BACKUP",
+    "evolvedFrom": null,
+    "weakness": [],
+    "isAdvanced": false,
+    "skill": null,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 28,
+    "name": "Berserker",
+    "identifier": "berserker",
+    "weapons": [
+      [
+        "AXE",
+        "S"
+      ]
+    ],
+    "type": "BACKUP",
+    "evolvedFrom": 27,
+    "weakness": [],
+    "isAdvanced": true,
+    "skill": 325,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 29,
+    "name": "Warrior",
+    "identifier": "warrior",
+    "weapons": [
+      [
+        "AXE",
+        "A"
+      ],
+      [
+        "BOW",
+        "CC"
+      ]
+    ],
+    "type": "BACKUP",
+    "evolvedFrom": 27,
+    "weakness": [],
+    "isAdvanced": true,
+    "skill": 276,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 30,
+    "name": "Archer",
+    "identifier": "archer",
+    "weapons": [
+      [
+        "BOW",
+        "B"
+      ]
+    ],
+    "type": "COVERT",
+    "evolvedFrom": null,
+    "weakness": [],
+    "isAdvanced": false,
+    "skill": null,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 31,
+    "name": "Sniper",
+    "identifier": "sniper",
+    "weapons": [
+      [
+        "BOW",
+        "S"
+      ]
+    ],
+    "type": "COVERT",
+    "evolvedFrom": 30,
+    "weakness": [],
+    "isAdvanced": true,
+    "skill": 281,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 32,
+    "name": "Bow Knight",
+    "identifier": "bow-knight-sword",
+    "weapons": [
+      [
+        "BOW",
+        "A"
+      ],
+      [
+        "SWORD",
+        "CC"
+      ]
+    ],
+    "type": "CAVALRY",
+    "evolvedFrom": 30,
+    "weakness": [
+      "CAVALRY"
+    ],
+    "isAdvanced": true,
+    "skill": 87,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 33,
+    "name": "Bow Knight",
+    "identifier": "bow-knight-lance",
+    "weapons": [
+      [
+        "BOW",
+        "A"
+      ],
+      [
+        "SPEAR",
+        "CC"
+      ]
+    ],
+    "type": "CAVALRY",
+    "evolvedFrom": 30,
+    "weakness": [
+      "CAVALRY"
+    ],
+    "isAdvanced": true,
+    "skill": 87,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 34,
+    "name": "Bow Knight",
+    "identifier": "bow-knight-axe",
+    "weapons": [
+      [
+        "BOW",
+        "A"
+      ],
+      [
+        "AXE",
+        "CC"
+      ]
+    ],
+    "type": "CAVALRY",
+    "evolvedFrom": 30,
+    "weakness": [
+      "CAVALRY"
+    ],
+    "isAdvanced": true,
+    "skill": 87,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 35,
+    "name": "Sword Armor",
+    "identifier": "sword-armor",
+    "weapons": [
+      [
+        "SWORD",
+        "B"
+      ]
+    ],
+    "type": "ARMOR",
+    "evolvedFrom": null,
+    "weakness": [
+      "ARMOR"
+    ],
+    "isAdvanced": false,
+    "skill": null,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 36,
+    "name": "Lance Armor",
+    "identifier": "lance-armor",
+    "weapons": [
+      [
+        "SPEAR",
+        "B"
+      ]
+    ],
+    "type": "ARMOR",
+    "evolvedFrom": null,
+    "weakness": [
+      "ARMOR"
+    ],
+    "isAdvanced": false,
+    "skill": null,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 37,
+    "name": "Axe Armor",
+    "identifier": "axe-armor",
+    "weapons": [
+      [
+        "AXE",
+        "B"
+      ]
+    ],
+    "type": "ARMOR",
+    "evolvedFrom": null,
+    "weakness": [
+      "ARMOR"
+    ],
+    "isAdvanced": false,
+    "skill": null,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 38,
+    "name": "General",
+    "identifier": "general-sword",
+    "weapons": [
+      [
+        "SWORD",
+        "AA"
+      ]
+    ],
+    "type": "ARMOR",
+    "evolvedFrom": 35,
+    "weakness": [
+      "ARMOR"
+    ],
+    "isAdvanced": true,
+    "skill": 382,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 39,
+    "name": "General",
+    "identifier": "general-lance",
+    "weapons": [
+      [
+        "SPEAR",
+        "AA"
+      ]
+    ],
+    "type": "ARMOR",
+    "evolvedFrom": 36,
+    "weakness": [
+      "ARMOR"
+    ],
+    "isAdvanced": true,
+    "skill": 382,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 40,
+    "name": "General",
+    "identifier": "general-axe",
+    "weapons": [
+      [
+        "AXE",
+        "AA"
+      ]
+    ],
+    "type": "ARMOR",
+    "evolvedFrom": 37,
+    "weakness": [
+      "ARMOR"
+    ],
+    "isAdvanced": true,
+    "skill": 382,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 41,
+    "name": "Great Knight",
+    "identifier": "great-knight-sword-lance",
+    "weapons": [
+      [
+        "SWORD",
+        "BB"
+      ],
+      [
+        "SPEAR",
+        "BB"
+      ]
+    ],
+    "type": "CAVALRY",
+    "evolvedFrom": 35,
+    "weakness": [
+      "CAVALRY",
+      "ARMOR"
+    ],
+    "isAdvanced": true,
+    "skill": 12,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 42,
+    "name": "Great Knight",
+    "identifier": "great-knight-sword-axe",
+    "weapons": [
+      [
+        "SWORD",
+        "BB"
+      ],
+      [
+        "AXE",
+        "BB"
+      ]
+    ],
+    "type": "CAVALRY",
+    "evolvedFrom": 35,
+    "weakness": [
+      "CAVALRY",
+      "ARMOR"
+    ],
+    "isAdvanced": true,
+    "skill": 12,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 43,
+    "name": "Great Knight",
+    "identifier": "great-knight-lance-axe",
+    "weapons": [
+      [
+        "SPEAR",
+        "BB"
+      ],
+      [
+        "AXE",
+        "BB"
+      ]
+    ],
+    "type": "CAVALRY",
+    "evolvedFrom": 36,
+    "weakness": [
+      "CAVALRY",
+      "ARMOR"
+    ],
+    "isAdvanced": true,
+    "skill": 12,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 44,
+    "name": "Sword Cavalier",
+    "identifier": "sword-cavalier",
+    "weapons": [
+      [
+        "SWORD",
+        "B"
+      ]
+    ],
+    "type": "CAVALRY",
+    "evolvedFrom": null,
+    "weakness": [
+      "CAVALRY"
+    ],
+    "isAdvanced": false,
+    "skill": null,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 45,
+    "name": "Lance Cavalier",
+    "identifier": "lance-cavalier",
+    "weapons": [
+      [
+        "SPEAR",
+        "B"
+      ]
+    ],
+    "type": "CAVALRY",
+    "evolvedFrom": null,
+    "weakness": [
+      "CAVALRY"
+    ],
+    "isAdvanced": false,
+    "skill": null,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 46,
+    "name": "Axe Cavalier",
+    "identifier": "axe-cavalier",
+    "weapons": [
+      [
+        "AXE",
+        "B"
+      ]
+    ],
+    "type": "CAVALRY",
+    "evolvedFrom": null,
+    "weakness": [
+      "CAVALRY"
+    ],
+    "isAdvanced": false,
+    "skill": null,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 47,
+    "name": "Paladin",
+    "identifier": "paladin-sword",
+    "weapons": [
+      [
+        "SWORD",
+        "AA"
+      ]
+    ],
+    "type": "CAVALRY",
+    "evolvedFrom": 44,
+    "weakness": [
+      "CAVALRY"
+    ],
+    "isAdvanced": true,
+    "skill": 292,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 48,
+    "name": "Paladin",
+    "identifier": "paladin-lance",
+    "weapons": [
+      [
+        "SPEAR",
+        "AA"
+      ]
+    ],
+    "type": "CAVALRY",
+    "evolvedFrom": 45,
+    "weakness": [
+      "CAVALRY"
+    ],
+    "isAdvanced": true,
+    "skill": 292,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 49,
+    "name": "Paladin",
+    "identifier": "paladin-axe",
+    "weapons": [
+      [
+        "AXE",
+        "AA"
+      ]
+    ],
+    "type": "CAVALRY",
+    "evolvedFrom": 46,
+    "weakness": [
+      "CAVALRY"
+    ],
+    "isAdvanced": true,
+    "skill": 292,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 50,
+    "name": "Wolf Knight",
+    "identifier": "wolf-knight-sword",
+    "weapons": [
+      [
+        "SWORD",
+        "BB"
+      ],
+      [
+        "DAGGER",
+        "AA"
+      ]
+    ],
+    "type": "CAVALRY",
+    "evolvedFrom": 44,
+    "weakness": [
+      "CAVALRY"
+    ],
+    "isAdvanced": true,
+    "skill": 181,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 51,
+    "name": "Wolf Knight",
+    "identifier": "wolf-knight-lance",
+    "weapons": [
+      [
+        "SPEAR",
+        "BB"
+      ],
+      [
+        "DAGGER",
+        "AA"
+      ]
+    ],
+    "type": "CAVALRY",
+    "evolvedFrom": 45,
+    "weakness": [
+      "CAVALRY"
+    ],
+    "isAdvanced": true,
+    "skill": 181,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 52,
+    "name": "Wolf Knight",
+    "identifier": "wolf-knight-axe",
+    "weapons": [
+      [
+        "AXE",
+        "BB"
+      ],
+      [
+        "DAGGER",
+        "AA"
+      ]
+    ],
+    "type": "CAVALRY",
+    "evolvedFrom": 46,
+    "weakness": [
+      "CAVALRY"
+    ],
+    "isAdvanced": true,
+    "skill": 181,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 53,
+    "name": "Mage",
+    "identifier": "mage",
+    "weapons": [
+      [
+        "TOME",
+        "B"
+      ]
+    ],
+    "type": "MYSTICAL",
+    "evolvedFrom": null,
+    "weakness": [],
+    "isAdvanced": false,
+    "skill": null,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 54,
+    "name": "Sage",
+    "identifier": "sage",
+    "weapons": [
+      [
+        "TOME",
+        "S"
+      ],
+      [
+        "STAFF",
+        "BB"
+      ]
+    ],
+    "type": "MYSTICAL",
+    "evolvedFrom": 53,
+    "weakness": [],
+    "isAdvanced": true,
+    "skill": 354,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 55,
+    "name": "Mage Knight",
+    "identifier": "mage-knight-sword",
+    "weapons": [
+      [
+        "TOME",
+        "A"
+      ],
+      [
+        "SWORD",
+        "BB"
+      ]
+    ],
+    "type": "CAVALRY",
+    "evolvedFrom": 53,
+    "weakness": [
+      "CAVALRY"
+    ],
+    "isAdvanced": true,
+    "skill": 90,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 56,
+    "name": "Mage Knight",
+    "identifier": "mage-knight-lance",
+    "weapons": [
+      [
+        "TOME",
+        "A"
+      ],
+      [
+        "SPEAR",
+        "BB"
+      ]
+    ],
+    "type": "CAVALRY",
+    "evolvedFrom": 53,
+    "weakness": [
+      "CAVALRY"
+    ],
+    "isAdvanced": true,
+    "skill": 90,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 57,
+    "name": "Mage Knight",
+    "identifier": "mage-knight-axe",
+    "weapons": [
+      [
+        "TOME",
+        "A"
+      ],
+      [
+        "AXE",
+        "BB"
+      ]
+    ],
+    "type": "CAVALRY",
+    "evolvedFrom": 53,
+    "weakness": [
+      "CAVALRY"
+    ],
+    "isAdvanced": true,
+    "skill": 90,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 58,
+    "name": "Martial Monk",
+    "identifier": "martial-monk",
+    "weapons": [
+      [
+        "ART",
+        "C"
+      ],
+      [
+        "STAFF",
+        "B"
+      ]
+    ],
+    "type": "QI_ADEPT",
+    "evolvedFrom": null,
+    "weakness": [],
+    "isAdvanced": false,
+    "skill": null,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 59,
+    "name": "Martial Master",
+    "identifier": "martial-master",
+    "weapons": [
+      [
+        "ART",
+        "S"
+      ],
+      [
+        "STAFF",
+        "A"
+      ]
+    ],
+    "type": "QI_ADEPT",
+    "evolvedFrom": 58,
+    "weakness": [],
+    "isAdvanced": true,
+    "skill": 119,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 60,
+    "name": "High Priest",
+    "identifier": "high-priest",
+    "weapons": [
+      [
+        "TOME",
+        "BB"
+      ],
+      [
+        "STAFF",
+        "S"
+      ],
+      [
+        "ART",
+        "C"
+      ]
+    ],
+    "type": "MYSTICAL",
+    "evolvedFrom": 53,
+    "weakness": [],
+    "isAdvanced": true,
+    "skill": 320,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 61,
+    "name": "Sword Flier",
+    "identifier": "sword-flier",
+    "weapons": [
+      [
+        "SWORD",
+        "B"
+      ]
+    ],
+    "type": "FLYING",
+    "evolvedFrom": null,
+    "weakness": [
+      "FLYING"
+    ],
+    "isAdvanced": false,
+    "skill": null,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 62,
+    "name": "Lance Flier",
+    "identifier": "lance-flier",
+    "weapons": [
+      [
+        "SPEAR",
+        "B"
+      ]
+    ],
+    "type": "FLYING",
+    "evolvedFrom": null,
+    "weakness": [
+      "FLYING"
+    ],
+    "isAdvanced": false,
+    "skill": null,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 63,
+    "name": "Axe Flier",
+    "identifier": "axe-flier",
+    "weapons": [
+      [
+        "AXE",
+        "B"
+      ]
+    ],
+    "type": "FLYING",
+    "evolvedFrom": null,
+    "weakness": [
+      "FLYING"
+    ],
+    "isAdvanced": false,
+    "skill": null,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 64,
+    "name": "Griffin Knight",
+    "identifier": "griffin-knight-sword",
+    "weapons": [
+      [
+        "SWORD",
+        "AA"
+      ],
+      [
+        "STAFF",
+        "CC"
+      ]
+    ],
+    "type": "FLYING",
+    "evolvedFrom": 61,
+    "weakness": [
+      "FLYING"
+    ],
+    "isAdvanced": true,
+    "skill": 93,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 65,
+    "name": "Griffin Knight",
+    "identifier": "griffin-knight-lance",
+    "weapons": [
+      [
+        "SPEAR",
+        "AA"
+      ],
+      [
+        "STAFF",
+        "CC"
+      ]
+    ],
+    "type": "FLYING",
+    "evolvedFrom": 62,
+    "weakness": [
+      "FLYING"
+    ],
+    "isAdvanced": true,
+    "skill": 93,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 66,
+    "name": "Griffin Knight",
+    "identifier": "griffin-knight-axe",
+    "weapons": [
+      [
+        "AXE",
+        "AA"
+      ],
+      [
+        "STAFF",
+        "CC"
+      ]
+    ],
+    "type": "FLYING",
+    "evolvedFrom": 63,
+    "weakness": [
+      "FLYING"
+    ],
+    "isAdvanced": true,
+    "skill": 93,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 67,
+    "name": "Wyvern Knight",
+    "identifier": "wyvern-knight-sword-lance",
+    "weapons": [
+      [
+        "SWORD",
+        "BB"
+      ],
+      [
+        "SPEAR",
+        "BB"
+      ]
+    ],
+    "type": "FLYING",
+    "evolvedFrom": 61,
+    "weakness": [
+      "FLYING",
+      "DRAGON"
+    ],
+    "isAdvanced": true,
+    "skill": 6,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 68,
+    "name": "Wyvern Knight",
+    "identifier": "wyvern-knight-sword-axe",
+    "weapons": [
+      [
+        "SWORD",
+        "BB"
+      ],
+      [
+        "AXE",
+        "BB"
+      ]
+    ],
+    "type": "FLYING",
+    "evolvedFrom": 61,
+    "weakness": [
+      "FLYING",
+      "DRAGON"
+    ],
+    "isAdvanced": true,
+    "skill": 6,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 69,
+    "name": "Wyvern Knight",
+    "identifier": "wyvern-knight-lance-axe",
+    "weapons": [
+      [
+        "SPEAR",
+        "BB"
+      ],
+      [
+        "AXE",
+        "BB"
+      ]
+    ],
+    "type": "FLYING",
+    "evolvedFrom": 62,
+    "weakness": [
+      "FLYING",
+      "DRAGON"
+    ],
+    "isAdvanced": true,
+    "skill": 6,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 70,
+    "name": "Thief",
+    "identifier": "thief",
+    "weapons": [
+      [
+        "DAGGER",
+        "S"
+      ]
+    ],
+    "type": "COVERT",
+    "evolvedFrom": null,
+    "weakness": [],
+    "isAdvanced": true,
+    "skill": 287,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 71,
+    "name": "Dancer",
+    "identifier": "dancer",
+    "weapons": [
+      [
+        "ART",
+        "A"
+      ]
+    ],
+    "type": "QI_ADEPT",
+    "evolvedFrom": null,
+    "weakness": [],
+    "isAdvanced": true,
+    "skill": 342,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 72,
+    "name": "Fell Child",
+    "identifier": "fell-child-nel",
+    "weapons": [
+      [
+        "SPEAR",
+        "A"
+      ],
+      [
+        "DRAGONSTONE",
+        "S"
+      ]
+    ],
+    "type": "DRAGON",
+    "evolvedFrom": null,
+    "weakness": [
+      "FELL"
+    ],
+    "isAdvanced": true,
+    "skill": 427,
+    "signatureCharacter": 37,
+    "stats": {}
+  },
+  {
+    "id": 73,
+    "name": "Fell Child",
+    "identifier": "fell-child-rafal",
+    "weapons": [
+      [
+        "AXE",
+        "A"
+      ],
+      [
+        "DRAGONSTONE",
+        "S"
+      ]
+    ],
+    "type": "DRAGON",
+    "evolvedFrom": null,
+    "weakness": [
+      "FELL"
+    ],
+    "isAdvanced": true,
+    "skill": 428,
+    "signatureCharacter": 38,
+    "stats": {}
+  },
+  {
+    "id": 74,
+    "name": "Melusine",
+    "identifier": "melusine",
+    "weapons": [
+      [
+        "TOME",
+        "S"
+      ],
+      [
+        "SWORD",
+        "A"
+      ]
+    ],
+    "type": "FLYING",
+    "evolvedFrom": null,
+    "weakness": [
+      "FLYING",
+      "DRAGON"
+    ],
+    "isAdvanced": true,
+    "skill": 330,
+    "signatureCharacter": 39,
+    "stats": {}
+  },
+  {
+    "id": 75,
+    "name": "Enchanter",
+    "identifier": "enchanter",
+    "weapons": [
+      [
+        "DAGGER",
+        "BB"
+      ],
+      [
+        "ART",
+        "BB"
+      ]
+    ],
+    "type": "QI_ADEPT",
+    "evolvedFrom": null,
+    "weakness": [],
+    "isAdvanced": true,
+    "skill": 100,
+    "signatureCharacter": null,
+    "stats": {}
+  },
+  {
+    "id": 76,
+    "name": "Mage Cannoneer",
+    "identifier": "mage-cannoneer",
+    "weapons": [
+      [
+        "BLAST",
+        "S"
+      ]
+    ],
+    "type": "ARMOR",
+    "evolvedFrom": null,
+    "weakness": [
+      "ARMOR"
+    ],
+    "isAdvanced": true,
+    "skill": 236,
+    "signatureCharacter": null,
+    "stats": {}
+  }
+]

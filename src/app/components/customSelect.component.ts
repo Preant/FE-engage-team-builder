@@ -50,6 +50,7 @@ export type OptionsProvider<T> = () => Promise<SelectOption<T>[]> | SelectOption
             <!-- Main Select Button -->
             <div
                     (click)="toggleDropdown()"
+                    (contextmenu)="handleRightClick($event)"
                     [ngClass]="[
                       'flex items-center justify-between p-2 cursor-pointer bg-gradient-to-br from-gunmetal-400/50 to-gunmetal-600/50 border border-rich_black-500 rounded-lg hover:border-forest_green-500 transition-all duration-300 group',
                       isOpen() ? 'ring-2 ring-forest_green-500' : ''
@@ -71,12 +72,11 @@ export type OptionsProvider<T> = () => Promise<SelectOption<T>[]> | SelectOption
                 </div>
             </div>
 
-
             <!-- Dropdown Options -->
             @if (isOpen()) {
                 <div
                         [@dropdownAnimation]
-                        class="absolute z-10 w-64 mt-2 bg-gradient-to-br from-gunmetal-400/95 to-gunmetal-600/95 border border-rich_black-500 rounded-lg shadow-lg backdrop-blur-sm"
+                        class="absolute z-20 w-64 mt-2 bg-gradient-to-br from-gunmetal-400/95 to-gunmetal-600/95 border border-rich_black-500 rounded-lg shadow-lg backdrop-blur-sm"
                         (keydown.escape)="closeDropdown()"
                 >
                     <!-- Search Input -->
@@ -145,7 +145,7 @@ export type OptionsProvider<T> = () => Promise<SelectOption<T>[]> | SelectOption
 export class CustomSelectComponent<T> {
     @ViewChild('searchInput') searchInput!: ElementRef;
     @Input({ required: true }) optionsProvider!: OptionsProvider<T>;
-    @Output() selectionChange = new EventEmitter<SelectOption<T>>();
+    @Output() selectionChange = new EventEmitter<SelectOption<T> | null>();
 
     searchQuery = '';
     private readonly displayOptionSignal = signal<SelectOption<T> | null>(null);
@@ -181,6 +181,12 @@ export class CustomSelectComponent<T> {
           this.displayOptionSignal.set(selectedOption ?? null);
         }
       });
+    }
+
+    handleRightClick(event: MouseEvent): void {
+      event.preventDefault();
+      this.displayOptionSignal.set(null);
+      this.selectionChange.emit(null);
     }
 
     async loadOptions() {

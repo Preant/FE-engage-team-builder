@@ -7,5 +7,6 @@ export enum WeaponType {
     DRAGONSTONE = 'DRAGONSTONE',
     BLAST = 'BLAST',
     ART = 'ART',
-    DAGGER = 'DAGGER'
+    DAGGER = 'DAGGER',
+    STAFF = 'STAFF'
 }

@@ -2593,7 +2593,7 @@
   },
   {
     "id": 325,
-    "name": "Smash",
+    "name": "Smash+",
     "identifier": "Smash",
     "skillType": "CLASS",
     "evolvedFrom": null,
@@ -3406,5 +3406,21 @@
     "skillType": "EMBLEM_INHERITABLE",
     "evolvedFrom": null,
     "description": "At start of combat, for each HP the unit has lost, grants Crit+1 during combat. (Max +30)"
+  },
+  {
+    "id": 427,
+    "name": "Resist Emblems",
+    "identifier": "resist_emblems",
+    "skillType": "CLASS",
+    "evolvedFrom": null,
+    "description": "When attacked with an engage attack, prevents 20% of damage."
+  },
+  {
+    "id": 428,
+    "name": "Spur Emblems",
+    "identifier": "spur_emblems",
+    "skillType": "CLASS",
+    "evolvedFrom": null,
+    "description": "At start of player phase, fills adjacent allies’ engage meters by 1."
   }
 ]

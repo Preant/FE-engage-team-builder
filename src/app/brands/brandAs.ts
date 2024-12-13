@@ -1,5 +1,6 @@
 import {
   characterID,
+  classID,
   emblemID,
   itemID,
   skillID,
@@ -15,5 +16,6 @@ export const brandAs = {
   TeamID: teamID,
   TeamMemberID: teamMemberID,
   SkillID: skillID,
-  ItemID: itemID
+  ItemID: itemID,
+  ClassID: classID
 } as const;
