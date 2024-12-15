@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, computed, inject, Input, Signal, signal, WritableSignal } from '@angular/core';
 
 import { Emblem } from '@/app/models/Emblem.model';
-import { ImageSize } from '@/app/models/ImageSize.enum';
+import { ImageType } from '@/app/models/ImageSize.enum';
 import { isItem } from '@/app/models/Item.model';
 import { AssetsService } from '@/app/services/assets.service';
 import { EmblemService } from '@/app/services/resources.service';
@@ -37,12 +37,6 @@ import { EmblemService } from '@/app/services/resources.service';
                                     Resource Identifier: <span
                                         class="text-mauve-500">{{ currentEmblem().identifier }}</span>
                                 </p>
-                                @if (currentEmblem().secondaryIdentifier) {
-                                    <p class="text-2xl text-paynes_gray-400">
-                                        Secondary Identifier: <span
-                                            class="text-mauve-500">{{ currentEmblem().secondaryIdentifier }}</span>
-                                    </p>
-                                }
                             </div>
                         </div>
                     </div>
@@ -98,8 +92,7 @@ export class EmblemDetailComponent {
   public emblemImageUrl = computed(() =>
     this.assetsService.getEmblemImage(
       this.currentEmblem().identifier,
-      this.currentEmblem().secondaryIdentifier,
-      ImageSize.LARGE
+      ImageType.BODY
     )
   );
 
@@ -113,10 +106,10 @@ export class EmblemDetailComponent {
   }
 
     getWeaponImage(weaponIdentifier: string): string {
-      return this.assetsService.getWeaponImage(weaponIdentifier, ImageSize.SMALL);
+      return this.assetsService.getWeaponImage(weaponIdentifier, ImageType.BODY_SMALL);
     }
 
     getItemImage(itemIdentifier: string): string {
-      return this.assetsService.getItemImage(itemIdentifier, ImageSize.SMALL);
+      return this.assetsService.getItemImage(itemIdentifier, ImageType.BODY_SMALL);
     }
 }

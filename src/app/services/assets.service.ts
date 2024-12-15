@@ -9,7 +9,7 @@ import {
   WEAPON_RESOURCE_PATH
 } from '@/app/config/config';
 import { EfficiencyType } from '@/app/models/EfficiencyType.enum';
-import { ImageSize } from '@/app/models/ImageSize.enum';
+import { ImageType } from '@/app/models/ImageSize.enum';
 
 @Injectable({
   providedIn: 'root'
@@ -19,34 +19,35 @@ export class AssetsService {
   constructor() {
   }
 
-  getCharacterImage(characterIdentifier: string, size: ImageSize = ImageSize.SMALL): string {
-    if (size === ImageSize.SMALL) {
+  getCharacterImage(characterIdentifier: string, size: ImageType = ImageType.BODY_SMALL): string {
+    if (size === ImageType.BODY_SMALL) {
       return `${CHARACTER_RESOURCE_PATH}${characterIdentifier}/${characterIdentifier}_body_small.png`;
+    } else if (size === ImageType.BANNER_SMALL) {
+      return `${CHARACTER_RESOURCE_PATH}${characterIdentifier}/${characterIdentifier}_banner_small.png`;
     }
     return `${CHARACTER_RESOURCE_PATH}${characterIdentifier}/${characterIdentifier}_body.png`;
   }
 
-  getEmblemImage(identifier: string, secondaryIdentifier: string | undefined, size: ImageSize = ImageSize.SMALL): string {
-    const effectiveIdentifier: string = secondaryIdentifier || identifier;
-    if (size === ImageSize.SMALL) {
-      return `${EMBLEM_RESOURCE_PATH}${identifier}/${effectiveIdentifier}_body_small.png`;
+  getEmblemImage(identifier: string, size: ImageType = ImageType.BODY_SMALL): string {
+    if (size === ImageType.BODY_SMALL) {
+      return `${EMBLEM_RESOURCE_PATH}${identifier}/${identifier}_body_small.png`;
     }
-    return `${EMBLEM_RESOURCE_PATH}${identifier}/${effectiveIdentifier}_body.png`;
+    return `${EMBLEM_RESOURCE_PATH}${identifier}/${identifier}_body.png`;
   }
 
-  getWeaponImage(weaponIdentifier: string, _size: ImageSize = ImageSize.SMALL): string {
+  getWeaponImage(weaponIdentifier: string, _size: ImageType = ImageType.BODY_SMALL): string {
     return `${WEAPON_RESOURCE_PATH}${weaponIdentifier}.png`;
   }
 
-  getItemImage(itemIdentifier: string, _size: ImageSize = ImageSize.SMALL): string {
+  getItemImage(itemIdentifier: string, _size: ImageType = ImageType.BODY_SMALL): string {
     return `${ITEM_RESOURCE_PATH}${itemIdentifier}.png`;
   }
 
-  getSkillImage(skillIdentifier: string, _size: ImageSize = ImageSize.SMALL): string {
+  getSkillImage(skillIdentifier: string, _size: ImageType = ImageType.BODY_SMALL): string {
     return `${SKILL_RESOURCE_PATH}${skillIdentifier}.png`;
   }
 
-  getEfficiencyTypeImage(efficiencyType: EfficiencyType, _size: ImageSize = ImageSize.SMALL): string {
+  getEfficiencyTypeImage(efficiencyType: EfficiencyType, _size: ImageType = ImageType.BODY_SMALL): string {
     return `${MISCELLANEOUS_RESOURCE_PATH}icons/effective-${efficiencyType.toLowerCase()}.png`;
   }
 }

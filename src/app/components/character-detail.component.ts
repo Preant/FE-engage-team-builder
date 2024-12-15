@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, computed, inject, Input, Signal, signal, WritableSignal } from '@angular/core';
 
 import { Character } from '@/app/models/Character.model';
-import { ImageSize } from '@/app/models/ImageSize.enum';
+import { ImageType } from '@/app/models/ImageSize.enum';
 import { Skill } from '@/app/models/Skill.model';
 import { StatSheet } from '@/app/models/StatSheet.model';
 import { AssetsService } from '@/app/services/assets.service';
@@ -126,7 +126,7 @@ export class CharacterDetailComponent {
     this.assetsService.getSkillImage(this.personalSkill().identifier)
   );
   public characterImageUrl: Signal<string> = computed((): string =>
-    this.assetsService.getCharacterImage(this.characterSignal().identifier, ImageSize.LARGE)
+    this.assetsService.getCharacterImage(this.characterSignal().identifier, ImageType.BODY)
   );
 
   get character(): Character {

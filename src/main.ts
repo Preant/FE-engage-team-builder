@@ -2,7 +2,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import Lara from '@primeng/themes/lara';
+import Aura from '@primeng/themes/aura';
 import { providePrimeNG } from 'primeng/config';
 
 import { AppRoutingModule } from './app/app-routing.module';
@@ -16,7 +16,7 @@ bootstrapApplication(AppComponent, {
     provideAnimationsAsync(),
     providePrimeNG({
       theme: {
-        preset: Lara
+        preset: Aura
       }
     }),
     importProvidersFrom(AppRoutingModule),

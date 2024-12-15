@@ -34,30 +34,33 @@ import { ViewStateService } from '@/app/services/view-state.service';
                 <as-split-area [size]="50" [minSize]="50">
                     <app-team-builder [team]="team()"/>
                 </as-split-area>
-                <as-split-area [size]="50" [maxSize]="50">
-                    <div class="h-12">
-                        <app-navbar/>
-                    </div>
-                    <div class="h-[calc(100vh-48px)]">
-                        @if (viewStateService.getCurrentView()() === ViewType.RESOURCES) {
-                            <app-resources-menu/>
-                        } @else if (viewStateService.getCurrentView()() === ViewType.CHARACTERS) {
-                            <app-characters/>
-                        } @else if (viewStateService.getCurrentView()() === ViewType.EMBLEMS) {
-                            <app-emblems/>
-                        } @else if (viewStateService.getCurrentView()() === ViewType.SKILLS) {
-                            <app-skills/>
-                        } @else if (viewStateService.getCurrentView()() === ViewType.CLASSES) {
-                            <app-classes/>
-                        }
-                    </div>
-                </as-split-area>
+                @if (isResourcesPanelOpen()) {
+                    <as-split-area [size]="50" [maxSize]="50">
+                        <div class="h-12">
+                            <app-navbar/>
+                        </div>
+                        <div class="h-[calc(100vh-48px)]">
+                            @if (viewStateService.getCurrentView()() === ViewType.RESOURCES) {
+                                <app-resources-menu/>
+                            } @else if (viewStateService.getCurrentView()() === ViewType.CHARACTERS) {
+                                <app-characters/>
+                            } @else if (viewStateService.getCurrentView()() === ViewType.EMBLEMS) {
+                                <app-emblems/>
+                            } @else if (viewStateService.getCurrentView()() === ViewType.SKILLS) {
+                                <app-skills/>
+                            } @else if (viewStateService.getCurrentView()() === ViewType.CLASSES) {
+                                <app-classes/>
+                            }
+                        </div>
+                    </as-split-area>
+                }
             </as-split>
         </div>
     `
 })
 export class HomePageComponent {
   viewStateService: ViewStateService = inject(ViewStateService);
+  readonly isResourcesPanelOpen: Signal<boolean> = this.viewStateService.getIsResourcesPanelOpen();
   protected readonly ViewType: typeof ViewType = ViewType;
   private teamService: TeamService = inject(TeamService);
   public team: Signal<Team> = this.teamService.team;

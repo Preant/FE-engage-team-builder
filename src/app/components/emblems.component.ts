@@ -3,7 +3,7 @@ import { Component, inject, signal, WritableSignal } from '@angular/core';
 import { CarouselComponent, CarouselItem } from '@/app/components/carousel.component';
 import { EmblemDetailComponent } from '@/app/components/emblem-detail.component';
 import { Emblem } from '@/app/models/Emblem.model';
-import { ImageSize } from '@/app/models/ImageSize.enum';
+import { ImageType } from '@/app/models/ImageSize.enum';
 import { AssetsService } from '@/app/services/assets.service';
 import { EmblemService } from '@/app/services/resources.service';
 
@@ -62,8 +62,7 @@ export class EmblemsComponent {
       label: emblem.name,
       imageUrl: this.assetsService.getEmblemImage(
         emblem.identifier,
-        emblem.secondaryIdentifier,
-        ImageSize.SMALL
+        ImageType.BODY_SMALL
       )
     }));
   }

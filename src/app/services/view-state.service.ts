@@ -7,6 +7,7 @@ import { ViewType } from '@/app/models/ViewType.enum';
 })
 export class ViewStateService {
   private currentView: WritableSignal<ViewType> = signal<ViewType>(ViewType.RESOURCES);
+  private isResourcesPanelOpen: WritableSignal<boolean> = signal<boolean>(true);
   private selectedCharacterId: WritableSignal<number | null> = signal<number | null>(null);
 
   getCurrentView(): WritableSignal<ViewType> {
@@ -23,5 +24,13 @@ export class ViewStateService {
 
   setSelectedCharacterId(id: number | null): void {
     this.selectedCharacterId.set(id);
+  }
+
+  getIsResourcesPanelOpen(): WritableSignal<boolean> {
+    return this.isResourcesPanelOpen;
+  }
+
+  setIsResourcesPanelOpen(isOpen: boolean): void {
+    this.isResourcesPanelOpen.set(isOpen);
   }
 }

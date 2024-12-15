@@ -5,13 +5,29 @@ import { FloatLabel } from 'primeng/floatlabel';
 import { Select } from 'primeng/select';
 
 import { SelectItemComponent } from '@/app/components/select/selectItem.component';
-import { SelectItemWithIconComponent } from '@/app/components/select/selectItemWithIcon.component';
+
+export enum SelectType {
+    ICON = 'icon',
+    LABEL = 'label',
+}
+
+export type SelectOption<T> = {
+    id: T;
+    name: string;
+    borderColor: string;
+}
+
+export type SelectOptionIcon<T> = SelectOption<T> & {
+    itemUrl: string;
+    selectedItemUrl: string;
+}
 
 @Component({
   selector: 'app-select',
-  imports: [CommonModule, Select, SelectItemWithIconComponent, FormsModule, FloatLabel, SelectItemComponent],
+  imports: [CommonModule, Select, FormsModule, FloatLabel, SelectItemComponent],
   standalone: true,
   template: `
+
         <p-float-label variant="on">
             <p-select [options]="selectOptions" [(ngModel)]="selectedItemModel" optionLabel="name"
                       [filter]="true"
@@ -19,32 +35,43 @@ import { SelectItemWithIconComponent } from '@/app/components/select/selectItemW
                       inputId="emblem_label"
                       class="w-full md:w-36 md:h-20">
                 <ng-template #selectedItem let-selectedOption>
-                    @if (withIcon) {
-                        <app-select-item-with-icon [item]="selectedOption" [shouldDisplayLabel]="false"/>
-                    } @else {
+                    @if (type === SelectType.ICON) {
+                        <img
+                                [src]="selectedOption.selectedItemUrl"
+                                [alt]="selectedOption.name"
+                                class="w-full h-fit"
+                        />
+                    } @else if (type === SelectType.LABEL) {
                         <app-select-item [item]="selectedOption"/>
                     }
-
                 </ng-template>
                 <ng-template let-options #item>
-                    @if (withIcon) {
-                        <app-select-item-with-icon [item]="options"/>
-                    } @else {
+                    @if (type === SelectType.ICON) {
+                        <div class="flex flex-col items-center">
+                            <img
+                                    [src]="options.itemUrl"
+                                    [alt]="options.name"
+                                    class="w-full h-fit rounded-lg border-4 border-rich_black-700"
+                                    [style]="{'border-color': options.borderColor}"
+                            />
+                            <span>{{ options.name }}</span>
+                        </div>
+                    } @else if (type === SelectType.LABEL) {
                         <app-select-item [item]="options"/>
                     }
                 </ng-template>
             </p-select>
             <label for="emblem_label">{{ label }}</label>
         </p-float-label>
-
     `,
   styles: [``]
 })
 export class SelectComponent<T> {
-    @Input() selectOptions!: T[];
+    @Input() selectOptions!: SelectOption<T>[] | SelectOptionIcon<T>[];
+    @Input() type!: SelectType;
     @Input() label!: string;
-    @Input() withIcon: boolean = true;
-    selectedItemModel: ModelSignal<T | null> = model<T | null>(null);
+    readonly SelectType: typeof SelectType = SelectType;
+    selectedItemModel: ModelSignal<SelectOption<T> | SelectOptionIcon<T> | null> = model<SelectOption<T> | SelectOptionIcon<T> | null>(null);
 
     @HostListener('contextmenu', ['$event'])
     onRightClick(event: MouseEvent) {

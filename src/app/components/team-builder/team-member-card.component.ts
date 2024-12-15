@@ -3,14 +3,12 @@ import { Component, computed, inject, Input, Signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { CharacterID, ClassID, EmblemID, SkillID, WeaponID } from '@/app/brands/ResourceID.brand';
-import { SelectComponent } from '@/app/components/select/select.component';
-import { SelectItemOption } from '@/app/components/select/selectItem.component';
-import { SelectItemIconOption } from '@/app/components/select/selectItemWithIcon.component';
+import { SelectComponent, SelectOption, SelectOptionIcon, SelectType } from '@/app/components/select/select.component';
 import { Character } from '@/app/models/Character.model';
 import { Class } from '@/app/models/Class.model';
 import { ClassType } from '@/app/models/ClassType.enum';
 import { Country } from '@/app/models/Country.enum';
-import { ImageSize } from '@/app/models/ImageSize.enum';
+import { ImageType } from '@/app/models/ImageSize.enum';
 import { ResourceID } from '@/app/models/Resource.model';
 import { TeamMember } from '@/app/models/Team.model';
 import { ViewType } from '@/app/models/ViewType.enum';
@@ -34,31 +32,32 @@ import { getOrdinal } from '@/app/utils/getOrdinal';
             </div>
 
             <div class="flex flex-col space-y-4">
-                <div class="flex justify-around space-x-4">
+                <div class="flex justify-around flex-wrap space-x-4">
                     <!-- Character Selection -->
-                    <app-select [selectOptions]="characterOptions()" label="Character"
-                                (selectedItemModelChange)="onCharacterSelect($event)"/>
+                    <app-select [selectOptions]="characterOptions()" label="Character" [type]="SelectType.ICON"
+                                (selectedItemModelChange)="onCharacterSelect($event?.id ?? null)"/>
 
                     <!-- Class Selection -->
-                    <app-select [selectOptions]="classOptions()" [withIcon]="false" label="Class"
-                                (selectedItemModelChange)="onClassSelect($event)"/>
+                    <app-select [selectOptions]="classOptions()" label="Class"
+                                [type]="SelectType.LABEL"
+                                (selectedItemModelChange)="onClassSelect($event?.id ?? null)"/>
 
                     <!-- Emblem Selection -->
-                    <app-select [selectOptions]="emblemOptions()" label="Emblem"
-                                (selectedItemModelChange)="onEmblemSelect($event)"/>
+                    <app-select [selectOptions]="emblemOptions()" label="Emblem" [type]="SelectType.ICON"
+                                (selectedItemModelChange)="onEmblemSelect($event?.id ?? null)"/>
 
 
                     <!-- Weapons Selection -->
                     @for (weapon of weaponsOptions; track $index) {
-                        <app-select [selectOptions]="weapon()" label="Weapon #{{$index + 1}}"
-                                    (selectedItemModelChange)="onWeaponSelect($event, $index) "/>
+                        <app-select [selectOptions]="weapon()" label="Weapon #{{$index + 1}}" [type]="SelectType.ICON"
+                                    (selectedItemModelChange)="onWeaponSelect($event?.id ?? null, $index) "/>
                     }
 
                     <!-- Inheritable Skills Selection -->
 
                     @for (skill of skillOptions; track $index) {
-                        <app-select [selectOptions]="skill()" label="Skill #{{$index + 1}}"
-                                    (selectedItemModelChange)="onSkillSelect($event, $index)"/>
+                        <app-select [selectOptions]="skill()" label="Skill #{{$index + 1}}" [type]="SelectType.ICON"
+                                    (selectedItemModelChange)="onSkillSelect($event?.id ?? null, $index)"/>
                     }
                 </div>
             </div>
@@ -67,11 +66,12 @@ import { getOrdinal } from '@/app/utils/getOrdinal';
 })
 export class TeamMemberCardComponent {
     @Input() member!: TeamMember;
-    characterOptions!: Signal<SelectItemIconOption<CharacterID>[]>;
-    classOptions!: Signal<SelectItemOption<ClassID>[]>;
-    emblemOptions!: Signal<SelectItemIconOption<EmblemID>[]>;
-    weaponsOptions!: Signal<SelectItemIconOption<WeaponID>[]>[];
-    skillOptions!: Signal<SelectItemIconOption<SkillID>[]>[];
+    characterOptions!: Signal<SelectOption<CharacterID>[]>;
+    classOptions!: Signal<SelectOption<ClassID>[]>;
+    emblemOptions!: Signal<SelectOption<EmblemID>[]>;
+    weaponsOptions!: Signal<SelectOption<WeaponID>[]>[];
+    skillOptions!: Signal<SelectOption<SkillID>[]>[];
+    protected readonly SelectType = SelectType;
     private readonly colorService: ColorService = inject(ColorService);
     private readonly teamService: TeamService = inject(TeamService);
     private readonly assetsService: AssetsService = inject(AssetsService);
@@ -88,14 +88,15 @@ export class TeamMemberCardComponent {
     }
 
     //Options providers
-    public getCharacterOptions(): SelectItemIconOption<CharacterID>[] {
+    public getCharacterOptions(): SelectOptionIcon<CharacterID>[] {
       return this.getResourceSelectItemIconOptions(this.teamService.getAvailableCharacters(this.member.id)(),
-        (identifier: string) => this.assetsService.getCharacterImage(identifier),
+        (identifier: string) => this.assetsService.getCharacterImage(identifier, ImageType.BANNER_SMALL),
+        (identifier: string) => this.assetsService.getCharacterImage(identifier, ImageType.BODY_SMALL),
         (a, b) => getOrdinal(Country, a.country) - getOrdinal(Country, b.country),
         (character) => this.colorService.getColorForCharacter(character));
     }
 
-    public getClassOptions(): SelectItemOption<ClassID>[] {
+    public getClassOptions(): SelectOption<ClassID>[] {
       return this.getResourceSelectItemOptions(this.teamService.getAvailableClasses(this.member.id)(),
         (a, b) => {
           if (a.signatureCharacter && !b.signatureCharacter) {
@@ -108,49 +109,54 @@ export class TeamMemberCardComponent {
         (combatClass: Class) => this.colorService.getColorForClassType(combatClass));
     }
 
-    public getEmblemOptions(): SelectItemIconOption<EmblemID>[] {
-      return this.getResourceSelectItemIconOptions(this.teamService.getAvailableEmblems(this.member.id)(), this.assetsService.getEmblemImage,
+    public getEmblemOptions(): SelectOptionIcon<EmblemID>[] {
+      return this.getResourceSelectItemIconOptions(this.teamService.getAvailableEmblems(this.member.id)(),
+        (identifier: string) => this.assetsService.getEmblemImage(identifier, ImageType.BODY),
+        (identifier: string) => this.assetsService.getEmblemImage(identifier, ImageType.BODY),
         (a, b) => a.id - b.id);
     }
 
-    public getWeaponOptions(weaponSlotIndex: number): SelectItemIconOption<WeaponID>[] {
-      return this.getResourceSelectItemIconOptions(this.teamService.getAvailableWeapons(this.member.id, weaponSlotIndex)(), this.assetsService.getWeaponImage,
+    public getWeaponOptions(weaponSlotIndex: number): SelectOptionIcon<WeaponID>[] {
+      return this.getResourceSelectItemIconOptions(this.teamService.getAvailableWeapons(this.member.id, weaponSlotIndex)(),
+        (identifier: string) => this.assetsService.getWeaponImage(identifier, ImageType.BODY),
+        (identifier: string) => this.assetsService.getWeaponImage(identifier, ImageType.BODY),
         (a, b) => getOrdinal(WeaponType, a.weaponType) - getOrdinal(WeaponType, b.weaponType),
         (weapon: Weapon) => this.colorService.getColorForWeapon(weapon));
     }
 
-    public getInheritableSkillOptions(skillSlotIndex: number): SelectItemIconOption<SkillID>[] {
-      return this.getResourceSelectItemIconOptions(this.teamService.getAvailableInheritableSkills(this.member.id, skillSlotIndex)(), this.assetsService.getSkillImage,
+    public getInheritableSkillOptions(skillSlotIndex: number): SelectOptionIcon<SkillID>[] {
+      return this.getResourceSelectItemIconOptions(this.teamService.getAvailableInheritableSkills(this.member.id, skillSlotIndex)(),
+        (identifier: string) => this.assetsService.getSkillImage(identifier, ImageType.BODY),
+        (identifier: string) => this.assetsService.getSkillImage(identifier, ImageType.BODY),
         (a, b) => a.name.localeCompare(b.name));
     }
 
-    public onCharacterSelect(option: SelectItemIconOption<CharacterID> | null): void {
-      console.log('onCharacterSelect', option);
-      this.teamService.updateMemberCharacter(this.member.id, option?.id ?? null);
+    public onCharacterSelect(id: CharacterID | null): void {
+      this.teamService.updateMemberCharacter(this.member.id, id);
     }
 
-    public onEmblemSelect(option: SelectItemIconOption<EmblemID> | null): void {
-      this.teamService.updateMemberEmblem(this.member.id, option?.id ?? null);
+    public onEmblemSelect(id: EmblemID | null): void {
+      this.teamService.updateMemberEmblem(this.member.id, id);
     }
 
-    public onClassSelect(option: SelectItemOption<ClassID> | null): void {
-      this.teamService.updateMemberClass(this.member.id, option?.id ?? null);
+    public onClassSelect(id: ClassID | null): void {
+      this.teamService.updateMemberClass(this.member.id, id);
     }
 
-    public onWeaponSelect(option: SelectItemIconOption<WeaponID> | null, weaponIndex: number): void {
+    public onWeaponSelect(id: WeaponID | null, weaponIndex: number): void {
       if (weaponIndex < 0 || weaponIndex >= this.member.weapons.length) {
         console.error(`Invalid weapon index: ${weaponIndex}`);
         return;
       }
-      this.teamService.updateMemberWeapon(this.member.id, weaponIndex, option?.id ?? null);
+      this.teamService.updateMemberWeapon(this.member.id, weaponIndex, id);
     }
 
-    public onSkillSelect(option: SelectItemIconOption<SkillID> | null, skillIndex: number): void {
+    public onSkillSelect(id: SkillID | null, skillIndex: number): void {
       if (skillIndex < 0 || skillIndex >= this.member.inheritableSkills.length) {
         console.error(`Invalid skill index: ${skillIndex}`);
         return;
       }
-      this.teamService.updateMemberInheritableSkill(this.member.id, skillIndex, option?.id ?? null);
+      this.teamService.updateMemberInheritableSkill(this.member.id, skillIndex, id);
     }
 
     viewCharacterDetails(event: Event): void {
@@ -168,14 +174,16 @@ export class TeamMemberCardComponent {
         identifier: string
     }, U extends ResourceID>(
       resources: T[],
-      getImageUrl: (identifier: string, size?: ImageSize) => string,
+      getImageUrl: (identifier: string) => string,
+      getSelectedImageUrl: (identifier: string) => string,
       sortComparator: (a: T, b: T) => number,
       getBorderColor?: (resource: T) => string
-    ): SelectItemIconOption<U>[] {
+    ): SelectOptionIcon<U>[] {
       return resources.sort(sortComparator).map((resource: T) => ({
         id: resource.id,
         name: resource.name,
-        iconUrl: getImageUrl(resource.identifier),
+        itemUrl: getImageUrl(resource.identifier),
+        selectedItemUrl: getSelectedImageUrl(resource.identifier),
         borderColor: getBorderColor ? getBorderColor(resource) : '#808080'
       }));
     }
@@ -184,7 +192,7 @@ export class TeamMemberCardComponent {
       resources: T[],
       sortComparator: (a: T, b: T) => number,
       getBorderColor?: (resource: T) => string
-    ): SelectItemOption<U>[] {
+    ): SelectOption<U>[] {
       return resources.sort(sortComparator).map((resource: T) => ({
         id: resource.id,
         name: resource.name,

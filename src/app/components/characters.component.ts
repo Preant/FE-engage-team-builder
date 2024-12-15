@@ -3,7 +3,7 @@ import { Component, effect, inject, signal, WritableSignal } from '@angular/core
 import { CarouselComponent, CarouselItem } from '@/app/components/carousel.component';
 import { CharacterDetailComponent } from '@/app/components/character-detail.component';
 import { Character } from '@/app/models/Character.model';
-import { ImageSize } from '@/app/models/ImageSize.enum';
+import { ImageType } from '@/app/models/ImageSize.enum';
 import { AssetsService } from '@/app/services/assets.service';
 import { CharacterService } from '@/app/services/resources.service';
 import { ViewStateService } from '@/app/services/view-state.service';
@@ -75,7 +75,7 @@ export class CharactersComponent {
     return this.characterService.resources().map((character: Character): CarouselItem => ({
       id: character.id,
       label: character.name,
-      imageUrl: this.assetsService.getCharacterImage(character.identifier, ImageSize.SMALL)
+      imageUrl: this.assetsService.getCharacterImage(character.identifier, ImageType.BODY_SMALL)
     }));
   }
 
