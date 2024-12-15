@@ -1,5 +1,7 @@
 module.exports = {
-    content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"], theme: {
+    plugins: [require('tailwindcss-primeui')],
+    content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+    theme: {
         extend: {
             fontFamily: {
                 sans: ['Cinzel', 'serif']

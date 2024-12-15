@@ -13,6 +13,7 @@ import { RouterOutlet } from '@angular/router';
             <router-outlet></router-outlet>
         </div>
     `,
+  standalone: true,
   styles: [`
     `]
 })

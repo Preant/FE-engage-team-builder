@@ -2,7 +2,8 @@ import { provideHttpClient } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { ChevronLeft, ChevronRight, LucideAngularModule } from 'lucide-angular';
+import Lara from '@primeng/themes/lara';
+import { providePrimeNG } from 'primeng/config';
 
 import { AppRoutingModule } from './app/app-routing.module';
 import { AppComponent } from './app/app.component';
@@ -13,8 +14,12 @@ bootstrapApplication(AppComponent, {
   providers: [
     provideHttpClient(),
     provideAnimationsAsync(),
+    providePrimeNG({
+      theme: {
+        preset: Lara
+      }
+    }),
     importProvidersFrom(AppRoutingModule),
-    importProvidersFrom(LucideAngularModule.pick({ ChevronRight, ChevronLeft })),
     appInitializer
   ]
 }).catch((err: any) => console.error(err));

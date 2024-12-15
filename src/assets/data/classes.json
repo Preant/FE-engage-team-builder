@@ -174,7 +174,7 @@
     "identifier": "noble-alfred",
     "weapons": [
       [
-        "SPEAR",
+        "LANCE",
         "B"
       ]
     ],
@@ -194,7 +194,7 @@
     "identifier": "avenir",
     "weapons": [
       [
-        "SPEAR",
+        "LANCE",
         "A"
       ],
       [
@@ -440,7 +440,7 @@
     "identifier": "sentinel-timerra",
     "weapons": [
       [
-        "SPEAR",
+        "LANCE",
         "B"
       ]
     ],
@@ -458,7 +458,7 @@
     "identifier": "picket",
     "weapons": [
       [
-        "SPEAR",
+        "LANCE",
         "S"
       ]
     ],
@@ -582,7 +582,7 @@
         "A"
       ],
       [
-        "SPEAR",
+        "LANCE",
         "CC"
       ]
     ],
@@ -600,7 +600,7 @@
     "identifier": "lance-fighter",
     "weapons": [
       [
-        "SPEAR",
+        "LANCE",
         "B"
       ]
     ],
@@ -618,7 +618,7 @@
     "identifier": "halberdier",
     "weapons": [
       [
-        "SPEAR",
+        "LANCE",
         "S"
       ]
     ],
@@ -636,7 +636,7 @@
     "identifier": "royal-knight",
     "weapons": [
       [
-        "SPEAR",
+        "LANCE",
         "A"
       ],
       [
@@ -782,7 +782,7 @@
         "A"
       ],
       [
-        "SPEAR",
+        "LANCE",
         "CC"
       ]
     ],
@@ -846,7 +846,7 @@
     "identifier": "lance-armor",
     "weapons": [
       [
-        "SPEAR",
+        "LANCE",
         "B"
       ]
     ],
@@ -906,7 +906,7 @@
     "identifier": "general-lance",
     "weapons": [
       [
-        "SPEAR",
+        "LANCE",
         "AA"
       ]
     ],
@@ -950,7 +950,7 @@
         "BB"
       ],
       [
-        "SPEAR",
+        "LANCE",
         "BB"
       ]
     ],
@@ -996,7 +996,7 @@
     "identifier": "great-knight-lance-axe",
     "weapons": [
       [
-        "SPEAR",
+        "LANCE",
         "BB"
       ],
       [
@@ -1041,7 +1041,7 @@
     "identifier": "lance-cavalier",
     "weapons": [
       [
-        "SPEAR",
+        "LANCE",
         "B"
       ]
     ],
@@ -1101,7 +1101,7 @@
     "identifier": "paladin-lance",
     "weapons": [
       [
-        "SPEAR",
+        "LANCE",
         "AA"
       ]
     ],
@@ -1165,7 +1165,7 @@
     "identifier": "wolf-knight-lance",
     "weapons": [
       [
-        "SPEAR",
+        "LANCE",
         "BB"
       ],
       [
@@ -1281,7 +1281,7 @@
         "A"
       ],
       [
-        "SPEAR",
+        "LANCE",
         "BB"
       ]
     ],
@@ -1415,7 +1415,7 @@
     "identifier": "lance-flier",
     "weapons": [
       [
-        "SPEAR",
+        "LANCE",
         "B"
       ]
     ],
@@ -1479,7 +1479,7 @@
     "identifier": "griffin-knight-lance",
     "weapons": [
       [
-        "SPEAR",
+        "LANCE",
         "AA"
       ],
       [
@@ -1531,7 +1531,7 @@
         "BB"
       ],
       [
-        "SPEAR",
+        "LANCE",
         "BB"
       ]
     ],
@@ -1577,7 +1577,7 @@
     "identifier": "wyvern-knight-lance-axe",
     "weapons": [
       [
-        "SPEAR",
+        "LANCE",
         "BB"
       ],
       [
@@ -1638,7 +1638,7 @@
     "identifier": "fell-child-nel",
     "weapons": [
       [
-        "SPEAR",
+        "LANCE",
         "A"
       ],
       [

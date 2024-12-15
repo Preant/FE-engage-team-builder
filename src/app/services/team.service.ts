@@ -29,6 +29,7 @@ export class TeamService {
     callCount: 0,
     lastMembersSignal: null as any
   };
+  readonly members: Signal<TeamMember[]> = computed(() => this.team().members);
   private characterService: CharacterService = inject(CharacterService);
   private emblemService: EmblemService = inject(EmblemService);
   private weaponService: WeaponService = inject(WeaponService);
@@ -46,7 +47,6 @@ export class TeamService {
     }))
   });
   readonly team: Signal<Team> = this.teamSignal.asReadonly();
-  readonly members: Signal<TeamMember[]> = computed(() => this.team().members);
 
   public findMemberById(id: number): TeamMember | undefined {
     return this.members().find((m: TeamMember) => m.id === id);
@@ -139,14 +139,11 @@ export class TeamService {
           : member
       )
     }));
-    console.log('Updated team:', this.team());
   }
 
   // Computed values for UI
   public getAvailableCharacters(memberId: TeamMemberID): Signal<Character[]> {
-    console.log('getAvailableCharacters');
     return computed((): Character[] => {
-      console.log('computing available characters');
       const usedIds: Set<CharacterID> = new Set<CharacterID>(
         this.members()
           .filter((member: TeamMember) => member.id !== memberId)
@@ -164,9 +161,7 @@ export class TeamService {
   }
 
   public getAvailableClasses(memberId: TeamMemberID): Signal<Class[]> {
-    console.log('getAvailableClasses');
     return computed((): Class[] => {
-      console.log('computing available classes');
 
       return this.classService.resources()
         .filter((combatClass: Class) => combatClass.isAdvanced)
@@ -190,9 +185,7 @@ export class TeamService {
   }
 
   public getAvailableEmblems(memberId: TeamMemberID): Signal<Emblem[]> {
-    console.log('getAvailableEmblems');
     return computed((): Emblem[] => {
-      console.log('computing available emblems');
       const usedIds: Set<EmblemID> = new Set<EmblemID>(
         this.members()
           .filter((member: TeamMember) => member.id !== memberId)
@@ -206,9 +199,7 @@ export class TeamService {
   }
 
   public getAvailableWeapons(memberId: TeamMemberID, weaponSlotIndex: number): Signal<Weapon[]> {
-    console.log('getAvailableWeapons');
     return computed((): Weapon[] => {
-      console.log('computing available weapons');
       const member: TeamMember = this.getMemberById(memberId);
       const usedWeaponIds: Set<WeaponID> = new Set<WeaponID>([
         //add weapons from other slots
@@ -230,14 +221,24 @@ export class TeamService {
 
       return this.weaponService.resources()
         .filter((weapon: Weapon) => !weapon.isEngageWeapon)
-        .filter((weapon: Weapon) => !usedWeaponIds.has(weapon.id));
+        .filter((weapon: Weapon) => !usedWeaponIds.has(weapon.id))
+        .filter((weapon: Weapon): boolean => {
+          const combatClass: Class | null = member.class;
+          if (!combatClass) {
+            return true;
+          }
+          return combatClass.weapons.some(([weaponType, classWeaponMasteryLevel]: [WeaponType, ClassWeaponMasteryLevel]) => {
+            if (weaponType !== weapon.weaponType) {
+              return false;
+            }
+            return getOrdinal(ClassWeaponMasteryLevel, classWeaponMasteryLevel) <= getOrdinal(ClassWeaponMasteryLevel, weaponRankToWeaponMasteryLevel(weapon.rank));
+          });
+        });
     });
   }
 
   public getAvailableInheritableSkills(memberId: TeamMemberID, skillIndex: number): Signal<Skill[]> {
-    console.log('getAvailableInheritableSkills');
     return computed((): Skill[] => {
-      console.log('computing available inheritable skills');
       if (skillIndex < 0 || skillIndex >= INHERITABLE_SKILL_SIZE) {
         throw new Error(`Invalid skill index ${skillIndex}`);
       }
