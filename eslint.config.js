@@ -68,7 +68,7 @@ export default [
             'no-nested-ternary': 'error',
             'no-unneeded-ternary': 'error',
             'no-unused-expressions': 'warn',
-            'no-warning-comments': 'error',
+            'no-warning-comments': 'off',
             'no-var': 'error',
             'operator-assignment': 'warn',
             'prefer-const': 'error',

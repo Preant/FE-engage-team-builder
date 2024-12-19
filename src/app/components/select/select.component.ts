@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, Input, model, ModelSignal } from '@angular/core';
+import { Component, HostListener, Input, model, ModelSignal, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FloatLabel } from 'primeng/floatlabel';
 import { Select } from 'primeng/select';
@@ -27,7 +27,6 @@ export type SelectOptionIcon<T> = SelectOption<T> & {
   imports: [CommonModule, Select, FormsModule, FloatLabel, SelectItemComponent],
   standalone: true,
   template: `
-
         <p-float-label variant="on">
             <p-select [options]="selectOptions" [(ngModel)]="selectedItemModel" optionLabel="name"
                       [filter]="true"
@@ -63,15 +62,24 @@ export type SelectOptionIcon<T> = SelectOption<T> & {
             </p-select>
             <label for="emblem_label">{{ label }}</label>
         </p-float-label>
-    `,
-  styles: [``]
+    `
 })
-export class SelectComponent<T> {
+export class SelectComponent<T> implements OnInit {
     @Input() selectOptions!: SelectOption<T>[] | SelectOptionIcon<T>[];
     @Input() type!: SelectType;
     @Input() label!: string;
+    @Input() initialSelection?: T | null;
     readonly SelectType: typeof SelectType = SelectType;
     selectedItemModel: ModelSignal<SelectOption<T> | SelectOptionIcon<T> | null> = model<SelectOption<T> | SelectOptionIcon<T> | null>(null);
+
+    ngOnInit() {
+      if (this.initialSelection) {
+        const initialOption = this.selectOptions.find(option => option.id === this.initialSelection);
+        if (initialOption) {
+          this.selectedItemModel.set(initialOption);
+        }
+      }
+    }
 
     @HostListener('contextmenu', ['$event'])
     onRightClick(event: MouseEvent) {

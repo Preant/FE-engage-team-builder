@@ -7,6 +7,7 @@ import { ClassesComponent } from '@/app/components/classes.component';
 import { EmblemsComponent } from '@/app/components/emblems.component';
 import { ResourcesMenuComponent } from '@/app/components/resources-menu.component';
 import { SkillsComponent } from '@/app/components/skills.component';
+import { TeamSelectorComponent } from '@/app/components/team-builder/team-selector.component';
 import { TeamBuilderComponent } from '@/app/components/team-builder/teambuilder.component';
 import { NavbarComponent } from '@/app/header/navbar.component';
 import { Team } from '@/app/models/Team.model';
@@ -24,15 +25,22 @@ import { ViewStateService } from '@/app/services/view-state.service';
     EmblemsComponent,
     CharactersComponent,
     SkillsComponent,
-    TeamBuilderComponent,
-    ClassesComponent
+    ClassesComponent,
+    TeamSelectorComponent,
+    TeamBuilderComponent
   ],
   standalone: true,
   template: `
         <div class="w-full h-full">
             <as-split>
                 <as-split-area [size]="50" [minSize]="50">
-                    <app-team-builder [team]="team()"/>
+                    <div class="flex flex-col h-full">
+                        @if (this.activeTeam()) {
+                            <app-team-builder [team]="activeTeam()!"/>
+                        } @else {
+                            <app-team-selector/>
+                        }
+                    </div>
                 </as-split-area>
                 @if (isResourcesPanelOpen()) {
                     <as-split-area [size]="50" [maxSize]="50">
@@ -40,15 +48,15 @@ import { ViewStateService } from '@/app/services/view-state.service';
                             <app-navbar/>
                         </div>
                         <div class="h-[calc(100vh-48px)]">
-                            @if (viewStateService.getCurrentView()() === ViewType.RESOURCES) {
+                            @if (this.getCurrentView() === ViewType.RESOURCES) {
                                 <app-resources-menu/>
-                            } @else if (viewStateService.getCurrentView()() === ViewType.CHARACTERS) {
+                            } @else if (this.getCurrentView() === ViewType.CHARACTERS) {
                                 <app-characters/>
-                            } @else if (viewStateService.getCurrentView()() === ViewType.EMBLEMS) {
+                            } @else if (this.getCurrentView() === ViewType.EMBLEMS) {
                                 <app-emblems/>
-                            } @else if (viewStateService.getCurrentView()() === ViewType.SKILLS) {
+                            } @else if (this.getCurrentView() === ViewType.SKILLS) {
                                 <app-skills/>
-                            } @else if (viewStateService.getCurrentView()() === ViewType.CLASSES) {
+                            } @else if (this.getCurrentView() === ViewType.CLASSES) {
                                 <app-classes/>
                             }
                         </div>
@@ -59,9 +67,13 @@ import { ViewStateService } from '@/app/services/view-state.service';
     `
 })
 export class HomePageComponent {
-  viewStateService: ViewStateService = inject(ViewStateService);
-  readonly isResourcesPanelOpen: Signal<boolean> = this.viewStateService.getIsResourcesPanelOpen();
   protected readonly ViewType: typeof ViewType = ViewType;
-  private teamService: TeamService = inject(TeamService);
-  public team: Signal<Team> = this.teamService.team;
+  private readonly teamService: TeamService = inject(TeamService);
+  readonly activeTeam: Signal<Team | null> = this.teamService.activeTeam;
+  private readonly viewStateService: ViewStateService = inject(ViewStateService);
+  readonly isResourcesPanelOpen: Signal<boolean> = this.viewStateService.getIsResourcesPanelOpen();
+
+  public getCurrentView(): ViewType {
+    return this.viewStateService.getCurrentView()();
+  }
 }

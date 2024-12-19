@@ -29,6 +29,7 @@
     "@vitest/coverage-istanbul": "^2.1.8",
     "@vitest/ui": "^2.1.8",
     "angular-split": "^18.0.0",
+    "primeicons": "^7.0.0",
     "primeng": "19.0.0-rc.1",
     "recharts": "^2.14.1",
     "rxjs": "~7.8.1",

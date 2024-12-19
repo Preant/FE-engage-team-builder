@@ -26,38 +26,49 @@ import { getOrdinal } from '@/app/utils/getOrdinal';
   standalone: true,
   template: `
         <div class="relative bg-gradient-to-br from-gunmetal-400/50 to-gunmetal-600/50 rounded-lg p-2 border border-rich_black-500 m-4">
-            <!-- Member Number Badge -->
             <div class="absolute -top-3 -left-3 w-8 h-8 bg-rich_black-800 rounded-full flex items-center justify-center border-2 border-rich_black-500">
                 <span class="text-baby_powder-500 font-bold">{{ member.id }}</span>
             </div>
 
             <div class="flex flex-col space-y-4">
                 <div class="flex justify-around flex-wrap space-x-4">
-                    <!-- Character Selection -->
-                    <app-select [selectOptions]="characterOptions()" label="Character" [type]="SelectType.ICON"
-                                (selectedItemModelChange)="onCharacterSelect($event?.id ?? null)"/>
+                    <app-select
+                            [selectOptions]="characterOptions()"
+                            label="Character"
+                            [type]="SelectType.ICON"
+                            [initialSelection]="member.character?.id"
+                            (selectedItemModelChange)="onCharacterSelect($event?.id ?? null)"/>
 
-                    <!-- Class Selection -->
-                    <app-select [selectOptions]="classOptions()" label="Class"
-                                [type]="SelectType.LABEL"
-                                (selectedItemModelChange)="onClassSelect($event?.id ?? null)"/>
+                    <app-select
+                            [selectOptions]="classOptions()"
+                            label="Class"
+                            [type]="SelectType.LABEL"
+                            [initialSelection]="member.class?.id"
+                            (selectedItemModelChange)="onClassSelect($event?.id ?? null)"/>
 
-                    <!-- Emblem Selection -->
-                    <app-select [selectOptions]="emblemOptions()" label="Emblem" [type]="SelectType.ICON"
-                                (selectedItemModelChange)="onEmblemSelect($event?.id ?? null)"/>
+                    <app-select
+                            [selectOptions]="emblemOptions()"
+                            label="Emblem"
+                            [type]="SelectType.ICON"
+                            [initialSelection]="member.emblem?.id"
+                            (selectedItemModelChange)="onEmblemSelect($event?.id ?? null)"/>
 
-
-                    <!-- Weapons Selection -->
                     @for (weapon of weaponsOptions; track $index) {
-                        <app-select [selectOptions]="weapon()" label="Weapon #{{$index + 1}}" [type]="SelectType.ICON"
-                                    (selectedItemModelChange)="onWeaponSelect($event?.id ?? null, $index) "/>
+                        <app-select
+                                [selectOptions]="weapon()"
+                                label="Weapon #{{$index + 1}}"
+                                [type]="SelectType.ICON"
+                                [initialSelection]="member.weapons[$index]?.id"
+                                (selectedItemModelChange)="onWeaponSelect($event?.id ?? null, $index)"/>
                     }
 
-                    <!-- Inheritable Skills Selection -->
-
                     @for (skill of skillOptions; track $index) {
-                        <app-select [selectOptions]="skill()" label="Skill #{{$index + 1}}" [type]="SelectType.ICON"
-                                    (selectedItemModelChange)="onSkillSelect($event?.id ?? null, $index)"/>
+                        <app-select
+                                [selectOptions]="skill()"
+                                label="Skill #{{$index + 1}}"
+                                [type]="SelectType.ICON"
+                                [initialSelection]="member.inheritableSkills[$index]?.id"
+                                (selectedItemModelChange)="onSkillSelect($event?.id ?? null, $index)"/>
                     }
                 </div>
             </div>
@@ -66,12 +77,12 @@ import { getOrdinal } from '@/app/utils/getOrdinal';
 })
 export class TeamMemberCardComponent {
     @Input() member!: TeamMember;
-    characterOptions!: Signal<SelectOption<CharacterID>[]>;
+    characterOptions!: Signal<SelectOptionIcon<CharacterID>[]>;
     classOptions!: Signal<SelectOption<ClassID>[]>;
-    emblemOptions!: Signal<SelectOption<EmblemID>[]>;
-    weaponsOptions!: Signal<SelectOption<WeaponID>[]>[];
-    skillOptions!: Signal<SelectOption<SkillID>[]>[];
-    protected readonly SelectType = SelectType;
+    emblemOptions!: Signal<SelectOptionIcon<EmblemID>[]>;
+    weaponsOptions!: Signal<SelectOptionIcon<WeaponID>[]>[];
+    skillOptions!: Signal<SelectOptionIcon<SkillID>[]>[];
+    protected readonly SelectType: typeof SelectType = SelectType;
     private readonly colorService: ColorService = inject(ColorService);
     private readonly teamService: TeamService = inject(TeamService);
     private readonly assetsService: AssetsService = inject(AssetsService);

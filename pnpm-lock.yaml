@@ -53,6 +53,9 @@ importers:
       angular-split:
         specifier: ^18.0.0
         version: 18.0.0(@angular/common@19.0.3(@angular/core@19.0.3(rxjs@7.8.1)(zone.js@0.15.0))(rxjs@7.8.1))(@angular/core@19.0.3(rxjs@7.8.1)(zone.js@0.15.0))(rxjs@7.8.1)
+      primeicons:
+        specifier: ^7.0.0
+        version: 7.0.0
       primeng:
         specifier: 19.0.0-rc.1
         version: 19.0.0-rc.1(ev2vlicayv524v3ze57fsopswu)
@@ -6227,6 +6230,9 @@ packages:
   pretty-format@29.7.0:
     resolution: {integrity: sha512-Pdlw/oPxN+aXdmM9R00JVC9WVFoCLTKJvDVLgmJ+qAffBMxsV85l/Lu7sNx4zSzPyoL2euImuEwHhOXdEgNFZQ==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
+
+  primeicons@7.0.0:
+    resolution: {integrity: sha512-jK3Et9UzwzTsd6tzl2RmwrVY/b8raJ3QZLzoDACj+oTJ0oX7L9Hy+XnVwgo4QVKlKpnP/Ur13SXV/pVh4LzaDw==}
 
   primeng@19.0.0-rc.1:
     resolution: {integrity: sha512-y8SwXmp/kMaNbZpgaB3rz/8sG0Mn9HMc04nbN5c9dqSdFBNFu3EmhuDI25jYoYKHRWs8j3ZGzb5bXho9DMjCjg==}
@@ -14702,6 +14708,8 @@ snapshots:
       '@jest/schemas': 29.6.3
       ansi-styles: 5.2.0
       react-is: 18.3.1
+
+  primeicons@7.0.0: {}
 
   primeng@19.0.0-rc.1(ev2vlicayv524v3ze57fsopswu):
     dependencies:

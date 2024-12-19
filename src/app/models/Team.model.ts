@@ -16,5 +16,8 @@ export type TeamMember = {
 
 export type Team = {
     id: TeamID;
+    name: string;
+    createdAt: Date;
+    lastModified: Date;
     members: TeamMember[];
 }

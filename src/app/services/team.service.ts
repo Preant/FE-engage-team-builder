@@ -1,7 +1,7 @@
-import { computed, inject, Injectable, Signal, signal, WritableSignal } from '@angular/core';
+import { computed, effect, inject, Injectable, Signal, signal, WritableSignal } from '@angular/core';
 
 import { brandAs } from '@/app/brands/brandAs';
-import { CharacterID, ClassID, EmblemID, SkillID, TeamMemberID, WeaponID } from '@/app/brands/ResourceID.brand';
+import { CharacterID, ClassID, EmblemID, SkillID, TeamID, TeamMemberID, WeaponID } from '@/app/brands/ResourceID.brand';
 import { INHERITABLE_SKILL_SIZE, TEAM_MEMBER_SIZE, WEAPON_BY_MEMBER_SIZE } from '@/app/config/config';
 import { Character } from '@/app/models/Character.model';
 import { Class } from '@/app/models/Class.model';
@@ -25,28 +25,118 @@ import { getOrdinal } from '@/app/utils/getOrdinal';
   providedIn: 'root'
 })
 export class TeamService {
-  debugMemberState = {
-    callCount: 0,
-    lastMembersSignal: null as any
-  };
-  readonly members: Signal<TeamMember[]> = computed(() => this.team().members);
+  readonly members: Signal<TeamMember[]> = computed((): TeamMember[] => this.activeTeam()?.members ?? []);
+  private readonly teamsSignal: WritableSignal<Team[]> = signal<Team[]>([]);
+  readonly teams: Signal<Team[]> = this.teamsSignal.asReadonly();
   private characterService: CharacterService = inject(CharacterService);
   private emblemService: EmblemService = inject(EmblemService);
   private weaponService: WeaponService = inject(WeaponService);
   private skillService: SkillService = inject(SkillService);
   private classService: ClassService = inject(ClassService);
-  private readonly teamSignal: WritableSignal<Team> = signal<Team>({
-    id: brandAs.TeamID(1),
-    members: Array(TEAM_MEMBER_SIZE).fill(null).map((_, index) => ({
-      id: brandAs.TeamMemberID(index + 1),
-      character: null,
-      class: null,
-      emblem: null,
-      weapons: [null, null, null, null],
-      inheritableSkills: [null, null]
-    }))
+  private activeTeamIdSignal: WritableSignal<TeamID | null> = signal<TeamID | null>(null);
+  readonly activeTeam: Signal<Team | null> = computed((): Team | null => {
+    const id: TeamID | null = this.activeTeamIdSignal();
+    return id ? this.getTeamById(id) : null;
   });
-  readonly team: Signal<Team> = this.teamSignal.asReadonly();
+
+  constructor() {
+    this.loadTeamFromLocalStorage();
+
+    if (this.teams().length === 0) {
+      this.createTeam('Default Team');
+    }
+
+    effect(() => {
+      const activeTeam: Team | null = this.activeTeam();
+      if (activeTeam) {
+        this.saveTeamToLocalStorage(activeTeam);
+      }
+    });
+  }
+
+  public getTeamSignal(teamId: TeamID): Signal<Team> {
+    return computed((): Team => {
+      const team: Team | undefined = this.findTeamById(teamId);
+      if (!team) {
+        throw new Error(`Team with ID ${teamId} not found`);
+      }
+      return team;
+    });
+  }
+
+  createTeam(name: string = 'new Team'): Team {
+    const newTeamId: TeamID = this.generateNewTeamId();
+    const now: Date = new Date();
+
+    const newTeam: Team = {
+      id: newTeamId,
+      name,
+      createdAt: now,
+      lastModified: now,
+      members: Array(TEAM_MEMBER_SIZE).fill(null).map((_, index) => ({
+        id: brandAs.TeamMemberID(index + 1),
+        character: null,
+        class: null,
+        emblem: null,
+        weapons: [null, null, null, null],
+        inheritableSkills: [null, null]
+      }))
+    };
+
+    this.teamsSignal.update((teams: Team[]) => {
+      return [...teams, newTeam];
+    });
+
+    this.saveTeamToLocalStorage(newTeam);
+
+    return newTeam;
+  }
+
+  public findTeamById(teamId: TeamID): Team | undefined {
+    return this.teams().find((team: Team) => team.id === teamId);
+  }
+
+  public getTeamById(teamId: TeamID): Team {
+    const team: Team | undefined = this.findTeamById(teamId);
+    if (!team) {
+      throw new Error(`Team with ID ${teamId} not found`);
+    }
+    return team;
+  }
+
+  switchTeam(teamId: TeamID | null): void {
+    if (teamId === null) {
+      this.activeTeamIdSignal.update((): null => null);
+      return;
+    }
+    if (!this.findTeamById(teamId)) {
+      throw new Error(`Team with ID ${teamId} not found`);
+    }
+    this.activeTeamIdSignal.update((): TeamID => teamId);
+  }
+
+  public deleteTeam(teamId: TeamID): void {
+    this.teamsSignal.update((teams: Team[]): Team[] => teams.filter((team: Team) => team.id !== teamId));
+
+    // Remove team state from local storage
+    this.deleteTeamFromLocalStorage(teamId);
+  }
+
+  updateTeamName(teamId: TeamID, name: string): void {
+    this.teamsSignal.update((teams: Team[]): Team[] => {
+      const team: Team | undefined = this.findTeamById(teamId);
+      if (!team) {
+        throw new Error(`Team with ID ${teamId} not found`);
+      }
+
+      const updatedMetadata: Team = {
+        ...team,
+        name,
+        lastModified: new Date()
+      };
+      return teams.map((team: Team): Team => (team.id === teamId ? updatedMetadata : team));
+    });
+  }
 
   public findMemberById(id: number): TeamMember | undefined {
     return this.members().find((m: TeamMember) => m.id === id);
@@ -61,83 +151,134 @@ export class TeamService {
   }
 
   updateMemberCharacter(memberId: TeamMemberID, characterId: CharacterID | null): void {
-    this.teamSignal.update((team: Team): Team => ({
-      ...team,
-      members: team.members.map((member: TeamMember): TeamMember =>
-        member.id === memberId
-          ? { ...member, character: characterId ? this.characterService.getResourceById(characterId) : null }
-          : member
-      )
+    const id: TeamID | null = this.activeTeamIdSignal();
+    if (!id) {
+      throw new Error('No active team');
+    }
+    this.teamsSignal.update((teams: Team[]): Team[] => teams.map((team: Team): Team => {
+      if (team.id !== id) {
+        return team;
+      }
+      return {
+        ...team,
+        members: team.members.map((member: TeamMember): TeamMember =>
+          member.id === memberId
+            ? {
+              ...member,
+              character: characterId ? this.characterService.getResourceById(characterId) : null
+            }
+            : member
+        )
+      };
     }));
   }
 
   updateMemberClass(memberId: TeamMemberID, classId: ClassID | null): void {
-    this.teamSignal.update((team: Team): Team => ({
-      ...team,
-      members: team.members.map((member: TeamMember): TeamMember =>
-        member.id === memberId
-          ? { ...member, class: classId ? this.classService.getResourceById(classId) : null }
-          : member
-      )
+    const id: TeamID | null = this.activeTeamIdSignal();
+    if (!id) {
+      throw new Error('No active team');
+    }
+    this.teamsSignal.update((teams: Team[]): Team[] => teams.map((team: Team): Team => {
+      if (team.id !== id) {
+        return team;
+      }
+      if (!team) {
+        throw new Error('No active team');
+      }
+      return {
+        ...team,
+        members: team.members.map((member: TeamMember): TeamMember =>
+          member.id === memberId
+            ? { ...member, class: classId ? this.classService.getResourceById(classId) : null }
+            : member
+        )
+      };
     }));
   }
 
-  updateMemberEmblem(memberId: TeamMemberID, emblemId: EmblemID | null) {
-    this.teamSignal.update((team: Team): Team => ({
-      ...team,
-      members: team.members.map((member: TeamMember) =>
-        member.id === memberId
-          ? { ...member, emblem: emblemId ? this.emblemService.getResourceById(emblemId) : null }
-          : member
-      )
+  updateMemberEmblem(memberId: TeamMemberID, emblemId: EmblemID | null): void {
+    const id: TeamID | null = this.activeTeamIdSignal();
+    if (!id) {
+      throw new Error('No active team');
+    }
+    this.teamsSignal.update((teams: Team[]): Team[] => teams.map((team: Team): Team => {
+      if (!team) {
+        throw new Error('No active team');
+      }
+      return {
+        ...team,
+        members: team.members.map((member: TeamMember) =>
+          member.id === memberId
+            ? { ...member, emblem: emblemId ? this.emblemService.getResourceById(emblemId) : null }
+            : member
+        )
+      };
     }));
   }
 
-  updateMemberWeapon(memberId: TeamMemberID, weaponIndex: number, weaponId: WeaponID | null) {
+  updateMemberWeapon(memberId: TeamMemberID, weaponIndex: number, weaponId: WeaponID | null): void {
     if (weaponIndex < 0 || weaponIndex >= WEAPON_BY_MEMBER_SIZE) {
       throw new Error(`Invalid weapon index ${weaponIndex}`);
     }
-    this.teamSignal.update((team: Team): Team => ({
-      ...team,
-      members: team.members.map((member: TeamMember): TeamMember =>
-        member.id === memberId
-          ? {
-            ...member,
-            weapons: member.weapons.map((weapon: Weapon | null, index: number): Weapon | null => {
-              if (index !== weaponIndex) {
-                return weapon;
-              } else if (weaponId) {
-                return this.weaponService.getResourceById(weaponId);
-              }
-              return null;
-            })
-          }
-          : member
-      )
+    const id: TeamID | null = this.activeTeamIdSignal();
+    if (!id) {
+      throw new Error('No active team');
+    }
+    this.teamsSignal.update((teams: Team[]): Team[] => teams.map((team: Team): Team => {
+      if (!team) {
+        throw new Error('No active team');
+      }
+      return {
+        ...team,
+        members: team.members.map((member: TeamMember): TeamMember =>
+          member.id === memberId
+            ? {
+              ...member,
+              weapons: member.weapons.map((weapon: Weapon | null, index: number): Weapon | null => {
+                if (index !== weaponIndex) {
+                  return weapon;
+                } else if (weaponId) {
+                  return this.weaponService.getResourceById(weaponId);
+                }
+                return null;
+              })
+            }
+            : member
+        )
+      };
     }));
   }
 
-  updateMemberInheritableSkill(memberId: TeamMemberID, skillIndex: number, skillId: SkillID | null) {
+  updateMemberInheritableSkill(memberId: TeamMemberID, skillIndex: number, skillId: SkillID | null): void {
     if (skillIndex < 0 || skillIndex >= INHERITABLE_SKILL_SIZE) {
       throw new Error(`Invalid skill index ${skillIndex}`);
     }
-    this.teamSignal.update((team: Team): Team => ({
-      ...team,
-      members: team.members.map((member: TeamMember): TeamMember =>
-        member.id === memberId
-          ? {
-            ...member,
-            inheritableSkills: member.inheritableSkills.map((skill: Skill | null, index: number): Skill | null => {
-              if (index !== skillIndex) {
-                return skill;
-              } else if (skillId) {
-                return this.skillService.getResourceById(skillId);
-              }
-              return null;
-            })
-          }
-          : member
-      )
+    const id: TeamID | null = this.activeTeamIdSignal();
+    if (!id) {
+      throw new Error('No active team');
+    }
+    this.teamsSignal.update((teams: Team[]): Team[] => teams.map((team: Team): Team => {
+      if (!team) {
+        throw new Error('No active team');
+      }
+      return {
+        ...team,
+        members: team.members.map((member: TeamMember): TeamMember =>
+          member.id === memberId
+            ? {
+              ...member,
+              inheritableSkills: member.inheritableSkills.map((skill: Skill | null, index: number): Skill | null => {
+                if (index !== skillIndex) {
+                  return skill;
+                } else if (skillId) {
+                  return this.skillService.getResourceById(skillId);
+                }
+                return null;
+              })
+            }
+            : member
+        )
+      };
     }));
   }
 
@@ -261,5 +402,34 @@ export class TeamService {
         !excludedSkillIds.has(skill.id)
       );
     });
+  }
+
+  importTeam(importedTeam: Team): void {
+    this.teamsSignal.update((teams: Team[]): Team[] => {
+      return [...teams, importedTeam];
+    });
+    this.saveTeamToLocalStorage(importedTeam);
+  }
+
+  private generateNewTeamId(): TeamID {
+    const existingIds: TeamID[] = this.teams().map((team: Team): TeamID => team.id);
+    const maxId: number = Math.max(...existingIds, 0);
+    return brandAs.TeamID(maxId + 1);
+  }
+
+  // Local Storage management for team states
+  private saveTeamToLocalStorage(team: Team): void {
+    //TODO: save ids instead of objects
+    localStorage.setItem(`team_${team.id}`, JSON.stringify(team));
+  }
+
+  private deleteTeamFromLocalStorage(teamId: TeamID): void {
+    localStorage.removeItem(`team_${teamId}`);
+  }
+
+  private loadTeamFromLocalStorage(): void {
+    const teamIds: string[] = Object.keys(localStorage).filter((key: string): boolean => key.startsWith('team_'));
+    const teams: Team[] = teamIds.map((key: string): Team => JSON.parse(localStorage.getItem(key) ?? ''));
+    this.teamsSignal.update((): Team[] => teams);
   }
 }
