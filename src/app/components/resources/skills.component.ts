@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, computed, inject, Signal, signal, WritableSignal } from '@angular/core';
 
 import { CarouselComponent, CarouselItem } from '@/app/components/carousel.component';
-import { SkillDetailComponent } from '@/app/components/skill-detail.component';
+import { SkillDetailComponent } from '@/app/components/resources/details/skill-detail.component';
 import { Skill } from '@/app/models/Skill.model';
 import { SkillType } from '@/app/models/SkillType.enum';
 import { AssetsService } from '@/app/services/assets.service';

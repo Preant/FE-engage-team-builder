@@ -1,7 +1,7 @@
 import { Component, inject, Signal } from '@angular/core';
 
-import { ClassDetailComponent } from './class-detail.component';
 
+import { ClassDetailComponent } from '@/app/components/resources/details/class-detail.component';
 import { Class } from '@/app/models/Class.model';
 import { ClassService } from '@/app/services/resources.service';
 

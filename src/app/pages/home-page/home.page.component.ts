@@ -2,11 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component, inject, Signal } from '@angular/core';
 import { SplitAreaComponent, SplitComponent } from 'angular-split';
 
-import { CharactersComponent } from '@/app/components/characters.component';
-import { ClassesComponent } from '@/app/components/classes.component';
-import { EmblemsComponent } from '@/app/components/emblems.component';
+import { CharactersComponent } from '@/app/components/resources/characters.component';
+import { ClassesComponent } from '@/app/components/resources/classes.component';
+import { EmblemsComponent } from '@/app/components/resources/emblems.component';
+import { SkillsComponent } from '@/app/components/resources/skills.component';
 import { ResourcesMenuComponent } from '@/app/components/resources-menu.component';
-import { SkillsComponent } from '@/app/components/skills.component';
 import { TeamSelectorComponent } from '@/app/components/team-builder/team-selector.component';
 import { TeamBuilderComponent } from '@/app/components/team-builder/teambuilder.component';
 import { NavbarComponent } from '@/app/header/navbar.component';
