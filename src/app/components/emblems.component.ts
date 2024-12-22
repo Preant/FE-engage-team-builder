@@ -1,4 +1,4 @@
-import { Component, inject, signal, WritableSignal } from '@angular/core';
+import { Component, effect, inject, signal, WritableSignal } from '@angular/core';
 
 import { CarouselComponent, CarouselItem } from '@/app/components/carousel.component';
 import { EmblemDetailComponent } from '@/app/components/emblem-detail.component';
@@ -6,6 +6,7 @@ import { Emblem } from '@/app/models/Emblem.model';
 import { ImageType } from '@/app/models/ImageSize.enum';
 import { AssetsService } from '@/app/services/assets.service';
 import { EmblemService } from '@/app/services/resources.service';
+import { ViewStateService } from '@/app/services/view-state.service';
 
 @Component({
   selector: 'app-emblems',
@@ -55,6 +56,20 @@ export class EmblemsComponent {
   selectedEmblem: WritableSignal<Emblem | null> = signal(null);
   private assetsService: AssetsService = inject(AssetsService);
   private emblemService: EmblemService = inject(EmblemService);
+  private viewStateService: ViewStateService = inject(ViewStateService);
+
+  constructor() {
+    effect(() => {
+      const selectedId: number | null = this.viewStateService.getSelectedEmblemId()();
+      if (selectedId !== null) {
+        const emblem: Emblem | undefined = this.emblemService.resources().find((emblem: Emblem) => emblem.id === selectedId);
+        if (emblem) {
+          this.selectedEmblem.set(emblem);
+        }
+        this.viewStateService.setSelectedCharacterId(null);
+      }
+    });
+  }
 
   getCarouselItems(): CarouselItem[] {
     return this.emblemService.resources().map((emblem: Emblem) => ({

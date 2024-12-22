@@ -1,5 +1,15 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, Input, model, ModelSignal, OnInit } from '@angular/core';
+import {
+  booleanAttribute,
+  Component,
+  EventEmitter,
+  HostListener,
+  Input,
+  model,
+  ModelSignal,
+  OnInit,
+  Output
+} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FloatLabel } from 'primeng/floatlabel';
 import { Select } from 'primeng/select';
@@ -11,13 +21,17 @@ export enum SelectType {
     LABEL = 'label',
 }
 
-export type SelectOption<T> = {
+export type SelectOptionLabel<T> = {
     id: T;
     name: string;
     borderColor: string;
+    secondaryItemsUrl: string[];
 }
 
-export type SelectOptionIcon<T> = SelectOption<T> & {
+export type SelectOptionIcon<T> = {
+    id: T;
+    name: string;
+    borderColor: string;
     itemUrl: string;
     selectedItemUrl: string;
 }
@@ -27,12 +41,17 @@ export type SelectOptionIcon<T> = SelectOption<T> & {
   imports: [CommonModule, Select, FormsModule, FloatLabel, SelectItemComponent],
   standalone: true,
   template: `
-        <p-float-label variant="on">
+        @if (showDetailsButton) {
+            <button class="absolute p-2 text-white z-10 scale-150"
+                    (click)="$event.stopPropagation(); detailsButtonClicked.emit()">+
+            </button>
+        }
+        <p-float-label variant="on" class="w-full h-full">
             <p-select [options]="selectOptions" [(ngModel)]="selectedItemModel" optionLabel="name"
                       [filter]="true"
                       filterBy="name"
                       inputId="emblem_label"
-                      class="w-full md:w-36 md:h-20">
+                      class="w-full h-full">
                 <ng-template #selectedItem let-selectedOption>
                     @if (type === SelectType.ICON) {
                         <img
@@ -41,7 +60,7 @@ export type SelectOptionIcon<T> = SelectOption<T> & {
                                 class="w-full h-fit"
                         />
                     } @else if (type === SelectType.LABEL) {
-                        <app-select-item [item]="selectedOption"/>
+                        <app-select-item [item]="selectedOption" class="h-full w-full flex"/>
                     }
                 </ng-template>
                 <ng-template let-options #item>
@@ -50,7 +69,7 @@ export type SelectOptionIcon<T> = SelectOption<T> & {
                             <img
                                     [src]="options.itemUrl"
                                     [alt]="options.name"
-                                    class="w-full h-fit rounded-lg border-4 border-rich_black-700"
+                                    class="w-32 h-full rounded-lg border-4 border-rich_black-700"
                                     [style]="{'border-color': options.borderColor}"
                             />
                             <span>{{ options.name }}</span>
@@ -65,12 +84,14 @@ export type SelectOptionIcon<T> = SelectOption<T> & {
     `
 })
 export class SelectComponent<T> implements OnInit {
-    @Input() selectOptions!: SelectOption<T>[] | SelectOptionIcon<T>[];
+    @Input() selectOptions!: SelectOptionLabel<T>[] | SelectOptionIcon<T>[];
     @Input() type!: SelectType;
     @Input() label!: string;
     @Input() initialSelection?: T | null;
+    @Input({ transform: booleanAttribute }) showDetailsButton: boolean = false;
+    @Output() detailsButtonClicked: EventEmitter<void> = new EventEmitter<void>();
     readonly SelectType: typeof SelectType = SelectType;
-    selectedItemModel: ModelSignal<SelectOption<T> | SelectOptionIcon<T> | null> = model<SelectOption<T> | SelectOptionIcon<T> | null>(null);
+    selectedItemModel: ModelSignal<SelectOptionLabel<T> | SelectOptionIcon<T> | null> = model<SelectOptionLabel<T> | SelectOptionIcon<T> | null>(null);
 
     ngOnInit() {
       if (this.initialSelection) {

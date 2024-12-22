@@ -1,13 +1,20 @@
 import { CommonModule } from '@angular/common';
 import { Component, computed, inject, Input, Signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Select } from 'primeng/select';
 
 import { CharacterID, ClassID, EmblemID, SkillID, WeaponID } from '@/app/brands/ResourceID.brand';
-import { SelectComponent, SelectOption, SelectOptionIcon, SelectType } from '@/app/components/select/select.component';
+import {
+  SelectComponent,
+  SelectOptionIcon,
+  SelectOptionLabel,
+  SelectType
+} from '@/app/components/select/select.component';
 import { Character } from '@/app/models/Character.model';
 import { Class } from '@/app/models/Class.model';
 import { ClassType } from '@/app/models/ClassType.enum';
 import { Country } from '@/app/models/Country.enum';
+import { Emblem } from '@/app/models/Emblem.model';
 import { ImageType } from '@/app/models/ImageSize.enum';
 import { ResourceID } from '@/app/models/Resource.model';
 import { TeamMember } from '@/app/models/Team.model';
@@ -16,13 +23,14 @@ import { Weapon } from '@/app/models/Weapon.model';
 import { WeaponType } from '@/app/models/WeaponType.enum';
 import { AssetsService } from '@/app/services/assets.service';
 import { ColorService } from '@/app/services/Color.service';
+import { ClassService } from '@/app/services/resources.service';
 import { TeamService } from '@/app/services/team.service';
 import { ViewStateService } from '@/app/services/view-state.service';
 import { getOrdinal } from '@/app/utils/getOrdinal';
 
 @Component({
   selector: 'app-team-member-card',
-  imports: [CommonModule, FormsModule, SelectComponent],
+  imports: [CommonModule, FormsModule, SelectComponent, Select],
   standalone: true,
   template: `
         <div class="relative bg-gradient-to-br from-gunmetal-400/50 to-gunmetal-600/50 rounded-lg p-2 border border-rich_black-500 m-4">
@@ -33,42 +41,52 @@ import { getOrdinal } from '@/app/utils/getOrdinal';
             <div class="flex flex-col space-y-4">
                 <div class="flex justify-around flex-wrap space-x-4">
                     <app-select
+                            class="w-36 h-24"
                             [selectOptions]="characterOptions()"
                             label="Character"
+                            showDetailsButton
+                            (detailsButtonClicked)="viewCharacterDetails()"
                             [type]="SelectType.ICON"
                             [initialSelection]="member.character?.id"
                             (selectedItemModelChange)="onCharacterSelect($event?.id ?? null)"/>
 
                     <app-select
+                            class="w-52 h-24"
                             [selectOptions]="classOptions()"
                             label="Class"
                             [type]="SelectType.LABEL"
                             [initialSelection]="member.class?.id"
-                            (selectedItemModelChange)="onClassSelect($event?.id ?? null)"/>
+                            (selectedItemModelChange)="onClassSelect($event?.id ?? null)"
+                    />
 
                     <app-select
+                            class="w-36 h-24"
                             [selectOptions]="emblemOptions()"
+                            showDetailsButton
+                            (detailsButtonClicked)="viewEmblemDetails()"
                             label="Emblem"
                             [type]="SelectType.ICON"
                             [initialSelection]="member.emblem?.id"
                             (selectedItemModelChange)="onEmblemSelect($event?.id ?? null)"/>
 
-                    @for (weapon of weaponsOptions; track $index) {
-                        <app-select
-                                [selectOptions]="weapon()"
-                                label="Weapon #{{$index + 1}}"
-                                [type]="SelectType.ICON"
-                                [initialSelection]="member.weapons[$index]?.id"
-                                (selectedItemModelChange)="onWeaponSelect($event?.id ?? null, $index)"/>
-                    }
 
                     @for (skill of skillOptions; track $index) {
                         <app-select
+                                class="w-36 h-24"
                                 [selectOptions]="skill()"
                                 label="Skill #{{$index + 1}}"
                                 [type]="SelectType.ICON"
                                 [initialSelection]="member.inheritableSkills[$index]?.id"
                                 (selectedItemModelChange)="onSkillSelect($event?.id ?? null, $index)"/>
+                    }
+                    @for (weapon of weaponsOptions; track $index) {
+                        <app-select
+                                class="w-36 h-24"
+                                [selectOptions]="weapon()"
+                                label="Weapon #{{$index + 1}}"
+                                [type]="SelectType.ICON"
+                                [initialSelection]="member.weapons[$index]?.id"
+                                (selectedItemModelChange)="onWeaponSelect($event?.id ?? null, $index)"/>
                     }
                 </div>
             </div>
@@ -78,13 +96,14 @@ import { getOrdinal } from '@/app/utils/getOrdinal';
 export class TeamMemberCardComponent {
     @Input() member!: TeamMember;
     characterOptions!: Signal<SelectOptionIcon<CharacterID>[]>;
-    classOptions!: Signal<SelectOption<ClassID>[]>;
+    classOptions!: Signal<SelectOptionLabel<ClassID>[]>;
     emblemOptions!: Signal<SelectOptionIcon<EmblemID>[]>;
     weaponsOptions!: Signal<SelectOptionIcon<WeaponID>[]>[];
     skillOptions!: Signal<SelectOptionIcon<SkillID>[]>[];
     protected readonly SelectType: typeof SelectType = SelectType;
     private readonly colorService: ColorService = inject(ColorService);
     private readonly teamService: TeamService = inject(TeamService);
+    private readonly classService: ClassService = inject(ClassService);
     private readonly assetsService: AssetsService = inject(AssetsService);
     private readonly viewStateService: ViewStateService = inject(ViewStateService);
 
@@ -104,10 +123,10 @@ export class TeamMemberCardComponent {
         (identifier: string) => this.assetsService.getCharacterImage(identifier, ImageType.BANNER_SMALL),
         (identifier: string) => this.assetsService.getCharacterImage(identifier, ImageType.BODY_SMALL),
         (a, b) => getOrdinal(Country, a.country) - getOrdinal(Country, b.country),
-        (character) => this.colorService.getColorForCharacter(character));
+        (character: Character) => this.colorService.getColorForCharacter(character));
     }
 
-    public getClassOptions(): SelectOption<ClassID>[] {
+    public getClassOptions(): SelectOptionLabel<ClassID>[] {
       return this.getResourceSelectItemOptions(this.teamService.getAvailableClasses(this.member.id)(),
         (a, b) => {
           if (a.signatureCharacter && !b.signatureCharacter) {
@@ -116,6 +135,10 @@ export class TeamMemberCardComponent {
             return 1;
           }
           return getOrdinal(ClassType, a.type) - getOrdinal(ClassType, b.type);
+        },
+        (identifier: string): string[] => {
+          const combatClass: Class = this.classService.getResourceByIdentifier(identifier);
+          return combatClass.weapons.map((weapon) => this.assetsService.getWeaponTypeImage(weapon[0]));
         },
         (combatClass: Class) => this.colorService.getColorForClassType(combatClass));
     }
@@ -170,12 +193,21 @@ export class TeamMemberCardComponent {
       this.teamService.updateMemberInheritableSkill(this.member.id, skillIndex, id);
     }
 
-    viewCharacterDetails(event: Event): void {
-      event.stopPropagation();
+    viewCharacterDetails(): void {
+      this.viewStateService.openPanel();
       const character: Character | null = this.member.character;
       if (character) {
         this.viewStateService.setSelectedCharacterId(character.id);
         this.viewStateService.setView(ViewType.CHARACTERS);
+      }
+    }
+
+    viewEmblemDetails(): void {
+      this.viewStateService.openPanel();
+      const emblem: Emblem | null = this.member.emblem;
+      if (emblem) {
+        this.viewStateService.setSelectedEmblemId(emblem.id);
+        this.viewStateService.setView(ViewType.EMBLEMS);
       }
     }
 
@@ -202,12 +234,14 @@ export class TeamMemberCardComponent {
     public getResourceSelectItemOptions<T extends { id: U; name: string; identifier: string }, U extends ResourceID>(
       resources: T[],
       sortComparator: (a: T, b: T) => number,
+      getItemUrl: (identifier: string) => string[],
       getBorderColor?: (resource: T) => string
-    ): SelectOption<U>[] {
+    ): SelectOptionLabel<U>[] {
       return resources.sort(sortComparator).map((resource: T) => ({
         id: resource.id,
         name: resource.name,
-        borderColor: getBorderColor ? getBorderColor(resource) : '#808080'
+        borderColor: getBorderColor ? getBorderColor(resource) : '#808080',
+        secondaryItemsUrl: getItemUrl(resource.identifier)
       }));
     }
 }

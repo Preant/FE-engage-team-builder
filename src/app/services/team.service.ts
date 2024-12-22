@@ -182,9 +182,6 @@ export class TeamService {
       if (team.id !== id) {
         return team;
       }
-      if (!team) {
-        throw new Error('No active team');
-      }
       return {
         ...team,
         members: team.members.map((member: TeamMember): TeamMember =>
@@ -202,12 +199,12 @@ export class TeamService {
       throw new Error('No active team');
     }
     this.teamsSignal.update((teams: Team[]): Team[] => teams.map((team: Team): Team => {
-      if (!team) {
-        throw new Error('No active team');
+      if (team.id !== id) {
+        return team;
       }
       return {
         ...team,
-        members: team.members.map((member: TeamMember) =>
+        members: team.members.map((member: TeamMember): TeamMember =>
           member.id === memberId
             ? { ...member, emblem: emblemId ? this.emblemService.getResourceById(emblemId) : null }
             : member
@@ -225,8 +222,8 @@ export class TeamService {
       throw new Error('No active team');
     }
     this.teamsSignal.update((teams: Team[]): Team[] => teams.map((team: Team): Team => {
-      if (!team) {
-        throw new Error('No active team');
+      if (team.id !== id) {
+        return team;
       }
       return {
         ...team,
@@ -258,8 +255,8 @@ export class TeamService {
       throw new Error('No active team');
     }
     this.teamsSignal.update((teams: Team[]): Team[] => teams.map((team: Team): Team => {
-      if (!team) {
-        throw new Error('No active team');
+      if (team.id !== id) {
+        return team;
       }
       return {
         ...team,
@@ -297,6 +294,40 @@ export class TeamService {
         .filter((character: Character) => {
           const member: TeamMember = this.getMemberById(memberId);
           return !member.class || !member.class.signatureCharacter || member.class.signatureCharacter === character.id;
+        })
+        .filter((character: Character) => {
+          const member: TeamMember = this.getMemberById(memberId);
+          return member.weapons.every((weapon: Weapon | null): boolean => {
+            if (!weapon || !member.class) {
+              return true;
+            }
+            return !!member.class?.weapons.some(([weaponType, classWeaponMasteryLevel]: [WeaponType, ClassWeaponMasteryLevel]) => {
+              let effectiveClassWeaponMasteryLevel: ClassWeaponMasteryLevel = classWeaponMasteryLevel;
+              const characterAffinity: WeaponType | undefined = character.innateProficiency;
+              switch (classWeaponMasteryLevel) {
+                case ClassWeaponMasteryLevel.AA:
+                  if (characterAffinity === weaponType) {
+                    effectiveClassWeaponMasteryLevel = ClassWeaponMasteryLevel.S;
+                  }
+                  break;
+                case ClassWeaponMasteryLevel.BB:
+                  if (characterAffinity === weaponType) {
+                    effectiveClassWeaponMasteryLevel = ClassWeaponMasteryLevel.A;
+                  }
+                  break;
+                case ClassWeaponMasteryLevel.CC:
+                  if (characterAffinity === weaponType) {
+                    effectiveClassWeaponMasteryLevel = ClassWeaponMasteryLevel.B;
+                  }
+                  break;
+                default:
+              }
+              if (weaponType !== weapon.weaponType) {
+                return false;
+              }
+              return getOrdinal(ClassWeaponMasteryLevel, effectiveClassWeaponMasteryLevel) <= getOrdinal(ClassWeaponMasteryLevel, weaponRankToWeaponMasteryLevel(weapon.rank));
+            });
+          });
         });
     });
   }
@@ -314,10 +345,30 @@ export class TeamService {
               return true;
             }
             return combatClass.weapons.some(([weaponType, classWeaponMasteryLevel]: [WeaponType, ClassWeaponMasteryLevel]) => {
+              let effectiveClassWeaponMasteryLevel: ClassWeaponMasteryLevel = classWeaponMasteryLevel;
+              const characterAffinity: WeaponType | undefined = member.character?.innateProficiency;
+              switch (classWeaponMasteryLevel) {
+                case ClassWeaponMasteryLevel.AA:
+                  if (characterAffinity === weaponType) {
+                    effectiveClassWeaponMasteryLevel = ClassWeaponMasteryLevel.S;
+                  }
+                  break;
+                case ClassWeaponMasteryLevel.BB:
+                  if (characterAffinity === weaponType) {
+                    effectiveClassWeaponMasteryLevel = ClassWeaponMasteryLevel.A;
+                  }
+                  break;
+                case ClassWeaponMasteryLevel.CC:
+                  if (characterAffinity === weaponType) {
+                    effectiveClassWeaponMasteryLevel = ClassWeaponMasteryLevel.B;
+                  }
+                  break;
+                default:
+              }
               if (weaponType !== weapon.weaponType) {
                 return false;
               }
-              return getOrdinal(ClassWeaponMasteryLevel, classWeaponMasteryLevel) <= getOrdinal(ClassWeaponMasteryLevel, weaponRankToWeaponMasteryLevel(weapon.rank));
+              return getOrdinal(ClassWeaponMasteryLevel, effectiveClassWeaponMasteryLevel) <= getOrdinal(ClassWeaponMasteryLevel, weaponRankToWeaponMasteryLevel(weapon.rank));
             });
           }
           );
@@ -343,14 +394,12 @@ export class TeamService {
     return computed((): Weapon[] => {
       const member: TeamMember = this.getMemberById(memberId);
       const usedWeaponIds: Set<WeaponID> = new Set<WeaponID>([
-        //add weapons from other slots
         ...member.weapons
           .filter((weapon: Weapon | null): weapon is Weapon => !!weapon)
           .filter((weapon: Weapon): boolean => {
             return member.weapons.findIndex((weaponSearch: Weapon | null) => weaponSearch?.id === weapon.id) !== weaponSlotIndex;
           })
           .map((weapon: Weapon): WeaponID => weapon.id),
-        // add unique weapon ids from other members
         ...this.members()
           .filter((m: TeamMember): boolean => m.id !== memberId)
           .map((m: TeamMember): (Weapon | null)[] => m.weapons)
@@ -369,10 +418,30 @@ export class TeamService {
             return true;
           }
           return combatClass.weapons.some(([weaponType, classWeaponMasteryLevel]: [WeaponType, ClassWeaponMasteryLevel]) => {
+            let effectiveClassWeaponMasteryLevel: ClassWeaponMasteryLevel = classWeaponMasteryLevel;
+            const characterInnateProficiency: WeaponType | undefined = member.character?.innateProficiency;
+            switch (classWeaponMasteryLevel) {
+              case ClassWeaponMasteryLevel.AA:
+                if (!characterInnateProficiency || characterInnateProficiency === weaponType) {
+                  effectiveClassWeaponMasteryLevel = ClassWeaponMasteryLevel.S;
+                }
+                break;
+              case ClassWeaponMasteryLevel.BB:
+                if (!characterInnateProficiency || characterInnateProficiency === weaponType) {
+                  effectiveClassWeaponMasteryLevel = ClassWeaponMasteryLevel.A;
+                }
+                break;
+              case ClassWeaponMasteryLevel.CC:
+                if (!characterInnateProficiency || characterInnateProficiency === weaponType) {
+                  effectiveClassWeaponMasteryLevel = ClassWeaponMasteryLevel.B;
+                }
+                break;
+              default:
+            }
             if (weaponType !== weapon.weaponType) {
               return false;
             }
-            return getOrdinal(ClassWeaponMasteryLevel, classWeaponMasteryLevel) <= getOrdinal(ClassWeaponMasteryLevel, weaponRankToWeaponMasteryLevel(weapon.rank));
+            return getOrdinal(ClassWeaponMasteryLevel, effectiveClassWeaponMasteryLevel) <= getOrdinal(ClassWeaponMasteryLevel, weaponRankToWeaponMasteryLevel(weapon.rank));
           });
         });
     });
@@ -387,7 +456,6 @@ export class TeamService {
       const member: TeamMember = this.getMemberById(memberId);
       const allInheritableSkills: Skill[] = this.skillService.getSkillsByType(SkillType.EMBLEM_INHERITABLE);
 
-      // Get all skills in evolution chains of selected skills
       const excludedSkillIds: Set<SkillID> = new Set<SkillID>();
       member.inheritableSkills
         .filter((skill: Skill | null): skill is Skill => !!skill)
@@ -405,6 +473,7 @@ export class TeamService {
   }
 
   importTeam(importedTeam: Team): void {
+    importedTeam.id = this.generateNewTeamId();
     this.teamsSignal.update((teams: Team[]): Team[] => {
       return [...teams, importedTeam];
     });

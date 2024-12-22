@@ -28,7 +28,12 @@
       "bld": 4
     },
     "identifier": "alear",
-    "personalSkillId": 125
+    "personalSkillId": 125,
+    "proficiencies": [
+      "SWORD",
+      "ART"
+    ],
+    "innateProficiency": "SWORD"
   },
   {
     "id": 2,
@@ -59,7 +64,11 @@
       "bld": 8
     },
     "identifier": "vander",
-    "personalSkillId": 7
+    "personalSkillId": 7,
+    "proficiencies": [
+      "AXE"
+    ],
+    "innateProficiency": "AXE"
   },
   {
     "id": 3,
@@ -90,7 +99,12 @@
       "bld": 4
     },
     "identifier": "clanne",
-    "personalSkillId": 419
+    "personalSkillId": 419,
+    "proficiencies": [
+      "TOME",
+      "SWORD"
+    ],
+    "innateProficiency": "TOME"
   },
   {
     "id": 4,
@@ -121,7 +135,12 @@
       "bld": 3
     },
     "identifier": "framme",
-    "personalSkillId": 101
+    "personalSkillId": 101,
+    "proficiencies": [
+      "ART",
+      "STAFF"
+    ],
+    "innateProficiency": "ART"
   },
   {
     "id": 5,
@@ -152,7 +171,12 @@
       "bld": 6
     },
     "identifier": "alfred",
-    "personalSkillId": 321
+    "personalSkillId": 321,
+    "proficiencies": [
+      "LANCE",
+      "SWORD"
+    ],
+    "innateProficiency": "LANCE"
   },
   {
     "id": 6,
@@ -183,7 +207,11 @@
       "bld": 4
     },
     "identifier": "etie",
-    "personalSkillId": 145
+    "personalSkillId": 145,
+    "proficiencies": [
+      "BOW"
+    ],
+    "innateProficiency": "BOW"
   },
   {
     "id": 7,
@@ -214,7 +242,11 @@
       "bld": 9
     },
     "identifier": "boucheron",
-    "personalSkillId": 279
+    "personalSkillId": 279,
+    "proficiencies": [
+      "AXE"
+    ],
+    "innateProficiency": "AXE"
   },
   {
     "id": 8,
@@ -245,7 +277,13 @@
       "bld": 4
     },
     "identifier": "celine",
-    "personalSkillId": 160
+    "personalSkillId": 160,
+    "proficiencies": [
+      "TOME",
+      "SWORD",
+      "STAFF"
+    ],
+    "innateProficiency": "TOME"
   },
   {
     "id": 9,
@@ -276,7 +314,12 @@
       "bld": 5
     },
     "identifier": "chloe",
-    "personalSkillId": 148
+    "personalSkillId": 148,
+    "proficiencies": [
+      "LANCE",
+      "STAFF"
+    ],
+    "innateProficiency": "LANCE"
   },
   {
     "id": 10,
@@ -307,7 +350,11 @@
       "bld": 8
     },
     "identifier": "louis",
-    "personalSkillId": 4
+    "personalSkillId": 4,
+    "proficiencies": [
+      "LANCE"
+    ],
+    "innateProficiency": "LANCE"
   },
   {
     "id": 11,
@@ -338,7 +385,11 @@
       "bld": 5
     },
     "identifier": "yunaka",
-    "personalSkillId": 411
+    "personalSkillId": 411,
+    "proficiencies": [
+      "DAGGER"
+    ],
+    "innateProficiency": "DAGGER"
   },
   {
     "id": 12,
@@ -369,7 +420,11 @@
       "bld": 6
     },
     "identifier": "alcryst",
-    "personalSkillId": 163
+    "personalSkillId": 163,
+    "proficiencies": [
+      "BOW"
+    ],
+    "innateProficiency": "BOW"
   },
   {
     "id": 13,
@@ -400,7 +455,12 @@
       "bld": 4
     },
     "identifier": "citrinne",
-    "personalSkillId": 157
+    "personalSkillId": 157,
+    "proficiencies": [
+      "TOME",
+      "STAFF"
+    ],
+    "innateProficiency": "TOME"
   },
   {
     "id": 14,
@@ -431,7 +491,11 @@
       "bld": 5
     },
     "identifier": "lapis",
-    "personalSkillId": 322
+    "personalSkillId": 322,
+    "proficiencies": [
+      "SWORD"
+    ],
+    "innateProficiency": "SWORD"
   },
   {
     "id": 15,
@@ -462,7 +526,12 @@
       "bld": 9
     },
     "identifier": "diamant",
-    "personalSkillId": 147
+    "personalSkillId": 147,
+    "proficiencies": [
+      "SWORD",
+      "AXE"
+    ],
+    "innateProficiency": "SWORD"
   },
   {
     "id": 16,
@@ -493,7 +562,11 @@
       "bld": 8
     },
     "identifier": "amber",
-    "personalSkillId": 22
+    "personalSkillId": 22,
+    "proficiencies": [
+      "LANCE"
+    ],
+    "innateProficiency": "LANCE"
   },
   {
     "id": 17,
@@ -524,7 +597,11 @@
       "bld": 8
     },
     "identifier": "jade",
-    "personalSkillId": 274
+    "personalSkillId": 274,
+    "proficiencies": [
+      "AXE"
+    ],
+    "innateProficiency": "AXE"
   },
   {
     "id": 18,
@@ -555,7 +632,12 @@
       "bld": 7
     },
     "identifier": "ivy",
-    "personalSkillId": 324
+    "personalSkillId": 324,
+    "proficiencies": [
+      "TOME",
+      "STAFF"
+    ],
+    "innateProficiency": "TOME"
   },
   {
     "id": 19,
@@ -586,7 +668,11 @@
       "bld": 9
     },
     "identifier": "kagetsu",
-    "personalSkillId": 45
+    "personalSkillId": 45,
+    "proficiencies": [
+      "SWORD"
+    ],
+    "innateProficiency": "SWORD"
   },
   {
     "id": 20,
@@ -617,7 +703,11 @@
       "bld": 9
     },
     "identifier": "zelkov",
-    "personalSkillId": 282
+    "personalSkillId": 282,
+    "proficiencies": [
+      "DAGGER"
+    ],
+    "innateProficiency": "DAGGER"
   },
   {
     "id": 21,
@@ -648,7 +738,12 @@
       "bld": 8
     },
     "identifier": "fogado",
-    "personalSkillId": 92
+    "personalSkillId": 92,
+    "proficiencies": [
+      "BOW",
+      "SWORD"
+    ],
+    "innateProficiency": "BOW"
   },
   {
     "id": 22,
@@ -679,7 +774,13 @@
       "bld": 8
     },
     "identifier": "pandreo",
-    "personalSkillId": 286
+    "personalSkillId": 286,
+    "proficiencies": [
+      "STAFF",
+      "TOME",
+      "ART"
+    ],
+    "innateProficiency": "STAFF"
   },
   {
     "id": 23,
@@ -710,7 +811,12 @@
       "bld": 11
     },
     "identifier": "bunet",
-    "personalSkillId": 319
+    "personalSkillId": 319,
+    "proficiencies": [
+      "SWORD",
+      "AXE"
+    ],
+    "innateProficiency": "SWORD"
   },
   {
     "id": 24,
@@ -741,7 +847,11 @@
       "bld": 5
     },
     "identifier": "timerra",
-    "personalSkillId": 299
+    "personalSkillId": 299,
+    "proficiencies": [
+      "LANCE"
+    ],
+    "innateProficiency": "LANCE"
   },
   {
     "id": 25,
@@ -772,7 +882,12 @@
       "bld": 11
     },
     "identifier": "panette",
-    "personalSkillId": 47
+    "personalSkillId": 47,
+    "proficiencies": [
+      "DAGGER",
+      "AXE"
+    ],
+    "innateProficiency": "DAGGER"
   },
   {
     "id": 26,
@@ -803,7 +918,12 @@
       "bld": 9
     },
     "identifier": "merrin",
-    "personalSkillId": 218
+    "personalSkillId": 218,
+    "proficiencies": [
+      "DAGGER",
+      "SWORD"
+    ],
+    "innateProficiency": "DAGGER"
   },
   {
     "id": 27,
@@ -834,7 +954,12 @@
       "bld": 5
     },
     "identifier": "hortensia",
-    "personalSkillId": 43
+    "personalSkillId": 43,
+    "proficiencies": [
+      "STAFF",
+      "TOME"
+    ],
+    "innateProficiency": "STAFF"
   },
   {
     "id": 28,
@@ -865,7 +990,11 @@
       "bld": 8
     },
     "identifier": "seadall",
-    "personalSkillId": 102
+    "personalSkillId": 102,
+    "proficiencies": [
+      "ART"
+    ],
+    "innateProficiency": "ART"
   },
   {
     "id": 29,
@@ -896,7 +1025,12 @@
       "bld": 8
     },
     "identifier": "rosado",
-    "personalSkillId": 379
+    "personalSkillId": 379,
+    "proficiencies": [
+      "AXE",
+      "LANCE"
+    ],
+    "innateProficiency": "AXE"
   },
   {
     "id": 30,
@@ -927,7 +1061,12 @@
       "bld": 9
     },
     "identifier": "goldmary",
-    "personalSkillId": 120
+    "personalSkillId": 120,
+    "proficiencies": [
+      "LANCE",
+      "SWORD"
+    ],
+    "innateProficiency": "LANCE"
   },
   {
     "id": 31,
@@ -958,7 +1097,12 @@
       "bld": 10
     },
     "identifier": "lindon",
-    "personalSkillId": 421
+    "personalSkillId": 421,
+    "proficiencies": [
+      "STAFF",
+      "TOME"
+    ],
+    "innateProficiency": "STAFF"
   },
   {
     "id": 32,
@@ -989,7 +1133,12 @@
       "bld": 15
     },
     "identifier": "saphir",
-    "personalSkillId": 424
+    "personalSkillId": 424,
+    "proficiencies": [
+      "AXE",
+      "BOW"
+    ],
+    "innateProficiency": "AXE"
   },
   {
     "id": 33,
@@ -1020,7 +1169,12 @@
       "bld": 7
     },
     "identifier": "veyle",
-    "personalSkillId": 150
+    "personalSkillId": 150,
+    "proficiencies": [
+      "TOME",
+      "DAGGER"
+    ],
+    "innateProficiency": "TOME"
   },
   {
     "id": 34,
@@ -1051,7 +1205,12 @@
       "bld": 12
     },
     "identifier": "mauvier",
-    "personalSkillId": 98
+    "personalSkillId": 98,
+    "proficiencies": [
+      "STAFF",
+      "LANCE"
+    ],
+    "innateProficiency": "STAFF"
   },
   {
     "id": 35,
@@ -1082,7 +1241,12 @@
       "bld": 7
     },
     "identifier": "anna",
-    "personalSkillId": 273
+    "personalSkillId": 273,
+    "proficiencies": [
+      "BOW",
+      "AXE"
+    ],
+    "innateProficiency": "BOW"
   },
   {
     "id": 36,
@@ -1113,7 +1277,13 @@
       "bld": 3
     },
     "identifier": "jean",
-    "personalSkillId": 146
+    "personalSkillId": 146,
+    "proficiencies": [
+      "ART",
+      "TOME",
+      "STAFF"
+    ],
+    "innateProficiency": "ART"
   },
   {
     "id": 37,
@@ -1144,7 +1314,11 @@
       "bld": 8
     },
     "identifier": "nel",
-    "personalSkillId": 293
+    "personalSkillId": 293,
+    "proficiencies": [
+      "LANCE"
+    ],
+    "innateProficiency": "LANCE"
   },
   {
     "id": 38,
@@ -1175,7 +1349,11 @@
       "bld": 9
     },
     "identifier": "rafal",
-    "personalSkillId": 315
+    "personalSkillId": 315,
+    "proficiencies": [
+      "AXE"
+    ],
+    "innateProficiency": "AXE"
   },
   {
     "id": 39,
@@ -1206,7 +1384,11 @@
       "bld": 9
     },
     "identifier": "zelestia",
-    "personalSkillId": 154
+    "personalSkillId": 154,
+    "proficiencies": [
+      "SWORD"
+    ],
+    "innateProficiency": "SWORD"
   },
   {
     "id": 40,
@@ -1237,7 +1419,11 @@
       "bld": 8
     },
     "identifier": "gregory",
-    "personalSkillId": 381
+    "personalSkillId": 381,
+    "proficiencies": [
+      "STAFF"
+    ],
+    "innateProficiency": "STAFF"
   },
   {
     "id": 41,
@@ -1268,6 +1454,10 @@
       "bld": 13
     },
     "identifier": "madeline",
-    "personalSkillId": 219
+    "personalSkillId": 219,
+    "proficiencies": [
+      "AXE"
+    ],
+    "innateProficiency": "AXE"
   }
 ]

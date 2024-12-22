@@ -50,4 +50,8 @@ export class AssetsService {
   getEfficiencyTypeImage(efficiencyType: EfficiencyType, _size: ImageType = ImageType.BODY_SMALL): string {
     return `${MISCELLANEOUS_RESOURCE_PATH}icons/effective-${efficiencyType.toLowerCase()}.png`;
   }
+
+  getWeaponTypeImage(weaponType: string): string {
+    return `${MISCELLANEOUS_RESOURCE_PATH}icons/weapon-${weaponType.toLowerCase()}.png`;
+  }
 }

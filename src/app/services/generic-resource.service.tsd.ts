@@ -23,8 +23,16 @@ export abstract class GenericResourceService<T extends Resource> {
     return resource;
   }
 
-  public getResourceByIdentifier(identifier: string): T | undefined {
+  public findResourceByIdentifier(identifier: string): T | undefined {
     return this.resourceSignal().find((resource: T): boolean => resource.identifier === identifier);
+  }
+
+  public getResourceByIdentifier(identifier: string): T {
+    const resource: T | undefined = this.findResourceByIdentifier(identifier);
+    if (!resource) {
+      throw new Error(`Resource with identifier ${identifier} not found.`);
+    }
+    return resource;
   }
 
   public async loadResourcesInformation(): Promise<void> {
