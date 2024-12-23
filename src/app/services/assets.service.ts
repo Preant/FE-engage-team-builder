@@ -10,6 +10,7 @@ import {
 } from '@/app/config/config';
 import { EfficiencyType } from '@/app/models/EfficiencyType.enum';
 import { ImageType } from '@/app/models/ImageSize.enum';
+import { WeaponType } from '@/app/models/WeaponType.enum';
 
 @Injectable({
   providedIn: 'root'
@@ -24,6 +25,8 @@ export class AssetsService {
       return `${CHARACTER_RESOURCE_PATH}${characterIdentifier}/${characterIdentifier}_body_small.png`;
     } else if (size === ImageType.BANNER_SMALL) {
       return `${CHARACTER_RESOURCE_PATH}${characterIdentifier}/${characterIdentifier}_banner_small.png`;
+    } else if (size === ImageType.STAMP) {
+      return `${CHARACTER_RESOURCE_PATH}${characterIdentifier}/${characterIdentifier}_stamp.png`;
     }
     return `${CHARACTER_RESOURCE_PATH}${characterIdentifier}/${characterIdentifier}_body.png`;
   }
@@ -31,6 +34,10 @@ export class AssetsService {
   getEmblemImage(identifier: string, size: ImageType = ImageType.BODY_SMALL): string {
     if (size === ImageType.BODY_SMALL) {
       return `${EMBLEM_RESOURCE_PATH}${identifier}/${identifier}_body_small.png`;
+    } else if (size === ImageType.BANNER_SMALL) {
+      return `${EMBLEM_RESOURCE_PATH}${identifier}/${identifier}_banner_small.png`;
+    } else if (size === ImageType.STAMP) {
+      return `${EMBLEM_RESOURCE_PATH}${identifier}/${identifier}_stamp.png`;
     }
     return `${EMBLEM_RESOURCE_PATH}${identifier}/${identifier}_body.png`;
   }
@@ -51,7 +58,7 @@ export class AssetsService {
     return `${MISCELLANEOUS_RESOURCE_PATH}icons/effective-${efficiencyType.toLowerCase()}.png`;
   }
 
-  getWeaponTypeImage(weaponType: string): string {
+  getWeaponTypeImage(weaponType: WeaponType): string {
     return `${MISCELLANEOUS_RESOURCE_PATH}icons/weapon-${weaponType.toLowerCase()}.png`;
   }
 }

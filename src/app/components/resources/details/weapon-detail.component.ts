@@ -4,6 +4,7 @@ import { Component, inject, Input } from '@angular/core';
 import { EfficiencyType } from '@/app/models/EfficiencyType.enum';
 import { ImageType } from '@/app/models/ImageSize.enum';
 import { Weapon } from '@/app/models/Weapon.model';
+import { WeaponType } from '@/app/models/WeaponType.enum';
 import { AssetsService } from '@/app/services/assets.service';
 import { ColorService } from '@/app/services/Color.service';
 
@@ -143,7 +144,7 @@ export class WeaponDetailComponent {
       return this.assetsService.getWeaponImage(identifier, ImageType.BODY);
     }
 
-    getWeaponTypeImage(weaponType: string): string {
+    getWeaponTypeImage(weaponType: WeaponType): string {
       return this.assetsService.getWeaponTypeImage(weaponType);
     }
 

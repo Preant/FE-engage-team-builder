@@ -3,9 +3,9 @@ import { Component, inject, Input } from '@angular/core';
 
 import { Character } from '@/app/models/Character.model';
 import { ImageType } from '@/app/models/ImageSize.enum';
-import { Skill } from '@/app/models/Skill.model';
 import { CharacterStats } from '@/app/models/Stat.enum';
 import { StatSheet } from '@/app/models/StatSheet.model';
+import { WeaponType } from '@/app/models/WeaponType.enum';
 import { AssetsService } from '@/app/services/assets.service';
 import { SkillService } from '@/app/services/resources.service';
 
@@ -15,78 +15,99 @@ import { SkillService } from '@/app/services/resources.service';
   imports: [CommonModule],
   template: `
         <div class="w-full h-full relative rounded-lg bg-gradient-to-br from-rich_black-400/95 to-rich_black-600/95 p-6">
-            <!-- Background Character Image -->
-            <div class="absolute inset-0 z-0 opacity-10">
-                <img
-                        [src]="getCharacterImage(character.identifier)"
-                        [alt]="character.name"
-                        class="w-full h-full object-cover"
-                />
+            <!-- Background Character Image with intense gradient mask -->
+            <div class="absolute inset-0 z-0">
+                <div class="w-full h-full relative">
+                    <img
+                            [src]="getCharacterImage(character.identifier)"
+                            [alt]="character.name"
+                            class="w-full h-full object-scale-down opacity-15"
+                            style="mask-image: radial-gradient(circle at center, black 30%, transparent 60%);
+                   -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 60%);"
+                    />
+                </div>
             </div>
 
             <!-- Content Container -->
-            <div class="relative z-10 flex flex-col h-[calc(100%-1.5rem)]">
+            <div class="relative z-10 flex flex-col h-full">
                 <!-- Header Section -->
-                <div class="flex justify-between items-start mb-6">
-                    <div>
-                        <h2 class="text-3xl font-bold text-baby_powder-500 mb-2">{{ character.name }}</h2>
-                        <p class="text-air_superiority_blue-400">{{ character.country }}</p>
+                <div class="flex justify-between items-start mb-28">
+                    <!-- Left side: Character info -->
+                    <div class="flex items-center gap-4">
+                        <img
+                                [src]="getCharacterStampImage(character.identifier)"
+                                [alt]="character.name"
+                                class="w-32 h-32 object-cover rounded-lg border-2 border-air_superiority_blue-500"
+                        />
+                        <div>
+                            <h2 class="text-3xl font-bold text-baby_powder-500 mb-2">{{ character.name }}</h2>
+                            <span class="px-3 py-1 rounded-full bg-prussian_blue-500/50 text-air_superiority_blue-400">
+                {{ character.country }}
+              </span>
+                        </div>
                     </div>
 
-                    <!-- Proficiency Badge -->
-                    <div class="flex items-center space-x-2 bg-rich_black-500/50 px-4 py-2 rounded-full">
-                        <span class="text-paynes_gray-300">Innate Proficiency:</span>
-                        <img
-                                [src]="getWeaponTypeIcon(character.innateProficiency)"
-                                [alt]="character.innateProficiency"
-                                class="w-6 h-6"
-                        />
+                    <!-- Right side: Innate Proficiency -->
+                    <div class="flex items-center gap-2">
+                        <span class="text-paynes_gray-800">Innate Proficiency:</span>
+                        <div class="flex items-center gap-2">
+                            <img
+                                    [src]="getWeaponTypeImage(character.innateProficiency)"
+                                    [alt]="character.innateProficiency"
+                                    class="w-8 h-8"
+                            />
+                            <span class="text-air_superiority_blue-800 font-semibold">
+                {{ character.innateProficiency }}
+              </span>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Main Content Area -->
-                <div class="flex gap-6 h-full">
-                    <!-- Stats Grid with Row Layout -->
-                    <div class="bg-rich_black-500/30 p-4 rounded-lg w-64 h-fit">
-                        <h3 class="text-xl font-semibold text-mauve-400 mb-4">Growth Rates</h3>
-                        <div class="flex flex-col gap-2">
+                <div class="flex gap-6">
+                    <!-- Growth Rates -->
+                    <div class="bg-rich_black-500/30 p-6 rounded-lg flex-grow h-fit">
+                        <h3 class="text-xl font-semibold text-mauve-400 mb-4">Growth Rate</h3>
+                        <div class="grid grid-cols-3 gap-4">
                             @for (stat of getStatsArray(character.growth); track stat[0]) {
-                                <div class="flex items-center justify-between px-3 py-1.5 bg-rich_black-500/20 rounded-md">
-                                    <div class="text-paynes_gray-400 text-sm">{{ getStatDisplayName(stat[0]) }}</div>
-                                    <div [class]="getGrowthStatClass(stat[0], stat[1]) + ' text-lg font-bold'">
-                                        {{ stat[1] }}%
+                                <div class="stat-row">
+                                    <span class="text-paynes_gray-800 text-lg mr-3">{{ getStatDisplayName(stat[0]) }}</span>
+                                    <div class="flex items-center gap-2">
+                    <span [class]="getGrowthStatClass(stat[0], stat[1]) + ' text-lg font-semibold'">
+                      {{ stat[1] }}%
+                    </span>
                                     </div>
                                 </div>
                             }
                         </div>
                     </div>
 
-                    <!-- Personal Skill Section -->
-                    <div class="flex-1 flex items-end">
-                        @if (getPersonalSkill(); as skill) {
-                            <div class="bg-rich_black-500/30 p-4 rounded-lg w-full">
-                                <div class="flex items-center gap-3 mb-4">
-                                    <img
-                                            [src]="getSkillIcon(skill.identifier)"
-                                            [alt]="skill.name"
-                                            class="w-8 h-8"
-                                    />
-                                    <h3 class="text-xl font-semibold text-mauve-400">Personal Skill</h3>
-                                </div>
-                                <div class="space-y-2">
-                                    <p class="text-air_superiority_blue-300 font-medium">{{ skill.name }}</p>
-                                    <p class="text-paynes_gray-300">{{ skill.description }}</p>
-                                </div>
+                    <!-- Personal Skill -->
+                    <div class="bg-rich_black-500/30 p-6 rounded-lg w-1/3">
+                        <h3 class="text-xl font-semibold text-mauve-400 mb-4">Personal Skill</h3>
+                        <div class="flex flex-col gap-3 px-4 py-3 bg-rich_black-500/20 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <img
+                                        [src]="getSkillImage(character.personalSkillId)"
+                                        [alt]="getSkillName(character.personalSkillId)"
+                                        class="w-10 h-10"
+                                />
+                                <p class="text-baby_powder-500 font-medium text-lg">
+                                    {{ getSkillName(character.personalSkillId) }}
+                                </p>
                             </div>
-                        }
+                            <p class="text-paynes_gray-800">
+                                {{ getSkillDescription(character.personalSkillId) }}
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     `,
   styles: [`
-        :host {
-            display: block;
+        .stat-row {
+            @apply flex justify-between items-center px-4 py-2 bg-rich_black-500/20 rounded-md;
         }
     `]
 })
@@ -100,16 +121,24 @@ export class CharacterDetailComponent {
       return this.assetsService.getCharacterImage(identifier, ImageType.BODY);
     }
 
-    getWeaponTypeIcon(weaponType: string): string {
+    getCharacterStampImage(identifier: string): string {
+      return this.assetsService.getCharacterImage(identifier, ImageType.STAMP);
+    }
+
+    getWeaponTypeImage(weaponType: WeaponType): string {
       return this.assetsService.getWeaponTypeImage(weaponType);
     }
 
-    getSkillIcon(identifier: string): string {
-      return this.assetsService.getSkillImage(identifier, ImageType.BODY);
+    getSkillImage(skillId: number): string {
+      return this.assetsService.getSkillImage(this.skillService.getResourceById(skillId).identifier);
     }
 
-    getPersonalSkill(): Skill {
-      return this.skillService.getResourceById(this.character.personalSkillId);
+    getSkillName(skillId: number): string {
+      return this.skillService.getResourceById(skillId).name;
+    }
+
+    getSkillDescription(skillId: number): string {
+      return this.skillService.getResourceById(skillId).description;
     }
 
     getStatDisplayName(stat: string): string {
@@ -122,7 +151,6 @@ export class CharacterDetailComponent {
         [CharacterStats.DEF]: 'Defense',
         [CharacterStats.RES]: 'Resistance',
         [CharacterStats.LCK]: 'Luck',
-        [CharacterStats.MOV]: 'Movement',
         [CharacterStats.BLD]: 'Build'
       };
       return displayNames[stat] || stat.toUpperCase();
@@ -141,8 +169,8 @@ export class CharacterDetailComponent {
       return this.getDefaultStatClass(value);
     }
 
-    public getStatsArray(stats: StatSheet): [string, number][] {
-      return Object.entries(stats || {}).map(([key, value]) => [key, Number(value)]);
+    getStatsArray(stats: StatSheet): [string, number][] {
+      return Object.entries(stats || {}).filter(([name, _]) => name !== CharacterStats.MOV).map(([key, value]) => [key, Number(value)]);
     }
 
     private getBuildStatClass(value: number): string {
@@ -158,18 +186,34 @@ export class CharacterDetailComponent {
     }
 
     private getHPStatClass(value: number): string {
-      if (value < 50) {return 'text-gray-500';}
-      if (value < 60) {return 'text-red-500';}
-      if (value < 70) {return 'text-yellow-500';}
-      if (value < 80) {return 'text-green-500';}
+      if (value < 50) {
+        return 'text-purple-500';
+      }
+      if (value < 60) {
+        return 'text-red-500';
+      }
+      if (value < 70) {
+        return 'text-yellow-500';
+      }
+      if (value < 80) {
+        return 'text-green-500';
+      }
       return 'text-blue-500';
     }
 
     private getDefaultStatClass(value: number): string {
-      if (value <= 10) {return 'text-gray-500';}
-      if (value <= 20) {return 'text-red-500';}
-      if (value <= 35) {return 'text-yellow-500';}
-      if (value <= 45) {return 'text-green-500';}
+      if (value <= 10) {
+        return 'text-purple-500';
+      }
+      if (value <= 20) {
+        return 'text-red-500';
+      }
+      if (value <= 35) {
+        return 'text-yellow-500';
+      }
+      if (value <= 45) {
+        return 'text-green-500';
+      }
       return 'text-blue-500';
     }
 }

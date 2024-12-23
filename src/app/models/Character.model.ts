@@ -1,5 +1,6 @@
 import { CharacterID, SkillID } from '@/app/brands/ResourceID.brand';
 import { Country } from '@/app/models/Country.enum';
+import { Gender } from '@/app/models/Gender.enum';
 import { Resource } from '@/app/models/Resource.model';
 import { StatSheet } from '@/app/models/StatSheet.model';
 import { WeaponType } from '@/app/models/WeaponType.enum';
@@ -9,7 +10,8 @@ export type Character = Resource & {
     country: Country;
     base: StatSheet;
     growth: StatSheet;
-    personalSkillId: SkillID,
-    proficiencies: WeaponType[],
-    innateProficiency: WeaponType
+    personalSkillId: SkillID;
+    proficiencies: WeaponType[];
+    innateProficiency: WeaponType;
+    gender: Gender;
 }

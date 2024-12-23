@@ -1,4 +1,5 @@
-import { Component, effect, inject, signal, WritableSignal } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, computed, effect, inject, signal, Signal, WritableSignal } from '@angular/core';
 
 import { CarouselComponent, CarouselItem } from '@/app/components/carousel.component';
 import { EmblemDetailComponent } from '@/app/components/resources/details/emblem-detail.component';
@@ -10,35 +11,47 @@ import { ViewStateService } from '@/app/services/view-state.service';
 
 @Component({
   selector: 'app-emblems',
+  standalone: true,
   imports: [
+    CommonModule,
     CarouselComponent,
     EmblemDetailComponent
   ],
   template: `
         <div class="w-full h-full flex flex-col p-6 bg-gradient-to-br from-prussian_blue-400 to-rich_black-600">
+            <!-- Carousel -->
             <app-carousel
-                    [items]="getCarouselItems()"
+                    [items]="carouselItems()"
                     (itemSelected)="handleItemSelected($event)"
             />
+
+            <!-- Emblem Detail -->
             @if (selectedEmblem(); as emblem) {
                 <emblem-detail class="h-full mt-8" [emblem]="emblem"/>
             }
         </div>
-    `,
-  standalone: true
+    `
 })
 export class EmblemsComponent {
-  selectedEmblem: WritableSignal<Emblem | null> = signal(null);
+  protected selectedEmblem: WritableSignal<Emblem | null> = signal(null);
+
   private assetsService: AssetsService = inject(AssetsService);
   private emblemService: EmblemService = inject(EmblemService);
+  readonly carouselItems: Signal<CarouselItem[]> = computed(() =>
+    this.emblemService.resources().map(emblem => ({
+      id: emblem.id,
+      label: emblem.name,
+      imageUrl: this.assetsService.getEmblemImage(emblem.identifier, ImageType.BODY_SMALL)
+    }))
+  );
   private viewStateService: ViewStateService = inject(ViewStateService);
 
   constructor() {
     effect(() => {
-      const selectedId: number | null = this.viewStateService.getSelectedEmblemId()();
+      const selectedId = this.viewStateService.getSelectedEmblemId()();
       if (selectedId !== null) {
-        const emblem: Emblem | undefined = this.emblemService.resources()
-          .find((emblem: Emblem) => emblem.id === selectedId);
+        const emblem = this.emblemService.resources()
+          .find(emblem => emblem.id === selectedId);
         if (emblem) {
           this.selectedEmblem.set(emblem);
         }
@@ -47,17 +60,9 @@ export class EmblemsComponent {
     });
   }
 
-  getCarouselItems(): CarouselItem[] {
-    return this.emblemService.resources().map((emblem: Emblem) => ({
-      id: emblem.id,
-      label: emblem.name,
-      imageUrl: this.assetsService.getEmblemImage(emblem.identifier, ImageType.BODY_SMALL)
-    }));
-  }
-
-  handleItemSelected(id: number): void {
-    const emblem: Emblem | undefined = this.emblemService.resources()
-      .find((emblem: Emblem) => emblem.id === id);
+  protected handleItemSelected(id: number): void {
+    const emblem = this.emblemService.resources()
+      .find(emblem => emblem.id === id);
     if (emblem) {
       this.selectedEmblem.set(emblem);
     }

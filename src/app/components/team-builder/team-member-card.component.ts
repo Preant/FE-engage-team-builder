@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, computed, inject, Input, Signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Select } from 'primeng/select';
 
 import { CharacterID, ClassID, EmblemID, SkillID, WeaponID } from '@/app/brands/ResourceID.brand';
 import {
@@ -30,7 +29,7 @@ import { getOrdinal } from '@/app/utils/getOrdinal';
 
 @Component({
   selector: 'app-team-member-card',
-  imports: [CommonModule, FormsModule, SelectComponent, Select],
+  imports: [CommonModule, FormsModule, SelectComponent],
   standalone: true,
   template: `
         <div class="relative bg-gradient-to-br from-gunmetal-400/50 to-gunmetal-600/50 rounded-lg p-2 border border-rich_black-500 m-4">
