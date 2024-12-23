@@ -15,42 +15,17 @@ import { ViewStateService } from '@/app/services/view-state.service';
     EmblemDetailComponent
   ],
   template: `
-        <div class="min-h-screen p-6 bg-gradient-to-br from-prussian_blue-400 to-rich_black-600">
-            <div class="space-y-6">
-                <app-carousel
-                        [items]="getCarouselItems()"
-                        (itemSelected)="handleItemSelected($event)"/>
-
-                @if (selectedEmblem(); as emblem) {
-                    <div class="mt-8 fade-in">
-                        <emblem-detail [emblem]="emblem"/>
-                    </div>
-                }
-            </div>
+        <div class="w-full h-full flex flex-col p-6 bg-gradient-to-br from-prussian_blue-400 to-rich_black-600">
+            <app-carousel
+                    [items]="getCarouselItems()"
+                    (itemSelected)="handleItemSelected($event)"
+            />
+            @if (selectedEmblem(); as emblem) {
+                <emblem-detail class="h-full mt-8" [emblem]="emblem"/>
+            }
         </div>
     `,
-  standalone: true,
-  styles: [`
-        :host {
-            display: block;
-            min-height: 100vh;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in {
-            animation: fadeIn 0.5s ease-out;
-        }
-    `]
+  standalone: true
 })
 export class EmblemsComponent {
   selectedEmblem: WritableSignal<Emblem | null> = signal(null);
@@ -62,11 +37,12 @@ export class EmblemsComponent {
     effect(() => {
       const selectedId: number | null = this.viewStateService.getSelectedEmblemId()();
       if (selectedId !== null) {
-        const emblem: Emblem | undefined = this.emblemService.resources().find((emblem: Emblem) => emblem.id === selectedId);
+        const emblem: Emblem | undefined = this.emblemService.resources()
+          .find((emblem: Emblem) => emblem.id === selectedId);
         if (emblem) {
           this.selectedEmblem.set(emblem);
         }
-        this.viewStateService.setSelectedCharacterId(null);
+        this.viewStateService.setSelectedEmblemId(null);
       }
     });
   }
@@ -75,15 +51,13 @@ export class EmblemsComponent {
     return this.emblemService.resources().map((emblem: Emblem) => ({
       id: emblem.id,
       label: emblem.name,
-      imageUrl: this.assetsService.getEmblemImage(
-        emblem.identifier,
-        ImageType.BODY_SMALL
-      )
+      imageUrl: this.assetsService.getEmblemImage(emblem.identifier, ImageType.BODY_SMALL)
     }));
   }
 
   handleItemSelected(id: number): void {
-    const emblem: Emblem | undefined = this.emblemService.resources().find((emblem: Emblem) => emblem.id === id);
+    const emblem: Emblem | undefined = this.emblemService.resources()
+      .find((emblem: Emblem) => emblem.id === id);
     if (emblem) {
       this.selectedEmblem.set(emblem);
     }

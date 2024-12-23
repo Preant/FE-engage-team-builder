@@ -83,6 +83,8 @@ import { getOrdinal } from '@/app/utils/getOrdinal';
                         <app-select
                                 class="w-36 h-24"
                                 [selectOptions]="weapon()"
+                                showDetailsButton
+                                (detailsButtonClicked)="viewWeaponDetails($index)"
                                 label="Weapon #{{$index + 1}}"
                                 [type]="SelectType.ICON"
                                 [initialSelection]="member.weapons[$index]?.id"
@@ -208,6 +210,15 @@ export class TeamMemberCardComponent {
       if (emblem) {
         this.viewStateService.setSelectedEmblemId(emblem.id);
         this.viewStateService.setView(ViewType.EMBLEMS);
+      }
+    }
+
+    viewWeaponDetails(weaponIndexSlot: number): void {
+      this.viewStateService.openPanel();
+      const weapon: Weapon | null = this.member.weapons[weaponIndexSlot];
+      if (weapon) {
+        this.viewStateService.setSelectedWeaponId(weapon.id);
+        this.viewStateService.setView(ViewType.WEAPONS);
       }
     }
 

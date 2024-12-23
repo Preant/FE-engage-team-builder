@@ -44,6 +44,15 @@ export class ColorService {
     [WeaponType.DRAGONSTONE]: '#ff0000' // Red
   };
 
+  private readonly weaponRankColors: Record<string, string> = {
+    'E': '#808080', // Gray
+    'D': '#0000ff', // Blue
+    'C': '#008000', // Green
+    'B': '#800000', // Red
+    'A': '#ffa500', // Orange
+    'S': '#ff0000'  // Red
+  };
+
   private readonly uniqueWeaponColor: string = '#ff00ff'; // Magenta
 
   public getColorForCharacter(character: Character): string {
@@ -56,5 +65,9 @@ export class ColorService {
 
   public getColorForWeapon(weapon: Weapon): string {
     return weapon.isUnique ? this.uniqueWeaponColor : this.weaponTypeColors[weapon.weaponType];
+  }
+
+  public getColorForWeaponRank(rank: string): string {
+    return this.weaponRankColors[rank];
   }
 }

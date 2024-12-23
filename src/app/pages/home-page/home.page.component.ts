@@ -6,6 +6,7 @@ import { CharactersComponent } from '@/app/components/resources/characters.compo
 import { ClassesComponent } from '@/app/components/resources/classes.component';
 import { EmblemsComponent } from '@/app/components/resources/emblems.component';
 import { SkillsComponent } from '@/app/components/resources/skills.component';
+import { WeaponsComponent } from '@/app/components/resources/weapons.component';
 import { ResourcesMenuComponent } from '@/app/components/resources-menu.component';
 import { TeamSelectorComponent } from '@/app/components/team-builder/team-selector.component';
 import { TeamBuilderComponent } from '@/app/components/team-builder/teambuilder.component';
@@ -27,7 +28,8 @@ import { ViewStateService } from '@/app/services/view-state.service';
     SkillsComponent,
     ClassesComponent,
     TeamSelectorComponent,
-    TeamBuilderComponent
+    TeamBuilderComponent,
+    WeaponsComponent
   ],
   standalone: true,
   template: `
@@ -58,6 +60,8 @@ import { ViewStateService } from '@/app/services/view-state.service';
                                 <app-skills/>
                             } @else if (this.getCurrentView() === ViewType.CLASSES) {
                                 <app-classes/>
+                            } @else if (this.getCurrentView() === ViewType.WEAPONS) {
+                                <app-weapons/>
                             }
                         </div>
                     </as-split-area>

@@ -835,7 +835,7 @@
     "description": "Paired sword wielded by Emblem Eirika.",
     "KnocksBack": false,
     "effectiveness": [
-      "CORRUPTED"
+      "FELL"
     ],
     "isEngageWeapon": true,
     "isUnique": true
@@ -857,7 +857,9 @@
     "price": 100,
     "description": "Sword wielded by Emblem Alear.",
     "KnocksBack": false,
-    "effectiveness": "CORRUPTED",
+    "effectiveness": [
+      "FELL"
+    ],
     "isEngageWeapon": true,
     "isUnique": true
   },
@@ -1454,7 +1456,7 @@
     "description": "Paired lance wielded by Emblem Ephraim. Effective: Corrupted.",
     "KnocksBack": false,
     "effectiveness": [
-      "CORRUPTED"
+      "FELL"
     ],
     "isEngageWeapon": true,
     "isUnique": true
@@ -1989,7 +1991,7 @@
     "rank": "D",
     "price": 100,
     "description": "Relic axe of Emblem Byleth. Effective against dragons, grants Str+3 during combat.",
-    "KnocksBack": false,
+    "KnocksBack": true,
     "effectiveness": [
       "DRAGON"
     ],
@@ -3026,7 +3028,7 @@
     "description": "Holy tome wielded by Emblem Celica.",
     "KnocksBack": false,
     "effectiveness": [
-      "CORRUPTED"
+      "FELL"
     ],
     "isEngageWeapon": true,
     "isUnique": true
@@ -3801,7 +3803,7 @@
     "description": "Cannonball for the Corrupted. Cannot follow up. Reduced Hit for distant targets. Effective: Corrupted.",
     "KnocksBack": false,
     "effectiveness": [
-      "CORRUPTED"
+      "FELL"
     ],
     "isEngageWeapon": false,
     "isUnique": false
