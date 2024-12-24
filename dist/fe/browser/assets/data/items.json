@@ -1,0 +1,313 @@
+[
+  {
+    "id": 1,
+    "identifier": "heal",
+    "name": "Heal",
+    "uses": 25,
+    "hit": "inf",
+    "range": [
+      1,
+      1
+    ],
+    "type": "STAFF",
+    "rank": "D",
+    "price": 500,
+    "description": "Pow: 10, A staff imbued with healing magic. Recovers an ally's HP.",
+    "isEngageItem": false
+  },
+  {
+    "id": 2,
+    "identifier": "mend",
+    "name": "Mend",
+    "uses": 30,
+    "hit": "inf",
+    "range": [
+      1,
+      1
+    ],
+    "type": "STAFF",
+    "rank": "D",
+    "price": 1000,
+    "description": "Pow: 20, A staff imbued with healing magic. Recovers a great deal of an ally's HP.",
+    "isEngageItem": false
+  },
+  {
+    "id": 3,
+    "identifier": "physic",
+    "name": "Physic",
+    "uses": 10,
+    "hit": "inf",
+    "range": [
+      1,
+      5
+    ],
+    "type": "STAFF",
+    "rank": "C",
+    "price": 3000,
+    "description": "Pow: 8, A staff imbued with healing magic. Can recover an ally's HP at a distance.",
+    "isEngageItem": false
+  },
+  {
+    "id": 4,
+    "identifier": "recover",
+    "name": "Recover",
+    "uses": 10,
+    "hit": "inf",
+    "range": [
+      1,
+      1
+    ],
+    "type": "STAFF",
+    "rank": "B",
+    "price": 3000,
+    "description": "Pow: 40, A staff imbued with healing magic. Recovers vast amounts of an ally's HP.",
+    "isEngageItem": false
+  },
+  {
+    "id": 5,
+    "identifier": "fortify",
+    "name": "Fortify",
+    "uses": 5,
+    "hit": "inf",
+    "range": [
+      1,
+      5
+    ],
+    "type": "STAFF",
+    "rank": "A",
+    "price": 5000,
+    "description": "Pow: 7, A staff imbued with healing magic. Recovers HP for all allies within a 5-space radius.",
+    "isEngageItem": false
+  },
+  {
+    "id": 6,
+    "identifier": "restore",
+    "name": "Restore",
+    "uses": 10,
+    "hit": "inf",
+    "range": [
+      1,
+      3
+    ],
+    "type": "STAFF",
+    "rank": "C",
+    "price": 500,
+    "description": "A staff that removes status effects on an ally.",
+    "isEngageItem": false
+  },
+  {
+    "id": 7,
+    "identifier": "warp",
+    "name": "Warp",
+    "uses": 5,
+    "hit": "inf",
+    "range": [
+      1,
+      1
+    ],
+    "type": "STAFF",
+    "rank": "B",
+    "price": 2000,
+    "description": "A staff imbued with space-warping magic. Teleports an adjacent ally up to 5 spaces away.",
+    "isEngageItem": false
+  },
+  {
+    "id": 8,
+    "identifier": "rewarp",
+    "name": "Rewarp",
+    "uses": 5,
+    "hit": "inf",
+    "range": [],
+    "type": "STAFF",
+    "rank": "C",
+    "price": 1200,
+    "description": "A staff imbued with space-warping magic. Teleports the user up to 5 spaces away.",
+    "isEngageItem": false
+  },
+  {
+    "id": 9,
+    "identifier": "rescue",
+    "name": "Rescue",
+    "uses": 5,
+    "hit": "inf",
+    "range": [
+      1,
+      8
+    ],
+    "type": "STAFF",
+    "rank": "B",
+    "price": 2000,
+    "description": "A staff imbued with space-warping magic. Teleports a faraway ally to an adjacent space.",
+    "isEngageItem": false
+  },
+  {
+    "id": 10,
+    "identifier": "entrap",
+    "name": "Entrap",
+    "uses": 3,
+    "hit": 50,
+    "range": [
+      1,
+      6
+    ],
+    "type": "STAFF",
+    "rank": "A",
+    "price": 4000,
+    "description": "A staff imbued with space-warping magic. Teleports a faraway foe to an adjacent space.",
+    "isEngageItem": false
+  },
+  {
+    "id": 11,
+    "identifier": "illume",
+    "name": "Illume",
+    "uses": 5,
+    "hit": "inf",
+    "range": [],
+    "type": "STAFF",
+    "rank": "D",
+    "price": 500,
+    "description": "A staff that magically shines through darkness. Illuminates a 7-space radius (shrinks one space per turn).",
+    "isEngageItem": false
+  },
+  {
+    "id": 12,
+    "identifier": "freeze",
+    "name": "Freeze",
+    "uses": 5,
+    "hit": 70,
+    "range": [
+      1,
+      6
+    ],
+    "type": "STAFF",
+    "rank": "C",
+    "price": 1500,
+    "description": "A staff that prevents foes from moving for 1 turn.",
+    "isEngageItem": false
+  },
+  {
+    "id": 13,
+    "identifier": "silence",
+    "name": "Silence",
+    "uses": 5,
+    "hit": 70,
+    "range": [
+      1,
+      6
+    ],
+    "type": "STAFF",
+    "rank": "C",
+    "price": 1500,
+    "description": "A staff that prevents foes from using tomes or staves for 1 turn.",
+    "isEngageItem": false
+  },
+  {
+    "id": 14,
+    "identifier": "obstruct",
+    "name": "Obstruct",
+    "uses": 10,
+    "hit": "inf",
+    "range": [
+      1,
+      8
+    ],
+    "type": "STAFF",
+    "rank": "D",
+    "price": 500,
+    "description": "A staff that conjures a mass of ice that makes one space impassable for 1 turn.",
+    "isEngageItem": false
+  },
+  {
+    "id": 15,
+    "identifier": "fracture",
+    "name": "Fracture",
+    "uses": 10,
+    "hit": 70,
+    "range": [
+      1,
+      10
+    ],
+    "type": "STAFF",
+    "rank": "B",
+    "price": 1200,
+    "description": "A staff imbued with magic that can break foes.",
+    "isEngageItem": false
+  },
+  {
+    "id": 16,
+    "identifier": "nodus",
+    "name": "Nodus",
+    "uses": 1,
+    "hit": "inf",
+    "range": [],
+    "type": "STAFF",
+    "rank": "S",
+    "price": 6000,
+    "description": "Pow: 20, A staff imbued with mysterious magic that sets all allies' engage meters to max.",
+    "isEngageItem": false
+  },
+  {
+    "id": 17,
+    "identifier": "treat",
+    "name": "Treat",
+    "uses": 20,
+    "hit": "inf",
+    "range": [
+      1,
+      2
+    ],
+    "type": "STAFF",
+    "rank": "D",
+    "price": 500,
+    "description": "Pow: 15, A staff with a sweet scent. Recovers an ally's HP.",
+    "isEngageItem": false
+  },
+  {
+    "id": 18,
+    "identifier": "recover-celica",
+    "name": "Recover",
+    "uses": "inf",
+    "hit": "inf",
+    "range": [
+      1,
+      1
+    ],
+    "type": "STAFF",
+    "rank": "D",
+    "price": 1000,
+    "description": "Pow: 40, Staff wielded by Emblem Celica. Recovers a great deal of HP.",
+    "isEngageItem": true
+  },
+  {
+    "id": 19,
+    "identifier": "fortify-plus",
+    "name": "Fortify+",
+    "uses": "inf",
+    "hit": "inf",
+    "range": [
+      1,
+      7
+    ],
+    "type": "STAFF",
+    "rank": "D",
+    "price": 1000,
+    "description": "Pow: 10, A staff wielded by Emblem Veronica. Heals HP and status effects for all allies within a 7-space radius.",
+    "isEngageItem": true
+  },
+  {
+    "id": 20,
+    "identifier": "reflect",
+    "name": "Reflect",
+    "uses": "inf",
+    "hit": "inf",
+    "range": [
+      1,
+      2
+    ],
+    "type": "STAFF",
+    "rank": "D",
+    "price": 1000,
+    "description": "Staff of Emblem Soren. Allies within 2 spaces gain \"deals 50% of magic damage taken back to foe\" for 1 turn.",
+    "isEngageItem": true
+  }
+]

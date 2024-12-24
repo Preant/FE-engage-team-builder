@@ -42,7 +42,7 @@ import { CharacterService, SkillService } from '@/app/services/resources.service
                                 class="w-10 h-10 rounded-full"
                         />
                         <div class="flex flex-col">
-                            <span class="text-xs text-paynes_gray-400">Signature Character</span>
+                            <span class="text-xs text-paynes_gray-800">Signature Character</span>
                             <span class="text-sm text-baby_powder-500">
                 {{ getCharacter(class.signatureCharacter).name }}
               </span>
@@ -53,14 +53,29 @@ import { CharacterService, SkillService } from '@/app/services/resources.service
 
             <!-- Content Grid -->
             <div class="grid grid-cols-2 gap-6">
+
                 <!-- Left Column -->
+                <div class="space-y-6">
+                    <!-- Growth Rates -->
+                    <h4 class="text-sm font-semibold text-mauve-400 mb-3">Growth Rates</h4>
+                    <div class="grid grid-cols-2 gap-3">
+                        @for (stat of getStatsArray(class.stats.growth); track stat[0]) {
+                            <div class="flex flex-col justify-between items-center px-3 py-2 bg-rich_black-500/30 rounded">
+                                <span class="text-xs text-paynes_gray-800">{{ getStatDisplayName(stat[0]) }}</span>
+                                <span class="text-sm" [class]="getGrowthStatClass(stat[1])">{{ stat[1] }}%</span>
+                            </div>
+                        }
+                    </div>
+                </div>
+
+                <!-- Right Column -->
                 <div class="space-y-6">
                     <!-- Weapon Proficiencies -->
                     <div>
                         <h4 class="text-sm font-semibold text-mauve-400 mb-3">Weapon Proficiencies</h4>
-                        <div class="grid grid-cols-2 gap-2">
+                        <div class="flex flex-col">
                             @for (weapon of class.weapons; track weapon[0]) {
-                                <div class="flex items-center gap-2 px-3 py-2 rounded bg-rich_black-500/30">
+                                <div class="flex items-center gap-2 px-3 py-2">
                                     <img
                                             [src]="getWeaponTypeImage(weapon[0])"
                                             [alt]="weapon[0]"
@@ -68,7 +83,7 @@ import { CharacterService, SkillService } from '@/app/services/resources.service
                                     />
                                     <div class="flex flex-col">
                                         <span class="text-sm text-baby_powder-500">{{ weapon[0] }}</span>
-                                        <span class="text-xs text-air_superiority_blue-400">Rank {{ weapon[1] }}</span>
+                                        <span class="text-xs text-air_superiority_blue-500">Rank {{ weapon[1] }}</span>
                                     </div>
                                 </div>
                             }
@@ -87,60 +102,31 @@ import { CharacterService, SkillService } from '@/app/services/resources.service
                                 />
                                 <div>
                                     <p class="text-sm text-baby_powder-500">{{ getSkill(class.skill).name }}</p>
-                                    <p class="text-xs text-paynes_gray-400 mt-1">{{ getSkill(class.skill).description }}</p>
+                                    <p class="text-xs text-paynes_gray-800 mt-1">{{ getSkill(class.skill).description }}</p>
                                 </div>
                             </div>
                         </div>
                     }
-                </div>
 
-                <!-- Right Column -->
-                <div class="space-y-6">
-                    <!-- Base Stats -->
-                    <div>
-                        <h4 class="text-sm font-semibold text-mauve-400 mb-3">Base Stats</h4>
-                        <div class="grid grid-cols-2 gap-2">
-                            @for (stat of getStatsArray(class.stats.base); track stat[0]) {
-                                <div class="flex justify-between items-center px-3 py-2 bg-rich_black-500/30 rounded">
-                                    <span class="text-xs text-paynes_gray-400">{{ getStatDisplayName(stat[0]) }}</span>
-                                    <span class="text-sm text-air_superiority_blue-300">{{ stat[1] }}</span>
-                                </div>
-                            }
+                    <!-- Weaknesses -->
+                    @if (class.weakness.length > 0) {
+                        <div>
+                            <h4 class="text-sm font-semibold text-mauve-400 mb-3">Weaknesses</h4>
+                            <div class="flex gap-2">
+                                @for (type of class.weakness; track type) {
+                                    <div class="p-2 bg-rich_black-500/30 rounded">
+                                        <img
+                                                [src]="getEfficiencyTypeImage(type)"
+                                                [alt]="type"
+                                                class="w-6 h-6"
+                                        />
+                                    </div>
+                                }
+                            </div>
                         </div>
-                    </div>
-
-                    <!-- Growth Rates -->
-                    <div>
-                        <h4 class="text-sm font-semibold text-mauve-400 mb-3">Growth Rates</h4>
-                        <div class="grid grid-cols-2 gap-2">
-                            @for (stat of getStatsArray(class.stats.growth); track stat[0]) {
-                                <div class="flex justify-between items-center px-3 py-2 bg-rich_black-500/30 rounded">
-                                    <span class="text-xs text-paynes_gray-400">{{ getStatDisplayName(stat[0]) }}</span>
-                                    <span class="text-sm" [class]="getGrowthStatClass(stat[1])">{{ stat[1] }}%</span>
-                                </div>
-                            }
-                        </div>
-                    </div>
+                    }
                 </div>
             </div>
-
-            <!-- Weaknesses -->
-            @if (class.weakness.length > 0) {
-                <div>
-                    <h4 class="text-sm font-semibold text-mauve-400 mb-3">Weaknesses</h4>
-                    <div class="flex gap-2">
-                        @for (type of class.weakness; track type) {
-                            <div class="p-2 bg-rich_black-500/30 rounded">
-                                <img
-                                        [src]="getEfficiencyTypeImage(type)"
-                                        [alt]="type"
-                                        class="w-6 h-6"
-                                />
-                            </div>
-                        }
-                    </div>
-                </div>
-            }
         </div>
     `
 })
@@ -197,16 +183,16 @@ export class ClassCardComponent {
     }
 
     protected getGrowthStatClass(value: number): string {
-      if (value <= 10) {
+      if (value === 0) {
         return 'text-purple-500';
       }
-      if (value <= 20) {
+      if (value <= 5) {
         return 'text-red-500';
       }
-      if (value <= 35) {
+      if (value <= 10) {
         return 'text-yellow-500';
       }
-      if (value <= 45) {
+      if (value <= 20) {
         return 'text-green-500';
       }
       return 'text-blue-500';

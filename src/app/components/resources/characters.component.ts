@@ -94,13 +94,13 @@ export class CharactersComponent {
   private characterService: CharacterService = inject(CharacterService);
   private viewStateService: ViewStateService = inject(ViewStateService);
 
-  private filteredCharacters: Signal<Character[]> = computed(() => {
-    let characters = this.characterService.resources();
+  private filteredCharacters: Signal<Character[]> = computed((): Character[] => {
+    let characters: Character[] = this.characterService.resources();
 
     // Apply country filter
-    const selectedCountry = this.selectedCountry();
+    const selectedCountry: Country | null = this.selectedCountry();
     if (selectedCountry) {
-      characters = characters.filter(c => c.country === selectedCountry);
+      characters = characters.filter((character: Character) => character.country === selectedCountry);
     }
 
     // Apply gender filter
@@ -118,7 +118,7 @@ export class CharactersComponent {
   });
 
   readonly carouselItems: Signal<CarouselItem[]> = computed(() =>
-    this.filteredCharacters().map(character => ({
+    this.filteredCharacters().map((character: Character) => ({
       id: character.id,
       label: character.name,
       imageUrl: this.assetsService.getCharacterImage(character.identifier, ImageType.BODY_SMALL)
@@ -127,10 +127,10 @@ export class CharactersComponent {
 
   constructor() {
     effect(() => {
-      const selectedId = this.viewStateService.getSelectedCharacterId()();
+      const selectedId: number | null = this.viewStateService.getSelectedCharacterId()();
       if (selectedId !== null) {
-        const character = this.characterService.resources()
-          .find(character => character.id === selectedId);
+        const character: Character | undefined = this.characterService.resources()
+          .find((character: Character) => character.id === selectedId);
         if (character) {
           this.selectedCharacter.set(character);
         }
@@ -140,8 +140,8 @@ export class CharactersComponent {
   }
 
   protected handleItemSelected(id: number): void {
-    const character = this.characterService.resources()
-      .find(character => character.id === id);
+    const character: Character | undefined = this.characterService.resources()
+      .find((character: Character) => character.id === id);
     if (character) {
       this.selectedCharacter.set(character);
     }

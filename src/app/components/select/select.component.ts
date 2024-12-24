@@ -41,7 +41,7 @@ export type SelectOptionIcon<T> = {
   imports: [CommonModule, Select, FormsModule, FloatLabel, SelectItemComponent],
   standalone: true,
   template: `
-        @if (showDetailsButton) {
+        @if (showDetailsButton && selectedItemModel()) {
             <button class="absolute p-2 text-white z-10 scale-150"
                     (click)="$event.stopPropagation(); detailsButtonClicked.emit()">+
             </button>

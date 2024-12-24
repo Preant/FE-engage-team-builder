@@ -23,7 +23,6 @@ import { ColorService } from '@/app/services/Color.service';
                         icon="pi pi-download"
                         (click)="$event.stopPropagation(); onExport.emit(team.id)"
                 />
-                <h3 class="text-lg font-semibold text-baby_powder-500">#{{ team.id }}</h3>
                 <h3 class="text-lg font-semibold text-baby_powder-500">{{ team.name }}</h3>
                 <button
                         class="text-paynes_gray-500 hover:text-mauve-500 transition-colors duration-200"

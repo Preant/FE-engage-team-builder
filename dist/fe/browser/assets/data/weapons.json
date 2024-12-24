@@ -1,0 +1,3874 @@
+[
+  {
+    "id": 1,
+    "identifier": "slim-sword",
+    "name": "Slim Sword",
+    "might": 3,
+    "hit": 100,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 2,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 500,
+    "description": "A light, unusually accurate sword.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 2,
+    "name": "Iron Sword",
+    "identifier": "iron-sword",
+    "might": 5,
+    "hit": 90,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 5,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 1000,
+    "description": "A standard sword made of iron─simple, but effective.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 3,
+    "name": "Steel Sword",
+    "identifier": "steel-sword",
+    "might": 9,
+    "hit": 85,
+    "crit": 5,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 8,
+    "weaponType": "SWORD",
+    "rank": "C",
+    "price": 2000,
+    "description": "A sword made of steel.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 4,
+    "name": "Silver Sword",
+    "identifier": "silver-sword",
+    "might": 12,
+    "hit": 90,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 11,
+    "weaponType": "SWORD",
+    "rank": "B",
+    "price": 4000,
+    "description": "An exceptional sword of rare metals.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 5,
+    "name": "Armorslayer",
+    "identifier": "armorslayer",
+    "might": 9,
+    "hit": 75,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 13,
+    "weaponType": "SWORD",
+    "rank": "C",
+    "price": 2500,
+    "description": "A sword made to penetrate heavy armor.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "ARMOR"
+    ],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 6,
+    "name": "Killing Edge",
+    "identifier": "killing-edge",
+    "might": 9,
+    "hit": 75,
+    "crit": 30,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 10,
+    "weaponType": "SWORD",
+    "rank": "C",
+    "price": 2500,
+    "description": "A sword especially well-suited to inflicting deadly wounds.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 7,
+    "name": "Levin Sword",
+    "identifier": "levin-sword",
+    "might": 13,
+    "hit": 85,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 11,
+    "weaponType": "SWORD",
+    "rank": "C",
+    "price": 3000,
+    "description": "A magical sword that can strike close or at range.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 8,
+    "name": "Wo Dao",
+    "identifier": "wo-dao",
+    "might": 6,
+    "hit": 90,
+    "crit": 20,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 7,
+    "weaponType": "SWORD",
+    "rank": "B",
+    "price": 2500,
+    "description": "A sword honed to a razor edge.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 9,
+    "name": "Wyrmslayer",
+    "identifier": "wyrmslayer",
+    "might": 8,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 12,
+    "weaponType": "SWORD",
+    "rank": "B",
+    "price": 2500,
+    "description": "A sword crafted specifically to fight dragons.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "DRAGON"
+    ],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 10,
+    "name": "Brave Sword",
+    "identifier": "brave-sword",
+    "might": 4,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 13,
+    "weaponType": "SWORD",
+    "rank": "A",
+    "price": 8000,
+    "description": "A sword built for expert wielders. If user initiates combat, attacks twice.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 11,
+    "name": "Libération",
+    "identifier": "liberation",
+    "might": 6,
+    "hit": 90,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 4,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 1000,
+    "description": "Divine Dragon only. Fills engage meter by 1 when user attacks and defeats a foe in a single turn.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": true
+  },
+  {
+    "id": 12,
+    "name": "Wille Glanz",
+    "identifier": "wille-glanz",
+    "might": 12,
+    "hit": 70,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 10,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 8000,
+    "description": "Divine Dragon only. A powerful sword that can strike close or at range.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": true
+  },
+  {
+    "id": 13,
+    "name": "Caladbolg",
+    "identifier": "caladbolg",
+    "might": 15,
+    "hit": 95,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 12,
+    "weaponType": "SWORD",
+    "rank": "S",
+    "price": 10000,
+    "description": "A legendary sword, famous for its great power.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": true
+  },
+  {
+    "id": 14,
+    "name": "Iron Blade",
+    "identifier": "iron-blade",
+    "might": 10,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 7,
+    "weaponType": "SWORD",
+    "rank": "C",
+    "price": 1500,
+    "description": "A massive sword that smashes foes. Cannot follow up, or strike first if initiating combat.",
+    "KnocksBack": true,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 15,
+    "name": "Steel Blade",
+    "identifier": "steel-blade",
+    "might": 18,
+    "hit": 75,
+    "crit": 5,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 10,
+    "weaponType": "SWORD",
+    "rank": "B",
+    "price": 3000,
+    "description": "A massive sword of steel that smashes foes. Cannot follow up, or strike first if initiating combat.",
+    "KnocksBack": true,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 16,
+    "name": "Silver Blade",
+    "identifier": "silver-blade",
+    "might": 24,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 13,
+    "weaponType": "SWORD",
+    "rank": "A",
+    "price": 6000,
+    "description": "A massive sword of rare metals that smashes foes. Cannot follow up, or strike first if initiating combat.",
+    "KnocksBack": true,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 17,
+    "name": "Georgios",
+    "identifier": "georgios",
+    "might": 32,
+    "hit": 90,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 18,
+    "weaponType": "SWORD",
+    "rank": "S",
+    "price": 10000,
+    "description": "A legendary blade that smashes foes. Cannot follow up, or strike first if initiating combat.",
+    "KnocksBack": true,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": true
+  },
+  {
+    "id": 18,
+    "name": "Fólkvangr",
+    "identifier": "folkvangr",
+    "might": 10,
+    "hit": 90,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 6,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 4000,
+    "description": "Sword of Alfonse, prince of Askr. Grants Atk+3 for 1 turn if user has 50% HP or less at start of turn.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": true
+  },
+  {
+    "id": 19,
+    "name": "Biting Blade",
+    "identifier": "biting-blade",
+    "might": 7,
+    "hit": 90,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 6,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 500,
+    "description": "Ddg+10, A sword with a sweet scent. Disappears when consumed as an item, but recovers user’s HP.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 20,
+    "name": "Rapier - Marth",
+    "identifier": "rapier-marth",
+    "might": 7,
+    "hit": 95,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 3,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 100,
+    "description": "Sword wielded by Emblem Marth.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "CAVALRY",
+      "ARMOR"
+    ],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 21,
+    "name": "Mercurius",
+    "identifier": "mercurius",
+    "might": 12,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 7,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 100,
+    "description": "Sword wielded by Emblem Marth. Doubles user's earned experience.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 22,
+    "name": "Falchion - Marth",
+    "identifier": "falchion-marth",
+    "might": 12,
+    "hit": 100,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 10,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 100,
+    "description": "Sacred sword wielded by Emblem Marth.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "DRAGON"
+    ],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 23,
+    "name": "Tyrfing",
+    "identifier": "tyrfing",
+    "might": 15,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 7,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 100,
+    "description": "Sword wielded by Emblem Sigurd. Grants Res+5.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 24,
+    "name": "Lancereaver",
+    "identifier": "lancereaver",
+    "might": 9,
+    "hit": 80,
+    "crit": 5,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 9,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 100,
+    "description": "Unusual sword wielded by Emblem Roy. Grants advantage vs. lances but disadvantage vs. axes.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 25,
+    "name": "Wyrmslayer - Roy",
+    "identifier": "wyrmslayer-roy",
+    "might": 10,
+    "hit": 70,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 5,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 100,
+    "description": "Sword wielded by Emblem Roy.",
+    "imageUrl": "wyrmslayer-roy.png",
+    "KnocksBack": false,
+    "effectiveness": [
+      "DRAGON"
+    ],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 26,
+    "name": "Binding Blade",
+    "identifier": "binding-blade",
+    "might": 14,
+    "hit": 95,
+    "crit": 10,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 8,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 100,
+    "description": "Famous sword wielded by Emblem Roy. Grants Def/Res+5. Can strike close or at range.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 27,
+    "name": "Light Brand",
+    "identifier": "light-brand",
+    "might": 15,
+    "hit": 75,
+    "crit": 20,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 6,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 100,
+    "description": "Magical sword wielded by Emblem Leif. Grants Lck+10. Can strike close or at range.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 28,
+    "name": "Noble Rapier",
+    "identifier": "noble-rapier",
+    "might": 8,
+    "hit": 85,
+    "crit": 10,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 8,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 100,
+    "description": "Sword wielded by Emblem Lucina.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "CAVALRY",
+      "ARMOR"
+    ],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 29,
+    "name": "Parallel Falchion",
+    "identifier": "parallel-falchion",
+    "might": 10,
+    "hit": 80,
+    "crit": 5,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 10,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 100,
+    "description": "Sacred sword wielded by Emblem Lucina.",
+    "KnocksBack": false,
+    "effectiveness": "DRAGON",
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 30,
+    "name": "Mani Katti",
+    "identifier": "mani-katti",
+    "might": 6,
+    "hit": 80,
+    "crit": 20,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 5,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 100,
+    "description": "Divine sword wielded by Emblem Lyn.",
+    "KnocksBack": false,
+    "effectiveness": "CAVALRY",
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 31,
+    "name": "Ragnell",
+    "identifier": "ragnell",
+    "might": 16,
+    "hit": 80,
+    "crit": 5,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 15,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 100,
+    "description": "Sacred sword wielded by Emblem Ike. Grants Def+5. Can strike close or at range.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 32,
+    "name": "Blutgang",
+    "identifier": "blutgang",
+    "might": 8,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 7,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 100,
+    "description": "Magical sword wielded by Emblem Byleth.",
+    "KnocksBack": false,
+    "effectiveness": "DRAGON",
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 33,
+    "name": "Sword of the Creator",
+    "identifier": "sword-of-the-creator",
+    "might": 11,
+    "hit": 90,
+    "crit": 10,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 7,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 100,
+    "description": "Sword of Emblem Byleth. Raises damage with user's Mag. Can strike close or at range.",
+    "KnocksBack": false,
+    "effectiveness": "DRAGON",
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 34,
+    "name": "Dual Katana",
+    "identifier": "dual-katana",
+    "might": 8,
+    "hit": 75,
+    "crit": 5,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 7,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 100,
+    "description": "Unusual sword wielded by Emblem Corrin. Grants advantage vs. lances but disadvantage vs. axes.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 35,
+    "name": "Wakizashi",
+    "identifier": "wakizashi",
+    "might": 10,
+    "hit": 75,
+    "crit": 0,
+    "range": [
+      2,
+      2
+    ],
+    "weight": 10,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 100,
+    "description": "Avo-10, Throwing sword wielded by Emblem Corrin. Can only strike at range, not close up.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 36,
+    "name": "Yato",
+    "identifier": "yato",
+    "might": 16,
+    "hit": 85,
+    "crit": 10,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 9,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 100,
+    "description": "Sacred sword wielded by Emblem Corrin.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 37,
+    "name": "Rapier - Eirika",
+    "identifier": "rapier-eirika",
+    "might": 7,
+    "hit": 95,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 3,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 100,
+    "description": "Sword wielded by Emblem Eirika.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "CAVALRY",
+      "ARMOR"
+    ],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 38,
+    "name": "Wind Sword",
+    "identifier": "wind-sword",
+    "might": 10,
+    "hit": 70,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 9,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 100,
+    "description": "Magical sword wielded by Emblem Eirika. Can strike close or at range.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "FLYING"
+    ],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 39,
+    "name": "Sieglinde",
+    "identifier": "sieglinde",
+    "might": 12,
+    "hit": 90,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 9,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 100,
+    "description": "Paired sword wielded by Emblem Eirika.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "FELL"
+    ],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 40,
+    "name": "Oligoludia",
+    "identifier": "oligoludia",
+    "might": 8,
+    "hit": 90,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 7,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 100,
+    "description": "Sword wielded by Emblem Alear.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "FELL"
+    ],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 41,
+    "name": "Lyrátion - Alear",
+    "identifier": "lyration-alear",
+    "might": 15,
+    "hit": 90,
+    "crit": 10,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 10,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 100,
+    "description": "Sword of Emblem Alear. If user defeats foe in player phase, fills adjacent allies' engage meters by 1.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 42,
+    "name": "Runesword",
+    "identifier": "runesword",
+    "might": 12,
+    "hit": 65,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 11,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 100,
+    "description": "Magic sword of Emblem Hector. Can strike close or at range. Restore HP equal to 50% of damage dealt.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 43,
+    "name": "Levin Sword - Robin",
+    "identifier": "levin-sword-robin",
+    "might": 10,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 8,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 100,
+    "description": "Magic sword wielded by Emblem Robin. Can hit foes with magic lightning from a distance.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 44,
+    "name": "Falchion - Chrom",
+    "identifier": "falchion-chrom",
+    "might": 13,
+    "hit": 80,
+    "crit": 10,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 12,
+    "weaponType": "SWORD",
+    "rank": "D",
+    "price": 100,
+    "description": "A legendary sword wielded by Emblem Chrom.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "DRAGON"
+    ],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 45,
+    "identifier": "slim-lance",
+    "name": "Slim Lance",
+    "might": 5,
+    "hit": 95,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 5,
+    "weaponType": "LANCE",
+    "rank": "D",
+    "price": 500,
+    "description": "Ddg+20, A light, unusually accurate lance.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 46,
+    "identifier": "iron-lance",
+    "name": "Iron Lance",
+    "might": 7,
+    "hit": 85,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 7,
+    "weaponType": "LANCE",
+    "rank": "D",
+    "price": 1000,
+    "description": "A standard lance made of iron─simple, but effective.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 47,
+    "identifier": "steel-lance",
+    "name": "Steel Lance",
+    "might": 11,
+    "hit": 75,
+    "crit": 5,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 10,
+    "weaponType": "LANCE",
+    "rank": "C",
+    "price": 2000,
+    "description": "A lance made of steel.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 48,
+    "identifier": "silver-lance",
+    "name": "Silver Lance",
+    "might": 14,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 13,
+    "weaponType": "LANCE",
+    "rank": "B",
+    "price": 4000,
+    "description": "An exceptional lance of rare metals.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 49,
+    "identifier": "javelin",
+    "name": "Javelin",
+    "might": 6,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 9,
+    "weaponType": "LANCE",
+    "rank": "D",
+    "price": 1800,
+    "description": "A light throwing lance that can strike close or at range.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 50,
+    "identifier": "ridersbane",
+    "name": "Ridersbane",
+    "might": 8,
+    "hit": 70,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 13,
+    "weaponType": "LANCE",
+    "rank": "D",
+    "price": 2500,
+    "description": "A lance designed for foes on horseback.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "CAVALRY"
+    ],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 51,
+    "identifier": "killer-lance",
+    "name": "Killer Lance",
+    "might": 7,
+    "hit": 75,
+    "crit": 30,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 9,
+    "weaponType": "LANCE",
+    "rank": "C",
+    "price": 3000,
+    "description": "A lance especially well-suited to inflicting deadly wounds.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 52,
+    "identifier": "flame-lance",
+    "name": "Flame Lance",
+    "might": 10,
+    "hit": 75,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 16,
+    "weaponType": "LANCE",
+    "rank": "C",
+    "price": 3000,
+    "description": "A magical lance that can strike close or at range.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 53,
+    "identifier": "spear",
+    "name": "Spear",
+    "might": 12,
+    "hit": 70,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 15,
+    "weaponType": "LANCE",
+    "rank": "B",
+    "price": 4500,
+    "description": "A powerful throwing lance that can strike close or at range.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 54,
+    "identifier": "brave-lance",
+    "name": "Brave Lance",
+    "might": 5,
+    "hit": 75,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 14,
+    "weaponType": "LANCE",
+    "rank": "A",
+    "price": 8000,
+    "description": "A lance built for expert wielders. If user initiates combat, attacks twice.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 55,
+    "identifier": "brionac",
+    "name": "Brionac",
+    "might": 17,
+    "hit": 70,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 17,
+    "weaponType": "LANCE",
+    "rank": "S",
+    "price": 10000,
+    "description": "A powerful lance of legend. Can strike close or at range.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": true
+  },
+  {
+    "id": 56,
+    "identifier": "iron-greatlance",
+    "name": "Iron Greatlance",
+    "might": 14,
+    "hit": 75,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 9,
+    "weaponType": "LANCE",
+    "rank": "C",
+    "price": 1500,
+    "description": "A massive lance that smashes foes. Cannot follow up, or strike first if initiating combat.",
+    "KnocksBack": true,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 57,
+    "identifier": "steel-greatlance",
+    "name": "Steel Greatlance",
+    "might": 22,
+    "hit": 65,
+    "crit": 5,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 12,
+    "weaponType": "LANCE",
+    "rank": "B",
+    "price": 3000,
+    "description": "A massive lance of steel that smashes foes. Cannot follow up, or strike first if initiating combat.",
+    "KnocksBack": true,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 58,
+    "identifier": "silver-greatlance",
+    "name": "Silver Greatlance",
+    "might": 28,
+    "hit": 70,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 15,
+    "weaponType": "LANCE",
+    "rank": "A",
+    "price": 6000,
+    "description": "A massive lance of rare metals that smashes foes. Cannot follow up, or strike first if initiating combat.",
+    "KnocksBack": true,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 59,
+    "identifier": "venomous",
+    "name": "Venomous",
+    "might": 34,
+    "hit": 80,
+    "crit": 10,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 20,
+    "weaponType": "LANCE",
+    "rank": "S",
+    "price": 10000,
+    "description": "A lance of legend that smashes and poisons hit foes. Cannot follow up, or strike first if initiating combat.",
+    "KnocksBack": true,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": true
+  },
+  {
+    "id": 60,
+    "identifier": "represailles",
+    "name": "Représailles",
+    "might": 13,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 9,
+    "weaponType": "LANCE",
+    "rank": "A",
+    "price": 4000,
+    "description": "Ddg+20, Battle lance that exudes an otherworldly air.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": true
+  },
+  {
+    "id": 61,
+    "identifier": "fensalir",
+    "name": "Fensalir",
+    "might": 12,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 8,
+    "weaponType": "LANCE",
+    "rank": "D",
+    "price": 4000,
+    "description": "Lance of Sharena, princess of Askr. Inflicts Atk-2 for 1 turn on adjacent foes at the start of player phase.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": true
+  },
+  {
+    "id": 62,
+    "identifier": "swirlance",
+    "name": "Swirlance",
+    "might": 9,
+    "hit": 85,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 8,
+    "weaponType": "LANCE",
+    "rank": "D",
+    "price": 500,
+    "description": "Ddg+10, A lance with a sweet scent. Disappears when consumed as an item, but recovers user's HP.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 63,
+    "identifier": "ridersbane-sigurd",
+    "name": "Ridersbane",
+    "might": 10,
+    "hit": 75,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 6,
+    "weaponType": "LANCE",
+    "rank": "D",
+    "price": 100,
+    "description": "Lance wielded by Emblem Sigurd.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "CAVALRY"
+    ],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 64,
+    "identifier": "brave-lance-sigurd",
+    "name": "Brave Lance",
+    "might": 7,
+    "hit": 60,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 12,
+    "weaponType": "LANCE",
+    "rank": "D",
+    "price": 100,
+    "description": "Lance wielded by Emblem Sigurd. If user initiates combat, attacks twice.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 65,
+    "identifier": "master-lance",
+    "name": "Master Lance",
+    "might": 7,
+    "hit": 55,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 16,
+    "weaponType": "LANCE",
+    "rank": "D",
+    "price": 100,
+    "description": "Lance wielded by Emblem Leif. If user initiates combat, attacks twice. Can strike close or at range.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 66,
+    "identifier": "luin",
+    "name": "Lúin",
+    "might": 11,
+    "hit": 90,
+    "crit": 10,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 9,
+    "weaponType": "LANCE",
+    "rank": "D",
+    "price": 100,
+    "description": "Lance wielded by Emblem Byleth. Raises damage based on user's Spd. Effective: Dragon. [+1 damage for every 3 Spd.]",
+    "KnocksBack": false,
+    "effectiveness": [
+      "DRAGON"
+    ],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 67,
+    "identifier": "areadbhar-byleth",
+    "name": "Areadbhar",
+    "might": 14,
+    "hit": 75,
+    "crit": 10,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 9,
+    "weaponType": "LANCE",
+    "rank": "D",
+    "price": 100,
+    "description": "Lance wielded by Emblem Byleth. If user initiates combat, grants Mt+50%.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 68,
+    "identifier": "siegmund",
+    "name": "Siegmund",
+    "might": 13,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 11,
+    "weaponType": "LANCE",
+    "rank": "D",
+    "price": 100,
+    "description": "Paired lance wielded by Emblem Ephraim. Effective: Corrupted.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "FELL"
+    ],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 69,
+    "identifier": "areadbhar-dimitri",
+    "name": "Areadbhar",
+    "might": 14,
+    "hit": 75,
+    "crit": 10,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 9,
+    "weaponType": "LANCE",
+    "rank": "D",
+    "price": 100,
+    "description": "Lance wielded by Emblem Dimitri. If user initiates combat, grants Mt+50%.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 70,
+    "identifier": "compact-axe",
+    "name": "Compact Axe",
+    "might": 6,
+    "hit": 90,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 7,
+    "weaponType": "AXE",
+    "rank": "D",
+    "price": 500,
+    "description": "Ddg+20, A light, unusually accurate axe.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 71,
+    "identifier": "iron-axe",
+    "name": "Iron Axe",
+    "might": 9,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 10,
+    "weaponType": "AXE",
+    "rank": "D",
+    "price": 1000,
+    "description": "A standard axe made of iron─simple, but effective.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 72,
+    "identifier": "steel-axe",
+    "name": "Steel Axe",
+    "might": 13,
+    "hit": 65,
+    "crit": 5,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 12,
+    "weaponType": "AXE",
+    "rank": "C",
+    "price": 2000,
+    "description": "An axe made of steel.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 73,
+    "identifier": "silver-axe",
+    "name": "Silver Axe",
+    "might": 16,
+    "hit": 70,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 15,
+    "weaponType": "AXE",
+    "rank": "B",
+    "price": 4000,
+    "description": "An exceptional axe of rare metals.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 74,
+    "identifier": "hand-axe",
+    "name": "Hand Axe",
+    "might": 7,
+    "hit": 70,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 12,
+    "weaponType": "AXE",
+    "rank": "D",
+    "price": 1800,
+    "description": "A light throwing axe that can strike close or at range.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 75,
+    "identifier": "hammer",
+    "name": "Hammer",
+    "might": 9,
+    "hit": 60,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 15,
+    "weaponType": "AXE",
+    "rank": "D",
+    "price": 2500,
+    "description": "A war hammer made to crack through heavy armor.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "ARMOR"
+    ],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 76,
+    "identifier": "poleaxe",
+    "name": "Poleaxe",
+    "might": 8,
+    "hit": 60,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 14,
+    "weaponType": "AXE",
+    "rank": "D",
+    "price": 2500,
+    "description": "An axe whose long handle helps reach mounted foes.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "CAVALRY"
+    ],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 77,
+    "identifier": "killer-axe",
+    "name": "Killer Axe",
+    "might": 11,
+    "hit": 65,
+    "crit": 30,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 12,
+    "weaponType": "AXE",
+    "rank": "C",
+    "price": 3000,
+    "description": "An axe especially well-suited to inflicting deadly wounds.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 78,
+    "identifier": "tomahawk",
+    "name": "Tomahawk",
+    "might": 14,
+    "hit": 60,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 16,
+    "weaponType": "AXE",
+    "rank": "B",
+    "price": 4500,
+    "description": "A powerful throwing axe that can strike close or at range.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 79,
+    "identifier": "brave-axe",
+    "name": "Brave Axe",
+    "might": 6,
+    "hit": 70,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 16,
+    "weaponType": "AXE",
+    "rank": "A",
+    "price": 8000,
+    "description": "An axe built for expert wielders. If user initiates combat, attacks twice.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 80,
+    "identifier": "fragarach",
+    "name": "Fragarach",
+    "might": 19,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 16,
+    "weaponType": "AXE",
+    "rank": "S",
+    "price": 10000,
+    "description": "A legendary axe.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": true
+  },
+  {
+    "id": 81,
+    "identifier": "iron-greataxe",
+    "name": "Iron Greataxe",
+    "might": 18,
+    "hit": 70,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 12,
+    "weaponType": "AXE",
+    "rank": "C",
+    "price": 1500,
+    "description": "A massive axe that smashes foes. Cannot follow up, or strike first if initiating combat.",
+    "KnocksBack": true,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 82,
+    "identifier": "steel-greataxe",
+    "name": "Steel Greataxe",
+    "might": 26,
+    "hit": 55,
+    "crit": 5,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 14,
+    "weaponType": "AXE",
+    "rank": "B",
+    "price": 3000,
+    "description": "A massive axe of steel that smashes foes. Cannot follow up, or strike first if initiating combat.",
+    "KnocksBack": true,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 83,
+    "identifier": "silver-greataxe",
+    "name": "Silver Greataxe",
+    "might": 32,
+    "hit": 60,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 17,
+    "weaponType": "AXE",
+    "rank": "A",
+    "price": 6000,
+    "description": "A massive axe of rare metals that smashes foes. Cannot follow up, or strike first if initiating combat.",
+    "KnocksBack": true,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 84,
+    "identifier": "hurricane-axe",
+    "name": "Hurricane Axe",
+    "might": 20,
+    "hit": 70,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 15,
+    "weaponType": "AXE",
+    "rank": "B",
+    "price": 3000,
+    "description": "A magical axe that smashes foes. Cannot follow up, or strike first if initiating combat.",
+    "KnocksBack": true,
+    "effectiveness": [
+      "FLYING"
+    ],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 85,
+    "identifier": "ukonvasara",
+    "name": "Ukonvasara",
+    "might": 38,
+    "hit": 70,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 24,
+    "weaponType": "AXE",
+    "rank": "S",
+    "price": 10000,
+    "description": "A huge, legendary axe that smashes foes. Cannot follow up, or strike first if initiating combat.",
+    "KnocksBack": true,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": true
+  },
+  {
+    "id": 86,
+    "identifier": "revanche",
+    "name": "Revanche",
+    "might": 10,
+    "hit": 70,
+    "crit": 20,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 12,
+    "weaponType": "AXE",
+    "rank": "A",
+    "price": 4000,
+    "description": "Battle axe that exudes an otherworldly air.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": true
+  },
+  {
+    "id": 87,
+    "identifier": "noatun",
+    "name": "Nóatún",
+    "might": 14,
+    "hit": 75,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 10,
+    "weaponType": "AXE",
+    "rank": "D",
+    "price": 4000,
+    "description": "Axe of Anna, a commander in Askr. Grants Mov+1 for 1 turn when user has 40% HP or less at start of turn.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": true
+  },
+  {
+    "id": 88,
+    "identifier": "lollichop",
+    "name": "Lollichop",
+    "might": 11,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 11,
+    "weaponType": "AXE",
+    "rank": "D",
+    "price": 500,
+    "description": "Ddg+10, An axe with a sweet scent. Disappears when consumed as an item, but recovers user's HP.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 89,
+    "identifier": "killer-axe-leif",
+    "name": "Killer Axe - Leif",
+    "might": 11,
+    "hit": 65,
+    "crit": 30,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 11,
+    "weaponType": "AXE",
+    "rank": "D",
+    "price": 100,
+    "description": "Axe wielded by Emblem Leif. Easily inflicts fatal wounds.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 90,
+    "identifier": "hammer-ike",
+    "name": "Hammer - Ike",
+    "might": 18,
+    "hit": 55,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 15,
+    "weaponType": "AXE",
+    "rank": "D",
+    "price": 100,
+    "description": "Hammer of Emblem Ike. Smashes foes. Cannot follow up, or strike first if initiating combat.",
+    "KnocksBack": true,
+    "effectiveness": [
+      "ARMOR"
+    ],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 91,
+    "identifier": "urvan",
+    "name": "Urvan",
+    "might": 21,
+    "hit": 90,
+    "crit": 5,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 19,
+    "weaponType": "AXE",
+    "rank": "D",
+    "price": 100,
+    "description": "Heirloom axe wielded by Emblem Ike. Grants Res+3.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 92,
+    "identifier": "aymr-edelgard",
+    "name": "Aymr - Edelgard",
+    "might": 24,
+    "hit": 60,
+    "crit": 20,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 11,
+    "weaponType": "AXE",
+    "rank": "D",
+    "price": 100,
+    "description": "Relic axe of Emblem Edelgard. Effective against dragons, cannot follow up or strike first if initiating combat.",
+    "KnocksBack": true,
+    "effectiveness": [
+      "DRAGON"
+    ],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 93,
+    "identifier": "aymr-byleth",
+    "name": "Aymr - Byleth",
+    "might": 22,
+    "hit": 65,
+    "crit": 15,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 10,
+    "weaponType": "AXE",
+    "rank": "D",
+    "price": 100,
+    "description": "Relic axe of Emblem Byleth. Effective against dragons, grants Str+3 during combat.",
+    "KnocksBack": true,
+    "effectiveness": [
+      "DRAGON"
+    ],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 94,
+    "identifier": "wolf-beil",
+    "name": "Wolf Beil",
+    "might": 10,
+    "hit": 75,
+    "crit": 5,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 10,
+    "weaponType": "AXE",
+    "rank": "D",
+    "price": 100,
+    "description": "Axe wielded by Emblem Hector. Effective: Cavalry, Armored.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "CAVALRY",
+      "ARMOR"
+    ],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 95,
+    "identifier": "armads",
+    "name": "Armads",
+    "might": 22,
+    "hit": 85,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 18,
+    "weaponType": "AXE",
+    "rank": "D",
+    "price": 100,
+    "description": "Lightning-charged axe wielded by Emblem Hector. Grants Def+5.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "DRAGON"
+    ],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 96,
+    "identifier": "bolt-axe",
+    "name": "Bolt Axe",
+    "might": 14,
+    "hit": 65,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 9,
+    "weaponType": "AXE",
+    "rank": "D",
+    "price": 100,
+    "description": "Magic axe wielded by Emblem Camilla. Can strike close or at range.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 97,
+    "identifier": "camillas-axe",
+    "name": "Camilla's Axe",
+    "might": 19,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 11,
+    "weaponType": "AXE",
+    "rank": "D",
+    "price": 100,
+    "description": "Axe wielded by Emblem Camilla. Grants Res+10 and deals extra damage = foe's Res-Def.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 98,
+    "identifier": "mini-bow",
+    "name": "Mini Bow",
+    "might": 3,
+    "hit": 100,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 4,
+    "weaponType": "BOW",
+    "rank": "D",
+    "price": 500,
+    "description": "Ddg+20, An easy-to-use, short-range bow.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "FLYING"
+    ],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 99,
+    "identifier": "iron-bow",
+    "name": "Iron Bow",
+    "might": 6,
+    "hit": 90,
+    "crit": 0,
+    "range": [
+      2,
+      2
+    ],
+    "weight": 5,
+    "weaponType": "BOW",
+    "rank": "D",
+    "price": 1000,
+    "description": "A standard bow made of iron.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "FLYING"
+    ],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 100,
+    "identifier": "steel-bow",
+    "name": "Steel Bow",
+    "might": 10,
+    "hit": 80,
+    "crit": 5,
+    "range": [
+      2,
+      2
+    ],
+    "weight": 7,
+    "weaponType": "BOW",
+    "rank": "C",
+    "price": 2000,
+    "description": "A bow made of steel.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "FLYING"
+    ],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 101,
+    "identifier": "silver-bow",
+    "name": "Silver Bow",
+    "might": 13,
+    "hit": 85,
+    "crit": 0,
+    "range": [
+      2,
+      2
+    ],
+    "weight": 10,
+    "weaponType": "BOW",
+    "rank": "B",
+    "price": 4000,
+    "description": "An exceptional bow of rare metals.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "FLYING"
+    ],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 102,
+    "identifier": "longbow",
+    "name": "Longbow",
+    "might": 7,
+    "hit": 70,
+    "crit": 0,
+    "range": [
+      2,
+      3
+    ],
+    "weight": 10,
+    "weaponType": "BOW",
+    "rank": "C",
+    "price": 2000,
+    "description": "A bow made to fire at longer ranges.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "FLYING"
+    ],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 103,
+    "identifier": "killer-bow",
+    "name": "Killer Bow",
+    "might": 7,
+    "hit": 75,
+    "crit": 30,
+    "range": [
+      2,
+      2
+    ],
+    "weight": 7,
+    "weaponType": "BOW",
+    "rank": "C",
+    "price": 3000,
+    "description": "A bow especially well-suited to inflicting deadly wounds.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "FLYING"
+    ],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 104,
+    "identifier": "radiant-bow",
+    "name": "Radiant Bow",
+    "might": 19,
+    "hit": 75,
+    "crit": 0,
+    "range": [
+      2,
+      2
+    ],
+    "weight": 12,
+    "weaponType": "BOW",
+    "rank": "C",
+    "price": 3000,
+    "description": "A magical bow whose arrows pierce with light.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "FLYING"
+    ],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 105,
+    "identifier": "brave-bow",
+    "name": "Brave Bow",
+    "might": 4,
+    "hit": 75,
+    "crit": 0,
+    "range": [
+      2,
+      2
+    ],
+    "weight": 11,
+    "weaponType": "BOW",
+    "rank": "A",
+    "price": 8000,
+    "description": "A bow built for expert wielders. If user initiates combat, attacks twice.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "FLYING"
+    ],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 106,
+    "identifier": "lendabair",
+    "name": "Lendabair",
+    "might": 16,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      2,
+      2
+    ],
+    "weight": 11,
+    "weaponType": "BOW",
+    "rank": "S",
+    "price": 10000,
+    "description": "A bow wielded by legends.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "FLYING"
+    ],
+    "isEngageWeapon": false,
+    "isUnique": true
+  },
+  {
+    "id": 107,
+    "identifier": "croissbow",
+    "name": "Croissbow",
+    "might": 8,
+    "hit": 90,
+    "crit": 0,
+    "range": [
+      2,
+      2
+    ],
+    "weight": 6,
+    "weaponType": "BOW",
+    "rank": "D",
+    "price": 500,
+    "description": "Ddg+10, A bow with a sweet scent. Disappears when consumed as an item, but recovers user's HP.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "FLYING"
+    ],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 108,
+    "identifier": "master-bow",
+    "name": "Master Bow",
+    "might": 6,
+    "hit": 65,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 14,
+    "weaponType": "BOW",
+    "rank": "D",
+    "price": 100,
+    "description": "(Used during Emblem Leif's Engage attack)",
+    "KnocksBack": false,
+    "effectiveness": [
+      "FLYING"
+    ],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 109,
+    "identifier": "parthia",
+    "name": "Parthia",
+    "might": 17,
+    "hit": 95,
+    "crit": 5,
+    "range": [
+      2,
+      2
+    ],
+    "weight": 14,
+    "weaponType": "BOW",
+    "rank": "D",
+    "price": 100,
+    "description": "Bow wielded by Emblem Lucina. Doubles user's earned experience. Grants Res+5.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "FLYING"
+    ],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 110,
+    "identifier": "killer-bow-lyn",
+    "name": "Killer Bow",
+    "might": 9,
+    "hit": 75,
+    "crit": 30,
+    "range": [
+      2,
+      2
+    ],
+    "weight": 7,
+    "weaponType": "BOW",
+    "rank": "D",
+    "price": 100,
+    "description": "Bow wielded by Emblem Lyn. Easily inflicts fatal wounds.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "FLYING"
+    ],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 111,
+    "identifier": "mulagir",
+    "name": "Mulagir",
+    "might": 16,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      2,
+      2
+    ],
+    "weight": 9,
+    "weaponType": "BOW",
+    "rank": "D",
+    "price": 100,
+    "description": "Mighty bow wielded by Emblem Lyn. Grants Spd+5.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "FLYING",
+      "DRAGON"
+    ],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 112,
+    "identifier": "failnaught-byleth",
+    "name": "Failnaught",
+    "might": 13,
+    "hit": 75,
+    "crit": 20,
+    "range": [
+      2,
+      3
+    ],
+    "weight": 9,
+    "weaponType": "BOW",
+    "rank": "D",
+    "price": 100,
+    "description": "Bow wielded by Emblem Byleth. If user initiates combat, grants Avo+20.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "DRAGON",
+      "FLYING"
+    ],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 113,
+    "identifier": "failnaught-claude",
+    "name": "Failnaught",
+    "might": 13,
+    "hit": 75,
+    "crit": 20,
+    "range": [
+      2,
+      3
+    ],
+    "weight": 9,
+    "weaponType": "BOW",
+    "rank": "D",
+    "price": 100,
+    "description": "Bow wielded by Emblem Claude. If user initiates combat, grants Avo+20.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "DRAGON",
+      "FLYING"
+    ],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 114,
+    "identifier": "short-knife",
+    "name": "Short Knife",
+    "might": 3,
+    "hit": 110,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 2,
+    "weaponType": "DAGGER",
+    "rank": "D",
+    "price": 500,
+    "description": "Ddg+20, An easy-to-use throwing knife. Poisons hit foes.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 115,
+    "identifier": "iron-dagger",
+    "name": "Iron Dagger",
+    "might": 5,
+    "hit": 100,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 3,
+    "weaponType": "DAGGER",
+    "rank": "D",
+    "price": 1000,
+    "description": "A standard throwing knife. Poisons hit foes.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 116,
+    "identifier": "steel-dagger",
+    "name": "Steel Dagger",
+    "might": 7,
+    "hit": 80,
+    "crit": 5,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 5,
+    "weaponType": "DAGGER",
+    "rank": "C",
+    "price": 2000,
+    "description": "A throwing knife made of steel. Poisons hit foes.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 117,
+    "identifier": "silver-dagger",
+    "name": "Silver Dagger",
+    "might": 10,
+    "hit": 90,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 7,
+    "weaponType": "DAGGER",
+    "rank": "B",
+    "price": 4000,
+    "description": "A throwing knife made of rare metals. Poisons hit foes.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 118,
+    "identifier": "kard",
+    "name": "Kard",
+    "might": 5,
+    "hit": 95,
+    "crit": 10,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 5,
+    "weaponType": "DAGGER",
+    "rank": "C",
+    "price": 1000,
+    "description": "A fighting knife intended for close combat. Poisons hit foes.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 119,
+    "identifier": "stiletto",
+    "name": "Stiletto",
+    "might": 9,
+    "hit": 75,
+    "crit": 15,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 7,
+    "weaponType": "DAGGER",
+    "rank": "B",
+    "price": 2000,
+    "description": "A fighting knife intended for close combat. Poisons hit foes.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 120,
+    "identifier": "peshkatz",
+    "name": "Peshkatz",
+    "might": 12,
+    "hit": 85,
+    "crit": 20,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 9,
+    "weaponType": "DAGGER",
+    "rank": "A",
+    "price": 4000,
+    "description": "A fighting knife intended for close combat. Poisons hit foes.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 121,
+    "identifier": "misericorde",
+    "name": "Misericorde",
+    "might": 7,
+    "hit": 90,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 6,
+    "weaponType": "DAGGER",
+    "rank": "D",
+    "price": 8000,
+    "description": "Veyle only. An enchanted throwing knife that inflicts magic damage and poisons hit foes.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": true
+  },
+  {
+    "id": 122,
+    "identifier": "cinquedea",
+    "name": "Cinquedea",
+    "might": 13,
+    "hit": 85,
+    "crit": 10,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 8,
+    "weaponType": "DAGGER",
+    "rank": "S",
+    "price": 10000,
+    "description": "A legendary throwing knife that poisons hit foes.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": true
+  },
+  {
+    "id": 123,
+    "identifier": "carnwenhan",
+    "name": "Carnwenhan",
+    "might": 28,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 13,
+    "weaponType": "DAGGER",
+    "rank": "S",
+    "price": 10000,
+    "description": "A legendary short sword. Smashes and poisons hit foes. Cannot follow up, or strike first if initiating combat.",
+    "KnocksBack": true,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": true
+  },
+  {
+    "id": 124,
+    "identifier": "confectioknife",
+    "name": "Confectioknife",
+    "might": 6,
+    "hit": 100,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 3,
+    "weaponType": "DAGGER",
+    "rank": "D",
+    "price": 500,
+    "description": "Ddg+10, A knife with a sweet scent. Disappears when consumed as an item, but recovers user's HP.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 125,
+    "identifier": "surge",
+    "name": "Surge",
+    "might": 7,
+    "hit": 255,
+    "crit": 5,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 5,
+    "weaponType": "TOME",
+    "rank": "D",
+    "price": 1500,
+    "description": "A basic attack tome that can only be used in close combat.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 126,
+    "identifier": "fire",
+    "name": "Fire",
+    "might": 5,
+    "hit": 95,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 4,
+    "weaponType": "TOME",
+    "rank": "D",
+    "price": 1000,
+    "description": "A standard tome of fire magic.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 127,
+    "identifier": "thunder",
+    "name": "Thunder",
+    "might": 5,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      3
+    ],
+    "weight": 10,
+    "weaponType": "TOME",
+    "rank": "D",
+    "price": 1000,
+    "description": "A standard tome of thunder magic. Cannot follow up.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 128,
+    "identifier": "wind",
+    "name": "Wind",
+    "might": 4,
+    "hit": 90,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 4,
+    "weaponType": "TOME",
+    "rank": "C",
+    "price": 1000,
+    "description": "A standard tome of wind magic.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "FLYING"
+    ],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 129,
+    "identifier": "elsurge",
+    "name": "Elsurge",
+    "might": 13,
+    "hit": 255,
+    "crit": 5,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 7,
+    "weaponType": "TOME",
+    "rank": "C",
+    "price": 2500,
+    "description": "An advanced attack tome that can only be used in close combat.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 130,
+    "identifier": "elfire",
+    "name": "Elfire",
+    "might": 11,
+    "hit": 90,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 7,
+    "weaponType": "TOME",
+    "rank": "C",
+    "price": 2000,
+    "description": "An advanced fire tome.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 131,
+    "identifier": "elthunder",
+    "name": "Elthunder",
+    "might": 11,
+    "hit": 75,
+    "crit": 0,
+    "range": [
+      1,
+      3
+    ],
+    "weight": 13,
+    "weaponType": "TOME",
+    "rank": "B",
+    "price": 2000,
+    "description": "An advanced thunder tome. Cannot follow up.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 132,
+    "identifier": "elwind",
+    "name": "Elwind",
+    "might": 7,
+    "hit": 85,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 6,
+    "weaponType": "TOME",
+    "rank": "B",
+    "price": 2000,
+    "description": "An advanced wind tome.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "FLYING"
+    ],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 133,
+    "identifier": "bolganone",
+    "name": "Bolganone",
+    "might": 16,
+    "hit": 85,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 11,
+    "weaponType": "TOME",
+    "rank": "A",
+    "price": 4000,
+    "description": "A truly mighty fire tome.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 134,
+    "identifier": "thoron",
+    "name": "Thoron",
+    "might": 18,
+    "hit": 70,
+    "crit": 0,
+    "range": [
+      1,
+      3
+    ],
+    "weight": 16,
+    "weaponType": "TOME",
+    "rank": "A",
+    "price": 4000,
+    "description": "A truly mighty thunder tome. Cannot follow up.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 135,
+    "identifier": "excalibur",
+    "name": "Excalibur",
+    "might": 10,
+    "hit": 80,
+    "crit": 5,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 9,
+    "weaponType": "TOME",
+    "rank": "A",
+    "price": 4000,
+    "description": "A truly mighty wind tome.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "FLYING"
+    ],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 136,
+    "identifier": "nova",
+    "name": "Nova",
+    "might": 5,
+    "hit": 75,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 14,
+    "weaponType": "TOME",
+    "rank": "S",
+    "price": 10000,
+    "description": "An extremely potent tome. If user initiates combat, attacks twice.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": true
+  },
+  {
+    "id": 137,
+    "identifier": "meteor",
+    "name": "Meteor",
+    "might": 13,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      3,
+      7
+    ],
+    "weight": 20,
+    "weaponType": "TOME",
+    "rank": "A",
+    "price": 100,
+    "description": "A tome of long-range attack magic. Cannot be used at shorter ranges.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": true
+  },
+  {
+    "id": 138,
+    "identifier": "obscurite",
+    "name": "Obscurité",
+    "might": 14,
+    "hit": 80,
+    "crit": 10,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 12,
+    "weaponType": "TOME",
+    "rank": "D",
+    "price": 8000,
+    "description": "Fell Dragon only. Truly mighty dark magic.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": true
+  },
+  {
+    "id": 139,
+    "identifier": "tiramistorm",
+    "name": "Tiramistorm",
+    "might": 8,
+    "hit": 85,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 6,
+    "weaponType": "TOME",
+    "rank": "D",
+    "price": 500,
+    "description": "Ddg+10, A tome with a sweet scent. Disappears when consumed as an item, but recovers user's HP.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 140,
+    "identifier": "seraphim",
+    "name": "Seraphim",
+    "might": 6,
+    "hit": 90,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 4,
+    "weaponType": "TOME",
+    "rank": "D",
+    "price": 100,
+    "description": "Holy tome wielded by Emblem Celica.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "FELL"
+    ],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 141,
+    "identifier": "ragnarok",
+    "name": "Ragnarok",
+    "might": 15,
+    "hit": 95,
+    "crit": 10,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 12,
+    "weaponType": "TOME",
+    "rank": "D",
+    "price": 100,
+    "description": "Mighty fire tome wielded by Emblem Celica.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 142,
+    "identifier": "shine",
+    "name": "Shine",
+    "might": 7,
+    "hit": 90,
+    "crit": 10,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 5,
+    "weaponType": "TOME",
+    "rank": "D",
+    "price": 100,
+    "description": "Light tome wielded by Emblem Micaiah. Illuminates a 5-space radius (shrinks one space per turn).",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 143,
+    "identifier": "nosferatu",
+    "name": "Nosferatu",
+    "might": 9,
+    "hit": 85,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 7,
+    "weaponType": "TOME",
+    "rank": "D",
+    "price": 100,
+    "description": "Light tome wielded by Emblem Micaiah. User recovers HP equal to 50% of damage dealt.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 144,
+    "identifier": "thani",
+    "name": "Thani",
+    "might": 11,
+    "hit": 100,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 6,
+    "weaponType": "TOME",
+    "rank": "D",
+    "price": 100,
+    "description": "Mighty light tome wielded by Emblem Micaiah.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "CAVALRY",
+      "ARMOR"
+    ],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 145,
+    "identifier": "hlidskjalf",
+    "name": "Hliðskjálf",
+    "might": 13,
+    "hit": 70,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 7,
+    "weaponType": "TOME",
+    "rank": "D",
+    "price": 100,
+    "description": "A staff wielded by Emblem Veronica. If user initiates combat, foe cannot counterattack.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 146,
+    "identifier": "elivagar",
+    "name": "Élivágar",
+    "might": 18,
+    "hit": 85,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 10,
+    "weaponType": "TOME",
+    "rank": "D",
+    "price": 100,
+    "description": "Powerful magic wielded by Emblem Veronica. Nullifies basic stat bonuses on target for 1 turn after combat.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 147,
+    "identifier": "bolting",
+    "name": "Bolting",
+    "might": 25,
+    "hit": 0,
+    "crit": 15,
+    "range": [
+      3,
+      10
+    ],
+    "weight": 15,
+    "weaponType": "TOME",
+    "rank": "D",
+    "price": 100,
+    "description": "Long-range thunder magic wielded by Emblem Soren. Cannot follow up.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 148,
+    "identifier": "rexcalibur",
+    "name": "Rexcalibur",
+    "might": 16,
+    "hit": 105,
+    "crit": 10,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 12,
+    "weaponType": "TOME",
+    "rank": "D",
+    "price": 100,
+    "description": "Powerful wind magic wielded by Emblem Soren.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "FLYING"
+    ],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 149,
+    "identifier": "lightning",
+    "name": "Lightning",
+    "might": 3,
+    "hit": 75,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 10,
+    "weaponType": "TOME",
+    "rank": "D",
+    "price": 100,
+    "description": "Magic wielded by Emblem Camilla. If user initiates combat, attacks twice.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 150,
+    "identifier": "thoron-robin",
+    "name": "Thoron",
+    "might": 14,
+    "hit": 65,
+    "crit": 10,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 7,
+    "weaponType": "TOME",
+    "rank": "D",
+    "price": 100,
+    "description": "Powerful lightning magic wielded by Emblem Robin.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 151,
+    "identifier": "initiate-art",
+    "name": "Initiate Art",
+    "might": 5,
+    "hit": 95,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 5,
+    "weaponType": "ART",
+    "rank": "D",
+    "price": 500,
+    "description": "Ddg+30, A scroll of a fundamental martial skill. As a basic text, it does not attack twice.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 152,
+    "identifier": "iron-body-art",
+    "name": "Iron-Body Art",
+    "might": 2,
+    "hit": 90,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 3,
+    "weaponType": "ART",
+    "rank": "D",
+    "price": 1000,
+    "description": "A scroll of a basic martial skill. If user initiates combat, attacks twice.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 153,
+    "identifier": "steel-hand-art",
+    "name": "Steel-Hand Art",
+    "might": 5,
+    "hit": 70,
+    "crit": 5,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 5,
+    "weaponType": "ART",
+    "rank": "C",
+    "price": 2000,
+    "description": "A scroll of a standard martial skill. If user initiates combat, attacks twice.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 154,
+    "identifier": "silver-spirit-art",
+    "name": "Silver-Spirit Art",
+    "might": 8,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 7,
+    "weaponType": "ART",
+    "rank": "B",
+    "price": 4000,
+    "description": "A scroll of a highly polished martial skill. If user initiates combat, attacks twice.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 155,
+    "identifier": "shielding-art",
+    "name": "Shielding Art",
+    "might": 4,
+    "hit": 70,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 8,
+    "weaponType": "ART",
+    "rank": "C",
+    "price": 2500,
+    "description": "A scroll of a defensive martial skill. Grants Def+5.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 156,
+    "identifier": "flashing-fist-art",
+    "name": "Flashing Fist Art",
+    "might": 9,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 9,
+    "weaponType": "ART",
+    "rank": "A",
+    "price": 6000,
+    "description": "A scroll of brash martial skill. Grants Spd+5, but user takes +5 damage. If user initiates combat, attacks twice.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 157,
+    "identifier": "divine-fist-art",
+    "name": "Divine Fist Art",
+    "might": 11,
+    "hit": 75,
+    "crit": 10,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 12,
+    "weaponType": "ART",
+    "rank": "S",
+    "price": 10000,
+    "description": "A scroll of a legendary martial skill. If user initiates combat, attacks twice.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 158,
+    "identifier": "scrollcake",
+    "name": "Scrollcake",
+    "might": 3,
+    "hit": 90,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 4,
+    "weaponType": "ART",
+    "rank": "D",
+    "price": 500,
+    "description": "Ddg+10, A martial skill scroll with a sweet scent. Disappears when consumed as an item, but recovers user's HP.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 159,
+    "identifier": "vajra-mushti",
+    "name": "Vajra-Mushti",
+    "might": 5,
+    "hit": 90,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 7,
+    "weaponType": "ART",
+    "rank": "D",
+    "price": 100,
+    "description": "Gauntlets wielded by Emblem Byleth. If user initiates combat, attacks twice. Uses lowest of foe's Def/Res.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 160,
+    "identifier": "dragons-fist",
+    "name": "Dragon's Fist",
+    "might": 10,
+    "hit": 85,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 9,
+    "weaponType": "ART",
+    "rank": "D",
+    "price": 100,
+    "description": "Magical attack wielded by Emblem Alear. If user initiates combat, attacks twice. (Uses Mag.)",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": true,
+    "isUnique": true
+  },
+  {
+    "id": 161,
+    "identifier": "fell-stone",
+    "name": "Fell Stone",
+    "might": 10,
+    "hit": 100,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 9,
+    "weaponType": "DRAGONSTONE",
+    "rank": "B",
+    "price": 1000,
+    "description": "A dragonstone that holds the Fell Dragon's power. Halves foe Def/Res.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 162,
+    "identifier": "fell-ruinstone",
+    "name": "Fell Ruinstone",
+    "might": 6,
+    "hit": 80,
+    "crit": 0,
+    "range": [
+      1,
+      2
+    ],
+    "weight": 12,
+    "weaponType": "DRAGONSTONE",
+    "rank": "S",
+    "price": 5000,
+    "description": "A dragonstone that holds a Fell Dragon's power. Halves foe Def/Res. Can strike close or at range.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 163,
+    "identifier": "fell-magicstone",
+    "name": "Fell Magicstone",
+    "might": 6,
+    "hit": 85,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 10,
+    "weaponType": "DRAGONSTONE",
+    "rank": "A",
+    "price": 3000,
+    "description": "A dragonstone that holds a Fell Dragon's power. Magic attack using physical power. Halves foe Def/Res.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 164,
+    "identifier": "fell-slaystone",
+    "name": "Fell Slaystone",
+    "might": 6,
+    "hit": 90,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 10,
+    "weaponType": "DRAGONSTONE",
+    "rank": "A",
+    "price": 3000,
+    "description": "A dragonstone that holds a Fell Dragon's special power. Halves foe Def/Res. Effective: Cavalry.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "CAVALRY"
+    ],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 165,
+    "identifier": "fell-weightstone",
+    "name": "Fell Weightstone",
+    "might": 6,
+    "hit": 95,
+    "crit": 0,
+    "range": [
+      1,
+      1
+    ],
+    "weight": 9,
+    "weaponType": "DRAGONSTONE",
+    "rank": "A",
+    "price": 3000,
+    "description": "A dragonstone that holds a Fell Dragon's special power. Halves foe Def/Res. Effective: Flying.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "FLYING"
+    ],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 166,
+    "identifier": "standard-blast",
+    "name": "Standard Blast",
+    "might": 5,
+    "hit": 75,
+    "crit": 0,
+    "range": [
+      3,
+      8
+    ],
+    "weight": 13,
+    "weaponType": "BLAST",
+    "rank": "C",
+    "price": 250,
+    "description": "Standard cannonball. Cannot follow up. Reduced Hit for distant targets.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 167,
+    "identifier": "magic-blast",
+    "name": "Magic Blast",
+    "might": 5,
+    "hit": 70,
+    "crit": 0,
+    "range": [
+      3,
+      8
+    ],
+    "weight": 15,
+    "weaponType": "BLAST",
+    "rank": "B",
+    "price": 250,
+    "description": "Cannonball infused with magic. Cannot follow up. Reduced Hit for distant targets.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 168,
+    "identifier": "freeze-blast",
+    "name": "Freeze Blast",
+    "might": 3,
+    "hit": 75,
+    "crit": 0,
+    "range": [
+      3,
+      8
+    ],
+    "weight": 10,
+    "weaponType": "BLAST",
+    "rank": "B",
+    "price": 500,
+    "description": "Magic cannonball with a 50% chance to freeze target. Cannot follow up. Reduced Hit for distant targets.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 169,
+    "identifier": "silence-blast",
+    "name": "Silence Blast",
+    "might": 3,
+    "hit": 75,
+    "crit": 0,
+    "range": [
+      3,
+      8
+    ],
+    "weight": 10,
+    "weaponType": "BLAST",
+    "rank": "B",
+    "price": 500,
+    "description": "Magic cannonball with a 50% chance to silence target. Cannot follow up. Reduced Hit for distant targets.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 170,
+    "identifier": "break-blast",
+    "name": "Break Blast",
+    "might": 3,
+    "hit": 75,
+    "crit": 0,
+    "range": [
+      3,
+      8
+    ],
+    "weight": 10,
+    "weaponType": "BLAST",
+    "rank": "B",
+    "price": 300,
+    "description": "Magic cannonball with 50% chance of breaking target. Cannot follow up. Reduced Hit for distant targets.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 171,
+    "identifier": "venom-blast",
+    "name": "Venom Blast",
+    "might": 3,
+    "hit": 75,
+    "crit": 0,
+    "range": [
+      3,
+      8
+    ],
+    "weight": 10,
+    "weaponType": "BLAST",
+    "rank": "C",
+    "price": 300,
+    "description": "Magic cannonball that inflicts deadly poison on hit. Cannot follow up. Reduced Hit for distant targets.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 172,
+    "identifier": "tornado-blast",
+    "name": "Tornado Blast",
+    "might": 6,
+    "hit": 70,
+    "crit": 0,
+    "range": [
+      3,
+      8
+    ],
+    "weight": 15,
+    "weaponType": "BLAST",
+    "rank": "B",
+    "price": 500,
+    "description": "Wind magic cannonball. Cannot follow up. Reduced Hit for distant targets. Effective: Flying.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "FLYING"
+    ],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 173,
+    "identifier": "armor-blast",
+    "name": "Armor Blast",
+    "might": 6,
+    "hit": 70,
+    "crit": 0,
+    "range": [
+      3,
+      8
+    ],
+    "weight": 15,
+    "weaponType": "BLAST",
+    "rank": "B",
+    "price": 500,
+    "description": "Cannonball for armored foes. Cannot follow up. Reduced Hit for distant targets. Effective: Armored.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "ARMOR"
+    ],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 174,
+    "identifier": "rider-blast",
+    "name": "Rider Blast",
+    "might": 6,
+    "hit": 70,
+    "crit": 0,
+    "range": [
+      3,
+      8
+    ],
+    "weight": 15,
+    "weaponType": "BLAST",
+    "rank": "A",
+    "price": 600,
+    "description": "Cannonball for cavalry foes. Cannot follow up. Reduced Hit for distant targets. Effective: Cavalry.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "CAVALRY"
+    ],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 175,
+    "identifier": "wyrm-blast",
+    "name": "Wyrm Blast",
+    "might": 6,
+    "hit": 70,
+    "crit": 0,
+    "range": [
+      3,
+      8
+    ],
+    "weight": 15,
+    "weaponType": "BLAST",
+    "rank": "A",
+    "price": 600,
+    "description": "Cannonball for dragon foes. Cannot follow up. Reduced Hit for distant targets. Effective: Dragon.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "DRAGON"
+    ],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 176,
+    "identifier": "holy-blast",
+    "name": "Holy Blast",
+    "might": 6,
+    "hit": 70,
+    "crit": 0,
+    "range": [
+      3,
+      8
+    ],
+    "weight": 15,
+    "weaponType": "BLAST",
+    "rank": "A",
+    "price": 600,
+    "description": "Cannonball for the Corrupted. Cannot follow up. Reduced Hit for distant targets. Effective: Corrupted.",
+    "KnocksBack": false,
+    "effectiveness": [
+      "FELL"
+    ],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 177,
+    "identifier": "mighty-blast",
+    "name": "Mighty Blast",
+    "might": 10,
+    "hit": 65,
+    "crit": 0,
+    "range": [
+      3,
+      8
+    ],
+    "weight": 18,
+    "weaponType": "BLAST",
+    "rank": "A",
+    "price": 500,
+    "description": "High-powered cannonball. Cannot follow up. Reduced Hit for distant targets.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 178,
+    "identifier": "eldritch-blast",
+    "name": "Eldritch Blast",
+    "might": 10,
+    "hit": 60,
+    "crit": 0,
+    "range": [
+      3,
+      8
+    ],
+    "weight": 20,
+    "weaponType": "BLAST",
+    "rank": "A",
+    "price": 500,
+    "description": "Cannonball infused with powerful magic. Cannot follow up. Reduced Hit for distant targets.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  },
+  {
+    "id": 179,
+    "identifier": "piercing-blast",
+    "name": "Piercing Blast",
+    "might": 20,
+    "hit": 65,
+    "crit": 0,
+    "range": [
+      3,
+      8
+    ],
+    "weight": 17,
+    "weaponType": "BLAST",
+    "rank": "S",
+    "price": 700,
+    "description": "Cannonball that ignores Def/Res. Cannot follow up. Reduced Hit for distant targets.",
+    "KnocksBack": false,
+    "effectiveness": [],
+    "isEngageWeapon": false,
+    "isUnique": false
+  }
+]

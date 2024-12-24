@@ -67,11 +67,7 @@ export class SkillDetailComponent {
   private readonly assetsService: AssetsService = inject(AssetsService);
   private readonly skillService: SkillService = inject(SkillService);
   protected readonly evolutionChain: Signal<Skill[]> = computed((): Skill[] => {
-    const skill: Skill | null = this._skill();
-    if (!skill) {
-      return [];
-    }
-    return this.skillService.getSkillEvolveChainBySkillId(skill.id);
+    return this.skillService.getSkillEvolveChainBySkillId(this.skill.id);
   });
 
   get skill(): Skill {

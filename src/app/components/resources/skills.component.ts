@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, computed, inject, signal, Signal, WritableSignal } from '@angular/core';
+import { Component, computed, effect, inject, signal, Signal, WritableSignal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { SelectButtonModule } from 'primeng/selectbutton';
@@ -29,7 +29,6 @@ import { ViewStateService } from '@/app/services/view-state.service';
                 <!-- Search Bar -->
                 <div class="flex-1">
           <span class="p-input-icon-left w-full">
-            <i class="pi pi-search"></i>
             <input
                     type="text"
                     pInputText
@@ -103,8 +102,8 @@ import { ViewStateService } from '@/app/services/view-state.service';
     `]
 })
 export class SkillsComponent {
-  protected searchQuery = signal('');
-  protected selectedSkillType = signal<SkillType>(SkillType.PERSONAL);
+  protected searchQuery: WritableSignal<string> = signal('');
+  protected selectedSkillType: WritableSignal<SkillType> = signal<SkillType>(SkillType.PERSONAL);
   protected selectedSkill: WritableSignal<Skill | null> = signal(null);
 
   protected readonly skillTypeOptions = [
@@ -115,35 +114,35 @@ export class SkillsComponent {
     { label: 'Engage', value: SkillType.EMBLEM_ENGAGE }
   ];
 
-  private readonly assetsService = inject(AssetsService);
-  private readonly skillService = inject(SkillService);
-  protected readonly filteredSkills: Signal<Skill[]> = computed(() => {
-    const query = this.searchQuery().toLowerCase();
-    const type = this.selectedSkillType();
+  private readonly assetsService: AssetsService = inject(AssetsService);
+  private readonly skillService: SkillService = inject(SkillService);
+  protected readonly filteredSkills: Signal<Skill[]> = computed((): Skill[] => {
+    const query: string = this.searchQuery().toLowerCase();
+    const type: SkillType = this.selectedSkillType();
 
     return this.skillService.resources()
-      .filter(skill => skill.skillType === type)
-      .filter(skill =>
+      .filter((skill: Skill) => skill.skillType === type)
+      .filter((skill: Skill) =>
         skill.name.toLowerCase().includes(query) ||
                 skill.description.toLowerCase().includes(query)
       )
       .sort((a, b) => a.name.localeCompare(b.name));
   });
-  private readonly viewStateService = inject(ViewStateService);
+  private readonly viewStateService: ViewStateService = inject(ViewStateService);
 
   constructor() {
-    /*effect(() => {
-                                  const selectedId = this.viewStateService.getSelectedSkillId()();
-                                  if (selectedId !== null) {
-                                    const skill = this.skillService.resources()
-                                      .find(skill => skill.id === selectedId);
-                                    if (skill) {
-                                      this.selectedSkill.set(skill);
-                                      this.selectedSkillType.set(skill.skillType);
-                                    }
-                                    this.viewStateService.setSelectedSkillId(null);
-                                  }
-                                });*/
+    effect(() => {
+      const selectedId: number | null = this.viewStateService.getSelectedSkillId()();
+      if (selectedId !== null) {
+        const skill: Skill | undefined = this.skillService.resources()
+          .find((skill: Skill) => skill.id === selectedId);
+        if (skill) {
+          this.selectedSkill.set(skill);
+          this.selectedSkillType.set(skill.skillType);
+        }
+        this.viewStateService.setSelectedSkillId(null);
+      }
+    });
   }
 
   protected getSkillImage(identifier: string): string {

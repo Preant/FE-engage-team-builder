@@ -16,6 +16,7 @@ import { Country } from '@/app/models/Country.enum';
 import { Emblem } from '@/app/models/Emblem.model';
 import { ImageType } from '@/app/models/ImageSize.enum';
 import { ResourceID } from '@/app/models/Resource.model';
+import { Skill } from '@/app/models/Skill.model';
 import { TeamMember } from '@/app/models/Team.model';
 import { ViewType } from '@/app/models/ViewType.enum';
 import { Weapon } from '@/app/models/Weapon.model';
@@ -73,6 +74,8 @@ import { getOrdinal } from '@/app/utils/getOrdinal';
                         <app-select
                                 class="w-36 h-24"
                                 [selectOptions]="skill()"
+                                showDetailsButton
+                                (detailsButtonClicked)="viewSkillDetails($index)"
                                 label="Skill #{{$index + 1}}"
                                 [type]="SelectType.ICON"
                                 [initialSelection]="member.inheritableSkills[$index]?.id"
@@ -209,6 +212,15 @@ export class TeamMemberCardComponent {
       if (emblem) {
         this.viewStateService.setSelectedEmblemId(emblem.id);
         this.viewStateService.setView(ViewType.EMBLEMS);
+      }
+    }
+
+    viewSkillDetails(skillIndexSlot: number): void {
+      this.viewStateService.openPanel();
+      const skill: Skill | null = this.member.inheritableSkills[skillIndexSlot];
+      if (skill) {
+        this.viewStateService.setSelectedSkillId(skill.id);
+        this.viewStateService.setView(ViewType.SKILLS);
       }
     }
 

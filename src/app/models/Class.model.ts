@@ -18,6 +18,5 @@ export type Class = Resource & {
     stats: {
         base: StatSheet;
         growth: StatSheet;
-        max: StatSheet;
     }
 }

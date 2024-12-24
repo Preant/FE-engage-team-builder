@@ -1,0 +1,1504 @@
+[
+  {
+    "id": 1,
+    "name": "Alear",
+    "country": "Lythos",
+    "growth": {
+      "hp": 60,
+      "str": 35,
+      "mag": 20,
+      "dex": 45,
+      "spd": 50,
+      "def": 40,
+      "res": 25,
+      "lck": 25,
+      "mov": 0,
+      "bld": 5
+    },
+    "base": {
+      "hp": 22,
+      "str": 6,
+      "mag": 0,
+      "dex": 5,
+      "spd": 7,
+      "def": 5,
+      "res": 3,
+      "lck": 5,
+      "mov": 4,
+      "bld": 4
+    },
+    "identifier": "alear",
+    "personalSkillId": 125,
+    "proficiencies": [
+      "SWORD",
+      "ART"
+    ],
+    "innateProficiency": "SWORD",
+    "gender": "FEMALE"
+  },
+  {
+    "id": 2,
+    "name": "Vander",
+    "country": "Lythos",
+    "growth": {
+      "hp": 60,
+      "str": 25,
+      "mag": 10,
+      "dex": 25,
+      "spd": 35,
+      "def": 35,
+      "res": 20,
+      "lck": 10,
+      "mov": 0,
+      "bld": 5
+    },
+    "base": {
+      "hp": 40,
+      "str": 11,
+      "mag": 5,
+      "dex": 10,
+      "spd": 8,
+      "def": 10,
+      "res": 8,
+      "lck": 6,
+      "mov": 6,
+      "bld": 8
+    },
+    "identifier": "vander",
+    "personalSkillId": 7,
+    "proficiencies": [
+      "AXE"
+    ],
+    "innateProficiency": "AXE",
+    "gender": "MALE"
+  },
+  {
+    "id": 3,
+    "name": "Clanne",
+    "country": "Lythos",
+    "growth": {
+      "hp": 40,
+      "str": 35,
+      "mag": 10,
+      "dex": 40,
+      "spd": 50,
+      "def": 30,
+      "res": 25,
+      "lck": 20,
+      "mov": 0,
+      "bld": 5
+    },
+    "base": {
+      "hp": 19,
+      "str": 1,
+      "mag": 8,
+      "dex": 11,
+      "spd": 9,
+      "def": 4,
+      "res": 7,
+      "lck": 4,
+      "mov": 4,
+      "bld": 4
+    },
+    "identifier": "clanne",
+    "personalSkillId": 419,
+    "proficiencies": [
+      "TOME",
+      "SWORD"
+    ],
+    "innateProficiency": "TOME",
+    "gender": "MALE"
+  },
+  {
+    "id": 4,
+    "name": "Framme",
+    "country": "Lythos",
+    "growth": {
+      "hp": 55,
+      "str": 30,
+      "mag": 25,
+      "dex": 35,
+      "spd": 55,
+      "def": 25,
+      "res": 30,
+      "lck": 25,
+      "mov": 0,
+      "bld": 0
+    },
+    "base": {
+      "hp": 18,
+      "str": 3,
+      "mag": 5,
+      "dex": 8,
+      "spd": 7,
+      "def": 4,
+      "res": 8,
+      "lck": 5,
+      "mov": 4,
+      "bld": 3
+    },
+    "identifier": "framme",
+    "personalSkillId": 101,
+    "proficiencies": [
+      "ART",
+      "STAFF"
+    ],
+    "innateProficiency": "ART",
+    "gender": "FEMALE"
+  },
+  {
+    "id": 5,
+    "name": "Alfred",
+    "country": "Firene",
+    "growth": {
+      "hp": 65,
+      "str": 40,
+      "mag": 5,
+      "dex": 35,
+      "spd": 40,
+      "def": 40,
+      "res": 20,
+      "lck": 40,
+      "mov": 0,
+      "bld": 10
+    },
+    "base": {
+      "hp": 27,
+      "str": 9,
+      "mag": 2,
+      "dex": 10,
+      "spd": 6,
+      "def": 8,
+      "res": 5,
+      "lck": 8,
+      "mov": 5,
+      "bld": 6
+    },
+    "identifier": "alfred",
+    "personalSkillId": 321,
+    "proficiencies": [
+      "LANCE",
+      "SWORD"
+    ],
+    "innateProficiency": "LANCE",
+    "gender": "MALE"
+  },
+  {
+    "id": 6,
+    "name": "Etie",
+    "country": "Firene",
+    "growth": {
+      "hp": 45,
+      "str": 40,
+      "mag": 0,
+      "dex": 25,
+      "spd": 35,
+      "def": 25,
+      "res": 30,
+      "lck": 25,
+      "mov": 0,
+      "bld": 5
+    },
+    "base": {
+      "hp": 21,
+      "str": 10,
+      "mag": 0,
+      "dex": 11,
+      "spd": 6,
+      "def": 3,
+      "res": 2,
+      "lck": 8,
+      "mov": 4,
+      "bld": 4
+    },
+    "identifier": "etie",
+    "personalSkillId": 145,
+    "proficiencies": [
+      "BOW"
+    ],
+    "innateProficiency": "BOW",
+    "gender": "FEMALE"
+  },
+  {
+    "id": 7,
+    "name": "Boucheron",
+    "country": "Firene",
+    "growth": {
+      "hp": 85,
+      "str": 20,
+      "mag": 0,
+      "dex": 50,
+      "spd": 45,
+      "def": 35,
+      "res": 20,
+      "lck": 15,
+      "mov": 0,
+      "bld": 20
+    },
+    "base": {
+      "hp": 29,
+      "str": 10,
+      "mag": 0,
+      "dex": 8,
+      "spd": 7,
+      "def": 6,
+      "res": 3,
+      "lck": 5,
+      "mov": 4,
+      "bld": 9
+    },
+    "identifier": "boucheron",
+    "personalSkillId": 279,
+    "proficiencies": [
+      "AXE"
+    ],
+    "innateProficiency": "AXE",
+    "gender": "MALE"
+  },
+  {
+    "id": 8,
+    "name": "Céline",
+    "country": "Firene",
+    "growth": {
+      "hp": 50,
+      "str": 35,
+      "mag": 25,
+      "dex": 30,
+      "spd": 45,
+      "def": 30,
+      "res": 40,
+      "lck": 50,
+      "mov": 0,
+      "bld": 5
+    },
+    "base": {
+      "hp": 22,
+      "str": 7,
+      "mag": 9,
+      "dex": 9,
+      "spd": 10,
+      "def": 5,
+      "res": 7,
+      "lck": 11,
+      "mov": 4,
+      "bld": 4
+    },
+    "identifier": "celine",
+    "personalSkillId": 160,
+    "proficiencies": [
+      "TOME",
+      "SWORD",
+      "STAFF"
+    ],
+    "innateProficiency": "TOME",
+    "gender": "FEMALE"
+  },
+  {
+    "id": 9,
+    "name": "Chloé",
+    "country": "Firene",
+    "growth": {
+      "hp": 75,
+      "str": 25,
+      "mag": 35,
+      "dex": 40,
+      "spd": 55,
+      "def": 30,
+      "res": 25,
+      "lck": 25,
+      "mov": 0,
+      "bld": 5
+    },
+    "base": {
+      "hp": 26,
+      "str": 8,
+      "mag": 4,
+      "dex": 13,
+      "spd": 13,
+      "def": 5,
+      "res": 9,
+      "lck": 10,
+      "mov": 5,
+      "bld": 5
+    },
+    "identifier": "chloe",
+    "personalSkillId": 148,
+    "proficiencies": [
+      "LANCE",
+      "STAFF"
+    ],
+    "innateProficiency": "LANCE",
+    "gender": "FEMALE"
+  },
+  {
+    "id": 10,
+    "name": "Louis",
+    "country": "Firene",
+    "growth": {
+      "hp": 75,
+      "str": 40,
+      "mag": 0,
+      "dex": 25,
+      "spd": 25,
+      "def": 50,
+      "res": 20,
+      "lck": 25,
+      "mov": 0,
+      "bld": 15
+    },
+    "base": {
+      "hp": 30,
+      "str": 13,
+      "mag": 0,
+      "dex": 11,
+      "spd": 3,
+      "def": 16,
+      "res": 1,
+      "lck": 4,
+      "mov": 4,
+      "bld": 8
+    },
+    "identifier": "louis",
+    "personalSkillId": 4,
+    "proficiencies": [
+      "LANCE"
+    ],
+    "innateProficiency": "LANCE",
+    "gender": "MALE"
+  },
+  {
+    "id": 11,
+    "name": "Yunaka",
+    "country": "Brodia",
+    "growth": {
+      "hp": 50,
+      "str": 35,
+      "mag": 25,
+      "dex": 40,
+      "spd": 45,
+      "def": 15,
+      "res": 45,
+      "lck": 25,
+      "mov": 0,
+      "bld": 5
+    },
+    "base": {
+      "hp": 25,
+      "str": 8,
+      "mag": 5,
+      "dex": 14,
+      "spd": 12,
+      "def": 9,
+      "res": 7,
+      "lck": 8,
+      "mov": 5,
+      "bld": 5
+    },
+    "identifier": "yunaka",
+    "personalSkillId": 411,
+    "proficiencies": [
+      "DAGGER"
+    ],
+    "innateProficiency": "DAGGER",
+    "gender": "FEMALE"
+  },
+  {
+    "id": 12,
+    "name": "Alcryst",
+    "country": "Brodia",
+    "growth": {
+      "hp": 65,
+      "str": 30,
+      "mag": 10,
+      "dex": 40,
+      "spd": 45,
+      "def": 30,
+      "res": 20,
+      "lck": 15,
+      "mov": 0,
+      "bld": 10
+    },
+    "base": {
+      "hp": 28,
+      "str": 11,
+      "mag": 2,
+      "dex": 17,
+      "spd": 12,
+      "def": 8,
+      "res": 5,
+      "lck": 8,
+      "mov": 4,
+      "bld": 6
+    },
+    "identifier": "alcryst",
+    "personalSkillId": 163,
+    "proficiencies": [
+      "BOW"
+    ],
+    "innateProficiency": "BOW",
+    "gender": "MALE"
+  },
+  {
+    "id": 13,
+    "name": "Citrinne",
+    "country": "Brodia",
+    "growth": {
+      "hp": 45,
+      "str": 10,
+      "mag": 40,
+      "dex": 25,
+      "spd": 30,
+      "def": 20,
+      "res": 40,
+      "lck": 25,
+      "mov": 0,
+      "bld": 5
+    },
+    "base": {
+      "hp": 24,
+      "str": 2,
+      "mag": 15,
+      "dex": 13,
+      "spd": 10,
+      "def": 3,
+      "res": 12,
+      "lck": 10,
+      "mov": 4,
+      "bld": 4
+    },
+    "identifier": "citrinne",
+    "personalSkillId": 157,
+    "proficiencies": [
+      "TOME",
+      "STAFF"
+    ],
+    "innateProficiency": "TOME",
+    "gender": "FEMALE"
+  },
+  {
+    "id": 14,
+    "name": "Lapis",
+    "country": "Brodia",
+    "growth": {
+      "hp": 55,
+      "str": 25,
+      "mag": 20,
+      "dex": 35,
+      "spd": 55,
+      "def": 35,
+      "res": 30,
+      "lck": 25,
+      "mov": 0,
+      "bld": 5
+    },
+    "base": {
+      "hp": 26,
+      "str": 11,
+      "mag": 2,
+      "dex": 12,
+      "spd": 14,
+      "def": 7,
+      "res": 6,
+      "lck": 7,
+      "mov": 4,
+      "bld": 5
+    },
+    "identifier": "lapis",
+    "personalSkillId": 322,
+    "proficiencies": [
+      "SWORD"
+    ],
+    "innateProficiency": "SWORD",
+    "gender": "FEMALE"
+  },
+  {
+    "id": 15,
+    "name": "Diamant",
+    "country": "Brodia",
+    "growth": {
+      "hp": 75,
+      "str": 30,
+      "mag": 15,
+      "dex": 20,
+      "spd": 40,
+      "def": 40,
+      "res": 25,
+      "lck": 20,
+      "mov": 0,
+      "bld": 15
+    },
+    "base": {
+      "hp": 32,
+      "str": 13,
+      "mag": 3,
+      "dex": 13,
+      "spd": 13,
+      "def": 10,
+      "res": 6,
+      "lck": 10,
+      "mov": 4,
+      "bld": 9
+    },
+    "identifier": "diamant",
+    "personalSkillId": 147,
+    "proficiencies": [
+      "SWORD",
+      "AXE"
+    ],
+    "innateProficiency": "SWORD",
+    "gender": "MALE"
+  },
+  {
+    "id": 16,
+    "name": "Amber",
+    "country": "Brodia",
+    "growth": {
+      "hp": 65,
+      "str": 45,
+      "mag": 0,
+      "dex": 25,
+      "spd": 30,
+      "def": 35,
+      "res": 5,
+      "lck": 35,
+      "mov": 0,
+      "bld": 15
+    },
+    "base": {
+      "hp": 31,
+      "str": 15,
+      "mag": 2,
+      "dex": 13,
+      "spd": 11,
+      "def": 9,
+      "res": 3,
+      "lck": 9,
+      "mov": 5,
+      "bld": 8
+    },
+    "identifier": "amber",
+    "personalSkillId": 22,
+    "proficiencies": [
+      "LANCE"
+    ],
+    "innateProficiency": "LANCE",
+    "gender": "MALE"
+  },
+  {
+    "id": 17,
+    "name": "Jade",
+    "country": "Brodia",
+    "growth": {
+      "hp": 55,
+      "str": 35,
+      "mag": 25,
+      "dex": 35,
+      "spd": 30,
+      "def": 40,
+      "res": 30,
+      "lck": 20,
+      "mov": 0,
+      "bld": 10
+    },
+    "base": {
+      "hp": 33,
+      "str": 14,
+      "mag": 4,
+      "dex": 14,
+      "spd": 5,
+      "def": 18,
+      "res": 6,
+      "lck": 5,
+      "mov": 4,
+      "bld": 8
+    },
+    "identifier": "jade",
+    "personalSkillId": 274,
+    "proficiencies": [
+      "AXE"
+    ],
+    "innateProficiency": "AXE",
+    "gender": "FEMALE"
+  },
+  {
+    "id": 18,
+    "name": "Ivy",
+    "country": "Elusia",
+    "growth": {
+      "hp": 55,
+      "str": 25,
+      "mag": 30,
+      "dex": 25,
+      "spd": 40,
+      "def": 30,
+      "res": 35,
+      "lck": 15,
+      "mov": 0,
+      "bld": 10
+    },
+    "base": {
+      "hp": 32,
+      "str": 7,
+      "mag": 17,
+      "dex": 15,
+      "spd": 13,
+      "def": 12,
+      "res": 15,
+      "lck": 4,
+      "mov": 5,
+      "bld": 7
+    },
+    "identifier": "ivy",
+    "personalSkillId": 324,
+    "proficiencies": [
+      "TOME",
+      "STAFF"
+    ],
+    "innateProficiency": "TOME",
+    "gender": "FEMALE"
+  },
+  {
+    "id": 19,
+    "name": "Kagetsu",
+    "country": "Elusia",
+    "growth": {
+      "hp": 60,
+      "str": 30,
+      "mag": 15,
+      "dex": 50,
+      "spd": 50,
+      "def": 40,
+      "res": 25,
+      "lck": 40,
+      "mov": 0,
+      "bld": 10
+    },
+    "base": {
+      "hp": 35,
+      "str": 17,
+      "mag": 5,
+      "dex": 22,
+      "spd": 22,
+      "def": 14,
+      "res": 10,
+      "lck": 17,
+      "mov": 5,
+      "bld": 9
+    },
+    "identifier": "kagetsu",
+    "personalSkillId": 45,
+    "proficiencies": [
+      "SWORD"
+    ],
+    "innateProficiency": "SWORD",
+    "gender": "MALE"
+  },
+  {
+    "id": 20,
+    "name": "Zelkov",
+    "country": "Elusia",
+    "growth": {
+      "hp": 65,
+      "str": 35,
+      "mag": 15,
+      "dex": 40,
+      "spd": 35,
+      "def": 35,
+      "res": 15,
+      "lck": 25,
+      "mov": 0,
+      "bld": 10
+    },
+    "base": {
+      "hp": 35,
+      "str": 15,
+      "mag": 3,
+      "dex": 19,
+      "spd": 19,
+      "def": 14,
+      "res": 5,
+      "lck": 7,
+      "mov": 5,
+      "bld": 9
+    },
+    "identifier": "zelkov",
+    "personalSkillId": 282,
+    "proficiencies": [
+      "DAGGER"
+    ],
+    "innateProficiency": "DAGGER",
+    "gender": "MALE"
+  },
+  {
+    "id": 21,
+    "name": "Fogado",
+    "country": "Solm",
+    "growth": {
+      "hp": 60,
+      "str": 30,
+      "mag": 25,
+      "dex": 30,
+      "spd": 55,
+      "def": 30,
+      "res": 35,
+      "lck": 25,
+      "mov": 0,
+      "bld": 10
+    },
+    "base": {
+      "hp": 33,
+      "str": 12,
+      "mag": 7,
+      "dex": 17,
+      "spd": 18,
+      "def": 10,
+      "res": 11,
+      "lck": 8,
+      "mov": 5,
+      "bld": 8
+    },
+    "identifier": "fogado",
+    "personalSkillId": 92,
+    "proficiencies": [
+      "BOW",
+      "SWORD"
+    ],
+    "innateProficiency": "BOW",
+    "gender": "MALE"
+  },
+  {
+    "id": 22,
+    "name": "Pandreo",
+    "country": "Solm",
+    "growth": {
+      "hp": 60,
+      "str": 5,
+      "mag": 30,
+      "dex": 45,
+      "spd": 45,
+      "def": 15,
+      "res": 55,
+      "lck": 30,
+      "mov": 0,
+      "bld": 15
+    },
+    "base": {
+      "hp": 34,
+      "str": 7,
+      "mag": 16,
+      "dex": 18,
+      "spd": 17,
+      "def": 8,
+      "res": 22,
+      "lck": 14,
+      "mov": 5,
+      "bld": 8
+    },
+    "identifier": "pandreo",
+    "personalSkillId": 286,
+    "proficiencies": [
+      "STAFF",
+      "TOME",
+      "ART"
+    ],
+    "innateProficiency": "STAFF",
+    "gender": "MALE"
+  },
+  {
+    "id": 23,
+    "name": "Bunet",
+    "country": "Solm",
+    "growth": {
+      "hp": 65,
+      "str": 30,
+      "mag": 10,
+      "dex": 40,
+      "spd": 35,
+      "def": 45,
+      "res": 25,
+      "lck": 40,
+      "mov": 0,
+      "bld": 10
+    },
+    "base": {
+      "hp": 41,
+      "str": 15,
+      "mag": 5,
+      "dex": 15,
+      "spd": 9,
+      "def": 20,
+      "res": 8,
+      "lck": 13,
+      "mov": 6,
+      "bld": 11
+    },
+    "identifier": "bunet",
+    "personalSkillId": 319,
+    "proficiencies": [
+      "SWORD",
+      "AXE"
+    ],
+    "innateProficiency": "SWORD",
+    "gender": "MALE"
+  },
+  {
+    "id": 24,
+    "name": "Timerra",
+    "country": "Solm",
+    "growth": {
+      "hp": 55,
+      "str": 25,
+      "mag": 25,
+      "dex": 45,
+      "spd": 45,
+      "def": 30,
+      "res": 30,
+      "lck": 30,
+      "mov": 0,
+      "bld": 10
+    },
+    "base": {
+      "hp": 35,
+      "str": 14,
+      "mag": 6,
+      "dex": 17,
+      "spd": 18,
+      "def": 16,
+      "res": 8,
+      "lck": 10,
+      "mov": 4,
+      "bld": 5
+    },
+    "identifier": "timerra",
+    "personalSkillId": 299,
+    "proficiencies": [
+      "LANCE"
+    ],
+    "innateProficiency": "LANCE",
+    "gender": "FEMALE"
+  },
+  {
+    "id": 25,
+    "name": "Panette",
+    "country": "Solm",
+    "growth": {
+      "hp": 75,
+      "str": 45,
+      "mag": 10,
+      "dex": 40,
+      "spd": 25,
+      "def": 30,
+      "res": 15,
+      "lck": 20,
+      "mov": 0,
+      "bld": 15
+    },
+    "base": {
+      "hp": 46,
+      "str": 25,
+      "mag": 3,
+      "dex": 19,
+      "spd": 13,
+      "def": 11,
+      "res": 7,
+      "lck": 11,
+      "mov": 5,
+      "bld": 11
+    },
+    "identifier": "panette",
+    "personalSkillId": 47,
+    "proficiencies": [
+      "DAGGER",
+      "AXE"
+    ],
+    "innateProficiency": "DAGGER",
+    "gender": "FEMALE"
+  },
+  {
+    "id": 26,
+    "name": "Merrin",
+    "country": "Solm",
+    "growth": {
+      "hp": 55,
+      "str": 25,
+      "mag": 25,
+      "dex": 40,
+      "spd": 50,
+      "def": 30,
+      "res": 30,
+      "lck": 25,
+      "mov": 0,
+      "bld": 10
+    },
+    "base": {
+      "hp": 36,
+      "str": 15,
+      "mag": 10,
+      "dex": 21,
+      "spd": 21,
+      "def": 12,
+      "res": 12,
+      "lck": 14,
+      "mov": 6,
+      "bld": 9
+    },
+    "identifier": "merrin",
+    "personalSkillId": 218,
+    "proficiencies": [
+      "DAGGER",
+      "SWORD"
+    ],
+    "innateProficiency": "DAGGER",
+    "gender": "FEMALE"
+  },
+  {
+    "id": 27,
+    "name": "Hortensia",
+    "country": "Elusia",
+    "growth": {
+      "hp": 40,
+      "str": 20,
+      "mag": 20,
+      "dex": 35,
+      "spd": 50,
+      "def": 25,
+      "res": 55,
+      "lck": 50,
+      "mov": 0,
+      "bld": 0
+    },
+    "base": {
+      "hp": 27,
+      "str": 5,
+      "mag": 12,
+      "dex": 21,
+      "spd": 19,
+      "def": 6,
+      "res": 23,
+      "lck": 17,
+      "mov": 5,
+      "bld": 5
+    },
+    "identifier": "hortensia",
+    "personalSkillId": 43,
+    "proficiencies": [
+      "STAFF",
+      "TOME"
+    ],
+    "innateProficiency": "STAFF",
+    "gender": "FEMALE"
+  },
+  {
+    "id": 28,
+    "name": "Seadall",
+    "country": "Solm",
+    "growth": {
+      "hp": 55,
+      "str": 25,
+      "mag": 15,
+      "dex": 25,
+      "spd": 50,
+      "def": 25,
+      "res": 25,
+      "lck": 35,
+      "mov": 0,
+      "bld": 10
+    },
+    "base": {
+      "hp": 33,
+      "str": 12,
+      "mag": 4,
+      "dex": 15,
+      "spd": 16,
+      "def": 10,
+      "res": 10,
+      "lck": 11,
+      "mov": 5,
+      "bld": 8
+    },
+    "identifier": "seadall",
+    "personalSkillId": 102,
+    "proficiencies": [
+      "ART"
+    ],
+    "innateProficiency": "ART",
+    "gender": "MALE"
+  },
+  {
+    "id": 29,
+    "name": "Rosado",
+    "country": "Elusia",
+    "growth": {
+      "hp": 75,
+      "str": 45,
+      "mag": 25,
+      "dex": 40,
+      "spd": 45,
+      "def": 30,
+      "res": 30,
+      "lck": 20,
+      "mov": 0,
+      "bld": 5
+    },
+    "base": {
+      "hp": 44,
+      "str": 16,
+      "mag": 7,
+      "dex": 19,
+      "spd": 21,
+      "def": 15,
+      "res": 11,
+      "lck": 8,
+      "mov": 6,
+      "bld": 8
+    },
+    "identifier": "rosado",
+    "personalSkillId": 379,
+    "proficiencies": [
+      "AXE",
+      "LANCE"
+    ],
+    "innateProficiency": "AXE",
+    "gender": "MALE"
+  },
+  {
+    "id": 30,
+    "name": "Goldmary",
+    "country": "Elusia",
+    "growth": {
+      "hp": 65,
+      "str": 30,
+      "mag": 5,
+      "dex": 25,
+      "spd": 25,
+      "def": 55,
+      "res": 25,
+      "lck": 25,
+      "mov": 0,
+      "bld": 5
+    },
+    "base": {
+      "hp": 40,
+      "str": 17,
+      "mag": 2,
+      "dex": 18,
+      "spd": 20,
+      "def": 20,
+      "res": 12,
+      "lck": 13,
+      "mov": 5,
+      "bld": 9
+    },
+    "identifier": "goldmary",
+    "personalSkillId": 120,
+    "proficiencies": [
+      "LANCE",
+      "SWORD"
+    ],
+    "innateProficiency": "LANCE",
+    "gender": "FEMALE"
+  },
+  {
+    "id": 31,
+    "name": "Lindon",
+    "country": "Elusia",
+    "growth": {
+      "hp": 65,
+      "str": 25,
+      "mag": 25,
+      "dex": 25,
+      "spd": 40,
+      "def": 25,
+      "res": 40,
+      "lck": 15,
+      "mov": 0,
+      "bld": 10
+    },
+    "base": {
+      "hp": 38,
+      "str": 8,
+      "mag": 19,
+      "dex": 21,
+      "spd": 19,
+      "def": 12,
+      "res": 21,
+      "lck": 8,
+      "mov": 5,
+      "bld": 10
+    },
+    "identifier": "lindon",
+    "personalSkillId": 421,
+    "proficiencies": [
+      "STAFF",
+      "TOME"
+    ],
+    "innateProficiency": "STAFF",
+    "gender": "MALE"
+  },
+  {
+    "id": 32,
+    "name": "Saphir",
+    "country": "Brodia",
+    "growth": {
+      "hp": 80,
+      "str": 35,
+      "mag": 0,
+      "dex": 25,
+      "spd": 30,
+      "def": 30,
+      "res": 5,
+      "lck": 20,
+      "mov": 0,
+      "bld": 10
+    },
+    "base": {
+      "hp": 51,
+      "str": 24,
+      "mag": 2,
+      "dex": 23,
+      "spd": 19,
+      "def": 19,
+      "res": 9,
+      "lck": 15,
+      "mov": 5,
+      "bld": 15
+    },
+    "identifier": "saphir",
+    "personalSkillId": 424,
+    "proficiencies": [
+      "AXE",
+      "BOW"
+    ],
+    "innateProficiency": "AXE",
+    "gender": "FEMALE"
+  },
+  {
+    "id": 33,
+    "name": "Veyle",
+    "country": "Gradlon",
+    "growth": {
+      "hp": 40,
+      "str": 25,
+      "mag": 45,
+      "dex": 35,
+      "spd": 30,
+      "def": 25,
+      "res": 35,
+      "lck": 20,
+      "mov": 0,
+      "bld": 0
+    },
+    "base": {
+      "hp": 35,
+      "str": 20,
+      "mag": 26,
+      "dex": 24,
+      "spd": 23,
+      "def": 17,
+      "res": 29,
+      "lck": 18,
+      "mov": 5,
+      "bld": 7
+    },
+    "identifier": "veyle",
+    "personalSkillId": 150,
+    "proficiencies": [
+      "TOME",
+      "DAGGER"
+    ],
+    "innateProficiency": "TOME",
+    "gender": "FEMALE"
+  },
+  {
+    "id": 34,
+    "name": "Mauvier",
+    "country": "Gradlon",
+    "growth": {
+      "hp": 70,
+      "str": 35,
+      "mag": 40,
+      "dex": 40,
+      "spd": 35,
+      "def": 50,
+      "res": 45,
+      "lck": 15,
+      "mov": 0,
+      "bld": 15
+    },
+    "base": {
+      "hp": 51,
+      "str": 21,
+      "mag": 23,
+      "dex": 25,
+      "spd": 22,
+      "def": 26,
+      "res": 24,
+      "lck": 16,
+      "mov": 6,
+      "bld": 12
+    },
+    "identifier": "mauvier",
+    "personalSkillId": 98,
+    "proficiencies": [
+      "STAFF",
+      "LANCE"
+    ],
+    "innateProficiency": "STAFF",
+    "gender": "MALE"
+  },
+  {
+    "id": 35,
+    "name": "Anna",
+    "country": "Elusia",
+    "growth": {
+      "hp": 55,
+      "str": 15,
+      "mag": 50,
+      "dex": 50,
+      "spd": 50,
+      "def": 20,
+      "res": 35,
+      "lck": 45,
+      "mov": 0,
+      "bld": 5
+    },
+    "base": {
+      "hp": 29,
+      "str": 10,
+      "mag": 2,
+      "dex": 9,
+      "spd": 7,
+      "def": 4,
+      "res": 5,
+      "lck": 3,
+      "mov": 4,
+      "bld": 7
+    },
+    "identifier": "anna",
+    "personalSkillId": 273,
+    "proficiencies": [
+      "BOW",
+      "AXE"
+    ],
+    "innateProficiency": "BOW",
+    "gender": "FEMALE"
+  },
+  {
+    "id": 36,
+    "name": "Jean",
+    "country": "Firene",
+    "growth": {
+      "hp": 50,
+      "str": 20,
+      "mag": 20,
+      "dex": 35,
+      "spd": 40,
+      "def": 25,
+      "res": 20,
+      "lck": 25,
+      "mov": 0,
+      "bld": 5
+    },
+    "base": {
+      "hp": 19,
+      "str": 4,
+      "mag": 5,
+      "dex": 10,
+      "spd": 7,
+      "def": 4,
+      "res": 8,
+      "lck": 3,
+      "mov": 4,
+      "bld": 3
+    },
+    "identifier": "jean",
+    "personalSkillId": 146,
+    "proficiencies": [
+      "ART",
+      "TOME",
+      "STAFF"
+    ],
+    "innateProficiency": "ART",
+    "gender": "MALE"
+  },
+  {
+    "id": 37,
+    "name": "Nel",
+    "country": "Gradlon",
+    "growth": {
+      "hp": 55,
+      "str": 30,
+      "mag": 25,
+      "dex": 40,
+      "spd": 45,
+      "def": 30,
+      "res": 35,
+      "lck": 30,
+      "mov": 0,
+      "bld": 10
+    },
+    "base": {
+      "hp": 35,
+      "str": 14,
+      "mag": 12,
+      "dex": 17,
+      "spd": 19,
+      "def": 14,
+      "res": 15,
+      "lck": 16,
+      "mov": 5,
+      "bld": 8
+    },
+    "identifier": "nel",
+    "personalSkillId": 293,
+    "proficiencies": [
+      "LANCE"
+    ],
+    "innateProficiency": "LANCE",
+    "gender": "FEMALE"
+  },
+  {
+    "id": 38,
+    "name": "Rafal",
+    "country": "Gradlon",
+    "growth": {
+      "hp": 70,
+      "str": 40,
+      "mag": 10,
+      "dex": 40,
+      "spd": 35,
+      "def": 45,
+      "res": 20,
+      "lck": 10,
+      "mov": 0,
+      "bld": 10
+    },
+    "base": {
+      "hp": 39,
+      "str": 19,
+      "mag": 7,
+      "dex": 17,
+      "spd": 16,
+      "def": 20,
+      "res": 11,
+      "lck": 12,
+      "mov": 5,
+      "bld": 9
+    },
+    "identifier": "rafal",
+    "personalSkillId": 315,
+    "proficiencies": [
+      "AXE"
+    ],
+    "innateProficiency": "AXE",
+    "gender": "MALE"
+  },
+  {
+    "id": 39,
+    "name": "Zelestia",
+    "country": "Lythos",
+    "growth": {
+      "hp": 60,
+      "str": 35,
+      "mag": 35,
+      "dex": 35,
+      "spd": 50,
+      "def": 30,
+      "res": 35,
+      "lck": 20,
+      "mov": 0,
+      "bld": 5
+    },
+    "base": {
+      "hp": 38,
+      "str": 17,
+      "mag": 18,
+      "dex": 16,
+      "spd": 20,
+      "def": 15,
+      "res": 19,
+      "lck": 7,
+      "mov": 6,
+      "bld": 9
+    },
+    "identifier": "zelestia",
+    "personalSkillId": 154,
+    "proficiencies": [
+      "SWORD"
+    ],
+    "innateProficiency": "SWORD",
+    "gender": "FEMALE"
+  },
+  {
+    "id": 40,
+    "name": "Gregory",
+    "country": "Lythos",
+    "growth": {
+      "hp": 55,
+      "str": 30,
+      "mag": 50,
+      "dex": 20,
+      "spd": 25,
+      "def": 35,
+      "res": 50,
+      "lck": 25,
+      "mov": 0,
+      "bld": 5
+    },
+    "base": {
+      "hp": 35,
+      "str": 10,
+      "mag": 25,
+      "dex": 13,
+      "spd": 13,
+      "def": 13,
+      "res": 25,
+      "lck": 9,
+      "mov": 5,
+      "bld": 8
+    },
+    "identifier": "gregory",
+    "personalSkillId": 381,
+    "proficiencies": [
+      "STAFF"
+    ],
+    "innateProficiency": "STAFF",
+    "gender": "MALE"
+  },
+  {
+    "id": 41,
+    "name": "Madeline",
+    "country": "Lythos",
+    "growth": {
+      "hp": 75,
+      "str": 50,
+      "mag": 20,
+      "dex": 15,
+      "spd": 15,
+      "def": 55,
+      "res": 25,
+      "lck": 25,
+      "mov": 0,
+      "bld": 10
+    },
+    "base": {
+      "hp": 46,
+      "str": 24,
+      "mag": 6,
+      "dex": 12,
+      "spd": 7,
+      "def": 27,
+      "res": 9,
+      "lck": 9,
+      "mov": 4,
+      "bld": 13
+    },
+    "identifier": "madeline",
+    "personalSkillId": 219,
+    "proficiencies": [
+      "AXE"
+    ],
+    "innateProficiency": "AXE",
+    "gender": "FEMALE"
+  }
+]

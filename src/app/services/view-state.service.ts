@@ -11,6 +11,7 @@ export class ViewStateService {
   private selectedCharacterId: WritableSignal<number | null> = signal<number | null>(null);
   private selectedEmblemId: WritableSignal<number | null> = signal<number | null>(null);
   private selectedWeaponId: WritableSignal<number | null> = signal<number | null>(null);
+  private selectedSkillId: WritableSignal<number | null> = signal<number | null>(null);
 
   getCurrentView(): WritableSignal<ViewType> {
     return this.currentView;
@@ -42,6 +43,14 @@ export class ViewStateService {
 
   setSelectedWeaponId(id: number | null): void {
     this.selectedWeaponId.set(id);
+  }
+
+  getSelectedSkillId(): WritableSignal<number | null> {
+    return this.selectedSkillId;
+  }
+
+  setSelectedSkillId(id: number | null): void {
+    this.selectedSkillId.set(id);
   }
 
   getIsResourcesPanelOpen(): WritableSignal<boolean> {

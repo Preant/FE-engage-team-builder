@@ -22,7 +22,6 @@ import { AssetsService } from '@/app/services/assets.service';
             <!-- Search -->
             <div class="w-full">
                 <span class="p-input-icon-left w-full">
-                  <i class="pi pi-search"></i>
                   <input
                           type="text"
                           pInputText

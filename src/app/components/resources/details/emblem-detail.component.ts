@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, computed, inject, Input, Signal } from '@angular/core';
+import { Component, computed, inject, Input, signal, Signal, WritableSignal } from '@angular/core';
 
 import { Emblem } from '@/app/models/Emblem.model';
 import { ImageType } from '@/app/models/ImageSize.enum';
@@ -42,6 +42,9 @@ import { EmblemService } from '@/app/services/resources.service';
                         />
                         <div>
                             <h2 class="text-3xl font-bold text-baby_powder-500 mb-2">{{ emblem.name }}</h2>
+                            <span class="px-3 py-1 rounded-full bg-prussian_blue-500/50 text-air_superiority_blue-400">
+                {{ emblem.type }}
+              </span>
                         </div>
                     </div>
                 </div>
@@ -76,7 +79,7 @@ import { EmblemService } from '@/app/services/resources.service';
                     </div>
 
                     <!-- Sync Stats Section -->
-                    <div class="bg-rich_black-500/30 p-6 rounded-lg w-1/3">
+                    <div class="bg-rich_black-500/30 p-6 rounded-lg w-1/3 h-fit">
                         <h3 class="text-xl font-semibold text-mauve-400 mb-4">Sync Stat Bonuses</h3>
                         <div class="space-y-3">
                             @for (stat of getStatsArray(emblem.syncStatBonus); track stat[0]) {
@@ -98,14 +101,23 @@ import { EmblemService } from '@/app/services/resources.service';
     `]
 })
 export class EmblemDetailComponent {
-    @Input({ required: true }) emblem!: Emblem;
+  private readonly _emblem: WritableSignal<Emblem | null> = signal<Emblem | null>(null);
 
-    private readonly assetsService: AssetsService = inject(AssetsService);
-    private readonly emblemService: EmblemService = inject(EmblemService);
+  private readonly assetsService: AssetsService = inject(AssetsService);
+  private readonly emblemService: EmblemService = inject(EmblemService);
 
-    engageWeapons: Signal<Weapon[]> = computed(() =>
-      this.emblemService.getEngageWeapons(this.emblem.id)()
-    );
+  engageWeapons: Signal<Weapon[]> = computed((): Weapon[] =>
+    this.emblemService.getEngageWeapons(this.emblem.id)()
+  );
+
+  get emblem(): Emblem {
+    return this._emblem()!;
+  }
+
+    @Input({ required: true })
+  set emblem(value: Emblem) {
+    this._emblem.set(value);
+  }
 
     getEmblemImage(identifier: string): string {
       return this.assetsService.getEmblemImage(identifier, ImageType.BODY);
