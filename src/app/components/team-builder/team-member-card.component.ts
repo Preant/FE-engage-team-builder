@@ -149,7 +149,7 @@ export class TeamMemberCardComponent {
 
     public getEmblemOptions(): SelectOptionIcon<EmblemID>[] {
       return this.getResourceSelectItemIconOptions(this.teamService.getAvailableEmblems(this.member.id)(),
-        (identifier: string) => this.assetsService.getEmblemImage(identifier, ImageType.BODY),
+        (identifier: string) => this.assetsService.getEmblemImage(identifier, ImageType.BANNER_SMALL),
         (identifier: string) => this.assetsService.getEmblemImage(identifier, ImageType.BODY),
         (a, b) => a.id - b.id);
     }

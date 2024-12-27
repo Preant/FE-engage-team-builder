@@ -35,7 +35,7 @@ export class AssetsService {
     if (size === ImageType.BODY_SMALL) {
       return `${EMBLEM_RESOURCE_PATH}${identifier}/${identifier}_body_small.png`;
     } else if (size === ImageType.BANNER_SMALL) {
-      return `${EMBLEM_RESOURCE_PATH}${identifier}/${identifier}_banner_small.png`;
+      return `${EMBLEM_RESOURCE_PATH}${identifier}/${identifier}_banner.png`;
     } else if (size === ImageType.STAMP) {
       return `${EMBLEM_RESOURCE_PATH}${identifier}/${identifier}_stamp.png`;
     }

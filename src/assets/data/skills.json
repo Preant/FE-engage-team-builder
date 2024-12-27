@@ -403,7 +403,7 @@
     "id": 51,
     "name": "Bond Forger",
     "identifier": "Bond_Forger",
-    "skillType": "EMBLEM_INHERITABLE",
+    "skillType": "EMBLEM_ENGAGE",
     "evolvedFrom": null,
     "description": "Grants Hit/Avo+20 to unit and allies within 2 spaces that are synced or engaged with an Emblem."
   },

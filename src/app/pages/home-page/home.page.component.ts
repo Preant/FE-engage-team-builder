@@ -35,7 +35,7 @@ import { ViewStateService } from '@/app/services/view-state.service';
   template: `
         <div class="w-full h-full">
             <as-split>
-                <as-split-area [size]="50" [minSize]="50">
+                <as-split-area [size]="isResourcesPanelOpen() ? 50 : 100" [minSize]="50">
                     <div class="flex flex-col h-full">
                         @if (this.activeTeam()) {
                             <app-team-builder [team]="activeTeam()!"/>

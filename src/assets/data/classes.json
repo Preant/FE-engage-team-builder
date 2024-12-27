@@ -3278,7 +3278,7 @@
     "weakness": [],
     "isAdvanced": true,
     "skill": 342,
-    "signatureCharacter": null,
+    "signatureCharacter": 28,
     "stats": {
       "base": {
         "hp": 21,
