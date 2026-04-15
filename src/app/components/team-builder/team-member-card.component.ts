@@ -36,6 +36,13 @@ import { getOrdinal } from '@/app/utils/getOrdinal';
   standalone: true,
   template: `
         <div class="relative bg-gradient-to-br from-gunmetal-400/50 to-gunmetal-600/50 rounded-lg p-2 border border-rich_black-500 m-4 flex gap-3">
+            <!-- Healing Access Indicator -->
+            @if (hasHealingAccess()) {
+                <div class="absolute left-1 top-1 z-10">
+                    <span class="pi pi-heart-fill text-red-500 text-lg" style="text-shadow: 0 0 3px rgba(0,0,0,0.8); -webkit-text-stroke: 1px rgba(0,0,0,0.6);"></span>
+                </div>
+            }
+
             <!-- Role Thumbnail -->
             <div class="flex-shrink-0 relative">
                 <div
@@ -198,7 +205,9 @@ export class TeamMemberCardComponent {
     { value: Role.SCOUT, label: 'Scout' },
     { value: Role.SUPPORT, label: 'Support' }
   ];
+  protected readonly healingSupportEmblems = ['celica', 'micaiah', 'veronica'];
   protected isRoleMenuOpen: WritableSignal<boolean> = signal(false);
+  protected hasHealingAccess!: Signal<boolean>;
   private readonly colorService: ColorService = inject(ColorService);
   private readonly teamService: TeamService = inject(TeamService);
   private readonly classService: ClassService = inject(ClassService);
@@ -213,6 +222,7 @@ export class TeamMemberCardComponent {
       .fill(0).map((_: 0, index: number) => computed(() => this.getWeaponOptions(index)));
     this.skillOptions = Array(this.member().inheritableSkills.length)
       .fill(0).map((_: 0, index: number) => computed(() => this.getInheritableSkillOptions(index)));
+    this.hasHealingAccess = computed(() => this.checkHealingAccess());
   }
 
   //Options providers
@@ -423,5 +433,23 @@ export class TeamMemberCardComponent {
   setRoleAndClose(role: Role | null): void {
     this.teamService.updateMemberRole(this.member().id, role);
     this.isRoleMenuOpen.set(false);
+  }
+
+  private checkHealingAccess(): boolean {
+    // Check if has staff equipped in weapons
+    const hasStaffEquipped = this.member().weapons.some(weapon => isStaff(weapon));
+    if (hasStaffEquipped) {
+      return true;
+    }
+
+    // Check if class has access to staves
+    const classHasStaffAccess = this.member().class?.weapons.some(([weaponType]) => weaponType === WeaponType.STAFF) ?? false;
+    if (classHasStaffAccess) {
+      return true;
+    }
+
+    // Check if emblem provides healing access
+    const emblemIdentifier = this.member().emblem?.identifier;
+    return emblemIdentifier ? this.healingSupportEmblems.includes(emblemIdentifier) : false;
   }
 }
