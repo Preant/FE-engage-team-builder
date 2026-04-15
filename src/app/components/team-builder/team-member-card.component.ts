@@ -19,16 +19,16 @@ import { ResourceID } from '@/app/models/Resource.model';
 import { Role } from '@/app/models/Role.enum';
 import { Skill } from '@/app/models/Skill.model';
 import { Staff } from '@/app/models/Staff.model';
-import { TeamMember, isStaff, isWeapon } from '@/app/models/Team.model';
+import { TeamMember, isWeapon } from '@/app/models/Team.model';
 import { ViewType } from '@/app/models/ViewType.enum';
 import { Weapon } from '@/app/models/Weapon.model';
-import { WeaponType } from '@/app/models/WeaponType.enum';
 import { AssetsService } from '@/app/services/assets.service';
 import { ColorService } from '@/app/services/Color.service';
 import { ClassService } from '@/app/services/resources.service';
 import { TeamService } from '@/app/services/team.service';
 import { ViewStateService } from '@/app/services/view-state.service';
 import { getOrdinal } from '@/app/utils/getOrdinal';
+import { getRoleIcon, getRoleBgClass, canMemberHeal } from '@/app/utils/role.utils';
 
 @Component({
   selector: 'app-team-member-card',
@@ -205,7 +205,6 @@ export class TeamMemberCardComponent {
     { value: Role.SCOUT, label: 'Scout' },
     { value: Role.SUPPORT, label: 'Support' }
   ];
-  protected readonly healingSupportEmblems = ['celica', 'micaiah', 'veronica'];
   protected isRoleMenuOpen: WritableSignal<boolean> = signal(false);
   protected hasHealingAccess!: Signal<boolean>;
   private readonly colorService: ColorService = inject(ColorService);
@@ -392,42 +391,11 @@ export class TeamMemberCardComponent {
   }
 
   getRoleThumbnailClass(): string {
-    const base = 'border border-rich_black-500 ';
-    switch (this.member().role) {
-      case Role.TANK:
-        return base + 'bg-air_superiority_blue-700';
-      case Role.HEALER:
-        return base + 'bg-green-700';
-      case Role.DPS:
-        return base + 'bg-red-700';
-      case Role.BRUISER:
-        return base + 'bg-orange-700';
-      case Role.SCOUT:
-        return base + 'bg-blue-600';
-      case Role.SUPPORT:
-        return base + 'bg-indigo-600';
-      default:
-        return base + 'bg-gunmetal-600';
-    }
+    return getRoleBgClass(this.member().role);
   }
 
   getRoleIcon(role: Role | null): string {
-    switch (role) {
-      case Role.TANK:
-        return 'pi-shield';
-      case Role.HEALER:
-        return 'pi-heart';
-      case Role.DPS:
-        return 'pi-bolt';
-      case Role.BRUISER:
-        return 'pi-hammer';
-      case Role.SCOUT:
-        return 'pi-arrow-right';
-      case Role.SUPPORT:
-        return 'pi-star-fill';
-      default:
-        return 'pi-circle';
-    }
+    return role ? getRoleIcon(role) : 'pi-circle';
   }
 
   setRoleAndClose(role: Role | null): void {
@@ -436,20 +404,6 @@ export class TeamMemberCardComponent {
   }
 
   private checkHealingAccess(): boolean {
-    // Check if has staff equipped in weapons
-    const hasStaffEquipped = this.member().weapons.some(weapon => isStaff(weapon));
-    if (hasStaffEquipped) {
-      return true;
-    }
-
-    // Check if class has access to staves
-    const classHasStaffAccess = this.member().class?.weapons.some(([weaponType]) => weaponType === WeaponType.STAFF) ?? false;
-    if (classHasStaffAccess) {
-      return true;
-    }
-
-    // Check if emblem provides healing access
-    const emblemIdentifier = this.member().emblem?.identifier;
-    return emblemIdentifier ? this.healingSupportEmblems.includes(emblemIdentifier) : false;
+    return canMemberHeal(this.member());
   }
 }

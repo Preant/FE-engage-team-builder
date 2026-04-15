@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
-import { ButtonModule } from 'primeng/button';
 
 import { TeamID } from '@/app/brands/ResourceID.brand';
 import { Character } from '@/app/models/Character.model';
@@ -12,17 +11,19 @@ import { ColorService } from '@/app/services/Color.service';
 @Component({
   selector: 'app-team-card',
   standalone: true,
-  imports: [CommonModule, ButtonModule],
+  imports: [CommonModule],
   template: `
         <div
                 class="relative bg-gradient-to-br from-gunmetal-400/50 to-gunmetal-600/50 rounded-lg p-4 border border-rich_black-500 cursor-pointer hover:border-air_superiority_blue-500 transition-all duration-200"
                 (click)="onSelect.emit(team.id)"
         >
             <div class="flex justify-between items-center">
-                <p-button
-                        icon="pi pi-download"
+                <button
+                        class="text-paynes_gray-500 hover:text-mauve-500 transition-colors duration-200"
                         (click)="$event.stopPropagation(); onExport.emit(team.id)"
-                />
+                >
+                    <i class="pi pi-download"></i>
+                </button>
                 <h3 class="text-lg font-semibold text-baby_powder-500">{{ team.name }}</h3>
                 <button
                         class="text-paynes_gray-500 hover:text-mauve-500 transition-colors duration-200"

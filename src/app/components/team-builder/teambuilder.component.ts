@@ -2,18 +2,20 @@ import { CommonModule } from '@angular/common';
 import { Component, computed, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
+import { TooltipModule } from 'primeng/tooltip';
 
 import { TeamMemberCardComponent } from '@/app/components/team-builder/team-member-card.component';
 import { Role } from '@/app/models/Role.enum';
 import { TeamMember } from '@/app/models/Team.model';
 import { TeamService } from '@/app/services/team.service';
+import { getRoleIcon, canMemberHeal } from '@/app/utils/role.utils';
 
 @Component({
   selector: 'app-team-builder',
-  imports: [CommonModule, TeamMemberCardComponent, InputTextModule, FormsModule],
+  imports: [CommonModule, TeamMemberCardComponent, InputTextModule, FormsModule, TooltipModule],
   template: `
-    <div class="h-full w-full bg-gradient-to-br from-rich_black-400/50 to-gunmetal-500/50 p-4 space-y-4 overflow-y-auto">
-      <div class="mb-6">
+    <div class="h-full w-full overflow-y-auto">
+      <div class="sticky top-0 z-10 bg-gradient-to-br from-rich_black-400/50 to-gunmetal-500/50 p-4 border-b border-air_superiority_blue-500/20 space-y-4">
         <div class="flex items-center gap-2">
           @if (isEditing) {
             <input
@@ -34,13 +36,46 @@ import { TeamService } from '@/app/services/team.service';
             </h2>
           }
         </div>
+
+        <div class="flex items-center gap-3 text-sm flex-wrap">
+          <div class="flex items-center gap-1.5 cursor-help" pTooltip="Tank" tooltipPosition="bottom" [showDelay]="800">
+            <span [class]="'pi ' + getRoleIcon(Role.TANK) + ' text-air_superiority_blue-500'"></span>
+            <span class="font-semibold text-baby_powder-500">{{ roleStats()[Role.TANK] }}</span>
+          </div>
+          <div class="flex items-center gap-1.5 cursor-help" pTooltip="DPS" tooltipPosition="bottom" [showDelay]="800">
+            <span [class]="'pi ' + getRoleIcon(Role.DPS) + ' text-red-500'"></span>
+            <span class="font-semibold text-baby_powder-500">{{ roleStats()[Role.DPS] }}</span>
+          </div>
+          <div class="flex items-center gap-1.5 cursor-help" pTooltip="Bruiser" tooltipPosition="bottom" [showDelay]="800">
+            <span [class]="'pi ' + getRoleIcon(Role.BRUISER) + ' text-orange-500'"></span>
+            <span class="font-semibold text-baby_powder-500">{{ roleStats()[Role.BRUISER] }}</span>
+          </div>
+          <div class="flex items-center gap-1.5 cursor-help" pTooltip="Scout" tooltipPosition="bottom" [showDelay]="800">
+            <span [class]="'pi ' + getRoleIcon(Role.SCOUT) + ' text-blue-500'"></span>
+            <span class="font-semibold text-baby_powder-500">{{ roleStats()[Role.SCOUT] }}</span>
+          </div>
+          <div class="flex items-center gap-1.5 cursor-help" pTooltip="Support" tooltipPosition="bottom" [showDelay]="800">
+            <span [class]="'pi ' + getRoleIcon(Role.SUPPORT) + ' text-indigo-500'"></span>
+            <span class="font-semibold text-baby_powder-500">{{ roleStats()[Role.SUPPORT] }}</span>
+          </div>
+          <div class="flex items-center gap-1.5 cursor-help" pTooltip="Soigneur" tooltipPosition="bottom" [showDelay]="800">
+            <span [class]="'pi ' + getRoleIcon(Role.HEALER) + ' text-emerald-400'"></span>
+            <span class="font-semibold text-emerald-400">{{ healerCount() }}</span>
+          </div>
+          <div class="flex items-center gap-1.5 border-l border-air_superiority_blue-500/20 pl-3 cursor-help" pTooltip="Peut soigner (Staff, classe, emblème)" tooltipPosition="bottom" [showDelay]="800">
+            <span class="pi pi-heart-fill text-red-500"></span>
+            <span class="font-semibold text-red-400">{{ canHealCount() }}</span>
+          </div>
+        </div>
       </div>
 
-      @for (member of displayedMembers(); track member.id) {
-        <app-team-member-card
-          [member]="member"
-        />
-      }
+      <div class="bg-gradient-to-br from-rich_black-400/50 to-gunmetal-500/50 p-4 space-y-4">
+        @for (member of displayedMembers(); track member.id) {
+          <app-team-member-card
+            [member]="member"
+          />
+        }
+      </div>
     </div>
   `,
   standalone: true,
@@ -54,6 +89,8 @@ import { TeamService } from '@/app/services/team.service';
 export class TeamBuilderComponent {
   protected isEditing = false;
   protected editedName = '';
+  protected readonly Role = Role;
+  protected readonly getRoleIcon = getRoleIcon;
 
   private readonly teamService: TeamService = inject(TeamService);
 
@@ -78,6 +115,53 @@ export class TeamBuilderComponent {
       const bRole = b.role ?? 'NONE';
       return roleOrder[aRole] - roleOrder[bRole];
     });
+  });
+
+  protected roleStats = computed(() => {
+    const currentTeam = this.team();
+    if (!currentTeam) {
+      return {
+        [Role.TANK]: 0,
+        [Role.DPS]: 0,
+        [Role.BRUISER]: 0,
+        [Role.SCOUT]: 0,
+        [Role.SUPPORT]: 0,
+        [Role.HEALER]: 0
+      };
+    }
+
+    const stats = {
+      [Role.TANK]: 0,
+      [Role.DPS]: 0,
+      [Role.BRUISER]: 0,
+      [Role.SCOUT]: 0,
+      [Role.SUPPORT]: 0,
+      [Role.HEALER]: 0
+    };
+
+    currentTeam.members.forEach((member: TeamMember) => {
+      if (member.role) {
+        stats[member.role]++;
+      }
+    });
+
+    return stats;
+  });
+
+  protected healerCount = computed(() => {
+    const currentTeam = this.team();
+    if (!currentTeam) return 0;
+
+    return currentTeam.members.filter((member: TeamMember) =>
+      member.role === Role.HEALER
+    ).length;
+  });
+
+  protected canHealCount = computed(() => {
+    const currentTeam = this.team();
+    if (!currentTeam) return 0;
+
+    return currentTeam.members.filter(canMemberHeal).length;
   });
 
   startEditing(): void {
