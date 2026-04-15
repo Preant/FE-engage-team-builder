@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, inject, signal, WritableSignal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { TooltipModule } from 'primeng/tooltip';
 
 import { TeamMemberCardComponent } from '@/app/components/team-builder/team-member-card.component';
+import { TeamMemberCompactCardComponent } from '@/app/components/team-builder/team-member-compact-card.component';
 import { Role } from '@/app/models/Role.enum';
 import { TeamMember } from '@/app/models/Team.model';
 import { TeamService } from '@/app/services/team.service';
@@ -12,11 +13,12 @@ import { getRoleIcon, canMemberHeal } from '@/app/utils/role.utils';
 
 @Component({
   selector: 'app-team-builder',
-  imports: [CommonModule, TeamMemberCardComponent, InputTextModule, FormsModule, TooltipModule],
+  imports: [CommonModule, TeamMemberCardComponent, TeamMemberCompactCardComponent, InputTextModule, FormsModule, TooltipModule],
   template: `
     <div class="h-full w-full overflow-y-auto">
       <div class="sticky top-0 z-10 bg-gradient-to-br from-rich_black-400/50 to-gunmetal-500/50 p-4 border-b border-air_superiority_blue-500/20 space-y-4">
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-2 justify-between">
+          <div>
           @if (isEditing) {
             <input
               pInputText
@@ -35,6 +37,16 @@ import { getRoleIcon, canMemberHeal } from '@/app/utils/role.utils';
               {{ team()?.name }}
             </h2>
           }
+          </div>
+          <button
+            class="pi text-lg cursor-pointer hover:text-air_superiority_blue-400 transition-colors"
+            [class.pi-list]="viewMode() === 'normal'"
+            [class.pi-th-large]="viewMode() === 'compact'"
+            (click)="toggleViewMode()"
+            [attr.title]="viewMode() === 'normal' ? 'Switch to compact view' : 'Switch to normal view'"
+            pTooltip="Toggle view"
+            tooltipPosition="left">
+          </button>
         </div>
 
         <div class="flex items-center gap-3 text-sm flex-wrap">
@@ -69,13 +81,23 @@ import { getRoleIcon, canMemberHeal } from '@/app/utils/role.utils';
         </div>
       </div>
 
-      <div class="bg-gradient-to-br from-rich_black-400/50 to-gunmetal-500/50 p-4 space-y-4">
-        @for (member of displayedMembers(); track member.id) {
-          <app-team-member-card
-            [member]="member"
-          />
-        }
-      </div>
+      @if (viewMode() === 'normal') {
+        <div class="bg-gradient-to-br from-rich_black-400/50 to-gunmetal-500/50 p-4 space-y-4">
+          @for (member of displayedMembers(); track member.id) {
+            <app-team-member-card
+              [member]="member"
+            />
+          }
+        </div>
+      } @else {
+        <div class="bg-gradient-to-br from-rich_black-400/50 to-gunmetal-500/50 p-2 flex flex-wrap gap-2 overflow-auto justify-center items-start content-start">
+          @for (member of displayedMembers(); track member.id) {
+            <app-team-member-compact-card
+              [member]="member"
+            />
+          }
+        </div>
+      }
     </div>
   `,
   standalone: true,
@@ -91,6 +113,7 @@ export class TeamBuilderComponent {
   protected editedName = '';
   protected readonly Role = Role;
   protected readonly getRoleIcon = getRoleIcon;
+  protected viewMode: WritableSignal<'normal' | 'compact'> = signal('normal');
 
   private readonly teamService: TeamService = inject(TeamService);
 
@@ -178,5 +201,9 @@ export class TeamBuilderComponent {
       this.teamService.updateTeamName(currentTeam.id, this.editedName.trim());
     }
     this.isEditing = false;
+  }
+
+  toggleViewMode(): void {
+    this.viewMode.set(this.viewMode() === 'normal' ? 'compact' : 'normal');
   }
 }
