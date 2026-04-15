@@ -17,7 +17,7 @@ import { Item } from '@/app/models/Item.model';
 import { Skill } from '@/app/models/Skill.model';
 import { SkillType } from '@/app/models/SkillType.enum';
 import { Weapon } from '@/app/models/Weapon.model';
-import { GenericResourceService } from '@/app/services/generic-resource.service.tsd';
+import { GenericResourceService } from '@/app/services/generic-resource.service';
 
 @Injectable({
   providedIn: 'root'

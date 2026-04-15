@@ -25,6 +25,8 @@ import { getOrdinal } from '@/app/utils/getOrdinal';
   providedIn: 'root'
 })
 export class TeamService {
+  private ALEAR_EMBLEM_ID: EmblemID = brandAs.EmblemID(13);
+
   readonly members: Signal<TeamMember[]> = computed((): TeamMember[] => this.activeTeam()?.members ?? []);
   private readonly teamsSignal: WritableSignal<Team[]> = signal<Team[]>([]);
   readonly teams: Signal<Team[]> = this.teamsSignal.asReadonly();
@@ -386,6 +388,8 @@ export class TeamService {
       );
 
       return this.emblemService.resources()
+        //filter alear emblem
+        .filter((emblem: Emblem) => emblem.id != this.ALEAR_EMBLEM_ID)
         .filter((emblem: Emblem) => !usedIds.has(emblem.id));
     });
   }

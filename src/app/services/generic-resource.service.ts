@@ -10,8 +10,8 @@ export abstract class GenericResourceService<T extends Resource> {
   readonly resources: Signal<T[]> = this.resourceSignal.asReadonly();
 
   protected constructor(
-        protected http: HttpClient,
-        protected dataPath: string
+    protected http: HttpClient,
+    protected dataPath: string
   ) {
   }
 
