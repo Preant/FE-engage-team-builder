@@ -11,7 +11,7 @@ import { SkillType } from '@/app/models/SkillType.enum';
 import { Staff } from '@/app/models/Staff.model';
 import { Team, TeamMember, isStaff, isWeapon } from '@/app/models/Team.model';
 import { Weapon } from '@/app/models/Weapon.model';
-import { ClassWeaponMasteryLevel, weaponRankToWeaponMasteryLevel } from '@/app/models/WeaponMasteryLevel.enum';
+import { ClassWeaponMasteryLevel, weaponRankToWeaponMasteryLevel, WeaponMasteryLevel } from '@/app/models/WeaponMasteryLevel.enum';
 import { WeaponType } from '@/app/models/WeaponType.enum';
 import {
   CharacterService,
@@ -28,6 +28,7 @@ import { getOrdinal } from '@/app/utils/getOrdinal';
 })
 export class TeamService {
   private ALEAR_EMBLEM_ID: EmblemID = brandAs.EmblemID(13);
+  private MICAIAH_EMBLEM_ID: EmblemID = brandAs.EmblemID(4);
 
   readonly members: Signal<TeamMember[]> = computed((): TeamMember[] => this.activeTeam()?.members ?? []);
   private readonly teamsSignal: WritableSignal<Team[]> = signal<Team[]>([]);
@@ -468,6 +469,11 @@ export class TeamService {
         .filter((staff: Staff) => !staff.isEngageWeapon)
         .filter((staff: Staff) => !usedItemIds.has(staff.id))
         .filter((staff: Staff): boolean => {
+          // Check if emblem is Micaiah - can use staves up to rank A
+          if (member.emblem?.id === this.MICAIAH_EMBLEM_ID) {
+            return [WeaponMasteryLevel.D, WeaponMasteryLevel.C, WeaponMasteryLevel.B, WeaponMasteryLevel.A].includes(staff.rank);
+          }
+
           const combatClass: Class | null = member.class;
           if (!combatClass) {
             return true;
