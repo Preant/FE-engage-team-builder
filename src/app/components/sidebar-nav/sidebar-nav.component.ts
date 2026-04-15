@@ -13,15 +13,13 @@ import { ViewStateService } from '@/app/services/view-state.service';
   template: `
     <div class="flex flex-col h-full items-center py-3 gap-3 bg-gradient-to-b from-rich_black-500 to-prussian_blue-500 shadow-lg w-[52px]">
       <!-- Home -->
-      @if (activeTeam()) {
-        <p-button
-          icon="pi pi-home"
-          [text]="true"
-          severity="secondary"
-          pTooltip="Accueil"
-          tooltipPosition="right"
-          (click)="goHome()"/>
-      }
+      <p-button
+        icon="pi pi-home"
+        [text]="true"
+        severity="secondary"
+        pTooltip="Accueil"
+        tooltipPosition="right"
+        (click)="goHome()"/>
 
       <!-- Resources toggle -->
       <p-button
