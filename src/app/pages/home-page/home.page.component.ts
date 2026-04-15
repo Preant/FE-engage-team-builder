@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject, Signal } from '@angular/core';
 import { SplitAreaComponent, SplitComponent } from 'angular-split';
 
+import { SidebarNavComponent } from '@/app/components/sidebar-nav/sidebar-nav.component';
 import { CharactersComponent } from '@/app/components/resources/characters.component';
 import { ClassesComponent } from '@/app/components/resources/classes.component';
 import { EmblemsComponent } from '@/app/components/resources/emblems.component';
@@ -20,6 +21,7 @@ import { ViewStateService } from '@/app/services/view-state.service';
 @Component({
   imports: [
     CommonModule,
+    SidebarNavComponent,
     ResourcesMenuComponent,
     SplitComponent,
     SplitAreaComponent,
@@ -35,8 +37,9 @@ import { ViewStateService } from '@/app/services/view-state.service';
   ],
   standalone: true,
   template: `
-        <div class="w-full h-full">
-            <as-split>
+        <div class="flex flex-row h-full w-full">
+            <app-sidebar-nav/>
+            <as-split class="flex-1">
                 <as-split-area [size]="isResourcesPanelOpen() ? 50 : 100" [minSize]="50">
                     <div class="flex flex-col h-full">
                         @if (this.activeTeam()) {

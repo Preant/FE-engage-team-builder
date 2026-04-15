@@ -1,14 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component, computed, inject, Signal, ViewChild } from '@angular/core';
+import { Component, computed, inject, Signal } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
-import { FileUploadModule } from 'primeng/fileupload';
 
 import { TeamID } from '@/app/brands/ResourceID.brand';
 import { TeamCardComponent } from '@/app/components/team-builder/team-card.component';
 import { Team } from '@/app/models/Team.model';
 import { TeamService } from '@/app/services/team.service';
-import { ViewStateService } from '@/app/services/view-state.service';
 
 @Component({
   selector: 'app-team-selector',
@@ -16,33 +14,13 @@ import { ViewStateService } from '@/app/services/view-state.service';
   imports: [
     CommonModule,
     ButtonModule,
-    FileUploadModule,
     DialogModule,
     TeamCardComponent
   ],
   template: `
         <div class="h-full w-full bg-gradient-to-br from-rich_black-400/50 to-gunmetal-500/50 p-4">
-            <div class="flex justify-between items-center mb-8">
+            <div class="mb-8">
                 <h2 class="text-2xl font-bold text-baby_powder-500">Teams</h2>
-                <div class="flex items-center space-x-2">
-                    <p-button
-                            label="New Team"
-                            class="p-button-rounded"
-                            (click)="createTeam()"
-                    ></p-button>
-                    <p-fileUpload
-                            #fileUpload
-                            mode="basic"
-                            accept=".json"
-                            chooseLabel="Import Team"
-                            (onSelect)="importTeam($event.files[0])"
-                    ></p-fileUpload>
-                    <p-button
-                            label="Resources"
-                            class="p-button-rounded p-button-text"
-                            (click)="toggleResourcesPanel()"
-                    ></p-button>
-                </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -117,7 +95,6 @@ import { ViewStateService } from '@/app/services/view-state.service';
     `]
 })
 export class TeamSelectorComponent {
-  @ViewChild('fileUpload') fileUpload!: any; // PrimeNG FileUploadComponent
   readonly sortedTeams: Signal<Team[]> = computed(
     (): Team[] => this.teams().sort((a, b) => a.id - b.id)
   );
@@ -125,20 +102,9 @@ export class TeamSelectorComponent {
   protected teamToDelete: Team | null = null;
   private readonly teamService: TeamService = inject(TeamService);
   readonly teams: Signal<Team[]> = this.teamService.teams;
-  private readonly viewStateService: ViewStateService = inject(ViewStateService);
-
-  toggleResourcesPanel(): void {
-    this.viewStateService.setIsResourcesPanelOpen(
-      !this.viewStateService.getIsResourcesPanelOpen()()
-    );
-  }
 
   selectTeam(teamId: TeamID): void {
     this.teamService.switchTeam(teamId);
-  }
-
-  createTeam(): void {
-    this.teamService.createTeam();
   }
 
   exportTeam(teamId: TeamID): void {
@@ -152,20 +118,6 @@ export class TeamSelectorComponent {
     link.download = `team_export_${new Date().toISOString().replace(/:/g, '-')}.json`;
     link.click();
     window.URL.revokeObjectURL(url);
-  }
-
-  importTeam(file: File): void {
-    const reader: FileReader = new FileReader();
-    reader.onload = (e: ProgressEvent<FileReader>) => {
-      try {
-        const importedTeam: Team = JSON.parse(e.target?.result as string);
-        this.teamService.importTeam(importedTeam);
-        this.fileUpload.clear();
-      } catch (error) {
-        console.error('Error importing team:', error);
-      }
-    };
-    reader.readAsText(file);
   }
 
   protected showDeleteConfirmation(team: Team): void {

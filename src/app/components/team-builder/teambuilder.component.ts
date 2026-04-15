@@ -1,52 +1,38 @@
 import { CommonModule } from '@angular/common';
 import { Component, computed, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 
 import { TeamMemberCardComponent } from '@/app/components/team-builder/team-member-card.component';
 import { Role } from '@/app/models/Role.enum';
 import { TeamMember } from '@/app/models/Team.model';
 import { TeamService } from '@/app/services/team.service';
-import { ViewStateService } from '@/app/services/view-state.service';
 
 @Component({
   selector: 'app-team-builder',
-  imports: [CommonModule, TeamMemberCardComponent, ButtonModule, InputTextModule, FormsModule],
+  imports: [CommonModule, TeamMemberCardComponent, InputTextModule, FormsModule],
   template: `
     <div class="h-full w-full bg-gradient-to-br from-rich_black-400/50 to-gunmetal-500/50 p-4 space-y-4 overflow-y-auto">
-      <div class="flex justify-between items-center mb-6">
-        <div class="flex items-center gap-4">
-          <p-button icon="pi pi-home" (click)="goBack()"/>
-
-          <div class="flex items-center gap-2">
-            @if (isEditing) {
-              <input
-                pInputText
-                type="text"
-                [(ngModel)]="editedName"
-                (keyup.enter)="saveName()"
-                (blur)="saveName()"
-                class="p-inputtext-sm"
-                #nameInput
-              />
-            } @else {
-              <h2
-                class="text-2xl font-bold text-baby_powder-500 hover:text-air_superiority_blue-500 cursor-pointer"
-                (click)="startEditing()"
-              >
-                {{ team()?.name }}
-              </h2>
-            }
-          </div>
-        </div>
-
-        <div class="flex gap-2">
-          <p-button
-            label="Resources"
-            class="p-button-rounded p-button-text"
-            (click)="toggleResourcesPanel()"
-          ></p-button>
+      <div class="mb-6">
+        <div class="flex items-center gap-2">
+          @if (isEditing) {
+            <input
+              pInputText
+              type="text"
+              [(ngModel)]="editedName"
+              (keyup.enter)="saveName()"
+              (blur)="saveName()"
+              class="p-inputtext-sm"
+              #nameInput
+            />
+          } @else {
+            <h2
+              class="text-2xl font-bold text-baby_powder-500 hover:text-air_superiority_blue-500 cursor-pointer"
+              (click)="startEditing()"
+            >
+              {{ team()?.name }}
+            </h2>
+          }
         </div>
       </div>
 
@@ -70,7 +56,6 @@ export class TeamBuilderComponent {
   protected editedName = '';
 
   private readonly teamService: TeamService = inject(TeamService);
-  private readonly viewStateService: ViewStateService = inject(ViewStateService);
 
   protected team = this.teamService.activeTeam;
 
@@ -94,14 +79,6 @@ export class TeamBuilderComponent {
       return roleOrder[aRole] - roleOrder[bRole];
     });
   });
-
-  public toggleResourcesPanel(): void {
-    this.viewStateService.setIsResourcesPanelOpen(!this.viewStateService.getIsResourcesPanelOpen()());
-  }
-
-  public goBack(): void {
-    this.teamService.switchTeam(null);
-  }
 
   startEditing(): void {
     const currentTeam = this.team();
