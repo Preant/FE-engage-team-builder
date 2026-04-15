@@ -6,11 +6,16 @@ import {
   EmblemService,
   ItemService,
   SkillService,
+  StaffService,
   WeaponService
 } from '@/app/services/resources.service';
 
 export function initializeWeapons(weaponService: WeaponService) {
   return () => weaponService.loadResourcesInformation();
+}
+
+export function initializeStaves(staffService: StaffService) {
+  return () => staffService.loadResourcesInformation();
 }
 
 export function initializeCharacters(characterService: CharacterService) {
@@ -36,6 +41,10 @@ export function initializeClasses(classService: ClassService) {
 export const appInitializer = [
   provideAppInitializer(() => {
     const initializerFn = (initializeWeapons)(inject(WeaponService));
+    return initializerFn();
+  }),
+  provideAppInitializer(() => {
+    const initializerFn = (initializeStaves)(inject(StaffService));
     return initializerFn();
   }),
   provideAppInitializer(() => {

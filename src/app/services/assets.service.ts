@@ -6,6 +6,7 @@ import {
   ITEM_RESOURCE_PATH,
   MISCELLANEOUS_RESOURCE_PATH,
   SKILL_RESOURCE_PATH,
+  STAFF_RESOURCE_PATH,
   WEAPON_RESOURCE_PATH
 } from '@/app/config/config';
 import { EfficiencyType } from '@/app/models/EfficiencyType.enum';
@@ -44,6 +45,10 @@ export class AssetsService {
 
   getWeaponImage(weaponIdentifier: string, _size: ImageType = ImageType.BODY_SMALL): string {
     return `${WEAPON_RESOURCE_PATH}${weaponIdentifier}.png`;
+  }
+
+  getStaffImage(staffIdentifier: string, _size: ImageType = ImageType.BODY_SMALL): string {
+    return `${STAFF_RESOURCE_PATH}${staffIdentifier}.png`;
   }
 
   getItemImage(itemIdentifier: string, _size: ImageType = ImageType.BODY_SMALL): string {
