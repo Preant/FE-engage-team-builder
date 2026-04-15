@@ -124,7 +124,7 @@ import { getOrdinal } from '@/app/utils/getOrdinal';
 
             <!-- Main Content -->
             <div class="flex-1 flex flex-col space-y-4">
-                <div class="flex justify-around flex-wrap space-x-4">
+                <div class="flex justify-around flex-nowrap gap-2 flex-shrink">
                     <app-select
                             class="w-36 h-24"
                             [selectOptions]="characterOptions()"
