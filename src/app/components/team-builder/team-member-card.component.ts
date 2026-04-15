@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, computed, inject, Input, Signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-import { CharacterID, ClassID, EmblemID, SkillID, WeaponID } from '@/app/brands/ResourceID.brand';
+import { CharacterID, ClassID, EmblemID, SkillID, StaffID, WeaponID } from '@/app/brands/ResourceID.brand';
 import {
   SelectComponent,
   SelectOptionIcon,
@@ -17,7 +17,8 @@ import { Emblem } from '@/app/models/Emblem.model';
 import { ImageType } from '@/app/models/ImageSize.enum';
 import { ResourceID } from '@/app/models/Resource.model';
 import { Skill } from '@/app/models/Skill.model';
-import { TeamMember } from '@/app/models/Team.model';
+import { Staff } from '@/app/models/Staff.model';
+import { TeamMember, isStaff, isWeapon } from '@/app/models/Team.model';
 import { ViewType } from '@/app/models/ViewType.enum';
 import { Weapon } from '@/app/models/Weapon.model';
 import { WeaponType } from '@/app/models/WeaponType.enum';
@@ -102,7 +103,7 @@ export class TeamMemberCardComponent {
     characterOptions!: Signal<SelectOptionIcon<CharacterID>[]>;
     classOptions!: Signal<SelectOptionLabel<ClassID>[]>;
     emblemOptions!: Signal<SelectOptionIcon<EmblemID>[]>;
-    weaponsOptions!: Signal<SelectOptionIcon<WeaponID>[]>[];
+    weaponsOptions!: Signal<SelectOptionIcon<WeaponID | StaffID>[]>[];
     skillOptions!: Signal<SelectOptionIcon<SkillID>[]>[];
     protected readonly SelectType: typeof SelectType = SelectType;
     private readonly colorService: ColorService = inject(ColorService);
@@ -154,12 +155,27 @@ export class TeamMemberCardComponent {
         (a, b) => a.id - b.id);
     }
 
-    public getWeaponOptions(weaponSlotIndex: number): SelectOptionIcon<WeaponID>[] {
-      return this.getResourceSelectItemIconOptions(this.teamService.getAvailableWeapons(this.member.id, weaponSlotIndex)(),
-        (identifier: string) => this.assetsService.getWeaponImage(identifier, ImageType.BODY),
-        (identifier: string) => this.assetsService.getWeaponImage(identifier, ImageType.BODY),
-        (a, b) => getOrdinal(WeaponType, a.weaponType) - getOrdinal(WeaponType, b.weaponType),
-        (weapon: Weapon) => this.colorService.getColorForWeapon(weapon));
+    public getWeaponOptions(weaponSlotIndex: number): SelectOptionIcon<WeaponID | StaffID>[] {
+      const items = this.teamService.getAvailableWeapons(this.member.id, weaponSlotIndex)();
+      return items.sort((a, b) => {
+        const aName = a.name;
+        const bName = b.name;
+        return aName.localeCompare(bName);
+      }).map((item: Weapon | Staff) => {
+        const imageUrl = isWeapon(item)
+          ? this.assetsService.getWeaponImage(item.identifier, ImageType.BODY)
+          : this.assetsService.getStaffImage(item.identifier, ImageType.BODY);
+        const borderColor = isWeapon(item)
+          ? this.colorService.getColorForWeapon(item)
+          : this.colorService.getColorForStaff(item);
+        return {
+          id: item.id,
+          name: item.name,
+          itemUrl: imageUrl,
+          selectedItemUrl: imageUrl,
+          borderColor: borderColor
+        };
+      });
     }
 
     public getInheritableSkillOptions(skillSlotIndex: number): SelectOptionIcon<SkillID>[] {
@@ -181,7 +197,7 @@ export class TeamMemberCardComponent {
       this.teamService.updateMemberClass(this.member.id, id);
     }
 
-    public onWeaponSelect(id: WeaponID | null, weaponIndex: number): void {
+    public onWeaponSelect(id: WeaponID | StaffID | null, weaponIndex: number): void {
       if (weaponIndex < 0 || weaponIndex >= this.member.weapons.length) {
         console.error(`Invalid weapon index: ${weaponIndex}`);
         return;
@@ -226,10 +242,15 @@ export class TeamMemberCardComponent {
 
     viewWeaponDetails(weaponIndexSlot: number): void {
       this.viewStateService.openPanel();
-      const weapon: Weapon | null = this.member.weapons[weaponIndexSlot];
-      if (weapon) {
-        this.viewStateService.setSelectedWeaponId(weapon.id);
-        this.viewStateService.setView(ViewType.WEAPONS);
+      const item: Weapon | Staff | null = this.member.weapons[weaponIndexSlot];
+      if (item) {
+        if (isWeapon(item)) {
+          this.viewStateService.setSelectedWeaponId(item.id);
+          this.viewStateService.setView(ViewType.WEAPONS);
+        } else {
+          this.viewStateService.setSelectedStaffId(item.id);
+          this.viewStateService.setView(ViewType.STAVES);
+        }
       }
     }
 

@@ -4,6 +4,7 @@ import { Character } from '@/app/models/Character.model';
 import { Class } from '@/app/models/Class.model';
 import { ClassType } from '@/app/models/ClassType.enum';
 import { Country } from '@/app/models/Country.enum';
+import { Staff } from '@/app/models/Staff.model';
 import { Weapon } from '@/app/models/Weapon.model';
 import { WeaponType } from '@/app/models/WeaponType.enum';
 
@@ -65,6 +66,10 @@ export class ColorService {
 
   public getColorForWeapon(weapon: Weapon): string {
     return weapon.isUnique ? this.uniqueWeaponColor : this.weaponTypeColors[weapon.weaponType];
+  }
+
+  public getColorForStaff(staff: Staff): string {
+    return staff.isUnique ? this.uniqueWeaponColor : this.weaponTypeColors[WeaponType.STAFF];
   }
 
   public getColorForWeaponRank(rank: string): string {

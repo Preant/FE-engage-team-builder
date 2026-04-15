@@ -144,14 +144,14 @@ export class StavesComponent {
 
   constructor() {
     effect(() => {
-      const selectedId = this.viewStateService.getSelectedWeaponId()();
+      const selectedId = this.viewStateService.getSelectedStaffId()();
       if (selectedId !== null) {
         const staff = this.staffService.resources()
           .find(staff => staff.id === selectedId);
         if (staff) {
           this.selectedStaff.set(staff);
         }
-        this.viewStateService.setSelectedWeaponId(null);
+        this.viewStateService.setSelectedStaffId(null);
       }
     });
   }
