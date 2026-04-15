@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { SelectButtonModule } from 'primeng/selectbutton';
 
+import { ClassFilters } from '@/app/models/ClassFilters.model';
 import { ClassType } from '@/app/models/ClassType.enum';
 import { WeaponType } from '@/app/models/WeaponType.enum';
 import { AssetsService } from '@/app/services/assets.service';
@@ -91,7 +92,7 @@ import { AssetsService } from '@/app/services/assets.service';
     `
 })
 export class ClassFiltersComponent {
-    @Output() filterChange: EventEmitter<any> = new EventEmitter<any>();
+    @Output() filterChange: EventEmitter<ClassFilters> = new EventEmitter<ClassFilters>();
     protected searchQuery: string = '';
     protected isAdvanced: boolean | null = null;
     protected selectedClassTypes: Set<ClassType> = new Set<ClassType>();

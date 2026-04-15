@@ -36,11 +36,11 @@ import { CharactersPanelGridConfig } from '@/app/models/CharactersPanelGridConfi
         }
     `]
 })
-export class ResourcesPanelGridComponent {
+export class ResourcesPanelGridComponent<T extends { gridArea?: string } = any> {
     @Input() config!: CharactersPanelGridConfig;
 
-    @Input() items: any[] = [];
-    @Input() customTemplate!: TemplateRef<any>;
+    @Input() items: T[] = [];
+    @Input() customTemplate!: TemplateRef<{ $implicit: T }>;
 
     get gridTemplateColumns(): string {
       return `repeat(${this.config.cols}, minmax(0, 1fr))`;
@@ -50,9 +50,9 @@ export class ResourcesPanelGridComponent {
       return `repeat(${this.config.rows}, minmax(0, 1fr))`;
     }
 
-    @Input() trackByFn: (item: any) => any = (index: number): number => index;
+    @Input() trackByFn: (item: T) => string | number = (index: number): number => index;
 
-    trackBy(item: any): any {
+    trackBy(item: T): string | number {
       return this.trackByFn(item);
     }
 }

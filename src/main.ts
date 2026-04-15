@@ -6,8 +6,8 @@ import Aura from '@primeng/themes/aura';
 import { ConfirmationService } from 'primeng/api';
 import { providePrimeNG } from 'primeng/config';
 
-import { routes } from './app/app.routes';
 import { AppComponent } from './app/app.component';
+import { routes } from './app/app.routes';
 
 import { appInitializer } from '@/app/config/appInitializer';
 
@@ -24,4 +24,4 @@ bootstrapApplication(AppComponent, {
     ConfirmationService,
     appInitializer
   ]
-}).catch((err: any) => console.error(err));
+}).catch((err: unknown) => console.error(err));

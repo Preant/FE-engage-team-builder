@@ -40,7 +40,7 @@ import { ViewStateService } from '@/app/services/view-state.service';
                 <as-split-area [size]="isResourcesPanelOpen() ? 50 : 100" [minSize]="50">
                     <div class="flex flex-col h-full">
                         @if (this.activeTeam()) {
-                            <app-team-builder [team]="activeTeam()!"/>
+                            <app-team-builder/>
                         } @else {
                             <app-team-selector/>
                         }

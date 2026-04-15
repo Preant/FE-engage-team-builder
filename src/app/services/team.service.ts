@@ -6,6 +6,7 @@ import { INHERITABLE_SKILL_SIZE, TEAM_MEMBER_SIZE, WEAPON_BY_MEMBER_SIZE } from 
 import { Character } from '@/app/models/Character.model';
 import { Class } from '@/app/models/Class.model';
 import { Emblem } from '@/app/models/Emblem.model';
+import { Role } from '@/app/models/Role.enum';
 import { Skill } from '@/app/models/Skill.model';
 import { SkillType } from '@/app/models/SkillType.enum';
 import { Staff } from '@/app/models/Staff.model';
@@ -85,7 +86,8 @@ export class TeamService {
         class: null,
         emblem: null,
         weapons: [null, null, null, null],
-        inheritableSkills: [null, null]
+        inheritableSkills: [null, null],
+        role: null
       }))
     };
 
@@ -283,6 +285,26 @@ export class TeamService {
                 return null;
               })
             }
+            : member
+        )
+      };
+    }));
+  }
+
+  updateMemberRole(memberId: TeamMemberID, role: Role | null): void {
+    const id: TeamID | null = this.activeTeamIdSignal();
+    if (!id) {
+      throw new Error('No active team');
+    }
+    this.teamsSignal.update((teams: Team[]): Team[] => teams.map((team: Team): Team => {
+      if (team.id !== id) {
+        return team;
+      }
+      return {
+        ...team,
+        members: team.members.map((member: TeamMember): TeamMember =>
+          member.id === memberId
+            ? { ...member, role }
             : member
         )
       };
@@ -547,6 +569,46 @@ export class TeamService {
     const existingIds: TeamID[] = this.teams().map((team: Team): TeamID => team.id);
     const maxId: number = Math.max(...existingIds, 0);
     return brandAs.TeamID(maxId + 1);
+  }
+
+  public sortMembersByRole(): void {
+    const id: TeamID | null = this.activeTeamIdSignal();
+    if (!id) {
+      throw new Error('No active team');
+    }
+
+    this.teamsSignal.update((teams: Team[]): Team[] => teams.map((team: Team): Team => {
+      if (team.id !== id) {
+        return team;
+      }
+
+      const roleOrder: Record<Role | 'NONE', number> = {
+        [Role.TANK]: 0,
+        [Role.DPS]: 1,
+        [Role.BRUISER]: 2,
+        [Role.SCOUT]: 3,
+        [Role.SUPPORT]: 4,
+        [Role.HEALER]: 5,
+        'NONE': 6
+      };
+
+      const sortedMembers = [...team.members].sort((a: TeamMember, b: TeamMember) => {
+        const aRole = a.role ?? 'NONE';
+        const bRole = b.role ?? 'NONE';
+        return roleOrder[aRole] - roleOrder[bRole];
+      });
+
+      const membersWithNewIds = sortedMembers.map((member: TeamMember, index: number): TeamMember => ({
+        ...member,
+        id: brandAs.TeamMemberID(index + 1)
+      }));
+
+      return {
+        ...team,
+        members: membersWithNewIds,
+        lastModified: new Date()
+      };
+    }));
   }
 
   // Local Storage management for team states

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, computed, inject, Signal } from '@angular/core';
+import { Component, computed, inject, Signal, ViewChild } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
 import { FileUploadModule } from 'primeng/fileupload';
@@ -117,6 +117,7 @@ import { ViewStateService } from '@/app/services/view-state.service';
     `]
 })
 export class TeamSelectorComponent {
+  @ViewChild('fileUpload') fileUpload!: any; // PrimeNG FileUploadComponent
   readonly sortedTeams: Signal<Team[]> = computed(
     (): Team[] => this.teams().sort((a, b) => a.id - b.id)
   );
@@ -159,8 +160,7 @@ export class TeamSelectorComponent {
       try {
         const importedTeam: Team = JSON.parse(e.target?.result as string);
         this.teamService.importTeam(importedTeam);
-        const uploadButton: any = document.querySelector('p-fileUpload');
-        uploadButton.clear();
+        this.fileUpload.clear();
       } catch (error) {
         console.error('Error importing team:', error);
       }

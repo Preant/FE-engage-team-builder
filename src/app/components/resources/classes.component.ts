@@ -7,6 +7,7 @@ import { SelectButtonModule } from 'primeng/selectbutton';
 import { ClassCardComponent } from '@/app/components/resources/class-card.component';
 import { ClassFiltersComponent } from '@/app/components/resources/class-filter.component';
 import { Class } from '@/app/models/Class.model';
+import { ClassFilters } from '@/app/models/ClassFilters.model';
 import { ClassType } from '@/app/models/ClassType.enum';
 import { WeaponType } from '@/app/models/WeaponType.enum';
 import { ClassService } from '@/app/services/resources.service';
@@ -81,7 +82,7 @@ export class ClassesComponent {
       });
   });
 
-  protected updateFilters(newFilters: any): void {
+  protected updateFilters(newFilters: ClassFilters): void {
     this.filters.set(newFilters);
   }
 }
