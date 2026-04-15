@@ -19,10 +19,6 @@ import { TeamService } from '@/app/services/team.service';
   ],
   template: `
         <div class="h-full w-full bg-gradient-to-br from-rich_black-400/50 to-gunmetal-500/50 p-4">
-            <div class="mb-8">
-                <h2 class="text-2xl font-bold text-baby_powder-500">Teams</h2>
-            </div>
-
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 @for (team of sortedTeams(); track team.id) {
                     <app-team-card

@@ -72,6 +72,7 @@ export class ViewStateService {
 
   openPanel(): void {
     if (!this.isResourcesPanelOpen()) {
+      this.currentView.set(ViewType.RESOURCES);
       this.isResourcesPanelOpen.set(true);
     }
   }
