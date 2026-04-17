@@ -62,46 +62,37 @@ import { getRoleIcon, getRoleBgClass, canMemberHeal } from '@/app/utils/role.uti
                 </button>
                 <button
                   class="w-full px-4 py-2 text-left text-sm text-baby_powder-300 hover:bg-rich_black-600 transition-colors flex items-center justify-between font-medium"
-                  [class.bg-green-700]="member().role === roles[1].value"
+                  [class.bg-red-700]="member().role === roles[1].value"
                   (click)="setRoleAndClose(roles[1].value)">
-                  <span>Soigneur</span>
-                  @if (member().role === roles[1].value) {
-                    <span class="pi pi-check text-xs text-green-300"></span>
-                  }
-                </button>
-                <button
-                  class="w-full px-4 py-2 text-left text-sm text-baby_powder-300 hover:bg-rich_black-600 transition-colors flex items-center justify-between font-medium"
-                  [class.bg-red-700]="member().role === roles[2].value"
-                  (click)="setRoleAndClose(roles[2].value)">
                   <span>DPS</span>
-                  @if (member().role === roles[2].value) {
+                  @if (member().role === roles[1].value) {
                     <span class="pi pi-check text-xs text-red-300"></span>
                   }
                 </button>
                 <button
                   class="w-full px-4 py-2 text-left text-sm text-baby_powder-300 hover:bg-rich_black-600 transition-colors flex items-center justify-between font-medium"
-                  [class.bg-orange-700]="member().role === roles[3].value"
-                  (click)="setRoleAndClose(roles[3].value)">
+                  [class.bg-orange-700]="member().role === roles[2].value"
+                  (click)="setRoleAndClose(roles[2].value)">
                   <span>Bruiser</span>
-                  @if (member().role === roles[3].value) {
+                  @if (member().role === roles[2].value) {
                     <span class="pi pi-check text-xs text-orange-300"></span>
                   }
                 </button>
                 <button
                   class="w-full px-4 py-2 text-left text-sm text-baby_powder-300 hover:bg-rich_black-600 transition-colors flex items-center justify-between font-medium"
-                  [class.bg-blue-600]="member().role === roles[4].value"
-                  (click)="setRoleAndClose(roles[4].value)">
+                  [class.bg-blue-600]="member().role === roles[3].value"
+                  (click)="setRoleAndClose(roles[3].value)">
                   <span>Scout</span>
-                  @if (member().role === roles[4].value) {
+                  @if (member().role === roles[3].value) {
                     <span class="pi pi-check text-xs text-blue-300"></span>
                   }
                 </button>
                 <button
                   class="w-full px-4 py-2 text-left text-sm text-baby_powder-300 hover:bg-rich_black-600 transition-colors flex items-center justify-between font-medium"
-                  [class.bg-indigo-600]="member().role === roles[5].value"
-                  (click)="setRoleAndClose(roles[5].value)">
+                  [class.bg-indigo-600]="member().role === roles[4].value"
+                  (click)="setRoleAndClose(roles[4].value)">
                   <span>Support</span>
-                  @if (member().role === roles[5].value) {
+                  @if (member().role === roles[4].value) {
                     <span class="pi pi-check text-xs text-indigo-300"></span>
                   }
                 </button>
@@ -119,12 +110,25 @@ import { getRoleIcon, getRoleBgClass, canMemberHeal } from '@/app/utils/role.uti
             }
           </div>
 
-          <!-- Healing indicator (Top right) -->
-          @if (hasHealingAccess()) {
-            <div>
-              <span class="pi pi-heart-fill text-red-500 text-sm" style="text-shadow: 0 0 3px rgba(0,0,0,0.8);" pTooltip="Peut soigner" tooltipPosition="top"></span>
+          <!-- Right side indicators -->
+          <div class="flex flex-col items-end gap-0.5">
+            <!-- Healing indicator -->
+            @if (hasHealingAccess()) {
+              <div>
+                <span class="pi pi-heart-fill text-red-500 text-sm" style="text-shadow: 0 0 3px rgba(0,0,0,0.8);" pTooltip="Peut soigner" tooltipPosition="top"></span>
+              </div>
+            }
+            <!-- Pact Ring Toggle -->
+            <div class="cursor-pointer"
+                 (click)="togglePactRing()"
+                 [pTooltip]="pactRingTooltipText()"
+                 tooltipPosition="top">
+              <span class="pi pi-circle-fill text-sm transition-all"
+                    [ngClass]="isPactRingBearer() ? 'text-yellow-400' : 'text-gray-600 hover:text-yellow-600/60'"
+                    [style]="isPactRingBearer() ? 'text-shadow: 0 0 6px rgba(234,179,8,0.8);' : ''">
+              </span>
             </div>
-          }
+          </div>
         </div>
 
         <!-- Bottom: Class + Emblem + Skills + Weapons -->
@@ -198,12 +202,12 @@ import { getRoleIcon, getRoleBgClass, canMemberHeal } from '@/app/utils/role.uti
 })
 export class TeamMemberCompactCardComponent {
   member = input.required<TeamMember>();
+  isPactRingBearer = input<boolean>(false);
   protected readonly Role = Role;
   protected readonly ImageType = ImageType;
 
   protected readonly roles = [
     { value: Role.TANK, label: 'Tank' },
-    { value: Role.HEALER, label: 'Soigneur' },
     { value: Role.DPS, label: 'DPS' },
     { value: Role.BRUISER, label: 'Bruiser' },
     { value: Role.SCOUT, label: 'Scout' },
@@ -231,6 +235,14 @@ export class TeamMemberCompactCardComponent {
   setRoleAndClose(role: Role | null): void {
     this.teamService.updateMemberRole(this.member().id, role);
     this.isRoleMenuOpen.set(false);
+  }
+
+  togglePactRing(): void {
+    this.teamService.setPactRingBearer(this.member().id);
+  }
+
+  pactRingTooltipText(): string {
+    return this.isPactRingBearer() ? "Retirer l'Anneau du Pacte" : "Porteur de l'Anneau du Pacte";
   }
 
   getWeaponImageUrl(weapon: Weapon | Staff): string {

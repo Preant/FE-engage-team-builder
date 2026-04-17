@@ -32,6 +32,9 @@ export class TeamService {
   private MICAIAH_EMBLEM_ID: EmblemID = brandAs.EmblemID(4);
 
   readonly members: Signal<TeamMember[]> = computed((): TeamMember[] => this.activeTeam()?.members ?? []);
+  readonly pactRingBearerId: Signal<TeamMemberID | null> = computed(
+    (): TeamMemberID | null => this.activeTeam()?.pactRingBearerId ?? null
+  );
   private readonly teamsSignal: WritableSignal<Team[]> = signal<Team[]>([]);
   readonly teams: Signal<Team[]> = this.teamsSignal.asReadonly();
   private characterService: CharacterService = inject(CharacterService);
@@ -88,7 +91,8 @@ export class TeamService {
         weapons: [null, null, null, null],
         inheritableSkills: [null, null],
         role: null
-      }))
+      })),
+      pactRingBearerId: null
     };
 
     this.teamsSignal.update((teams: Team[]) => {
@@ -309,6 +313,23 @@ export class TeamService {
         )
       };
     }));
+  }
+
+  setPactRingBearer(memberId: TeamMemberID): void {
+    const id: TeamID | null = this.activeTeamIdSignal();
+    if (!id) {
+      throw new Error('No active team');
+    }
+    this.teamsSignal.update((teams: Team[]): Team[] =>
+      teams.map((team: Team): Team => {
+        if (team.id !== id) {
+          return team;
+        }
+        const newBearerId: TeamMemberID | null =
+          team.pactRingBearerId === memberId ? null : memberId;
+        return { ...team, pactRingBearerId: newBearerId, lastModified: new Date() };
+      })
+    );
   }
 
   // Computed values for UI
@@ -588,8 +609,7 @@ export class TeamService {
         [Role.BRUISER]: 2,
         [Role.SCOUT]: 3,
         [Role.SUPPORT]: 4,
-        [Role.HEALER]: 5,
-        'NONE': 6
+        'NONE': 5
       };
 
       const sortedMembers = [...team.members].sort((a: TeamMember, b: TeamMember) => {
@@ -603,9 +623,19 @@ export class TeamService {
         id: brandAs.TeamMemberID(index + 1)
       }));
 
+      const oldBearerId = team.pactRingBearerId;
+      let newBearerId: TeamMemberID | null = null;
+      if (oldBearerId !== null) {
+        const bearerNewIndex = sortedMembers.findIndex(m => m.id === oldBearerId);
+        if (bearerNewIndex >= 0) {
+          newBearerId = brandAs.TeamMemberID(bearerNewIndex + 1);
+        }
+      }
+
       return {
         ...team,
         members: membersWithNewIds,
+        pactRingBearerId: newBearerId,
         lastModified: new Date()
       };
     }));
@@ -623,7 +653,10 @@ export class TeamService {
 
   private loadTeamFromLocalStorage(): void {
     const teamIds: string[] = Object.keys(localStorage).filter((key: string): boolean => key.startsWith('team_'));
-    const teams: Team[] = teamIds.map((key: string): Team => JSON.parse(localStorage.getItem(key) ?? ''));
+    const teams: Team[] = teamIds.map((key: string): Team => {
+      const parsed = JSON.parse(localStorage.getItem(key) ?? '');
+      return { ...parsed, pactRingBearerId: parsed.pactRingBearerId ?? null };
+    });
     this.teamsSignal.update((): Team[] => teams);
   }
 }

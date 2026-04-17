@@ -70,13 +70,18 @@ import { getRoleIcon, canMemberHeal } from '@/app/utils/role.utils';
             <span [class]="'pi ' + getRoleIcon(Role.SUPPORT) + ' text-indigo-500'"></span>
             <span class="font-semibold text-baby_powder-500">{{ roleStats()[Role.SUPPORT] }}</span>
           </div>
-          <div class="flex items-center gap-1.5 cursor-help" pTooltip="Soigneur" tooltipPosition="bottom" [showDelay]="800">
-            <span [class]="'pi ' + getRoleIcon(Role.HEALER) + ' text-emerald-400'"></span>
-            <span class="font-semibold text-emerald-400">{{ healerCount() }}</span>
-          </div>
           <div class="flex items-center gap-1.5 border-l border-air_superiority_blue-500/20 pl-3 cursor-help" pTooltip="Peut soigner (Staff, classe, emblème)" tooltipPosition="bottom" [showDelay]="800">
             <span class="pi pi-heart-fill text-red-500"></span>
             <span class="font-semibold text-red-400">{{ canHealCount() }}</span>
+          </div>
+          <div class="flex items-center gap-1.5 border-l border-air_superiority_blue-500/20 pl-3 cursor-help" pTooltip="Porteur de l'Anneau du Pacte" tooltipPosition="bottom" [showDelay]="800">
+            <span class="pi pi-circle-fill"
+                  [ngClass]="pactRingBearerId() ? 'text-yellow-400' : 'text-gray-500'"
+                  [style]="pactRingBearerId() ? 'text-shadow: 0 0 6px rgba(234,179,8,0.8);' : ''">
+            </span>
+            <span class="font-semibold" [ngClass]="pactRingBearerId() ? 'text-yellow-400' : 'text-gray-500'">
+              {{ pactRingBearerName() }}
+            </span>
           </div>
         </div>
       </div>
@@ -86,6 +91,7 @@ import { getRoleIcon, canMemberHeal } from '@/app/utils/role.utils';
           @for (member of displayedMembers(); track member.id) {
             <app-team-member-card
               [member]="member"
+              [isPactRingBearer]="pactRingBearerId() === member.id"
             />
           }
         </div>
@@ -94,6 +100,7 @@ import { getRoleIcon, canMemberHeal } from '@/app/utils/role.utils';
           @for (member of displayedMembers(); track member.id) {
             <app-team-member-compact-card
               [member]="member"
+              [isPactRingBearer]="pactRingBearerId() === member.id"
             />
           }
         </div>
@@ -118,6 +125,7 @@ export class TeamBuilderComponent {
   private readonly teamService: TeamService = inject(TeamService);
 
   protected team = this.teamService.activeTeam;
+  protected pactRingBearerId = this.teamService.pactRingBearerId;
 
   protected displayedMembers = computed(() => {
     const currentTeam = this.team();
@@ -129,8 +137,7 @@ export class TeamBuilderComponent {
       [Role.BRUISER]: 2,
       [Role.SCOUT]: 3,
       [Role.SUPPORT]: 4,
-      [Role.HEALER]: 5,
-      'NONE': 6
+      'NONE': 5
     };
 
     return [...currentTeam.members].sort((a: TeamMember, b: TeamMember) => {
@@ -148,8 +155,7 @@ export class TeamBuilderComponent {
         [Role.DPS]: 0,
         [Role.BRUISER]: 0,
         [Role.SCOUT]: 0,
-        [Role.SUPPORT]: 0,
-        [Role.HEALER]: 0
+        [Role.SUPPORT]: 0
       };
     }
 
@@ -158,8 +164,7 @@ export class TeamBuilderComponent {
       [Role.DPS]: 0,
       [Role.BRUISER]: 0,
       [Role.SCOUT]: 0,
-      [Role.SUPPORT]: 0,
-      [Role.HEALER]: 0
+      [Role.SUPPORT]: 0
     };
 
     currentTeam.members.forEach((member: TeamMember) => {
@@ -171,20 +176,18 @@ export class TeamBuilderComponent {
     return stats;
   });
 
-  protected healerCount = computed(() => {
-    const currentTeam = this.team();
-    if (!currentTeam) return 0;
-
-    return currentTeam.members.filter((member: TeamMember) =>
-      member.role === Role.HEALER
-    ).length;
-  });
-
   protected canHealCount = computed(() => {
     const currentTeam = this.team();
-    if (!currentTeam) return 0;
+    if (!currentTeam) {return 0;}
 
     return currentTeam.members.filter(canMemberHeal).length;
+  });
+
+  protected pactRingBearerName = computed((): string => {
+    const id = this.pactRingBearerId();
+    if (!id) {return '—';}
+    const member = this.teamService.members().find(m => m.id === id);
+    return member?.character?.name ?? '?';
   });
 
   startEditing(): void {

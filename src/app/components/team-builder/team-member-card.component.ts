@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, computed, inject, input, Signal, signal, WritableSignal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { TooltipModule } from 'primeng/tooltip';
 
 import { CharacterID, ClassID, EmblemID, SkillID, StaffID, WeaponID } from '@/app/brands/ResourceID.brand';
 import {
@@ -32,7 +33,7 @@ import { getRoleIcon, getRoleBgClass, canMemberHeal } from '@/app/utils/role.uti
 
 @Component({
   selector: 'app-team-member-card',
-  imports: [CommonModule, FormsModule, SelectComponent],
+  imports: [CommonModule, FormsModule, SelectComponent, TooltipModule],
   standalone: true,
   template: `
         <div class="relative bg-gradient-to-br from-gunmetal-400/50 to-gunmetal-600/50 rounded-lg p-2 border border-rich_black-500 m-4 flex gap-3">
@@ -42,6 +43,17 @@ import { getRoleIcon, getRoleBgClass, canMemberHeal } from '@/app/utils/role.uti
                     <span class="pi pi-heart-fill text-red-500 text-lg" style="text-shadow: 0 0 3px rgba(0,0,0,0.8); -webkit-text-stroke: 1px rgba(0,0,0,0.6);"></span>
                 </div>
             }
+
+            <!-- Pact Ring Toggle -->
+            <div class="absolute left-1 top-6 z-10 cursor-pointer"
+                 (click)="togglePactRing()"
+                 [pTooltip]="pactRingTooltipText()"
+                 tooltipPosition="right">
+              <span class="pi pi-circle-fill text-lg transition-all"
+                    [ngClass]="isPactRingBearer() ? 'text-yellow-400' : 'text-gray-600 hover:text-yellow-600/60'"
+                    [style]="isPactRingBearer() ? 'text-shadow: 0 0 8px rgba(234,179,8,0.9); -webkit-text-stroke: 1px rgba(0,0,0,0.5);' : ''">
+              </span>
+            </div>
 
             <!-- Role Thumbnail -->
             <div class="flex-shrink-0 relative">
@@ -72,46 +84,37 @@ import { getRoleIcon, getRoleBgClass, canMemberHeal } from '@/app/utils/role.uti
                         </button>
                         <button
                             class="w-full px-4 py-2 text-left text-sm text-baby_powder-300 hover:bg-rich_black-600 transition-colors flex items-center justify-between font-medium"
-                            [class.bg-green-700]="member().role === roles[1].value"
+                            [class.bg-red-700]="member().role === roles[1].value"
                             (click)="setRoleAndClose(roles[1].value)">
-                            <span>Soigneur</span>
-                            @if (member().role === roles[1].value) {
-                                <span class="pi pi-check text-xs text-green-300"></span>
-                            }
-                        </button>
-                        <button
-                            class="w-full px-4 py-2 text-left text-sm text-baby_powder-300 hover:bg-rich_black-600 transition-colors flex items-center justify-between font-medium"
-                            [class.bg-red-700]="member().role === roles[2].value"
-                            (click)="setRoleAndClose(roles[2].value)">
                             <span>DPS</span>
-                            @if (member().role === roles[2].value) {
+                            @if (member().role === roles[1].value) {
                                 <span class="pi pi-check text-xs text-red-300"></span>
                             }
                         </button>
                         <button
                             class="w-full px-4 py-2 text-left text-sm text-baby_powder-300 hover:bg-rich_black-600 transition-colors flex items-center justify-between font-medium"
-                            [class.bg-orange-700]="member().role === roles[3].value"
-                            (click)="setRoleAndClose(roles[3].value)">
+                            [class.bg-orange-700]="member().role === roles[2].value"
+                            (click)="setRoleAndClose(roles[2].value)">
                             <span>Bruiser</span>
-                            @if (member().role === roles[3].value) {
+                            @if (member().role === roles[2].value) {
                                 <span class="pi pi-check text-xs text-orange-300"></span>
                             }
                         </button>
                         <button
                             class="w-full px-4 py-2 text-left text-sm text-baby_powder-300 hover:bg-rich_black-600 transition-colors flex items-center justify-between font-medium"
-                            [class.bg-blue-600]="member().role === roles[4].value"
-                            (click)="setRoleAndClose(roles[4].value)">
+                            [class.bg-blue-600]="member().role === roles[3].value"
+                            (click)="setRoleAndClose(roles[3].value)">
                             <span>Scout</span>
-                            @if (member().role === roles[4].value) {
+                            @if (member().role === roles[3].value) {
                                 <span class="pi pi-check text-xs text-blue-300"></span>
                             }
                         </button>
                         <button
                             class="w-full px-4 py-2 text-left text-sm text-baby_powder-300 hover:bg-rich_black-600 transition-colors flex items-center justify-between font-medium"
-                            [class.bg-indigo-600]="member().role === roles[5].value"
-                            (click)="setRoleAndClose(roles[5].value)">
+                            [class.bg-indigo-600]="member().role === roles[4].value"
+                            (click)="setRoleAndClose(roles[4].value)">
                             <span>Support</span>
-                            @if (member().role === roles[5].value) {
+                            @if (member().role === roles[4].value) {
                                 <span class="pi pi-check text-xs text-indigo-300"></span>
                             }
                         </button>
@@ -191,6 +194,7 @@ import { getRoleIcon, getRoleBgClass, canMemberHeal } from '@/app/utils/role.uti
 })
 export class TeamMemberCardComponent {
   member = input.required<TeamMember>();
+  isPactRingBearer = input<boolean>(false);
   characterOptions!: Signal<SelectOptionIcon<CharacterID>[]>;
   classOptions!: Signal<SelectOptionLabel<ClassID>[]>;
   emblemOptions!: Signal<SelectOptionIcon<EmblemID>[]>;
@@ -199,7 +203,6 @@ export class TeamMemberCardComponent {
   protected readonly SelectType: typeof SelectType = SelectType;
   protected readonly roles = [
     { value: Role.TANK, label: 'Tank' },
-    { value: Role.HEALER, label: 'Soigneur' },
     { value: Role.DPS, label: 'DPS' },
     { value: Role.BRUISER, label: 'Bruiser' },
     { value: Role.SCOUT, label: 'Scout' },
@@ -221,7 +224,7 @@ export class TeamMemberCardComponent {
       .fill(0).map((_: 0, index: number) => computed(() => this.getWeaponOptions(index)));
     this.skillOptions = Array(this.member().inheritableSkills.length)
       .fill(0).map((_: 0, index: number) => computed(() => this.getInheritableSkillOptions(index)));
-    this.hasHealingAccess = computed(() => this.checkHealingAccess());
+    this.hasHealingAccess = computed(() => canMemberHeal(this.member()));
   }
 
   //Options providers
@@ -401,6 +404,14 @@ export class TeamMemberCardComponent {
   setRoleAndClose(role: Role | null): void {
     this.teamService.updateMemberRole(this.member().id, role);
     this.isRoleMenuOpen.set(false);
+  }
+
+  togglePactRing(): void {
+    this.teamService.setPactRingBearer(this.member().id);
+  }
+
+  pactRingTooltipText(): string {
+    return this.isPactRingBearer() ? "Retirer l'Anneau du Pacte" : "Désigner comme Porteur de l'Anneau du Pacte";
   }
 
   private checkHealingAccess(): boolean {

@@ -4,12 +4,25 @@ import { WeaponType } from '@/app/models/WeaponType.enum';
 
 const HEALING_SUPPORT_EMBLEMS = ['celica', 'micaiah', 'veronica'];
 
+export function canMemberHeal(member: TeamMember): boolean {
+  const hasStaffEquipped = member.weapons.some(weapon => isStaff(weapon));
+  if (hasStaffEquipped) {
+    return true;
+  }
+
+  const classHasStaffAccess = member.class?.weapons.some(([weaponType]) => weaponType === WeaponType.STAFF) ?? false;
+  if (classHasStaffAccess) {
+    return true;
+  }
+
+  const emblemIdentifier = member.emblem?.identifier;
+  return emblemIdentifier ? HEALING_SUPPORT_EMBLEMS.includes(emblemIdentifier) : false;
+}
+
 export function getRoleIcon(role: Role): string {
   switch (role) {
     case Role.TANK:
       return 'pi-shield';
-    case Role.HEALER:
-      return 'pi-heart-fill';
     case Role.DPS:
       return 'pi-bolt';
     case Role.BRUISER:
@@ -27,8 +40,6 @@ export function getRoleColor(role: Role | null): string {
   switch (role) {
     case Role.TANK:
       return 'text-air_superiority_blue-500';
-    case Role.HEALER:
-      return 'text-emerald-400';
     case Role.DPS:
       return 'text-red-500';
     case Role.BRUISER:
@@ -47,8 +58,6 @@ export function getRoleBgClass(role: Role | null): string {
   switch (role) {
     case Role.TANK:
       return base + 'bg-air_superiority_blue-700';
-    case Role.HEALER:
-      return base + 'bg-green-700';
     case Role.DPS:
       return base + 'bg-red-700';
     case Role.BRUISER:
@@ -60,22 +69,4 @@ export function getRoleBgClass(role: Role | null): string {
     default:
       return base + 'bg-gunmetal-600';
   }
-}
-
-export function canMemberHeal(member: TeamMember): boolean {
-  // Check if has staff equipped in weapons
-  const hasStaffEquipped = member.weapons.some(weapon => isStaff(weapon));
-  if (hasStaffEquipped) {
-    return true;
-  }
-
-  // Check if class has access to staves
-  const classHasStaffAccess = member.class?.weapons.some(([weaponType]) => weaponType === WeaponType.STAFF) ?? false;
-  if (classHasStaffAccess) {
-    return true;
-  }
-
-  // Check if emblem provides healing access
-  const emblemIdentifier = member.emblem?.identifier;
-  return emblemIdentifier ? HEALING_SUPPORT_EMBLEMS.includes(emblemIdentifier) : false;
 }
